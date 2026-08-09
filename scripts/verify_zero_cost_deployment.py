@@ -76,7 +76,16 @@ def check_remote_state_round_trip() -> None:
             def fake_request(method: str, path: str, **kwargs):
                 nonlocal bucket_exists
                 if path == "/storage/v1/bucket/cocoaid-state" and method == "GET":
-                    return httpx.Response(200 if bucket_exists else 404, json={"id": "cocoaid-state"})
+                    if bucket_exists:
+                        return httpx.Response(200, json={"id": "cocoaid-state"})
+                    # Mirrors the wrapped response observed from hosted Supabase:
+                    # HTTP 400 with a logical Storage 404 / NoSuchBucket code.
+                    return httpx.Response(400, json={
+                        "statusCode": "404",
+                        "error": "Bucket not found",
+                        "message": "Bucket not found",
+                        "code": "NoSuchBucket",
+                    })
                 if path == "/storage/v1/bucket" and method == "POST":
                     bucket_exists = True
                     return httpx.Response(200, json={"name": "cocoaid-state"})

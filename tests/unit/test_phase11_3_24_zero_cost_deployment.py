@@ -98,12 +98,17 @@ def test_supabase_database_snapshot_round_trip(monkeypatch, tmp_path: Path) -> N
 def test_supabase_bucket_is_created_automatically(monkeypatch, tmp_path: Path) -> None:
     store = _configure_store(monkeypatch, tmp_path)
     calls: list[tuple[str, str, dict]] = []
+    bucket_exists = False
 
     def fake_request(method: str, path: str, **kwargs):
+        nonlocal bucket_exists
         calls.append((method, path, kwargs))
         if method == "GET" and path == "/storage/v1/bucket/cocoaid-state":
-            return httpx.Response(404, json={"message": "not found"})
+            if bucket_exists:
+                return httpx.Response(200, json={"id": "cocoaid-state"})
+            return httpx.Response(404, json={"message": "not found", "code": "NoSuchBucket"})
         if method == "POST" and path == "/storage/v1/bucket":
+            bucket_exists = True
             return httpx.Response(200, json={"name": "cocoaid-state"})
         raise AssertionError((method, path))
 
@@ -113,6 +118,89 @@ def test_supabase_bucket_is_created_automatically(monkeypatch, tmp_path: Path) -
     payload = creation[2]["json"]
     assert payload["id"] == "cocoaid-state"
     assert payload["public"] is False
+
+
+def test_supabase_wrapped_400_nosuchbucket_creates_bucket(monkeypatch, tmp_path: Path) -> None:
+    """Regression for the exact Render/Supabase failure observed in production."""
+    store = _configure_store(monkeypatch, tmp_path)
+    bucket_exists = False
+    calls: list[tuple[str, str]] = []
+
+    def fake_request(method: str, path: str, **kwargs):
+        nonlocal bucket_exists
+        calls.append((method, path))
+        if method == "GET" and path == "/storage/v1/bucket/cocoaid-state":
+            if bucket_exists:
+                return httpx.Response(200, json={"id": "cocoaid-state", "public": False})
+            return httpx.Response(
+                400,
+                json={
+                    "statusCode": "404",
+                    "error": "Bucket not found",
+                    "message": "Bucket not found",
+                    "code": "NoSuchBucket",
+                },
+            )
+        if method == "POST" and path == "/storage/v1/bucket":
+            bucket_exists = True
+            return httpx.Response(200, json={"name": "cocoaid-state"})
+        raise AssertionError((method, path))
+
+    monkeypatch.setattr(store, "_request", fake_request)
+    assert store.ensure_bucket() is True
+    assert calls.count(("POST", "/storage/v1/bucket")) == 1
+    assert store.status()["last_error"] is None
+
+
+def test_supabase_bucket_creation_waits_for_short_propagation_delay(monkeypatch, tmp_path: Path) -> None:
+    store = _configure_store(monkeypatch, tmp_path)
+    created = False
+    reads_after_create = 0
+
+    def fake_request(method: str, path: str, **kwargs):
+        nonlocal created, reads_after_create
+        if method == "GET" and path == "/storage/v1/bucket/cocoaid-state":
+            if created:
+                reads_after_create += 1
+                if reads_after_create >= 3:
+                    return httpx.Response(200, json={"id": "cocoaid-state"})
+            return httpx.Response(400, json={"statusCode": "404", "code": "NoSuchBucket", "message": "Bucket not found"})
+        if method == "POST" and path == "/storage/v1/bucket":
+            created = True
+            return httpx.Response(200, json={"name": "cocoaid-state"})
+        raise AssertionError((method, path))
+
+    monkeypatch.setattr(store, "_request", fake_request)
+    monkeypatch.setattr("app.services.supabase_state.time.sleep", lambda _: None)
+    assert store.ensure_bucket() is True
+    assert reads_after_create >= 3
+
+
+def test_supabase_upload_recovers_if_bucket_temporarily_reports_missing(monkeypatch, tmp_path: Path) -> None:
+    store = _configure_store(monkeypatch, tmp_path)
+    bucket_exists = True
+    upload_attempts = 0
+
+    def fake_request(method: str, path: str, **kwargs):
+        nonlocal bucket_exists, upload_attempts
+        if method == "GET" and path == "/storage/v1/bucket/cocoaid-state":
+            return httpx.Response(200, json={"id": "cocoaid-state"}) if bucket_exists else httpx.Response(400, json={"statusCode": "404", "code": "NoSuchBucket", "message": "Bucket not found"})
+        if method == "POST" and path == "/storage/v1/bucket":
+            bucket_exists = True
+            return httpx.Response(200, json={"name": "cocoaid-state"})
+        if method == "POST" and path == "/storage/v1/object/cocoaid-state/state/test.bin":
+            upload_attempts += 1
+            if upload_attempts == 1:
+                bucket_exists = False
+                return httpx.Response(400, json={"statusCode": "404", "code": "NoSuchBucket", "message": "Bucket not found"})
+            return httpx.Response(200, json={"Key": "state/test.bin"})
+        raise AssertionError((method, path))
+
+    monkeypatch.setattr(store, "_request", fake_request)
+    # First ensure succeeds, then the upload simulates a transient Storage miss.
+    assert store.ensure_bucket() is True
+    assert store.upload_bytes("state/test.bin", b"payload", content_type="application/octet-stream") is True
+    assert upload_attempts == 2
 
 
 def test_runtime_file_upload_and_lazy_restore(monkeypatch, tmp_path: Path) -> None:

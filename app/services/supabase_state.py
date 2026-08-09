@@ -84,6 +84,68 @@ class SupabaseStateStore:
     def _request(self, method: str, path: str, **kwargs: Any) -> httpx.Response:
         return httpx.request(method, self._url(path), timeout=self._timeout(), follow_redirects=True, **kwargs)
 
+    @staticmethod
+    def _error_payload(response: httpx.Response) -> dict[str, Any]:
+        """Best-effort parse of Supabase Storage error payloads.
+
+        Supabase Storage can surface a logical 404 such as ``NoSuchBucket``
+        inside an HTTP 400 response.  Deployment code must therefore inspect
+        the structured payload instead of relying only on the outer status.
+        """
+        try:
+            payload = response.json()
+        except Exception:
+            return {}
+        return payload if isinstance(payload, dict) else {}
+
+    @classmethod
+    def _is_missing_bucket_response(cls, response: httpx.Response) -> bool:
+        if response.status_code == 404:
+            return True
+        payload = cls._error_payload(response)
+        code = str(payload.get("code") or payload.get("error") or "").strip().lower()
+        logical_status = str(payload.get("statusCode") or payload.get("status_code") or "").strip()
+        message = str(payload.get("message") or "").strip().lower()
+        return (
+            code == "nosuchbucket"
+            or (logical_status == "404" and "bucket" in message and "not found" in message)
+            or ("no such bucket" in message)
+        )
+
+    @classmethod
+    def _is_bucket_conflict_response(cls, response: httpx.Response) -> bool:
+        if response.status_code in {409, 422}:
+            return True
+        payload = cls._error_payload(response)
+        code = str(payload.get("code") or payload.get("error") or "").strip().lower()
+        message = str(payload.get("message") or "").strip().lower()
+        return code in {"bucketalreadyexists", "resourcealreadyexists", "duplicate"} or (
+            "bucket" in message and "already exists" in message
+        )
+
+    def _check_bucket(self, encoded_bucket: str) -> httpx.Response:
+        return self._request(
+            "GET",
+            f"/storage/v1/bucket/{encoded_bucket}",
+            headers=self._headers(),
+        )
+
+    def _wait_for_bucket(self, encoded_bucket: str, *, attempts: int = 4) -> bool:
+        """Wait briefly for a newly-created bucket to become queryable."""
+        for attempt in range(max(1, attempts)):
+            response = self._check_bucket(encoded_bucket)
+            if response.status_code == 200:
+                return True
+            if not self._is_missing_bucket_response(response):
+                self._last_error = (
+                    f"Supabase bucket verification failed ({response.status_code}): "
+                    f"{response.text[:240]}"
+                )
+                return False
+            if attempt + 1 < attempts:
+                time.sleep(0.25 * (attempt + 1))
+        return False
+
     def validate_configuration(self) -> None:
         if not settings.supabase_state_sync_enabled:
             if self.required:
@@ -111,16 +173,16 @@ class SupabaseStateStore:
             if self._bucket_ready:
                 return True
             bucket = quote(str(settings.supabase_storage_bucket), safe="")
-            response = self._request(
-                "GET",
-                f"/storage/v1/bucket/{bucket}",
-                headers=self._headers(),
-            )
+            response = self._check_bucket(bucket)
             if response.status_code == 200:
                 self._bucket_ready = True
                 self._last_error = None
                 return True
-            if response.status_code != 404:
+
+            # Supabase Storage sometimes wraps NoSuchBucket as HTTP 400 with a
+            # logical statusCode of 404. Treat every documented NoSuchBucket
+            # representation as the normal first-deploy path and create it.
+            if not self._is_missing_bucket_response(response):
                 self._last_error = f"Supabase bucket check failed ({response.status_code}): {response.text[:240]}"
                 if self.required:
                     raise RuntimeError(self._last_error)
@@ -133,26 +195,56 @@ class SupabaseStateStore:
                 "public": False,
                 "file_size_limit": int(settings.supabase_state_max_object_bytes),
             }
-            response = self._request(
+            created = self._request(
                 "POST",
                 "/storage/v1/bucket",
                 headers=self._headers(content_type="application/json"),
                 json=payload,
             )
-            if response.status_code not in {200, 201}:
-                # Concurrent first starts can race to create the bucket. Recheck
-                # before declaring a failure.
-                recheck = self._request(
-                    "GET",
-                    f"/storage/v1/bucket/{bucket}",
-                    headers=self._headers(),
-                )
-                if recheck.status_code != 200:
-                    self._last_error = f"Supabase bucket creation failed ({response.status_code}): {response.text[:240]}"
+            if created.status_code not in {200, 201}:
+                # A concurrent Render cold start can race us to create the same
+                # bucket. If Supabase reports an existing bucket, verify it
+                # instead of failing the application startup.
+                if not self._is_bucket_conflict_response(created):
+                    self._last_error = (
+                        f"Supabase bucket creation failed ({created.status_code}): "
+                        f"{created.text[:240]}"
+                    )
                     if self.required:
                         raise RuntimeError(self._last_error)
                     logger.warning(self._last_error)
                     return False
+
+            if not self._wait_for_bucket(bucket):
+                # Some Storage gateways acknowledge bucket creation before a
+                # subsequent read sees it. One final create/check cycle is safe:
+                # create is either successful or resolves as an already-exists
+                # race, after which we verify again.
+                retry_create = self._request(
+                    "POST",
+                    "/storage/v1/bucket",
+                    headers=self._headers(content_type="application/json"),
+                    json=payload,
+                )
+                if retry_create.status_code not in {200, 201} and not self._is_bucket_conflict_response(retry_create):
+                    self._last_error = (
+                        f"Supabase bucket creation retry failed ({retry_create.status_code}): "
+                        f"{retry_create.text[:240]}"
+                    )
+                    if self.required:
+                        raise RuntimeError(self._last_error)
+                    logger.warning(self._last_error)
+                    return False
+                if not self._wait_for_bucket(bucket):
+                    self._last_error = (
+                        "Supabase bucket was created but did not become available in time. "
+                        "Verify SUPABASE_URL and that SUPABASE_SECRET_KEY is the server-side secret key."
+                    )
+                    if self.required:
+                        raise RuntimeError(self._last_error)
+                    logger.warning(self._last_error)
+                    return False
+
             self._bucket_ready = True
             self._last_error = None
             logger.info("Supabase durable-state bucket is ready: %s", settings.supabase_storage_bucket)
@@ -183,6 +275,16 @@ class SupabaseStateStore:
                 headers=self._headers(content_type=content_type, upsert=True),
                 content=payload,
             )
+            if self._is_missing_bucket_response(response):
+                # Recover from a rare Storage propagation/cold-start race.
+                self._bucket_ready = False
+                if self.ensure_bucket():
+                    response = self._request(
+                        "POST",
+                        f"/storage/v1/object/{self._object_path(object_name)}",
+                        headers=self._headers(content_type=content_type, upsert=True),
+                        content=payload,
+                    )
             if response.status_code not in {200, 201}:
                 self._last_error = f"Supabase upload failed for {object_name} ({response.status_code}): {response.text[:240]}"
                 if self.required:
@@ -201,7 +303,18 @@ class SupabaseStateStore:
                 f"/storage/v1/object/authenticated/{self._object_path(object_name)}",
                 headers=self._headers(),
             )
+            if self._is_missing_bucket_response(response):
+                self._bucket_ready = False
+                if self.ensure_bucket():
+                    response = self._request(
+                        "GET",
+                        f"/storage/v1/object/authenticated/{self._object_path(object_name)}",
+                        headers=self._headers(),
+                    )
             if response.status_code == 404:
+                return None
+            payload = self._error_payload(response)
+            if str(payload.get("code") or "").strip().lower() == "nosuchkey":
                 return None
             if response.status_code != 200:
                 self._last_error = f"Supabase download failed for {object_name} ({response.status_code}): {response.text[:240]}"

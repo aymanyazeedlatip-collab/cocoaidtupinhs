@@ -1,3 +1,11 @@
+# COCOAID v3 Phase 11.3.23 — Final Supabase Storage Startup Hotfix
+
+- Fixed Render startup failure when hosted Supabase wraps `NoSuchBucket` as HTTP 400 with `statusCode: 404`.
+- Added structured Supabase Storage error parsing rather than relying only on the outer HTTP status.
+- First deployment now creates the private `cocoaid-state` bucket automatically for both literal 404 and wrapped `NoSuchBucket` responses.
+- Added bucket propagation retry/backoff and upload recovery for short Storage consistency delays.
+- Preserved zero-cost Render Free + Supabase Free + Vercel Hobby deployment architecture.
+
 # COCOAID v3 Phase 11.3.7 — Hourly Forecast Calendar + Collision-Safe Map UI
 
 - Standardized the genuine 16-day provider window to hourly Open-Meteo frames in both Long-Term Model Forecast and Weather GIS playback.
