@@ -22,7 +22,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import mm
 from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.pdfbase.ttfonts import TTFont, TTFError
 from reportlab.platypus import PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
 from app.coco_pilot.context import build_context
@@ -67,6 +67,17 @@ def _font_candidates() -> dict[str, list[Path]]:
     }
 
 
+def _first_report_font_file(paths: list[Path]) -> Path | None:
+    """Return a real font file, never a directory or placeholder path."""
+    for path in paths:
+        try:
+            if path.is_file():
+                return path
+        except OSError:
+            continue
+    return None
+
+
 def _register_report_fonts() -> tuple[str, str, str, str]:
     names = {
         "regular": "COCOAID-Times",
@@ -74,8 +85,11 @@ def _register_report_fonts() -> tuple[str, str, str, str]:
         "italic": "COCOAID-Times-Italic",
         "bold_italic": "COCOAID-Times-BoldItalic",
     }
-    resolved = {style: next((path for path in paths if path.exists()), None) for style, paths in _font_candidates().items()}
-    if all(resolved.values()):
+    resolved = {style: _first_report_font_file(paths) for style, paths in _font_candidates().items()}
+    if not all(resolved.values()):
+        return "Times-Roman", "Times-Bold", "Times-Italic", "Times-BoldItalic"
+
+    try:
         for style, path in resolved.items():
             if names[style] not in pdfmetrics.getRegisteredFontNames():
                 pdfmetrics.registerFont(TTFont(names[style], str(path)))
@@ -86,8 +100,12 @@ def _register_report_fonts() -> tuple[str, str, str, str]:
             italic=names["italic"],
             boldItalic=names["bold_italic"],
         )
-        return names["regular"], names["bold"], names["italic"], names["bold_italic"]
-    return "Times-Roman", "Times-Bold", "Times-Italic", "Times-BoldItalic"
+    except (OSError, TTFError, ValueError):
+        # Report fonts are optional. Render/CI images may not ship a Times-compatible
+        # TTF family, so use ReportLab's built-in Times metrics instead of crashing.
+        return "Times-Roman", "Times-Bold", "Times-Italic", "Times-BoldItalic"
+
+    return names["regular"], names["bold"], names["italic"], names["bold_italic"]
 
 
 PDF_FONT_REGULAR, PDF_FONT_BOLD, PDF_FONT_ITALIC, PDF_FONT_BOLD_ITALIC = _register_report_fonts()

@@ -14,7 +14,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import mm
 from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.pdfbase.ttfonts import TTFont, TTFError
 from reportlab.platypus import (
     Image,
     KeepTogether,
@@ -67,6 +67,17 @@ def _font_candidates() -> dict[str, list[Path]]:
     }
 
 
+def _first_font_file(paths: Iterable[Path]) -> Path | None:
+    """Return the first readable font file, never a directory placeholder."""
+    for path in paths:
+        try:
+            if path.is_file():
+                return path
+        except OSError:
+            continue
+    return None
+
+
 def _register_fonts() -> tuple[str, str, str, str]:
     names = {
         "regular": "COCO-Times",
@@ -75,10 +86,11 @@ def _register_fonts() -> tuple[str, str, str, str]:
         "bold_italic": "COCO-Times-BoldItalic",
     }
     candidates = _font_candidates()
-    resolved: dict[str, Path] = {}
-    for style, paths in candidates.items():
-        resolved[style] = next((path for path in paths if path.exists()), Path())
-    if all(path.exists() for path in resolved.values()):
+    resolved = {style: _first_font_file(paths) for style, paths in candidates.items()}
+    if not all(resolved.values()):
+        return "Times-Roman", "Times-Bold", "Times-Italic", "Times-BoldItalic"
+
+    try:
         for style, path in resolved.items():
             if names[style] not in pdfmetrics.getRegisteredFontNames():
                 pdfmetrics.registerFont(TTFont(names[style], str(path)))
@@ -89,8 +101,12 @@ def _register_fonts() -> tuple[str, str, str, str]:
             italic=names["italic"],
             boldItalic=names["bold_italic"],
         )
-        return names["regular"], names["bold"], names["italic"], names["bold_italic"]
-    return "Times-Roman", "Times-Bold", "Times-Italic", "Times-BoldItalic"
+    except (OSError, TTFError, ValueError):
+        # Font availability varies across local Windows, CI, and Render Linux.
+        # A missing/corrupt optional system font must never prevent FastAPI startup.
+        return "Times-Roman", "Times-Bold", "Times-Italic", "Times-BoldItalic"
+
+    return names["regular"], names["bold"], names["italic"], names["bold_italic"]
 
 
 FONT_REGULAR, FONT_BOLD, FONT_ITALIC, FONT_BOLD_ITALIC = _register_fonts()
