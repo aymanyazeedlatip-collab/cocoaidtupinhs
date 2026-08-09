@@ -8,7 +8,6 @@ services:
     buildCommand: pip install --disable-pip-version-check --prefer-binary -r requirements.deploy.txt
     startCommand: bash scripts/start_production.sh
     healthCheckPath: /api/health
-    maxShutdownDelaySeconds: 120
     numInstances: 1
     disk:
       name: cocoaid-data
