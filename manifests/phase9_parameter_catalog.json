@@ -1,0 +1,31 @@
+{
+  "confidence": "moderate",
+  "dependency_graph": {
+    "bayesian": [
+      "production"
+    ],
+    "intercropping": [
+      "production"
+    ],
+    "pest": [
+      "production"
+    ],
+    "production": [],
+    "rehabilitation": [
+      "production"
+    ]
+  },
+  "dependency_graph_version": "decision-support-dependency-graph-1.0.0",
+  "domain": "Integrated analytical dependency resolution, recommendation prioritization, and traceability",
+  "limitations": [
+    "The network interprets stored analytical outputs and does not create new field evidence.",
+    "Priority thresholds are transparent development rules pending expert and field validation.",
+    "Recommendations do not replace PCA diagnosis, local cost verification, or farmer consent."
+  ],
+  "parameter_count": 5,
+  "parameter_set_id": "integrated-decision-support-network",
+  "source_references": [],
+  "status": "experimental_phase_9",
+  "values_sha256": "8660c42bcb41d60c828975ee0409e6651b569142110a30925164f6bdaddbd5c3",
+  "version": "decision-support-parameters-1.0.0"
+}

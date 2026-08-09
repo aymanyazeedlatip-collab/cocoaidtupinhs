@@ -1,0 +1,8 @@
+COCOAID Phase 10 final release test baseline
+Date: 2026-08-04
+Contract API version: 3.0.0-draft.10
+Migrations: 1-10 applied and verified
+Test inventory: 259 tests across 84 test files
+Result: all tests passed
+Warnings: configured as errors; no warning summary
+Additional checks: Phase 0-10 verifiers, migration rollback/re-upgrade, Python compilation, JavaScript syntax, report generation, PII redaction, scenario comparison, public path redaction, ZIP integrity, and clean extraction/retest.

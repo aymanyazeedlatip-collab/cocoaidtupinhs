@@ -1,0 +1,21 @@
+[
+  {
+    "availability": "available",
+    "dependencies": [
+      "open_meteo_forecast_api",
+      "weather_run_repository"
+    ],
+    "deterministic_with_seed": false,
+    "engine_id": "v3.weather_assimilation",
+    "input_contract": "WeatherAssimilationPayload",
+    "limitations": [
+      "Past-day values from the Forecast API are archived forecasts, not field observations.",
+      "The seamless Open-Meteo endpoint does not expose one authoritative provider initialization time.",
+      "Long-term climate-conditioned scenarios are intentionally outside this engine."
+    ],
+    "maturity": "experimental",
+    "name": "Weather Assimilation Engine",
+    "output_contract": "WeatherFeatureSet",
+    "version": "1.0.0"
+  }
+]

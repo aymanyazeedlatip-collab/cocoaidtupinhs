@@ -1,0 +1,44 @@
+{
+  "CocoPilotCitation": {
+    "description": "Traceable analytical or PCA source citation used by CoCO-PILOT.",
+    "module": "app.domain.coco_pilot",
+    "name": "CocoPilotCitation",
+    "schema_sha256": "8f08f8ee64e8ffaff142e2c37d1f3ae1df207b62ff2a62060bdf638d6b380744",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "CocoPilotRedactionSummary": {
+    "description": "Privacy boundary and PII-removal summary for one assistant run.",
+    "module": "app.domain.coco_pilot",
+    "name": "CocoPilotRedactionSummary",
+    "schema_sha256": "b75e57d4f5892f5fbed268d093295623c49aa688c3e7138a547403054ed47828",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "CocoPilotRequest": {
+    "description": "Phase 10 grounded explanation request linked to one decision-support run.",
+    "module": "app.domain.coco_pilot",
+    "name": "CocoPilotRequest",
+    "schema_sha256": "710e34bf8a5ff38befc87f28e63924390001dd9489320c44e239f911750e8503",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "CocoPilotResponse": {
+    "description": "Grounded deterministic or validated optional-AI explanation.",
+    "module": "app.domain.coco_pilot",
+    "name": "CocoPilotResponse",
+    "schema_sha256": "675e9858c8102660eef5dd459944d8045ef9e3dbd6b487cca524d0b566b502e3",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "FormalReportRecord": {
+    "description": "Stored formal-report artifact metadata, checksum, fingerprint, and provenance.",
+    "module": "app.domain.coco_pilot",
+    "name": "FormalReportRecord",
+    "schema_sha256": "ab262f0a2c35df1bc7ed8a2757f5d5163186ade1a7aa668f89022a8c12e04ad4",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "FormalReportRequest": {
+    "description": "Request for a versioned DOCX or PDF report from a saved decision-support run.",
+    "module": "app.domain.coco_pilot",
+    "name": "FormalReportRequest",
+    "schema_sha256": "f6e7308c15890a7ee5bd32cadd1d9189b74b1bd59931d0b211004a9b13e7bee5",
+    "schema_version": "3.0.0-draft.10"
+  }
+}

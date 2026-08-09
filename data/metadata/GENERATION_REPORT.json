@@ -1,0 +1,13 @@
+{
+  "rows": 2880,
+  "farms": 360,
+  "years": [
+    2018,
+    2025
+  ],
+  "required_provenance_present": true,
+  "negative_rainfall_count": 0,
+  "invalid_probability_count": 0,
+  "invalid_tree_total_count": 0,
+  "seed": 20260719
+}

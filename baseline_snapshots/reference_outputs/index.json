@@ -1,0 +1,29 @@
+[
+  {
+    "fixture": "large_high_risk.json",
+    "output": "large_high_risk_baseline.json",
+    "recommended_intervention": "combined_rehabilitation",
+    "projected_end_median_tons": 11.6791,
+    "simulation_final_median_tons": 11.6791,
+    "pest_posterior_probability": 0.786257,
+    "suitability_score": 0.836018
+  },
+  {
+    "fixture": "medium_baseline.json",
+    "output": "medium_baseline_baseline.json",
+    "recommended_intervention": "combined_rehabilitation",
+    "projected_end_median_tons": 13.8372,
+    "simulation_final_median_tons": 13.8372,
+    "pest_posterior_probability": 0.047482,
+    "suitability_score": 0.913348
+  },
+  {
+    "fixture": "small_low_risk.json",
+    "output": "small_low_risk_baseline.json",
+    "recommended_intervention": "combined_rehabilitation",
+    "projected_end_median_tons": 3.4034,
+    "simulation_final_median_tons": 3.4034,
+    "pest_posterior_probability": 0.047482,
+    "suitability_score": 0.927761
+  }
+]

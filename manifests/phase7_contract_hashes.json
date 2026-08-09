@@ -1,0 +1,65 @@
+{
+  "CanopyLightEstimate": {
+    "description": "PCA-table canopy transmission estimate with explicit interpolation trace.",
+    "module": "app.domain.intercropping",
+    "name": "CanopyLightEstimate",
+    "schema_sha256": "e009170f6e8eda909bf04cd9e660c265bac324a98695f97cab2c764b0c578754",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "IntercropAssessmentRequest": {
+    "description": "Traceable multi-cell, multi-candidate Phase 7 assessment request.",
+    "module": "app.domain.intercropping",
+    "name": "IntercropAssessmentRequest",
+    "schema_sha256": "291cfeda5b746cf240a2bc6cf00f2ce8ae976eef211f67f0abb15ef7289a106a",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "IntercropCandidateAssessment": {
+    "description": "One candidate-by-cell suitability result with competition and pest penalties.",
+    "module": "app.domain.intercropping",
+    "name": "IntercropCandidateAssessment",
+    "schema_sha256": "d1232341e5be001e327dc7cc4637c4edcc1197a13f27b9d7cf0795f5650e0379",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "IntercropCandidateSnapshot": {
+    "description": "Immutable candidate light and requirement profile snapshot.",
+    "module": "app.domain.intercropping",
+    "name": "IntercropCandidateSnapshot",
+    "schema_sha256": "f41566c423184bb3f4059c59c1b0e4eb3c91b0b7e6d91050c0c3ab5925e35518",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "IntercropCellContext": {
+    "description": "Cell canopy, soil, space, slope, management, and market context for Phase 7.",
+    "module": "app.domain.intercropping",
+    "name": "IntercropCellContext",
+    "schema_sha256": "d4bedba86be070235fb8355039f3cadedd5acb6ca936e83e08e823c1ca9c7ddb",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "IntercropEconomicPotential": {
+    "description": "Gross-revenue scenario or explicit unavailable state.",
+    "module": "app.domain.intercropping",
+    "name": "IntercropEconomicPotential",
+    "schema_sha256": "e46d949fdfc7c9b3dfe11d901d5164a3234e17127ddf717ca96904a33943bf8b",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "IntercropEngineOutput": {
+    "description": "Complete Phase 7 intercropping potential run.",
+    "module": "app.domain.intercropping",
+    "name": "IntercropEngineOutput",
+    "schema_sha256": "eb2f5673526d494a41f4515f3f656d8b567b7acdc3b0a5d485312f8f717691ac",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "IntercropEngineSummary": {
+    "description": "Cross-cell summary and best candidate map.",
+    "module": "app.domain.intercropping",
+    "name": "IntercropEngineSummary",
+    "schema_sha256": "f35bffa73663cd9dd082526b6d14487cc4e8b3bc1f958580fb8cd0ebc2187f6d",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "SuitabilityComponent": {
+    "description": "One decomposable weighted component of an intercropping score.",
+    "module": "app.domain.intercropping",
+    "name": "SuitabilityComponent",
+    "schema_sha256": "14dd7ed6131db1c6da3ef9e3f262d86424d662c26da1cb90e51e912e4d211681",
+    "schema_version": "3.0.0-draft.10"
+  }
+}

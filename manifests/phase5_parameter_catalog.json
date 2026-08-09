@@ -1,0 +1,68 @@
+{
+  "descriptor": {
+    "confidence": "low",
+    "domain": "Bayesian palm-state transitions and observation likelihoods",
+    "limitations": [
+      "Development priors and monthly transitions require longitudinal farm calibration.",
+      "Evidence likelihood widths are transparent assumptions pending expert validation."
+    ],
+    "parameter_count": 10,
+    "parameter_set_id": "v3.bayesian_farm_state",
+    "source_references": [],
+    "status": "experimental_phase_5",
+    "values_sha256": "b7118d7cb05256f5d6094b028ed192729e962af7a8eec3168706d8202703b4a6",
+    "version": "bayesian-farm-state-parameters-1.0.0"
+  },
+  "evidence_reliability": {
+    "expert_confirmed": 1.0,
+    "farmer_reported": 0.35,
+    "field_confirmed": 0.75,
+    "predicted": 0.0,
+    "suspected": 0.0
+  },
+  "state_names": [
+    "young",
+    "healthy_bearing",
+    "aging",
+    "stressed",
+    "infested_or_diseased",
+    "rehabilitating",
+    "dead"
+  ],
+  "values": {
+    "default_particle_count": 1000,
+    "evidence_reliability": {
+      "expert_confirmed": 1.0,
+      "farmer_reported": 0.35,
+      "field_confirmed": 0.75,
+      "predicted": 0.0,
+      "suspected": 0.0
+    },
+    "maximum_particle_count": 5000,
+    "prior_annual_mortality_rate": {
+      "alpha": 1.5,
+      "beta": 98.5
+    },
+    "prior_pest_loss_fraction": {
+      "alpha": 2.0,
+      "beta": 8.0
+    },
+    "prior_pest_sensitivity": {
+      "alpha": 3.0,
+      "beta": 7.0
+    },
+    "prior_rehabilitation_success": {
+      "alpha": 7.0,
+      "beta": 3.0
+    },
+    "prior_soil_recovery_rate": {
+      "alpha": 5.0,
+      "beta": 5.0
+    },
+    "prior_weather_sensitivity": {
+      "alpha": 3.5,
+      "beta": 6.5
+    },
+    "resampling_ess_fraction": 0.75
+  }
+}

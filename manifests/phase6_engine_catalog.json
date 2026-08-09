@@ -1,0 +1,22 @@
+{
+  "availability": "available",
+  "dependencies": [
+    "v3.weather_assimilation",
+    "v3.production",
+    "v3.bayesian",
+    "pest_profile_registry"
+  ],
+  "deterministic_with_seed": false,
+  "engine_id": "v3.pest_inference",
+  "input_contract": "PestAssessmentRequest",
+  "limitations": [
+    "Qualitative PCA rules require calibrated likelihood ratios and local prevalence data",
+    "Output indicates outbreak plausibility and inspection priority, not confirmed diagnosis",
+    "Expected losses across pests overlap and are not independent additive realized losses",
+    "Only PCA-supported management text is returned; chemical dosage is intentionally excluded"
+  ],
+  "maturity": "experimental",
+  "name": "PCA Pest-Specific Risk Inference Engine",
+  "output_contract": "PestEngineOutput",
+  "version": "1.0.0"
+}

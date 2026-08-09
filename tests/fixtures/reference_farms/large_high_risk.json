@@ -1,0 +1,103 @@
+{
+  "name": "Reference Farm C - Large High Risk",
+  "location": {
+    "region": "Region XII",
+    "province": "South Cotabato",
+    "municipality": "Tupi",
+    "barangay": "Palian",
+    "latitude": 6.334,
+    "longitude": 124.952,
+    "polygon": [
+      [
+        6.316,
+        124.934
+      ],
+      [
+        6.352,
+        124.934
+      ],
+      [
+        6.352,
+        124.97
+      ],
+      [
+        6.316,
+        124.97
+      ]
+    ]
+  },
+  "area_hectares": 8.0,
+  "trees": {
+    "total_trees": 800,
+    "young": 80,
+    "productive": 300,
+    "aging": 180,
+    "stressed": 110,
+    "infested": 70,
+    "recovering": 20,
+    "dead": 40,
+    "average_age_years": 43,
+    "variety": "Hybrid"
+  },
+  "production": {
+    "annual_production_tons": 17.0,
+    "yield_tons_per_hectare": 2.125,
+    "copra_weight_kg": 5300,
+    "nut_count": 42000,
+    "oil_content_percent": 58
+  },
+  "soil_terrain": {
+    "elevation_m": 118,
+    "slope_degrees": 2.0,
+    "soil_ph": 5.3,
+    "nitrogen_index": 0.35,
+    "phosphorus_index": 0.31,
+    "potassium_index": 0.42,
+    "drainage_index": 0.34
+  },
+  "symptoms": {
+    "yellowing": true,
+    "crown_decline": true,
+    "frond_cuts": true,
+    "visible_scale_insects": true,
+    "rhinoceros_beetle_damage": true,
+    "premature_nut_fall": true,
+    "nearby_reports": true,
+    "severity": 3
+  },
+  "management": {
+    "fertilizer_activity": false,
+    "soil_rehabilitation": false,
+    "pest_control": false,
+    "replanting_percent": 0,
+    "monitoring_activity": false,
+    "intervention_burden_score": 0
+  },
+  "events": [
+    {
+      "event_type": "typhoon",
+      "year": 2023,
+      "description": "Severe wind damage and crown injury.",
+      "trees_affected": 190,
+      "production_loss_percent": 22,
+      "evidence_source": "farmer_reported",
+      "confidence": "moderate"
+    },
+    {
+      "event_type": "pest_outbreak",
+      "year": 2025,
+      "description": "Visible scale insects and beetle damage reported.",
+      "trees_affected": 120,
+      "production_loss_percent": 15,
+      "evidence_source": "farmer_reported",
+      "confidence": "moderate"
+    }
+  ],
+  "provenance": {
+    "area_hectares": "farmer_reported",
+    "trees": "farmer_reported",
+    "production": "farmer_reported",
+    "soil_terrain": "estimated",
+    "symptoms": "farmer_reported"
+  }
+}

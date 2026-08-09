@@ -1,0 +1,65 @@
+COCOAID v2.11 baseline regression test
+Captured: 2026-08-03
+Python: Python 3.13.5
+Command: pytest -q
+
+........................................................................ [ 64%]
+.......................................                                  [100%]
+=============================== warnings summary ===============================
+../../../opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463
+  /opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator SimpleImputer from version 1.9.0 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+  https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+    warnings.warn(
+
+../../../opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463
+  /opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator StandardScaler from version 1.9.0 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+  https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+    warnings.warn(
+
+../../../opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463
+  /opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator Pipeline from version 1.9.0 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+  https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+    warnings.warn(
+
+../../../opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463
+  /opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator OneHotEncoder from version 1.9.0 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+  https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+    warnings.warn(
+
+../../../opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463
+  /opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator ColumnTransformer from version 1.9.0 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+  https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+    warnings.warn(
+
+../../../opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463
+  /opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator _BinMapper from version 1.9.0 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+  https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+    warnings.warn(
+
+../../../opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463
+  /opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator HistGradientBoostingRegressor from version 1.9.0 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+  https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+    warnings.warn(
+
+../../../opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463
+  /opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator LabelEncoder from version 1.9.0 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+  https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+    warnings.warn(
+
+../../../opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463
+  /opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator HistGradientBoostingClassifier from version 1.9.0 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+  https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+    warnings.warn(
+
+../../../opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463
+  /opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeRegressor from version 1.9.0 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+  https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+    warnings.warn(
+
+../../../opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463
+  /opt/pyvenv/lib/python3.13/site-packages/sklearn/base.py:463: InconsistentVersionWarning: Trying to unpickle estimator RandomForestRegressor from version 1.9.0 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+  https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+111 passed, 11 warnings in 14.82s

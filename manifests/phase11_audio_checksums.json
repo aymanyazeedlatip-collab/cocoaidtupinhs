@@ -1,0 +1,16 @@
+{
+  "app/static/assets/audio/about.mp3": "617832d1e96b9af590a31a64ad2ad27a0af744bbbf36696f07e8911eaee10690",
+  "app/static/assets/audio/bgm-1.mp3": "4f5f9896c41cc58ebe048c520ca66a52e7598373659637117e5a92b644d512d7",
+  "app/static/assets/audio/database.mp3": "45ecad1110c538230940a63a20f3070eb4b439206ebd3463f93077d99800a495",
+  "app/static/assets/audio/decision-support.mp3": "f0db7114db56440cd26de1be3e67ce347f7fe9b6e990607a613f485b2ac1f20d",
+  "app/static/assets/audio/extreme-weather.mp3": "4f7a5b6404bfe8e535b0986a0abbfeeaa6b2fcddd9266b6b9ac4ce2975b1a005",
+  "app/static/assets/audio/farm-health.mp3": "92c5a6aeb14d25aa6f869ffc53a61e942ce44055bd66f2d4510e0ca348eb0e8a",
+  "app/static/assets/audio/farm-setup.mp3": "bf5723311fd923c8076e130ca1ea3178bd836f2202f1538aae8cc9b5175f8943",
+  "app/static/assets/audio/farm-site-forecast.mp3": "83fc783877f832614c165bb1afde00dd5548096b081003d98cd1557531dc4cf9",
+  "app/static/assets/audio/forecast-complete.mp3": "20f025501de85d175def83b519f9c6e935f3176a693ae7ea91e9d98ebf6b1fcc",
+  "app/static/assets/audio/home.mp3": "9e4ec39089e46471b08dac7e3fce5624d2abb6b7a7e608f1fbd416e8fa1b9ac1",
+  "app/static/assets/audio/intercropping.mp3": "bc592dfb9314e7f674e149934db58765e9ce67455dacf9078be23cfcce2e04c6",
+  "app/static/assets/audio/pest-risk.mp3": "64dfeeef26fe1fc1a2866623f849a346c25c17a7ba3e8da5ebb0980647039cb6",
+  "app/static/assets/audio/reports.mp3": "96ee8040415cd89b0b48c11ea52e55382af0c154f2ad26bfc4cbbd3021ab5d19",
+  "app/static/assets/audio/weather-gis.mp3": "0ab6de05a65ca4a764fae3f0f46d5265bba203a7d42a778fbfaef8dab5dd6586"
+}

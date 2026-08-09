@@ -1,0 +1,50 @@
+[
+  {
+    "label": "original_application_archive",
+    "original_filename": "COCO-AID-Research-Prototype-v2.11-Navigation-Layout-Fix(3).zip",
+    "size_bytes": 160527042,
+    "sha256": "d347f4ae8d4b9e129c2e1af1f76287f30c4619014bf2f34db9e2875adc6442d1"
+  },
+  {
+    "label": "pca_reference_archive",
+    "original_filename": "PCA-20260802T071715Z-1-001(4).zip",
+    "size_bytes": 24914973,
+    "sha256": "d2ee4a85541429b2a88688e4c2e76a64f3b9960ac0130ce0cfd3196832bd725a"
+  },
+  {
+    "label": "farmer_registry_workbook",
+    "original_filename": "Farmers_Lists_Updated(3).xlsx",
+    "size_bytes": 1077576,
+    "sha256": "7674174cfc5f1ed1a5cfe69bdcd32d9bbb2d84e39bea75b2e3e9ff61f503b0da"
+  },
+  {
+    "label": "rehaul_vision_source",
+    "original_filename": "Pasted markdown(3).md",
+    "size_bytes": 25410,
+    "sha256": "f16561dc9b38e2ee6d0739d2dfc75ebd13b226912dcd06dec2b8b7431021b8ef"
+  },
+  {
+    "label": "brochure_photo_1",
+    "original_filename": "6f19e28c-dd9d-4128-9ab7-027422ae0ade(4).jpg",
+    "size_bytes": 566347,
+    "sha256": "03a6bd2e5dadae8d1379c53a90a33245cdd8824c76c41aa42b113fae9799dfb7"
+  },
+  {
+    "label": "brochure_photo_2",
+    "original_filename": "bc063ae6-63ba-434f-b076-b3e043d70e6d(5).jpg",
+    "size_bytes": 507952,
+    "sha256": "845a2d98ece7f115148771e47064b5f25391cb16d92641ef0e72737355fbfb22"
+  },
+  {
+    "label": "brochure_photo_3",
+    "original_filename": "3fd60aa0-4de5-42c1-b789-0262862f06c9(4).jpg",
+    "size_bytes": 524476,
+    "sha256": "070565c5411402119bb5b033d301e044ff77461383a81b89e117e252e0788a32"
+  },
+  {
+    "label": "brochure_photo_4",
+    "original_filename": "6af87a09-9023-4ec9-8f7f-d5ecf5b69289(5).jpg",
+    "size_bytes": 461039,
+    "sha256": "a1338092bef8d0ff1aee888eb917b8d635d29ced0287feefdaaa276ba29aae6f"
+  }
+]

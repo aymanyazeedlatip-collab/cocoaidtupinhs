@@ -1,0 +1,10 @@
+{
+  "contract_api_version": "3.0.0-draft.7",
+  "endpoints": [
+    "GET /api/v2/intercropping/status",
+    "GET /api/v2/intercropping/candidates",
+    "POST /api/v2/intercropping/assess",
+    "GET /api/v2/intercropping/assessments",
+    "GET /api/v2/intercropping/assessments/{assessment_id}"
+  ]
+}

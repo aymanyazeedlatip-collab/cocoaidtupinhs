@@ -1,0 +1,74 @@
+{
+  "migrations": [
+    {
+      "version": 1,
+      "name": "legacy_v211_schema_baseline",
+      "checksum": "8586c264472e78923f2f1530ff74ca41758596e9c19e60342ee93753aaaf219f",
+      "reversible": true,
+      "destructive_down": true
+    },
+    {
+      "version": 2,
+      "name": "phase2_normalized_data_foundation",
+      "checksum": "edbaafe2f9d4a0bdd8dd545e03943c7b4875edbe51c592ac120f168f71e682c6",
+      "reversible": true,
+      "destructive_down": true
+    },
+    {
+      "version": 3,
+      "name": "phase3_weather_assimilation",
+      "checksum": "b1267f4219559838794a8cc9bbb7cf3dd2a66fa3569bbc9c14892378642af988",
+      "reversible": true,
+      "destructive_down": true
+    },
+    {
+      "version": 4,
+      "name": "phase4_production_engine",
+      "checksum": "5e7ef95a9512b2ea9469943050b328b76fbbc03e0d4cf5796f9130d0663e8eff",
+      "reversible": true,
+      "destructive_down": true
+    },
+    {
+      "version": 5,
+      "name": "phase5_bayesian_farm_state",
+      "checksum": "d4821b990ff9973afc74541bbe674e88aaf200916a230516bcd795e90d25f584",
+      "reversible": true,
+      "destructive_down": true
+    },
+    {
+      "version": 6,
+      "name": "phase6_pest_risk_inference",
+      "checksum": "c77a215a7cfde0f01654a34a085e7005b57f89f583934d7b69b4822467029888",
+      "reversible": true,
+      "destructive_down": true
+    },
+    {
+      "version": 7,
+      "name": "phase7_intercropping_potential",
+      "checksum": "0ed171981e27693a6557fa0ce385dea0f0577019cae7569f4f3379c341ca83f2",
+      "reversible": true,
+      "destructive_down": true
+    },
+    {
+      "version": 8,
+      "name": "phase8_rehabilitation_scenario_optimization",
+      "checksum": "c242c4307773a43729383361494d2e2d29c1e059eafd0f68efa167af69464353",
+      "reversible": true,
+      "destructive_down": true
+    },
+    {
+      "version": 9,
+      "name": "phase9_integrated_decision_support",
+      "checksum": "079426748717bd0b9f9ed1261460eadf171ca1eaea9aa229c4d6d05d242edef7",
+      "reversible": true,
+      "destructive_down": true
+    },
+    {
+      "version": 10,
+      "name": "phase10_coco_pilot_formal_reports",
+      "checksum": "475929a73885bdf3a4f36b7feb68ada08a2d3940950ee8226fda13dce4fe9f3a",
+      "reversible": true,
+      "destructive_down": true
+    }
+  ]
+}

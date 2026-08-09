@@ -1,0 +1,52 @@
+{
+  "artifact": {
+    "filename": "production_model.joblib",
+    "serialized_runtime": {
+      "joblib": null,
+      "scikit-learn": "1.9.0"
+    },
+    "sha256": "a7c3b7182f0496a6ecb96f9f87028325751e2a27db0f5c7e8c83b4219eab95f6"
+  },
+  "available": true,
+  "card": {
+    "data_source_type": "synthetic_reference_based",
+    "metrics": {
+      "mae": 2.2110527564442832,
+      "r2": 0.5177233648063471,
+      "rmse": 3.9669733434255896
+    },
+    "model": "production",
+    "random_seed": 42,
+    "split": "grouped by synthetic farm ID",
+    "statement": "The model learned the relationships encoded in the synthetic reference-based development dataset. Real-world validation remains required.",
+    "test_rows": 640,
+    "training_rows": 2240,
+    "version": "production-synthetic-1.0"
+  },
+  "features": [
+    "farm_area_hectares",
+    "productive_trees",
+    "aging_trees",
+    "stressed_trees",
+    "infested_trees",
+    "recovering_trees",
+    "annual_rainfall_mm",
+    "mean_temperature_c",
+    "relative_humidity_percent",
+    "drought_exposure",
+    "weather_severity",
+    "soil_ph",
+    "nitrogen_index",
+    "phosphorus_index",
+    "potassium_index",
+    "suitability_score",
+    "pest_probability",
+    "variety",
+    "intervention"
+  ],
+  "required_runtime": {
+    "joblib": null,
+    "scikit-learn": "1.9.0"
+  },
+  "version": "production-synthetic-1.0"
+}

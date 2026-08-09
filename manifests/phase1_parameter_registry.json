@@ -1,0 +1,104 @@
+{
+  "parameter_sets": [
+    {
+      "parameter_set_id": "integrated-decision-support-network",
+      "version": "decision-support-parameters-1.0.0",
+      "domain": "Integrated analytical dependency resolution, recommendation prioritization, and traceability",
+      "status": "experimental_phase_9",
+      "values_sha256": "8660c42bcb41d60c828975ee0409e6651b569142110a30925164f6bdaddbd5c3",
+      "parameter_count": 5,
+      "confidence": "moderate",
+      "source_references": [],
+      "limitations": [
+        "The network interprets stored analytical outputs and does not create new field evidence.",
+        "Priority thresholds are transparent development rules pending expert and field validation.",
+        "Recommendations do not replace PCA diagnosis, local cost verification, or farmer consent."
+      ]
+    },
+    {
+      "parameter_set_id": "intercrop-suitability",
+      "version": "intercrop-suitability-parameters-1.0.0",
+      "domain": "Spatial intercropping suitability, canopy light, competition, pest conflict, and economic scaling",
+      "status": "experimental_phase_7",
+      "values_sha256": "ab5d13eb6b3b34168e4488c0dd545601494d5dacbdbc8a7319451ab4c6ddd940",
+      "parameter_count": 15,
+      "confidence": "low",
+      "source_references": [],
+      "limitations": [
+        "PCA brochure directly supports crop light bands and canopy light-transmission table values.",
+        "Non-light candidate requirements and scoring constants are development assumptions pending expert validation.",
+        "Economic profiles represent historical gross revenue, not net profit or guaranteed future income."
+      ]
+    },
+    {
+      "parameter_set_id": "legacy.core",
+      "version": "psa-calibrated-parameters-2.4.1",
+      "domain": "legacy simulation and assessment",
+      "status": "frozen_legacy",
+      "values_sha256": "4d0ee12ee8d5096d3275f74ab7a7389ea8a71c57489584b8f631509dd8aa19fb",
+      "parameter_count": 1,
+      "confidence": "low",
+      "source_references": [],
+      "limitations": [
+        "Legacy parameters are retained for compatibility and shadow comparison.",
+        "Field calibration and parameter-level PCA provenance remain Phase 2 work."
+      ]
+    },
+    {
+      "parameter_set_id": "rehabilitation-scenario-optimization",
+      "version": "rehabilitation-scenario-parameters-1.0.0",
+      "domain": "Evidence-linked rehabilitation actions, cost/labor scenarios, and budget-constrained expected utility",
+      "status": "experimental_phase_8",
+      "values_sha256": "5925fc5e694f1e83203b1d78c15a6efa39eff8ef232e6ee692dcf6c3b46b7d38",
+      "parameter_count": 10,
+      "confidence": "low",
+      "source_references": [],
+      "limitations": [
+        "Cost and labor values are transparent development assumptions and require local validation.",
+        "Production recovery effects are scenario assumptions, not causal field estimates.",
+        "Predicted hazards and inferred pest risk trigger inspection, not automatic damage confirmation or treatment.",
+        "Economic utility uses a development coconut value and gross intercrop revenue where available."
+      ]
+    },
+    {
+      "parameter_set_id": "v3.bayesian_farm_state",
+      "version": "bayesian-farm-state-parameters-1.0.0",
+      "domain": "Bayesian palm-state transitions and observation likelihoods",
+      "status": "experimental_phase_5",
+      "values_sha256": "b7118d7cb05256f5d6094b028ed192729e962af7a8eec3168706d8202703b4a6",
+      "parameter_count": 10,
+      "confidence": "low",
+      "source_references": [],
+      "limitations": [
+        "Development priors and monthly transitions require longitudinal farm calibration.",
+        "Evidence likelihood widths are transparent assumptions pending expert validation."
+      ]
+    },
+    {
+      "parameter_set_id": "v3.contracts",
+      "version": "3.0.0-draft.2",
+      "domain": "units, validation limits, and data-contract semantics",
+      "status": "phase_2_active",
+      "values_sha256": "1517b832dadacd09552c3d9b4376d2513998bfc8e337f1571b034e3496d73343",
+      "parameter_count": 7,
+      "confidence": "high",
+      "source_references": [],
+      "limitations": []
+    },
+    {
+      "parameter_set_id": "v3.pest_inference",
+      "version": "pest-inference-parameters-1.0.0",
+      "domain": "PCA pest-specific evidence inference, spatial pressure, and loss separation",
+      "status": "experimental_phase_6",
+      "values_sha256": "8bbbbd9b316aa7ed174072589da446324e3ad8ff1b663df16b5516059ca0ce25",
+      "parameter_count": 8,
+      "confidence": "low",
+      "source_references": [],
+      "limitations": [
+        "PCA references provide qualitative evidence rules but not calibrated likelihood ratios or farm prevalence priors.",
+        "Likelihood ratios, spatial decay, and severity coefficients are transparent development assumptions pending expert and field calibration.",
+        "The engine produces inspection priority and probabilistic decision support, not laboratory diagnosis."
+      ]
+    }
+  ]
+}

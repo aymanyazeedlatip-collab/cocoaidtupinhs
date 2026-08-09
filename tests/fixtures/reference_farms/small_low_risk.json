@@ -1,0 +1,83 @@
+{
+  "name": "Reference Farm A - Small Low Risk",
+  "location": {
+    "region": "Region XII",
+    "province": "South Cotabato",
+    "municipality": "Tupi",
+    "barangay": "Palian",
+    "latitude": 6.334,
+    "longitude": 124.952,
+    "polygon": [
+      [
+        6.339,
+        124.949
+      ],
+      [
+        6.337,
+        124.949
+      ],
+      [
+        6.337,
+        124.955
+      ],
+      [
+        6.339,
+        124.955
+      ]
+    ]
+  },
+  "area_hectares": 1.2,
+  "trees": {
+    "total_trees": 120,
+    "young": 15,
+    "productive": 78,
+    "aging": 15,
+    "stressed": 5,
+    "infested": 2,
+    "recovering": 3,
+    "dead": 2,
+    "average_age_years": 26,
+    "variety": "Tall"
+  },
+  "production": {
+    "annual_production_tons": 3.8,
+    "yield_tons_per_hectare": 3.17,
+    "copra_weight_kg": 1200,
+    "nut_count": 8700,
+    "oil_content_percent": 62
+  },
+  "soil_terrain": {
+    "elevation_m": 145,
+    "slope_degrees": 3.2,
+    "soil_ph": 6.2,
+    "nitrogen_index": 0.68,
+    "phosphorus_index": 0.61,
+    "potassium_index": 0.72,
+    "drainage_index": 0.82
+  },
+  "symptoms": {
+    "yellowing": false,
+    "crown_decline": false,
+    "frond_cuts": false,
+    "visible_scale_insects": false,
+    "rhinoceros_beetle_damage": false,
+    "premature_nut_fall": false,
+    "nearby_reports": false,
+    "severity": 0
+  },
+  "management": {
+    "fertilizer_activity": true,
+    "soil_rehabilitation": true,
+    "pest_control": false,
+    "replanting_percent": 2,
+    "monitoring_activity": true,
+    "intervention_burden_score": 1.5
+  },
+  "events": [],
+  "provenance": {
+    "area_hectares": "farmer_reported",
+    "trees": "farmer_reported",
+    "production": "farmer_reported",
+    "soil_terrain": "estimated"
+  }
+}

@@ -1,0 +1,31 @@
+# Optional demo-only Blueprint. No persistent disk: saved farms/reports can be lost on restart/redeploy.
+services:
+  - type: web
+    name: cocoaid-backend-demo
+    runtime: python
+    plan: free
+    region: singapore
+    autoDeployTrigger: commit
+    buildCommand: pip install --disable-pip-version-check --prefer-binary -r requirements.deploy.txt
+    startCommand: bash scripts/start_production.sh
+    healthCheckPath: /api/health
+    numInstances: 1
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: AUTO_PHASE_WORKFLOWS
+        value: "true"
+      - key: AUTO_PHASE_POLL_SECONDS
+        value: "90"
+      - key: ALLOW_RUNTIME_API_KEY_CONFIGURATION
+        value: "false"
+      - key: AUTO_SEED_REFERENCE_DATA
+        value: "true"
+      - key: STRICT_MODEL_RUNTIME_COMPATIBILITY
+        value: "true"
+      - key: LOG_LEVEL
+        value: INFO
+      - key: GEMINI_MODEL
+        value: gemini-flash-latest

@@ -1,0 +1,21 @@
+{
+  "availability": "available",
+  "dependencies": [
+    "v3.production",
+    "v3.bayesian",
+    "v3.pest_inference",
+    "v3.intercropping",
+    "v3.rehabilitation"
+  ],
+  "deterministic_with_seed": false,
+  "engine_id": "v3.decision_support",
+  "input_contract": "DecisionSupportRequest",
+  "limitations": [
+    "Consolidates previously computed engine outputs rather than replacing their scientific logic.",
+    "Recommendations require field verification where source evidence is predicted, suspected, or incomplete."
+  ],
+  "maturity": "experimental",
+  "name": "Integrated Decision-Support Network",
+  "output_contract": "DecisionSupportEngineOutput",
+  "version": "1.0.0"
+}

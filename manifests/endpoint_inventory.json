@@ -1,0 +1,474 @@
+[
+  {
+    "method": "GET",
+    "path": "/",
+    "function": "index",
+    "source": "app/main.py",
+    "line": 91,
+    "async": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/analysis/full",
+    "function": "full_analysis_route",
+    "source": "app/api/routes.py",
+    "line": 322,
+    "async": true
+  },
+  {
+    "method": "GET",
+    "path": "/api/analysis/{analysis_id}",
+    "function": "get_analysis_route",
+    "source": "app/api/routes.py",
+    "line": 327,
+    "async": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/assistant/attach-report/{report_id}",
+    "function": "assistant_attach_report_route",
+    "source": "app/api/routes.py",
+    "line": 423,
+    "async": true
+  },
+  {
+    "method": "POST",
+    "path": "/api/assistant/chat",
+    "function": "assistant_chat_route",
+    "source": "app/api/routes.py",
+    "line": 433,
+    "async": true
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/assistant/configure",
+    "function": "assistant_clear_route",
+    "source": "app/api/routes.py",
+    "line": 397,
+    "async": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/assistant/configure",
+    "function": "assistant_configure_route",
+    "source": "app/api/routes.py",
+    "line": 388,
+    "async": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/assistant/status",
+    "function": "assistant_status_route",
+    "source": "app/api/routes.py",
+    "line": 383,
+    "async": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/assistant/upload-document",
+    "function": "assistant_upload_document_route",
+    "source": "app/api/routes.py",
+    "line": 403,
+    "async": true
+  },
+  {
+    "method": "POST",
+    "path": "/api/climate/generate-trajectory",
+    "function": "climate_trajectory_route",
+    "source": "app/api/routes.py",
+    "line": 246,
+    "async": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/climate/projection",
+    "function": "climate_projection_route",
+    "source": "app/api/routes.py",
+    "line": 238,
+    "async": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/config",
+    "function": "config",
+    "source": "app/api/routes.py",
+    "line": 57,
+    "async": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/database/analyses",
+    "function": "database_analyses_route",
+    "source": "app/api/routes.py",
+    "line": 340,
+    "async": false
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/database/analyses/{analysis_id}",
+    "function": "database_delete_analysis_route",
+    "source": "app/api/routes.py",
+    "line": 345,
+    "async": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/database/forecasts",
+    "function": "database_forecasts_route",
+    "source": "app/api/routes.py",
+    "line": 363,
+    "async": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/database/forecasts",
+    "function": "database_save_forecast_route",
+    "source": "app/api/routes.py",
+    "line": 357,
+    "async": false
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/database/forecasts/{forecast_id}",
+    "function": "database_delete_forecast_route",
+    "source": "app/api/routes.py",
+    "line": 376,
+    "async": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/database/forecasts/{forecast_id}",
+    "function": "database_forecast_route",
+    "source": "app/api/routes.py",
+    "line": 368,
+    "async": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/database/reports",
+    "function": "database_reports_route",
+    "source": "app/api/routes.py",
+    "line": 352,
+    "async": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/database/summary",
+    "function": "database_summary_route",
+    "source": "app/api/routes.py",
+    "line": 335,
+    "async": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/farm-assessment",
+    "function": "farm_assessment_route",
+    "source": "app/api/routes.py",
+    "line": 251,
+    "async": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/farm-site/forecast",
+    "function": "farm_site_forecast_route",
+    "source": "app/api/routes.py",
+    "line": 278,
+    "async": true
+  },
+  {
+    "method": "GET",
+    "path": "/api/farms",
+    "function": "list_farms_route",
+    "source": "app/api/routes.py",
+    "line": 119,
+    "async": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/farms",
+    "function": "create_farm_route",
+    "source": "app/api/routes.py",
+    "line": 114,
+    "async": false
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/farms/{farm_id}",
+    "function": "delete_farm_route",
+    "source": "app/api/routes.py",
+    "line": 140,
+    "async": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/farms/{farm_id}",
+    "function": "get_farm_route",
+    "source": "app/api/routes.py",
+    "line": 124,
+    "async": false
+  },
+  {
+    "method": "PUT",
+    "path": "/api/farms/{farm_id}",
+    "function": "update_farm_route",
+    "source": "app/api/routes.py",
+    "line": 132,
+    "async": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/geocode/search",
+    "function": "weather_geocode_alias",
+    "source": "app/api/routes.py",
+    "line": 194,
+    "async": true
+  },
+  {
+    "method": "GET",
+    "path": "/api/health",
+    "function": "health",
+    "source": "app/api/routes.py",
+    "line": 48,
+    "async": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/models",
+    "function": "models",
+    "source": "app/api/routes.py",
+    "line": 101,
+    "async": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/models/{model_name}",
+    "function": "model",
+    "source": "app/api/routes.py",
+    "line": 106,
+    "async": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/official-data/profile",
+    "function": "official_data_profile",
+    "source": "app/api/routes.py",
+    "line": 96,
+    "async": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/official-data/provinces",
+    "function": "official_data_provinces",
+    "source": "app/api/routes.py",
+    "line": 91,
+    "async": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/official-data/summary",
+    "function": "official_data_summary",
+    "source": "app/api/routes.py",
+    "line": 86,
+    "async": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/pest-risk/evaluate",
+    "function": "pest_risk_route",
+    "source": "app/api/routes.py",
+    "line": 256,
+    "async": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/pest-risk/specific",
+    "function": "pest_specific_route",
+    "source": "app/api/routes.py",
+    "line": 261,
+    "async": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/radar/frames",
+    "function": "radar_frames_alias",
+    "source": "app/api/routes.py",
+    "line": 199,
+    "async": true
+  },
+  {
+    "method": "POST",
+    "path": "/api/rehabilitation-map",
+    "function": "rehab_map_route",
+    "source": "app/api/routes.py",
+    "line": 312,
+    "async": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/rehabilitation-plan",
+    "function": "rehab_plan_route",
+    "source": "app/api/routes.py",
+    "line": 317,
+    "async": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/reports/generate",
+    "function": "generate_report_route",
+    "source": "app/api/routes.py",
+    "line": 453,
+    "async": true
+  },
+  {
+    "method": "GET",
+    "path": "/api/reports/{report_id}",
+    "function": "report_download",
+    "source": "app/api/routes.py",
+    "line": 476,
+    "async": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/scenarios/compare",
+    "function": "compare_route",
+    "source": "app/api/routes.py",
+    "line": 307,
+    "async": true
+  },
+  {
+    "method": "POST",
+    "path": "/api/simulation/run",
+    "function": "simulation_route",
+    "source": "app/api/routes.py",
+    "line": 271,
+    "async": true
+  },
+  {
+    "method": "GET",
+    "path": "/api/sources",
+    "function": "sources",
+    "source": "app/api/routes.py",
+    "line": 71,
+    "async": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/storms/active",
+    "function": "storms_alias",
+    "source": "app/api/routes.py",
+    "line": 204,
+    "async": true
+  },
+  {
+    "method": "POST",
+    "path": "/api/suitability/evaluate",
+    "function": "suitability_route",
+    "source": "app/api/routes.py",
+    "line": 266,
+    "async": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/warnings/philippines",
+    "function": "warnings_alias",
+    "source": "app/api/routes.py",
+    "line": 209,
+    "async": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/weather/cube",
+    "function": "weather_cube_route",
+    "source": "app/api/routes.py",
+    "line": 180,
+    "async": true
+  },
+  {
+    "method": "POST",
+    "path": "/api/weather/frame",
+    "function": "weather_frame_route",
+    "source": "app/api/routes.py",
+    "line": 160,
+    "async": true
+  },
+  {
+    "method": "GET",
+    "path": "/api/weather/geocode",
+    "function": "weather_geocode",
+    "source": "app/api/routes.py",
+    "line": 214,
+    "async": true
+  },
+  {
+    "method": "POST",
+    "path": "/api/weather/grid",
+    "function": "weather_grid_route",
+    "source": "app/api/routes.py",
+    "line": 152,
+    "async": true
+  },
+  {
+    "method": "GET",
+    "path": "/api/weather/point",
+    "function": "weather_point_get",
+    "source": "app/api/routes.py",
+    "line": 189,
+    "async": true
+  },
+  {
+    "method": "POST",
+    "path": "/api/weather/point",
+    "function": "weather_point",
+    "source": "app/api/routes.py",
+    "line": 147,
+    "async": true
+  },
+  {
+    "method": "GET",
+    "path": "/api/weather/radar/frames",
+    "function": "weather_radar_frames",
+    "source": "app/api/routes.py",
+    "line": 219,
+    "async": true
+  },
+  {
+    "method": "GET",
+    "path": "/api/weather/storms",
+    "function": "weather_storms",
+    "source": "app/api/routes.py",
+    "line": 224,
+    "async": true
+  },
+  {
+    "method": "GET",
+    "path": "/api/weather/warnings",
+    "function": "weather_warnings",
+    "source": "app/api/routes.py",
+    "line": 229,
+    "async": false
+  },
+  {
+    "method": "GET",
+    "path": "/favicon.ico",
+    "function": "favicon",
+    "source": "app/main.py",
+    "line": 101,
+    "async": false
+  },
+  {
+    "method": "GET",
+    "path": "/weather-viewer",
+    "function": "weather_viewer",
+    "source": "app/main.py",
+    "line": 96,
+    "async": false
+  },
+  {
+    "method": "GET",
+    "path": "/{path:path}",
+    "function": "static_fallback",
+    "source": "app/main.py",
+    "line": 106,
+    "async": false
+  }
+]

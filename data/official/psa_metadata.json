@@ -1,0 +1,17 @@
+{
+  "title": "Non-Food and Industrial Crops: Volume of Production, by Region, Province, Quarter, and Semester, 2010-2026",
+  "source": "Philippine Statistics Authority (PSA)",
+  "source_workbook": "COCONUT PRODUCTION, ALL PROVINCES 2010-2026.xlsx",
+  "table_code": "2E4EVCP1",
+  "unit": "metric tons",
+  "latest_update": "2026-06-04",
+  "coverage": "2010-2026",
+  "products": {
+    "coconut_w_husk": "Coconut (w/ husk)",
+    "coconut_mature": "Coconut Mature",
+    "coconut_young": "Coconut Young"
+  },
+  "official_note": "Final data through Quarter 4, Semester 2, and Annual 2025; preliminary Quarter 1 2026.",
+  "gap_method": "Unavailable cells are estimated from location-specific seasonal shares and annual interpolation/extrapolation. Estimated cells are tagged estimated_gap and are not represented as official observations.",
+  "provinces": 88
+}

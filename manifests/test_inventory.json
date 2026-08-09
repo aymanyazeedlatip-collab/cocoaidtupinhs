@@ -1,0 +1,267 @@
+{
+  "file_count": 25,
+  "test_function_count": 111,
+  "files": [
+    {
+      "path": "tests/integration/test_api.py",
+      "test_count": 14,
+      "tests": [
+        "test_climate_and_rehab_endpoints",
+        "test_database_rejects_oversized_forecast_timeline",
+        "test_docx_report_and_supplemental_weekly_outlook",
+        "test_embedded_weather_viewer_and_hybrid_farm_site_endpoint",
+        "test_farm_crud",
+        "test_full_analysis_and_report_generation",
+        "test_health_and_config",
+        "test_invalid_tree_totals_are_rejected",
+        "test_official_data_and_database_forecast_endpoints",
+        "test_offline_mode_blocks_live_weather_but_keeps_core_analysis",
+        "test_pest_suitability_and_simulation_endpoints",
+        "test_scenario_comparison_contract_is_compact",
+        "test_static_fallback_does_not_expose_files_outside_static",
+        "test_unknown_model_returns_404"
+      ]
+    },
+    {
+      "path": "tests/integration/test_v21_api.py",
+      "test_count": 3,
+      "tests": [
+        "test_frontend_contains_smooth_heatmap_health_donuts_and_hazard_dates",
+        "test_pest_specific_endpoint_returns_flash_card_contract",
+        "test_rich_pdf_and_docx_reports_include_new_sections_and_valid_assets"
+      ]
+    },
+    {
+      "path": "tests/mathematical/test_bayes.py",
+      "test_count": 4,
+      "tests": [
+        "test_beta_posterior_update",
+        "test_hand_calculated_bayes_example",
+        "test_likelihood_ratio_combination",
+        "test_odds_roundtrip"
+      ]
+    },
+    {
+      "path": "tests/mathematical/test_state.py",
+      "test_count": 3,
+      "tests": [
+        "test_replanting_maturity_is_delayed",
+        "test_state_conservation_and_nonnegative_counts",
+        "test_transition_rows_sum_to_one"
+      ]
+    },
+    {
+      "path": "tests/mathematical/test_suitability.py",
+      "test_count": 2,
+      "tests": [
+        "test_membership_bounds",
+        "test_suitability_is_bounded"
+      ]
+    },
+    {
+      "path": "tests/unit/test_audit_regressions.py",
+      "test_count": 12,
+      "tests": [
+        "test_climate_bounds_move_all_temperature_fields_and_sample_is_reproducible",
+        "test_far_climate_reference_is_disclosed",
+        "test_farm_assessment_reports_area_and_yield_inconsistency",
+        "test_frontend_uses_backend_results_and_has_required_workflow_sections",
+        "test_pdf_handles_markup_in_user_values",
+        "test_polygon_rejects_one_or_two_vertices",
+        "test_polygonless_rehabilitation_bounds_approximately_match_entered_area",
+        "test_rehabilitation_grid_does_not_invent_spatial_variation_and_excludes_outside_cells",
+        "test_scenario_response_is_compact_and_has_recommended_simulation",
+        "test_typhoon_proxy_is_not_artificially_changed_by_ssp",
+        "test_weather_grid_cache_key_includes_variables",
+        "test_weather_integrated_frontend_has_unique_and_resolved_ids"
+      ]
+    },
+    {
+      "path": "tests/unit/test_climate.py",
+      "test_count": 3,
+      "tests": [
+        "test_climate_projection_has_12_months",
+        "test_climate_scenario_changes_temperature_anomaly",
+        "test_trajectory_seed_reproducibility"
+      ]
+    },
+    {
+      "path": "tests/unit/test_data.py",
+      "test_count": 2,
+      "tests": [
+        "test_dataset_schema_and_constraints",
+        "test_generator_is_reproducible"
+      ]
+    },
+    {
+      "path": "tests/unit/test_farm_site_forecast.py",
+      "test_count": 5,
+      "tests": [
+        "test_farm_site_forecast_starts_on_selected_date_and_switches_data_modes",
+        "test_full_year_three_product_totals_match_annual_state_and_partial_year_is_labeled",
+        "test_live_cube_is_aggregated_to_manila_days_and_retains_spatial_grid",
+        "test_start_date_must_match_start_year",
+        "test_weekly_three_product_equivalents_do_not_claim_exact_harvest"
+      ]
+    },
+    {
+      "path": "tests/unit/test_models.py",
+      "test_count": 2,
+      "tests": [
+        "test_artifacts_load",
+        "test_prediction_shapes_and_probability_bounds"
+      ]
+    },
+    {
+      "path": "tests/unit/test_official_production.py",
+      "test_count": 4,
+      "tests": [
+        "test_mature_and_young_conserve_with_husk_reference",
+        "test_psa_metadata_and_province_catalog_are_available",
+        "test_south_cotabato_has_three_product_history_and_provenance",
+        "test_unknown_province_falls_back_without_claiming_province_data"
+      ]
+    },
+    {
+      "path": "tests/unit/test_simulation.py",
+      "test_count": 4,
+      "tests": [
+        "test_pest_pressure_reduces_formula_outcomes_statistically",
+        "test_scenario_comparison_has_six_strategies_and_utility",
+        "test_simulation_reproducibility_and_percentiles",
+        "test_weather_events_affect_productivity"
+      ]
+    },
+    {
+      "path": "tests/unit/test_v210_audio_navigation.py",
+      "test_count": 5,
+      "tests": [
+        "test_music_starts_on_preview_at_constant_ten_percent",
+        "test_remaining_audio_assets_are_bundled_and_served",
+        "test_settings_voice_removed_and_drawer_scroll_is_contained",
+        "test_sidebar_collapse_and_brand_cleanup_contract",
+        "test_v210_version_and_light_preview_contract"
+      ]
+    },
+    {
+      "path": "tests/unit/test_v211_sidebar_refinement.py",
+      "test_count": 4,
+      "tests": [
+        "test_background_refits_and_maps_resize_after_sidebar_transition",
+        "test_expanded_nav_labels_use_available_width",
+        "test_sidebar_has_smooth_transition_and_arrow_motion",
+        "test_v211_version"
+      ]
+    },
+    {
+      "path": "tests/unit/test_v21_features.py",
+      "test_count": 4,
+      "tests": [
+        "test_hazard_loss_increases_with_severity_for_same_duration_and_type",
+        "test_pest_specific_scores_are_bounded_and_symptoms_raise_matching_risk",
+        "test_poor_farm_condition_increases_pest_specific_pressure",
+        "test_weather_response_changes_mature_and_young_shares_but_conserves_total"
+      ]
+    },
+    {
+      "path": "tests/unit/test_v223_bugfix.py",
+      "test_count": 5,
+      "tests": [
+        "test_422_response_is_human_readable_instead_of_object_object",
+        "test_climate_projection_wind_is_removed_but_weather_gis_wind_remains",
+        "test_farm_site_schema_accepts_legacy_5000_run_setting",
+        "test_frontend_normalizes_stale_settings_and_blocks_duplicate_forecast_requests",
+        "test_weather_grid_preserves_provider_elevation_for_terrain_flow"
+      ]
+    },
+    {
+      "path": "tests/unit/test_v22_features.py",
+      "test_count": 5,
+      "tests": [
+        "test_daily_visual_frames_cover_every_calendar_date_and_link_to_weekly_controls",
+        "test_frontend_contract_has_daily_playback_split_charts_floating_weather_and_flip_cards",
+        "test_pest_cards_use_real_photos_with_credits_and_offline_fallbacks",
+        "test_product_series_have_distinct_weather_responses_and_conserve_husk_total",
+        "test_weather_viewer_interpolates_every_forecast_layer_and_has_visible_wind_canvas"
+      ]
+    },
+    {
+      "path": "tests/unit/test_v23_features.py",
+      "test_count": 6,
+      "tests": [
+        "test_assistant_can_extract_uploaded_pdf",
+        "test_coco_pilot_key_configuration_and_mocked_chat",
+        "test_draw_tutorial_and_rehab_map_framing_contract",
+        "test_health_version_and_playback_contract",
+        "test_pdf_contains_farm_location_shape_section",
+        "test_weather_viewer_is_one_shared_iframe_between_home_and_popup"
+      ]
+    },
+    {
+      "path": "tests/unit/test_v241_assistant_reliability.py",
+      "test_count": 5,
+      "tests": [
+        "test_assistant_continues_max_token_response",
+        "test_assistant_provider_failure_returns_503_not_internal_500",
+        "test_assistant_retries_provider_500_and_returns_clear_answer",
+        "test_assistant_ui_has_loading_dots_and_rehabilitation_arrows",
+        "test_project_has_no_explicit_gemini_35_reference"
+      ]
+    },
+    {
+      "path": "tests/unit/test_v24_rehabilitation.py",
+      "test_count": 5,
+      "tests": [
+        "test_automatic_flash_model_fallback",
+        "test_event_rehabilitation_plan_has_dates_heatmap_and_three_classes",
+        "test_frontend_rehabilitation_heatmap_and_ai_contract",
+        "test_moderate_loss_event_creates_inspection_zones_not_false_all_green",
+        "test_multiple_hazards_generate_multiple_rehabilitation_maps"
+      ]
+    },
+    {
+      "path": "tests/unit/test_v25_ui.py",
+      "test_count": 3,
+      "tests": [
+        "test_final_ui_has_wordmark_farm_background_about_page_and_loading_experience",
+        "test_v25_version_and_brand_assets_exist",
+        "test_weather_viewer_uses_same_brand_identity"
+      ]
+    },
+    {
+      "path": "tests/unit/test_v26_liquid_glass.py",
+      "test_count": 3,
+      "tests": [
+        "test_liquid_glass_skin_preserves_main_structure_and_repairs_pest_panel",
+        "test_v26_version_and_official_tool_icons",
+        "test_weather_gis_uses_official_icon_and_liquid_glass_skin"
+      ]
+    },
+    {
+      "path": "tests/unit/test_v27_refinements.py",
+      "test_count": 4,
+      "tests": [
+        "test_climate_map_fits_farm_polygon_once",
+        "test_loading_screen_is_minimal_and_accessible",
+        "test_priority_cells_and_formula_catalog_layout",
+        "test_version_and_extreme_weather_navigation_contract"
+      ]
+    },
+    {
+      "path": "tests/unit/test_v28_official_branding.py",
+      "test_count": 2,
+      "tests": [
+        "test_official_branding_is_used_across_interfaces",
+        "test_v28_version_and_official_brand_assets"
+      ]
+    },
+    {
+      "path": "tests/unit/test_weather.py",
+      "test_count": 2,
+      "tests": [
+        "test_gdacs_parser_filters_tropical_cyclones",
+        "test_weather_grid_validation"
+      ]
+    }
+  ]
+}

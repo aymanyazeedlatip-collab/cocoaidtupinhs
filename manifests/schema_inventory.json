@@ -1,0 +1,515 @@
+{
+  "app/schemas/analysis.py": [
+    {
+      "class": "PestRiskRequest",
+      "line": 17,
+      "fields": [
+        "prior_probability",
+        "symptoms",
+        "humidity_percent",
+        "rainfall_mm_month",
+        "average_tree_age",
+        "confirmed_positive_reports",
+        "confirmed_negative_reports"
+      ],
+      "methods": []
+    },
+    {
+      "class": "PestSpecificRequest",
+      "line": 29,
+      "fields": [
+        "farm",
+        "temperature_c",
+        "humidity_percent",
+        "rainfall_mm_week",
+        "wind_speed_kmh",
+        "farm_condition_score"
+      ],
+      "methods": []
+    },
+    {
+      "class": "SuitabilityRequest",
+      "line": 38,
+      "fields": [
+        "soil_terrain",
+        "annual_rainfall_mm",
+        "mean_temperature_c",
+        "humidity_percent",
+        "drought_exposure",
+        "climate_stress"
+      ],
+      "methods": []
+    },
+    {
+      "class": "ClimateProjectionRequest",
+      "line": 47,
+      "fields": [
+        "latitude",
+        "longitude",
+        "scenario",
+        "period",
+        "model_mode"
+      ],
+      "methods": []
+    },
+    {
+      "class": "ClimateTrajectoryRequest",
+      "line": 55,
+      "fields": [
+        "latitude",
+        "longitude",
+        "start_year",
+        "end_year",
+        "scenario",
+        "seed"
+      ],
+      "methods": [
+        "valid_years"
+      ]
+    },
+    {
+      "class": "SimulationRequest",
+      "line": 70,
+      "fields": [
+        "farm",
+        "start_year",
+        "end_year",
+        "scenario",
+        "intervention",
+        "runs",
+        "seed",
+        "recovery_threshold_ratio",
+        "severe_loss_threshold_ratio"
+      ],
+      "methods": [
+        "valid_years"
+      ]
+    },
+    {
+      "class": "ScenarioComparisonRequest",
+      "line": 88,
+      "fields": [
+        "farm",
+        "start_year",
+        "end_year",
+        "scenario",
+        "runs",
+        "seed",
+        "recovery_threshold_ratio",
+        "severe_loss_threshold_ratio"
+      ],
+      "methods": [
+        "valid_years"
+      ]
+    },
+    {
+      "class": "FarmSiteForecastRequest",
+      "line": 105,
+      "fields": [
+        "farm",
+        "start_year",
+        "end_year",
+        "start_date",
+        "scenario",
+        "intervention",
+        "runs",
+        "seed",
+        "include_live_short_term",
+        "recovery_threshold_ratio",
+        "severe_loss_threshold_ratio"
+      ],
+      "methods": [
+        "valid_years"
+      ]
+    },
+    {
+      "class": "RehabilitationHazardInput",
+      "line": 130,
+      "fields": [
+        "event_type",
+        "label",
+        "start_date",
+        "end_date",
+        "peak_severity",
+        "estimated_production_loss_tons",
+        "loss_percent_of_event_baseline",
+        "estimated_trees_affected",
+        "data_mode",
+        "confidence"
+      ],
+      "methods": [
+        "valid_dates"
+      ]
+    },
+    {
+      "class": "RehabilitationPlanRequest",
+      "line": 149,
+      "fields": [
+        "farm",
+        "hazards",
+        "rows",
+        "cols",
+        "assessment_delay_days",
+        "rehabilitation_delay_days"
+      ],
+      "methods": []
+    },
+    {
+      "class": "FullAnalysisRequest",
+      "line": 158,
+      "fields": [
+        "farm",
+        "scenario",
+        "period",
+        "end_year",
+        "runs",
+        "seed",
+        "recovery_threshold_ratio",
+        "severe_loss_threshold_ratio"
+      ],
+      "methods": []
+    },
+    {
+      "class": "AnalysisRecord",
+      "line": 169,
+      "fields": [
+        "id",
+        "created_at",
+        "input",
+        "result",
+        "metadata"
+      ],
+      "methods": []
+    },
+    {
+      "class": "ReportRequest",
+      "line": 177,
+      "fields": [
+        "analysis_id",
+        "analysis",
+        "report_format"
+      ],
+      "methods": [
+        "require_source"
+      ]
+    },
+    {
+      "class": "ForecastSaveRequest",
+      "line": 189,
+      "fields": [
+        "name",
+        "farm_id",
+        "forecast_id",
+        "summary",
+        "forecast"
+      ],
+      "methods": [
+        "validate_forecast_payload"
+      ]
+    }
+  ],
+  "app/schemas/assistant.py": [
+    {
+      "class": "AssistantMessage",
+      "line": 8,
+      "fields": [
+        "role",
+        "content"
+      ],
+      "methods": []
+    },
+    {
+      "class": "AssistantChatRequest",
+      "line": 13,
+      "fields": [
+        "message",
+        "history",
+        "context",
+        "document_ids"
+      ],
+      "methods": []
+    },
+    {
+      "class": "AssistantKeyRequest",
+      "line": 20,
+      "fields": [
+        "api_key"
+      ],
+      "methods": []
+    }
+  ],
+  "app/schemas/common.py": [
+    {
+      "class": "AnalysisMetadata",
+      "line": 13,
+      "fields": [
+        "calculation_version",
+        "model_versions",
+        "parameter_version",
+        "data_source_type",
+        "random_seed",
+        "simulation_count",
+        "retrieved_at",
+        "valid_period",
+        "warnings",
+        "limitations"
+      ],
+      "methods": []
+    },
+    {
+      "class": "SourceMetadata",
+      "line": 26,
+      "fields": [
+        "source",
+        "source_type",
+        "retrieved_at",
+        "observed_at",
+        "forecast_valid_at",
+        "model_run_at",
+        "units",
+        "is_stale",
+        "limitations",
+        "attribution"
+      ],
+      "methods": []
+    },
+    {
+      "class": "ApiMessage",
+      "line": 39,
+      "fields": [
+        "message",
+        "details"
+      ],
+      "methods": []
+    }
+  ],
+  "app/schemas/farm.py": [
+    {
+      "class": "FarmLocation",
+      "line": 11,
+      "fields": [
+        "region",
+        "province",
+        "municipality",
+        "barangay",
+        "latitude",
+        "longitude",
+        "polygon"
+      ],
+      "methods": [
+        "validate_polygon"
+      ]
+    },
+    {
+      "class": "TreeStateInput",
+      "line": 35,
+      "fields": [
+        "total_trees",
+        "young",
+        "productive",
+        "aging",
+        "stressed",
+        "infested",
+        "recovering",
+        "dead",
+        "average_age_years",
+        "variety"
+      ],
+      "methods": [
+        "validate_counts"
+      ]
+    },
+    {
+      "class": "ProductionInput",
+      "line": 55,
+      "fields": [
+        "annual_production_tons",
+        "yield_tons_per_hectare",
+        "copra_weight_kg",
+        "nut_count",
+        "oil_content_percent"
+      ],
+      "methods": []
+    },
+    {
+      "class": "SoilTerrainInput",
+      "line": 63,
+      "fields": [
+        "elevation_m",
+        "slope_degrees",
+        "soil_ph",
+        "nitrogen_index",
+        "phosphorus_index",
+        "potassium_index",
+        "drainage_index"
+      ],
+      "methods": []
+    },
+    {
+      "class": "SymptomInput",
+      "line": 73,
+      "fields": [
+        "yellowing",
+        "crown_decline",
+        "frond_cuts",
+        "visible_scale_insects",
+        "rhinoceros_beetle_damage",
+        "premature_nut_fall",
+        "nearby_reports",
+        "severity"
+      ],
+      "methods": []
+    },
+    {
+      "class": "ManagementInput",
+      "line": 84,
+      "fields": [
+        "fertilizer_activity",
+        "soil_rehabilitation",
+        "pest_control",
+        "replanting_percent",
+        "monitoring_activity",
+        "intervention_burden_score"
+      ],
+      "methods": []
+    },
+    {
+      "class": "HistoricalEvent",
+      "line": 93,
+      "fields": [
+        "event_type",
+        "year",
+        "description",
+        "trees_affected",
+        "production_loss_percent",
+        "evidence_source",
+        "confidence"
+      ],
+      "methods": []
+    },
+    {
+      "class": "FarmCreate",
+      "line": 106,
+      "fields": [
+        "name",
+        "location",
+        "area_hectares",
+        "trees",
+        "production",
+        "soil_terrain",
+        "symptoms",
+        "management",
+        "events",
+        "provenance"
+      ],
+      "methods": []
+    },
+    {
+      "class": "FarmRecord",
+      "line": 119,
+      "fields": [
+        "id",
+        "created_at",
+        "updated_at"
+      ],
+      "methods": []
+    },
+    {
+      "class": "FarmPatch",
+      "line": 125,
+      "fields": [],
+      "methods": []
+    }
+  ],
+  "app/schemas/weather.py": [
+    {
+      "class": "WeatherPointRequest",
+      "line": 14,
+      "fields": [
+        "latitude",
+        "longitude",
+        "model"
+      ],
+      "methods": []
+    },
+    {
+      "class": "WeatherGridRequest",
+      "line": 20,
+      "fields": [
+        "west",
+        "south",
+        "east",
+        "north",
+        "rows",
+        "cols",
+        "variables",
+        "forecast_hours",
+        "model"
+      ],
+      "methods": [
+        "variables_supported",
+        "bbox_valid"
+      ]
+    },
+    {
+      "class": "WeatherFrameRequest",
+      "line": 47,
+      "fields": [
+        "west",
+        "south",
+        "east",
+        "north",
+        "rows",
+        "cols",
+        "variables",
+        "hour_index",
+        "model"
+      ],
+      "methods": [
+        "variables_supported",
+        "bbox_valid"
+      ]
+    },
+    {
+      "class": "WeatherCubeRequest",
+      "line": 76,
+      "fields": [
+        "west",
+        "south",
+        "east",
+        "north",
+        "rows",
+        "cols",
+        "model"
+      ],
+      "methods": [
+        "bbox_valid"
+      ]
+    },
+    {
+      "class": "PointForecastResponse",
+      "line": 92,
+      "fields": [
+        "latitude",
+        "longitude",
+        "timezone",
+        "current",
+        "hourly",
+        "daily",
+        "metadata"
+      ],
+      "methods": []
+    },
+    {
+      "class": "RadarFrame",
+      "line": 102,
+      "fields": [
+        "time",
+        "unix_time",
+        "path",
+        "kind"
+      ],
+      "methods": []
+    }
+  ]
+}

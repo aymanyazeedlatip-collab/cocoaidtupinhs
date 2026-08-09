@@ -1,0 +1,9 @@
+{
+  "contract_api_version": "3.0.0-draft.10",
+  "endpoints": [
+    "GET /api/v2/decision-support/status",
+    "POST /api/v2/decision-support/compose",
+    "GET /api/v2/decision-support/runs",
+    "GET /api/v2/decision-support/runs/{analysis_run_id}"
+  ]
+}

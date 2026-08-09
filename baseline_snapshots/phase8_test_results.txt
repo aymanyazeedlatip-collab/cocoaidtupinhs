@@ -1,0 +1,5 @@
+COCOAID Phase 8 complete isolated-suite result
+
+ALL COCOAID TESTS PASSED: 239 tests across 73 fully isolated test-file processes
+
+Warnings are configured as errors. Every test file was executed in an isolated Python process to prevent shared-state contamination between the preserved v2.11 regression suite and the v3 analytical engines.

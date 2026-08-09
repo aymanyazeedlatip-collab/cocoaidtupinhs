@@ -1,0 +1,217 @@
+{
+  "units": [
+    {
+      "code": "MJ/m2/day",
+      "quantity": "daily radiation",
+      "symbol": "MJ/m²/day",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "PHP",
+      "quantity": "currency",
+      "symbol": "PHP",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "W/m2",
+      "quantity": "irradiance",
+      "symbol": "W/m²",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "count",
+      "quantity": "count",
+      "symbol": "count",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "day",
+      "quantity": "duration",
+      "symbol": "day",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "degC",
+      "quantity": "temperature",
+      "symbol": "°C",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "degree",
+      "quantity": "angle",
+      "symbol": "°",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "fraction",
+      "quantity": "ratio",
+      "symbol": "1",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "hPa",
+      "quantity": "pressure",
+      "symbol": "hPa",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "ha",
+      "quantity": "area",
+      "symbol": "ha",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "index_0_1",
+      "quantity": "normalized index",
+      "symbol": "0–1",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "kPa",
+      "quantity": "pressure",
+      "symbol": "kPa",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "kg",
+      "quantity": "mass",
+      "symbol": "kg",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "kg/ha",
+      "quantity": "yield",
+      "symbol": "kg/ha",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "km/h",
+      "quantity": "speed",
+      "symbol": "km/h",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "m",
+      "quantity": "length/elevation",
+      "symbol": "m",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "m/s",
+      "quantity": "speed",
+      "symbol": "m/s",
+      "canonical": false,
+      "notes": ""
+    },
+    {
+      "code": "m2",
+      "quantity": "area",
+      "symbol": "m²",
+      "canonical": false,
+      "notes": ""
+    },
+    {
+      "code": "m3/m3",
+      "quantity": "volumetric water content",
+      "symbol": "m³/m³",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "mm",
+      "quantity": "water depth",
+      "symbol": "mm",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "mm/day",
+      "quantity": "water flux",
+      "symbol": "mm/day",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "pH",
+      "quantity": "soil reaction",
+      "symbol": "pH",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "percent",
+      "quantity": "percentage",
+      "symbol": "%",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "probability_0_1",
+      "quantity": "probability",
+      "symbol": "0–1",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "score_0_100",
+      "quantity": "score",
+      "symbol": "0–100",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "t",
+      "quantity": "mass",
+      "symbol": "t",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "t/ha",
+      "quantity": "yield",
+      "symbol": "t/ha",
+      "canonical": true,
+      "notes": ""
+    },
+    {
+      "code": "year",
+      "quantity": "duration",
+      "symbol": "year",
+      "canonical": true,
+      "notes": ""
+    }
+  ],
+  "canonical_variable_units": {
+    "cost": "PHP",
+    "evapotranspiration": "mm/day",
+    "farm_area": "ha",
+    "normalized_index": "index_0_1",
+    "pressure": "hPa",
+    "probability": "probability_0_1",
+    "production_mass": "t",
+    "rainfall": "mm",
+    "relative_humidity": "percent",
+    "soil_moisture": "m3/m3",
+    "suitability_score": "score_0_100",
+    "temperature": "degC",
+    "vapor_pressure_deficit": "kPa",
+    "wind_speed": "km/h",
+    "yield": "t/ha"
+  }
+}

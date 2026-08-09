@@ -1,0 +1,188 @@
+{
+  "serialized_runtime": {
+    "scikit-learn": "1.9.0",
+    "joblib": null
+  },
+  "build_runtime_status": {
+    "expected_scikit_learn": "1.9.0",
+    "installed_scikit_learn": "1.8.0",
+    "compatible": false,
+    "strict_mode": false,
+    "mode": "legacy_compatibility",
+    "action": "Install scikit-learn==1.9.0 for exact artifact reproducibility."
+  },
+  "models": {
+    "production": {
+      "available": true,
+      "version": "production-synthetic-1.0",
+      "features": [
+        "farm_area_hectares",
+        "productive_trees",
+        "aging_trees",
+        "stressed_trees",
+        "infested_trees",
+        "recovering_trees",
+        "annual_rainfall_mm",
+        "mean_temperature_c",
+        "relative_humidity_percent",
+        "drought_exposure",
+        "weather_severity",
+        "soil_ph",
+        "nitrogen_index",
+        "phosphorus_index",
+        "potassium_index",
+        "suitability_score",
+        "pest_probability",
+        "variety",
+        "intervention"
+      ],
+      "card": {
+        "model": "production",
+        "version": "production-synthetic-1.0",
+        "data_source_type": "synthetic_reference_based",
+        "metrics": {
+          "mae": 2.2110527564442832,
+          "rmse": 3.9669733434255896,
+          "r2": 0.5177233648063471
+        },
+        "statement": "The model learned the relationships encoded in the synthetic reference-based development dataset. Real-world validation remains required.",
+        "training_rows": 2240,
+        "test_rows": 640,
+        "split": "grouped by synthetic farm ID",
+        "random_seed": 42
+      },
+      "fallback_active": false,
+      "artifact": {
+        "filename": "production_model.joblib",
+        "sha256": "a7c3b7182f0496a6ecb96f9f87028325751e2a27db0f5c7e8c83b4219eab95f6",
+        "serialized_runtime": {
+          "scikit-learn": "1.9.0",
+          "joblib": null
+        }
+      },
+      "runtime_compatibility": {
+        "expected_scikit_learn": "1.9.0",
+        "installed_scikit_learn": "1.8.0",
+        "compatible": false,
+        "strict_mode": false,
+        "mode": "legacy_compatibility",
+        "action": "Install scikit-learn==1.9.0 for exact artifact reproducibility."
+      }
+    },
+    "pest": {
+      "available": true,
+      "version": "pest-synthetic-1.0",
+      "features": [
+        "annual_rainfall_mm",
+        "mean_temperature_c",
+        "relative_humidity_percent",
+        "average_tree_age",
+        "yellowing",
+        "crown_decline",
+        "frond_cuts",
+        "visible_scale_insects",
+        "rhinoceros_beetle_damage",
+        "premature_nut_fall",
+        "nearby_reports",
+        "symptom_severity",
+        "pest_control"
+      ],
+      "card": {
+        "model": "pest",
+        "version": "pest-synthetic-1.0",
+        "data_source_type": "synthetic_reference_based",
+        "metrics": {
+          "accuracy": 0.996875,
+          "precision": 0.9863013698630136,
+          "recall": 1.0,
+          "f1": 0.993103448275862,
+          "roc_auc": 0.9999859991039426,
+          "brier": 0.0030899562212003376,
+          "log_loss": 0.016501258472795828,
+          "confusion_matrix": [
+            [
+              494,
+              2
+            ],
+            [
+              0,
+              144
+            ]
+          ]
+        },
+        "statement": "The model learned the relationships encoded in the synthetic reference-based development dataset. Real-world validation remains required.",
+        "training_rows": 2240,
+        "test_rows": 640,
+        "split": "grouped by synthetic farm ID",
+        "random_seed": 42
+      },
+      "fallback_active": false,
+      "artifact": {
+        "filename": "pest_model.joblib",
+        "sha256": "b78e99f6e7be86397eab46c18d66dab973bb098dabcf8ed583205eec738109ad",
+        "serialized_runtime": {
+          "scikit-learn": "1.9.0",
+          "joblib": null
+        }
+      },
+      "runtime_compatibility": {
+        "expected_scikit_learn": "1.9.0",
+        "installed_scikit_learn": "1.8.0",
+        "compatible": false,
+        "strict_mode": false,
+        "mode": "legacy_compatibility",
+        "action": "Install scikit-learn==1.9.0 for exact artifact reproducibility."
+      }
+    },
+    "suitability": {
+      "available": true,
+      "version": "suitability-synthetic-1.0",
+      "features": [
+        "annual_rainfall_mm",
+        "mean_temperature_c",
+        "relative_humidity_percent",
+        "elevation_m",
+        "slope_degrees",
+        "soil_ph",
+        "nitrogen_index",
+        "phosphorus_index",
+        "potassium_index",
+        "drainage_index",
+        "drought_exposure",
+        "typhoon_exposure"
+      ],
+      "card": {
+        "model": "suitability",
+        "version": "suitability-synthetic-1.0",
+        "data_source_type": "synthetic_reference_based",
+        "metrics": {
+          "mae": 0.006199448983744945,
+          "rmse": 0.008985876749124641,
+          "r2": 0.9276547293662936
+        },
+        "statement": "The model learned the relationships encoded in the synthetic reference-based development dataset. Real-world validation remains required.",
+        "training_rows": 2240,
+        "test_rows": 640,
+        "split": "grouped by synthetic farm ID",
+        "random_seed": 42
+      },
+      "fallback_active": false,
+      "artifact": {
+        "filename": "suitability_model.joblib",
+        "sha256": "8f5ac092f0c0f559f1b0346f5314962a5e5b534cf8f9624414d2062ac8612ca1",
+        "serialized_runtime": {
+          "scikit-learn": "1.9.0",
+          "joblib": null
+        }
+      },
+      "runtime_compatibility": {
+        "expected_scikit_learn": "1.9.0",
+        "installed_scikit_learn": "1.8.0",
+        "compatible": false,
+        "strict_mode": false,
+        "mode": "legacy_compatibility",
+        "action": "Install scikit-learn==1.9.0 for exact artifact reproducibility."
+      }
+    }
+  }
+}

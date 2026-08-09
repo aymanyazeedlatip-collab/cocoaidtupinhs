@@ -1,0 +1,17 @@
+{
+  "pest": {
+    "path": "artifacts/models/pest_model.joblib",
+    "sha256": "b78e99f6e7be86397eab46c18d66dab973bb098dabcf8ed583205eec738109ad",
+    "size_bytes": 461035
+  },
+  "production": {
+    "path": "artifacts/models/production_model.joblib",
+    "sha256": "a7c3b7182f0496a6ecb96f9f87028325751e2a27db0f5c7e8c83b4219eab95f6",
+    "size_bytes": 685885
+  },
+  "suitability": {
+    "path": "artifacts/models/suitability_model.joblib",
+    "sha256": "8f5ac092f0c0f559f1b0346f5314962a5e5b534cf8f9624414d2062ac8612ca1",
+    "size_bytes": 9004337
+  }
+}

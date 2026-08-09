@@ -1,0 +1,17 @@
+{
+  "confidence": "low",
+  "cost_catalog_version": "rehabilitation-cost-catalog-1.0.0",
+  "domain": "Evidence-linked rehabilitation actions, cost/labor scenarios, and budget-constrained expected utility",
+  "limitations": [
+    "Cost and labor values are transparent development assumptions and require local validation.",
+    "Production recovery effects are scenario assumptions, not causal field estimates.",
+    "Predicted hazards and inferred pest risk trigger inspection, not automatic damage confirmation or treatment.",
+    "Economic utility uses a development coconut value and gross intercrop revenue where available."
+  ],
+  "parameter_count": 10,
+  "parameter_set_id": "rehabilitation-scenario-optimization",
+  "source_references": [],
+  "status": "experimental_phase_8",
+  "values_sha256": "5925fc5e694f1e83203b1d78c15a6efa39eff8ef232e6ee692dcf6c3b46b7d38",
+  "version": "rehabilitation-scenario-parameters-1.0.0"
+}

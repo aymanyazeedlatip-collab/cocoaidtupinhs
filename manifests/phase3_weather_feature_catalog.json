@@ -1,0 +1,90 @@
+{
+  "feature_adapter_version": "weather-features-1.0.0",
+  "features": [
+    {
+      "basis": "reference_only",
+      "name": "rainfall_7d_mm",
+      "unit": "mm",
+      "window_days": 7
+    },
+    {
+      "basis": "reference_only",
+      "name": "rainfall_30d_mm",
+      "unit": "mm",
+      "window_days": 30
+    },
+    {
+      "basis": "reference_only",
+      "name": "rainfall_90d_mm",
+      "unit": "mm",
+      "window_days": 90
+    },
+    {
+      "basis": "reference_only",
+      "name": "moisture_balance_30d_mm",
+      "unit": "mm",
+      "window_days": 30
+    },
+    {
+      "basis": "reference_only",
+      "name": "moisture_balance_90d_mm",
+      "unit": "mm",
+      "window_days": 90
+    },
+    {
+      "basis": "reference_only",
+      "name": "consecutive_dry_days",
+      "unit": "day",
+      "window_days": 92
+    },
+    {
+      "basis": "reference_only",
+      "name": "heat_stress_days_30d",
+      "unit": "day",
+      "window_days": 30
+    },
+    {
+      "basis": "live_forecast",
+      "name": "forecast_rainfall_16d_mm",
+      "unit": "mm",
+      "window_days": 16
+    },
+    {
+      "basis": "live_forecast",
+      "name": "forecast_heat_stress_days_16d",
+      "unit": "day",
+      "window_days": 16
+    },
+    {
+      "basis": "live_forecast",
+      "name": "forecast_max_wind_gust_16d_kmh",
+      "unit": "km/h",
+      "window_days": 16
+    },
+    {
+      "basis": "reference_only",
+      "name": "mean_solar_radiation_90d_mj_m2_day",
+      "unit": "MJ/m2/day",
+      "window_days": 90
+    },
+    {
+      "basis": "reference_only",
+      "name": "mean_relative_humidity_30d_percent",
+      "unit": "percent",
+      "window_days": 30
+    },
+    {
+      "basis": "reference_only",
+      "name": "mean_vpd_30d_kpa",
+      "unit": "kPa",
+      "window_days": 30
+    },
+    {
+      "basis": "reference_only",
+      "name": "mean_soil_moisture_30d_fraction",
+      "unit": "m3/m3",
+      "window_days": 30
+    }
+  ],
+  "live_forecast_limit_days": 16
+}

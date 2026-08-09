@@ -1,0 +1,285 @@
+{
+  "contract_api_version": "3.0.0-draft.5",
+  "paths": {
+    "/api/v2/bayesian/observations": {
+      "get": {
+        "operationId": "bayesian_observations_api_v2_bayesian_observations_get",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "farm_id",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Farm Id"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "default": 100,
+              "maximum": 500,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "title": "Response Bayesian Observations Api V2 Bayesian Observations Get",
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Bayesian Observations",
+        "tags": [
+          "COCOAID v3 Contracts"
+        ]
+      },
+      "post": {
+        "operationId": "bayesian_observation_api_v2_bayesian_observations_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BayesianEvidenceObservation"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "title": "Response Bayesian Observation Api V2 Bayesian Observations Post",
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Bayesian Observation",
+        "tags": [
+          "COCOAID v3 Contracts"
+        ]
+      }
+    },
+    "/api/v2/bayesian/posteriors": {
+      "get": {
+        "operationId": "bayesian_posteriors_api_v2_bayesian_posteriors_get",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "farm_id",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Farm Id"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "default": 50,
+              "maximum": 200,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "title": "Response Bayesian Posteriors Api V2 Bayesian Posteriors Get",
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Bayesian Posteriors",
+        "tags": [
+          "COCOAID v3 Contracts"
+        ]
+      }
+    },
+    "/api/v2/bayesian/posteriors/{posterior_id}": {
+      "get": {
+        "operationId": "bayesian_posterior_record_api_v2_bayesian_posteriors__posterior_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "posterior_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Posterior Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "title": "Response Bayesian Posterior Record Api V2 Bayesian Posteriors  Posterior Id  Get",
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Bayesian Posterior Record",
+        "tags": [
+          "COCOAID v3 Contracts"
+        ]
+      }
+    },
+    "/api/v2/bayesian/simulate": {
+      "post": {
+        "operationId": "bayesian_simulate_api_v2_bayesian_simulate_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BayesianSimulationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "title": "Response Bayesian Simulate Api V2 Bayesian Simulate Post",
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Bayesian Simulate",
+        "tags": [
+          "COCOAID v3 Contracts"
+        ]
+      }
+    },
+    "/api/v2/bayesian/status": {
+      "get": {
+        "operationId": "bayesian_status_api_v2_bayesian_status_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "title": "Response Bayesian Status Api V2 Bayesian Status Get",
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Bayesian Status",
+        "tags": [
+          "COCOAID v3 Contracts"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "contract_api_version": "3.0.0-draft.10",
+  "endpoints": [
+    "GET /api/v2/coco-pilot/status",
+    "POST /api/v2/coco-pilot/explain",
+    "GET /api/v2/coco-pilot/runs",
+    "GET /api/v2/coco-pilot/runs/{run_id}",
+    "POST /api/v2/formal-reports/generate",
+    "GET /api/v2/formal-reports",
+    "GET /api/v2/formal-reports/{report_id}",
+    "GET /api/v2/formal-reports/{report_id}/download"
+  ]
+}

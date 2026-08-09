@@ -1,0 +1,24 @@
+{
+  "availability": "available",
+  "dependencies": [
+    "v3.weather_assimilation",
+    "v3.production",
+    "v3.pest_inference",
+    "canopy_light_registry",
+    "intercrop_requirement_registry"
+  ],
+  "deterministic_with_seed": false,
+  "engine_id": "v3.intercropping",
+  "input_contract": "IntercropAssessmentRequest",
+  "limitations": [
+    "Only light requirements and canopy transmission are directly supported by the uploaded PCA brochure",
+    "Non-light numerical requirements require expert validation",
+    "Pest conflict is conditional on a supplied Phase 6 assessment run",
+    "Economic estimates are gross-revenue scenarios for cacao and coffee only",
+    "No supervised intercropping model is claimed"
+  ],
+  "maturity": "experimental",
+  "name": "Spatial Intercropping Potential Engine",
+  "output_contract": "IntercropEngineOutput",
+  "version": "1.0.0"
+}

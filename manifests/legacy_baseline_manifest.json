@@ -1,0 +1,908 @@
+{
+  "baseline_tag": "v2.11-legacy-baseline",
+  "generated_at": "2026-08-03T03:35:11.408402+00:00",
+  "file_count": 180,
+  "total_size_bytes": 33652671,
+  "files": [
+    {
+      "path": ".env.example",
+      "size_bytes": 268,
+      "sha256": "fa525164bc387ca20083d000a6ed92fec19bbff02dcb61e2183c98f379368044"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 258,
+      "sha256": "901fc4044c2a46c431be2f21521ed64a8d3f9854ddc7ce9900f5445441edfc68"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size_bytes": 16942,
+      "sha256": "291756e7b971606068143f9873b7f896da7490089032cf76171b340f8750c051"
+    },
+    {
+      "path": "PROJECT_STATE.md",
+      "size_bytes": 4995,
+      "sha256": "9f932a056a969526ad9007534e38a41da7f3050d012b7a4e4228f639fe3e9c17"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 11745,
+      "sha256": "cda38f918496c51b7359f90ab99386e130fb68d1e9cb1461d71e0065bc16bb2d"
+    },
+    {
+      "path": "RELEASE_NOTES_v2.1.md",
+      "size_bytes": 1765,
+      "sha256": "ea950c846de903f12ad0fc9fa1044942616ada4b417987e24da593ae86ef1282"
+    },
+    {
+      "path": "RELEASE_NOTES_v2.10.md",
+      "size_bytes": 819,
+      "sha256": "9025d67a941d8e1cdfafe81c7d147456676fbbc7d12fd04847fc3e90c8a71fc3"
+    },
+    {
+      "path": "RELEASE_NOTES_v2.11.md",
+      "size_bytes": 572,
+      "sha256": "320e496dcaea5616ba2be631d17c95a38ed7526f1991d45242d603a37ac1ee53"
+    },
+    {
+      "path": "RELEASE_NOTES_v2.2.1.md",
+      "size_bytes": 993,
+      "sha256": "1240312a42ff4d378c8639dcd9836cf4246e97406413ea3e613cf8407d00a239"
+    },
+    {
+      "path": "RELEASE_NOTES_v2.2.md",
+      "size_bytes": 1468,
+      "sha256": "d7b3cfa8e36d4ff328e72bfb80a9815dfc36876c36fb3705d79ff307cfeaf890"
+    },
+    {
+      "path": "RELEASE_NOTES_v2.3.md",
+      "size_bytes": 1463,
+      "sha256": "95091796a07ae01c8256b896b39e4f10a2fac624909035a97a24e3fd04aea4f6"
+    },
+    {
+      "path": "RELEASE_NOTES_v2.4.1.md",
+      "size_bytes": 330,
+      "sha256": "c7efa9a4eb88eccf1a6e81de840f26efe9c640939fd851f697c8c0780d9fdd00"
+    },
+    {
+      "path": "RELEASE_NOTES_v2.4.md",
+      "size_bytes": 2574,
+      "sha256": "c4ae4bb998134571c91cd2edcbd5dd5e715110795406bb563bfbaa43ea3d40c5"
+    },
+    {
+      "path": "RELEASE_NOTES_v2.5.md",
+      "size_bytes": 1108,
+      "sha256": "9077c6d3fd45033c1a3c85e99d4fb90fbe6b5f3be9b751d97c8759b9e8a08709"
+    },
+    {
+      "path": "RELEASE_NOTES_v2.6.md",
+      "size_bytes": 967,
+      "sha256": "968f24e8ed2b31ee488cc1af4443a9a6ac0cc1ecab3e872fcd214b9f3298fd6d"
+    },
+    {
+      "path": "RELEASE_NOTES_v2.7.md",
+      "size_bytes": 719,
+      "sha256": "71ddb66c879e54c7e3d90e308798140f1a9cecebdfe1c54436d87215a400bb46"
+    },
+    {
+      "path": "RELEASE_NOTES_v2.9.md",
+      "size_bytes": 856,
+      "sha256": "7a39bd20ad1ced5023505567ba03d2a802076d94257ddfd7c534054c489c50dd"
+    },
+    {
+      "path": "app/__init__.py",
+      "size_bytes": 496,
+      "sha256": "6c4b76c82da53b9908a262262012d710894bd892575284b09475932579180bab"
+    },
+    {
+      "path": "app/api/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/api/routes.py",
+      "size_bytes": 20640,
+      "sha256": "e52573d7e05d798a66a0485fd88813b9f57a65712edb5584e0e8c0115841b795"
+    },
+    {
+      "path": "app/climate/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/climate/projections.py",
+      "size_bytes": 10051,
+      "sha256": "0ce4608737f5de95124397e98efe1f990f98b9a386be191e83646bdf752a4301"
+    },
+    {
+      "path": "app/core/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/core/config.py",
+      "size_bytes": 2287,
+      "sha256": "160e04d2ad8565e87f0c3bba8031fd44b421e260e45c2241b3a6da4cdc2f6f1a"
+    },
+    {
+      "path": "app/core/errors.py",
+      "size_bytes": 306,
+      "sha256": "e44c4c0488c29ce71d9d0daa1ad1f13049ed6e23d14ed88a6a33249e0e6bdd31"
+    },
+    {
+      "path": "app/core/logging.py",
+      "size_bytes": 216,
+      "sha256": "34d0ef2b62dd52e37b9499137dee62a23309e16b946a64a80d4b686c805a94c0"
+    },
+    {
+      "path": "app/data/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/data/official_production.py",
+      "size_bytes": 6207,
+      "sha256": "f883212f635fbf01632ce84241d7a9dede2b0ce979673b51be1ea171949c8f6d"
+    },
+    {
+      "path": "app/gis/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/gis/analysis.py",
+      "size_bytes": 25594,
+      "sha256": "fce609168d7720003edd06bc33d05030a74b0eba04a80d0f1732572ccddc2acc"
+    },
+    {
+      "path": "app/main.py",
+      "size_bytes": 4039,
+      "sha256": "1e47bd72b0d2f6328b10a2b50fc7feeddc1e8d104bfa6782c73c39d48079acb4"
+    },
+    {
+      "path": "app/math/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/math/bayes.py",
+      "size_bytes": 4609,
+      "sha256": "084ea12eddfc94ca511ca6c30db05471fd960bf3116c633ba477d46abf4a93fe"
+    },
+    {
+      "path": "app/math/pest_specific.py",
+      "size_bytes": 18332,
+      "sha256": "6157bf4e11b150310873013d2daf28a0c55706f892b102200f197b0b2f09ff5d"
+    },
+    {
+      "path": "app/math/state.py",
+      "size_bytes": 8985,
+      "sha256": "03666f5e947094869785a31b442abb5893087ca159d29d7df466013d064ead12"
+    },
+    {
+      "path": "app/math/suitability.py",
+      "size_bytes": 2762,
+      "sha256": "1530f1ddd91a62fe03c4950b139aa37904cffb47aad29e092d46fb493a41a4c8"
+    },
+    {
+      "path": "app/models/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/models/registry.py",
+      "size_bytes": 3054,
+      "sha256": "0d58d93eb237c36a95b37f8b9d9cd2c51180dbc11dc7a0b3e630e63e2b5f841e"
+    },
+    {
+      "path": "app/reports/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/reports/docx.py",
+      "size_bytes": 24326,
+      "sha256": "d6678d6c4f06223e2659e220fa031e8995bf58e172403fef0e36a7c6b2c05ce1"
+    },
+    {
+      "path": "app/reports/pdf.py",
+      "size_bytes": 25353,
+      "sha256": "915c8b995029a0b2d6afba1da85d741a510cc7c25c7bc546a8b657fea15739fc"
+    },
+    {
+      "path": "app/reports/visuals.py",
+      "size_bytes": 10595,
+      "sha256": "f7684494b2191d736709cbfa76866fd167151aa8cfb65ab22a1d70b8de5ea472"
+    },
+    {
+      "path": "app/schemas/__init__.py",
+      "size_bytes": 133,
+      "sha256": "60ddf1303504e9eca36be03f184f1cb85e6a9217f0e7cf4d5ef0cbc74f56a705"
+    },
+    {
+      "path": "app/schemas/analysis.py",
+      "size_bytes": 8803,
+      "sha256": "bdfe72d6a6bd946777ab3355d7d6b8059a17257328171fbb7efe20d9cf2ed1f3"
+    },
+    {
+      "path": "app/schemas/assistant.py",
+      "size_bytes": 630,
+      "sha256": "e33ebc29d7541a39b56134c81c9156ef91092083ce8818d0a40cd51406773935"
+    },
+    {
+      "path": "app/schemas/common.py",
+      "size_bytes": 1316,
+      "sha256": "1536dd2731b97cc3dfb69129c9d37c489628b6c7dfb815afff123bd30cb9d27b"
+    },
+    {
+      "path": "app/schemas/farm.py",
+      "size_bytes": 5102,
+      "sha256": "173af23c5fa7cd89bdb818faa955a58f2fe0d22fb8f35944058f54f7159eb05a"
+    },
+    {
+      "path": "app/schemas/weather.py",
+      "size_bytes": 3687,
+      "sha256": "fd7de1d64c23292b108516b7959780a4fccb797b7d60697bc39ba8c204b8b7c8"
+    },
+    {
+      "path": "app/services/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/services/analysis.py",
+      "size_bytes": 7989,
+      "sha256": "3d10c3631e60f9c3bd703e7f7331100d338e7ccb0017f88301b844c860a21d23"
+    },
+    {
+      "path": "app/services/assistant.py",
+      "size_bytes": 15152,
+      "sha256": "a0241b6d4673e08a9e40d7e7051ceeeebfd365f0a50691534cfc793373f1ecde"
+    },
+    {
+      "path": "app/services/cache.py",
+      "size_bytes": 1751,
+      "sha256": "f111fe4e1521843daa8cc599415e0c8721b280e958249cc3ac771f9cd6f98c84"
+    },
+    {
+      "path": "app/services/persistent_cache.py",
+      "size_bytes": 1483,
+      "sha256": "c72ceef8fc36d300e1a83f257113fdb4fc236f899f9db595c6dce538de4bf8d1"
+    },
+    {
+      "path": "app/simulation/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/simulation/compare.py",
+      "size_bytes": 3683,
+      "sha256": "49ef8f7b611e8a047108297df37df4a1c50c0acd0d68f8c7d0a15f863df0ad4b"
+    },
+    {
+      "path": "app/simulation/engine.py",
+      "size_bytes": 23970,
+      "sha256": "d6c77699c45d13f6d0dcea2bab99cea6d6c284f12c3f727e369b976c6327b9fa"
+    },
+    {
+      "path": "app/simulation/farm_site_forecast.py",
+      "size_bytes": 49777,
+      "sha256": "b28e110035c85aea9ec86f4075f8ced629963fd88c2c2ed50fcad2bf5a382a66"
+    },
+    {
+      "path": "app/static/app.js",
+      "size_bytes": 112068,
+      "sha256": "4b16451cd8c30d125fc1bb3d990467f33d2d2d9a49efda0c303519e0f726445d"
+    },
+    {
+      "path": "app/static/assets/audio/about.mp3",
+      "size_bytes": 216124,
+      "sha256": "63e41521855c93223cde66063e03b204dcf5e1dbe7e17f4fb3df9d9d8e409626"
+    },
+    {
+      "path": "app/static/assets/audio/bgm-1.mp3",
+      "size_bytes": 4537919,
+      "sha256": "4f5f9896c41cc58ebe048c520ca66a52e7598373659637117e5a92b644d512d7"
+    },
+    {
+      "path": "app/static/assets/audio/database.mp3",
+      "size_bytes": 186449,
+      "sha256": "bf459095aade00a85fcfb8a268fee5d23652965669c58f7d1b6e99b8e4c18af1"
+    },
+    {
+      "path": "app/static/assets/audio/extreme-weather.mp3",
+      "size_bytes": 255412,
+      "sha256": "13a8d7b246a2d3b72b2b059e8175b276ddaf11045f596f6c02435b7e9f6b8fb4"
+    },
+    {
+      "path": "app/static/assets/audio/farm-health.mp3",
+      "size_bytes": 313508,
+      "sha256": "51ab1447827a3e15b72047f7bd0c60c2c72565e7a0681b12ed7f64f8eb7b31f1"
+    },
+    {
+      "path": "app/static/assets/audio/farm-setup.mp3",
+      "size_bytes": 233260,
+      "sha256": "8497ea7a932b85c4be6c9607935df7aa4433ba8486fa8981d49639e7f42021d6"
+    },
+    {
+      "path": "app/static/assets/audio/farm-site-forecast.mp3",
+      "size_bytes": 224901,
+      "sha256": "a76a3ed5ce39abd678376ade18ef1548f91ef2ec43367463dfd322818214a370"
+    },
+    {
+      "path": "app/static/assets/audio/forecast-complete.mp3",
+      "size_bytes": 217378,
+      "sha256": "20f025501de85d175def83b519f9c6e935f3176a693ae7ea91e9d98ebf6b1fcc"
+    },
+    {
+      "path": "app/static/assets/audio/home.mp3",
+      "size_bytes": 262099,
+      "sha256": "3d150fca9ae3b1a69e084e41e5a56adc52a6d19ff0b6f0d60978daed3aa0aa11"
+    },
+    {
+      "path": "app/static/assets/audio/reports.mp3",
+      "size_bytes": 282184,
+      "sha256": "93897e0538d477f842ac33c264b1ba165e48fcd1edf8609ceef2737ad13790a6"
+    },
+    {
+      "path": "app/static/assets/audio/weather-gis.mp3",
+      "size_bytes": 233678,
+      "sha256": "2c24307f0aed1f58d20e0df157f099a6f6e441e195607bfb5a5710e0764c8cdb"
+    },
+    {
+      "path": "app/static/assets/brand/coco-aid-favicon.png",
+      "size_bytes": 8154,
+      "sha256": "5e788a0a781a655b7b49eaf31c7610855f7baa222c0b9eb5a886a7dcf9ea7dd0"
+    },
+    {
+      "path": "app/static/assets/brand/coco-aid-logo-192.png",
+      "size_bytes": 44593,
+      "sha256": "4818cc4643be18584b71b804871106a8a1548c58e894bfb163a3c1cfe7d25b68"
+    },
+    {
+      "path": "app/static/assets/brand/coco-aid-logo.png",
+      "size_bytes": 861941,
+      "sha256": "9474fa8605e77f274d6a2d479b5a67bb1f18051ee241a50d8ec1b4352cea5ae7"
+    },
+    {
+      "path": "app/static/assets/brand/coco-aid-official-lockup.png",
+      "size_bytes": 1138206,
+      "sha256": "2d80feabcf9ea5a719c1cea341a5a441c0624f7b8143b716afcfb8a055923023"
+    },
+    {
+      "path": "app/static/assets/brand/coco-aid-wordmark.png",
+      "size_bytes": 326891,
+      "sha256": "3ebbc52a1e82401288b942d42e3f4257e2cf6bf7490d44bb3c08dd3a97ef48bf"
+    },
+    {
+      "path": "app/static/assets/brand/coco-pilot-icon-128.png",
+      "size_bytes": 18271,
+      "sha256": "e248da2f039d620415edca0e4b21fb2205d30b543ba91da948e46b4bde36c4a9"
+    },
+    {
+      "path": "app/static/assets/brand/coco-pilot-icon-192.png",
+      "size_bytes": 30188,
+      "sha256": "a16be8b37fe29554d0d5f975495b00473ecff4677393e723d4af82b346e5a781"
+    },
+    {
+      "path": "app/static/assets/brand/coco-pilot-icon-64.png",
+      "size_bytes": 7042,
+      "sha256": "392a8498f0c9331e91ea43465e0d7ec70731a4737ec8535047a18d7803a0777c"
+    },
+    {
+      "path": "app/static/assets/brand/coco-pilot-icon.png",
+      "size_bytes": 94232,
+      "sha256": "bec45818bb871d1d30502d567ec13dc22f3593f9b6682358853a475e8ed8d809"
+    },
+    {
+      "path": "app/static/assets/brand/coconut-farm-hero.jpg",
+      "size_bytes": 778645,
+      "sha256": "11d2e10c5b90994e7d3cf1816447ef3ad2d3367300679667c818ab0738da87c0"
+    },
+    {
+      "path": "app/static/assets/brand/weather-gis-icon-128.png",
+      "size_bytes": 7955,
+      "sha256": "99654e0c433b07907494f4935802d2fe005004966dba683a7d814075ce40b75c"
+    },
+    {
+      "path": "app/static/assets/brand/weather-gis-icon-192.png",
+      "size_bytes": 12050,
+      "sha256": "60a18fc64f22a34fe2ecbe091c7cbcbfa50f7b6ea84cc9fdea5eae279d2f9c7c"
+    },
+    {
+      "path": "app/static/assets/brand/weather-gis-icon-64.png",
+      "size_bytes": 3597,
+      "sha256": "fef306013015a24d230e0df9aab16f41748083f1317c9ecde15bed189cb33409"
+    },
+    {
+      "path": "app/static/assets/brand/weather-gis-icon.png",
+      "size_bytes": 32792,
+      "sha256": "b705ed20a2d0f4ea4c51e6d035e7e5acca803bd6d7cb9288c16cbab56fe5550c"
+    },
+    {
+      "path": "app/static/assets/pests/black-headed-caterpillar-photo.jpg",
+      "size_bytes": 428025,
+      "sha256": "48b2674bf0fc27b2cbacab1904cfde2dde6a63caa4a18eb8c94b9a02cd91942b"
+    },
+    {
+      "path": "app/static/assets/pests/black-headed-caterpillar.svg",
+      "size_bytes": 835,
+      "sha256": "3a4faae20c2727e0a786f9658cc7df236a1f3f8123d4cab6135b68cded84724d"
+    },
+    {
+      "path": "app/static/assets/pests/brontispa-photo.jpg",
+      "size_bytes": 31802,
+      "sha256": "387f9ea3e179cc338c91e4762e6b55881da4fce7f95801b4c14fb046af22e5ba"
+    },
+    {
+      "path": "app/static/assets/pests/brontispa.svg",
+      "size_bytes": 782,
+      "sha256": "257d7eba2ccec94cda15bf2af7854fdabc7f1e45afd2dc302b5e2b818caf02c6"
+    },
+    {
+      "path": "app/static/assets/pests/coconut-scale-photo.jpg",
+      "size_bytes": 145030,
+      "sha256": "af8fcd6f54a54a192210a1e87a46b3260b1cdf2d73523458bbcc3dbf55156be3"
+    },
+    {
+      "path": "app/static/assets/pests/coconut-scale.svg",
+      "size_bytes": 765,
+      "sha256": "f6d2e030297e8ff70b0d645029b641bad0469dd710b07c21e94e4efbd23ea147"
+    },
+    {
+      "path": "app/static/assets/pests/eriophyid-mite-photo.jpg",
+      "size_bytes": 110415,
+      "sha256": "865290f0cf28cc585ea87da294bfdab37caca03dcfc337b4305145ad139b1e15"
+    },
+    {
+      "path": "app/static/assets/pests/eriophyid-mite.svg",
+      "size_bytes": 792,
+      "sha256": "076674a5aeabbcb2d94219d9a47676248571f9d064f5bc8a84f96ae1fab89254"
+    },
+    {
+      "path": "app/static/assets/pests/leaf-miner-photo.jpg",
+      "size_bytes": 81580,
+      "sha256": "20d1294ad8d35c12746f7de3aecd3d27b561bb869569f98df1d2b4baa9f424f2"
+    },
+    {
+      "path": "app/static/assets/pests/leaf-miner.svg",
+      "size_bytes": 771,
+      "sha256": "d1126d5de8a76ca394ad9954d1782124eabc20a111358dcd08adba898b272676"
+    },
+    {
+      "path": "app/static/assets/pests/mealybug-photo.jpg",
+      "size_bytes": 58677,
+      "sha256": "90b77871ae522f09af0905230c2d99a1ef2f08ec42be4f7b58d333cff6cdc596"
+    },
+    {
+      "path": "app/static/assets/pests/mealybug.svg",
+      "size_bytes": 868,
+      "sha256": "4a3f81634c9c295a84fb4afe67f54c1a18e25ac8ade9ecdb8622c2d06d9d79da"
+    },
+    {
+      "path": "app/static/assets/pests/red-palm-weevil-photo.jpg",
+      "size_bytes": 270116,
+      "sha256": "7894c279bc7f70ae69f18ae883b103a468bfdae445ca37996d7ea4766ff22b85"
+    },
+    {
+      "path": "app/static/assets/pests/red-palm-weevil.svg",
+      "size_bytes": 806,
+      "sha256": "7211af2b0918929efae52fb004b7315c784bcf60069475b3b3aba163bca14c03"
+    },
+    {
+      "path": "app/static/assets/pests/rhinoceros-beetle-photo.png",
+      "size_bytes": 1038490,
+      "sha256": "03007fd6a6f3fb22cce6f76ddfef9f306d4d30ca335342001e5253bb9925c23e"
+    },
+    {
+      "path": "app/static/assets/pests/rhinoceros-beetle.svg",
+      "size_bytes": 817,
+      "sha256": "ce1ff85a991810f898fd931b516e2cb5b8e72d9f9d8ffe0f30256e8486bbd7f4"
+    },
+    {
+      "path": "app/static/favicon.svg",
+      "size_bytes": 290,
+      "sha256": "067596fb9d399ffb983bd0f06cf1398a9b228e364880d8056f7f2fe1c091b15f"
+    },
+    {
+      "path": "app/static/index.html",
+      "size_bytes": 48830,
+      "sha256": "7c5a66104815e75c2cc4118a3606bcb6559fd40393d5b3e6e5fcc5dbb6bc80c7"
+    },
+    {
+      "path": "app/static/styles.css",
+      "size_bytes": 101283,
+      "sha256": "e0cb3013ff73260d7916e52d1fbbd6893fa7526ecd755bf294d874f9783fe14c"
+    },
+    {
+      "path": "app/static/weather-viewer/app.js",
+      "size_bytes": 68281,
+      "sha256": "36577cb82567b19a2eafabdf2d6b719524e1124b7ef52b318a18893cceaac4df"
+    },
+    {
+      "path": "app/static/weather-viewer/favicon.svg",
+      "size_bytes": 201,
+      "sha256": "f819e952794db9b672d3ca166c24bccb1b9bbca82ec15c5ee9c5566b628e5401"
+    },
+    {
+      "path": "app/static/weather-viewer/index.html",
+      "size_bytes": 13833,
+      "sha256": "f7e491f416486b5051863dec7e5c68afa9ea3137ef9a2fd0ae57ac74fb5bfc43"
+    },
+    {
+      "path": "app/static/weather-viewer/styles.css",
+      "size_bytes": 30055,
+      "sha256": "920fe935e786f1beb68a45b4de7b8b501aadc1ceabf1cb2998aafcbec9d38cb3"
+    },
+    {
+      "path": "app/storage/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/storage/database.py",
+      "size_bytes": 10466,
+      "sha256": "8acfb1c3040e7fb659e65edd2d23bfb33dc475d65a6bd2b4b5c29b64b8047194"
+    },
+    {
+      "path": "app/weather/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/weather/http.py",
+      "size_bytes": 1798,
+      "sha256": "e2fa88f840db85ccc67a98634ef4dfcc2ef218887a49f07ea29380fe75b6c5db"
+    },
+    {
+      "path": "app/weather/providers.py",
+      "size_bytes": 17277,
+      "sha256": "0c6ef4fb3e9011de84086c257f5df795bd47fa6dffdc90d7a92a97cc1f6f06e6"
+    },
+    {
+      "path": "artifacts/model_cards/PEST_MODEL_CARD.json",
+      "size_bytes": 751,
+      "sha256": "b91e351e640f2fa1a974c3ce51e83885dddf8c9424502584aa1482a934c493eb"
+    },
+    {
+      "path": "artifacts/model_cards/PRODUCTION_MODEL_CARD.json",
+      "size_bytes": 510,
+      "sha256": "1b5170fc663b8d83ff46e47068ec8078a83d464bda060246aeaaa86f7366c74e"
+    },
+    {
+      "path": "artifacts/model_cards/SUITABILITY_MODEL_CARD.json",
+      "size_bytes": 516,
+      "sha256": "95aa9078649b30bcc9c8bb7074ecad833de54eb46be5a08b375e8b3d888f9dd7"
+    },
+    {
+      "path": "artifacts/models/pest_model.joblib",
+      "size_bytes": 461035,
+      "sha256": "b78e99f6e7be86397eab46c18d66dab973bb098dabcf8ed583205eec738109ad"
+    },
+    {
+      "path": "artifacts/models/production_model.joblib",
+      "size_bytes": 685885,
+      "sha256": "a7c3b7182f0496a6ecb96f9f87028325751e2a27db0f5c7e8c83b4219eab95f6"
+    },
+    {
+      "path": "artifacts/models/suitability_model.joblib",
+      "size_bytes": 9004337,
+      "sha256": "8f5ac092f0c0f559f1b0346f5314962a5e5b534cf8f9624414d2062ac8612ca1"
+    },
+    {
+      "path": "data/climate_demo/philippines_climate_demo.csv",
+      "size_bytes": 247686,
+      "sha256": "2cb91f445ef1c29a0d493e95038a1684e866d0566fc524986f0b9749f220ca38"
+    },
+    {
+      "path": "data/metadata/DATASET_CARD.md",
+      "size_bytes": 1643,
+      "sha256": "8ebdad4c5246b0bf02b0a344fef892fb88a8af9db73b911ed569016f968f0f4a"
+    },
+    {
+      "path": "data/metadata/GENERATION_REPORT.json",
+      "size_bytes": 229,
+      "sha256": "05deb228c2f1d0e65cd218c05dbbb77dc12ebb2be0336d6a41ab817b501f4e4b"
+    },
+    {
+      "path": "data/metadata/MODEL_EVALUATION.json",
+      "size_bytes": 615,
+      "sha256": "9c4ec6d1d6502bccde34f0e72b7d6b14d8fa3502e17fbfaaf8334dfebd2f22e2"
+    },
+    {
+      "path": "data/official/psa_coconut_production_annual.csv",
+      "size_bytes": 670166,
+      "sha256": "d9e643aa19952f9d54da8b448ed2fd1a88c251e69ec6008705281400bd0eca3f"
+    },
+    {
+      "path": "data/official/psa_coconut_production_tidy.csv",
+      "size_bytes": 5022774,
+      "sha256": "ceade78c822034b1ddb2b39aa1be15b9c06c548c0d44619d9cefd6e327cf5e81"
+    },
+    {
+      "path": "data/official/psa_metadata.json",
+      "size_bytes": 852,
+      "sha256": "b809817ce6798869520787fd73fcb851ff28232beefba2369d890e82089270ae"
+    },
+    {
+      "path": "data/official/psa_province_profiles.json",
+      "size_bytes": 1416777,
+      "sha256": "b2df91d275400daa31ffb1e3c20dd7a49ce450e654b0eb50e0909bf95acb9da0"
+    },
+    {
+      "path": "data/source/COCONUT_PRODUCTION_ALL_PROVINCES_2010_2026_PSA.xlsx",
+      "size_bytes": 272503,
+      "sha256": "9842520c9d815f4c1087d940f1d7c4298de157398f5f9f8201bffef4a0b73622"
+    },
+    {
+      "path": "data/synthetic/coconut_farm_years.csv",
+      "size_bytes": 2014820,
+      "sha256": "cb965c8bdcfded962a287cd1ece7da98d56beab866b107a8c4fce5312144a266"
+    },
+    {
+      "path": "docs/API.md",
+      "size_bytes": 3786,
+      "sha256": "0dcdc421c40f83c551fe8473fba3151987adbb3ce1593c9a742a9fb2b6a0cc3e"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "size_bytes": 2133,
+      "sha256": "6d89ddac191dacf25118f1bc12f7cd2ea18a1005f498dab26eca147988acd833"
+    },
+    {
+      "path": "docs/DATA_DICTIONARY.csv",
+      "size_bytes": 5839,
+      "sha256": "1d89c4083d8ff331b6cfa5ba3239f504c2af178a353f1276e0b8e4caea2f3809"
+    },
+    {
+      "path": "docs/DATA_DICTIONARY.md",
+      "size_bytes": 4048,
+      "sha256": "4ae06d3464cfbe47ee91bf495a3a7bc466016eb49cbade45b8777a87b1d33c3b"
+    },
+    {
+      "path": "docs/DATA_SOURCES.md",
+      "size_bytes": 1179,
+      "sha256": "9b7e57bd0eeab2d1837d8ebd5b0f64565912eeb87207181b7c2edb2d6e0d6934"
+    },
+    {
+      "path": "docs/HYBRID_WEATHER_FARM_FORECAST.md",
+      "size_bytes": 1856,
+      "sha256": "c510171c676e9a446ad12c0fa43435bcb9edfcfe4e5fd5c850594cb916b5c5b4"
+    },
+    {
+      "path": "docs/LIMITATIONS.md",
+      "size_bytes": 1555,
+      "sha256": "5efa95e4fec43efdf4242d3d5a67662b84e8da064babca86546ee25c372a1e4f"
+    },
+    {
+      "path": "docs/MATHEMATICAL_MODEL.md",
+      "size_bytes": 4333,
+      "sha256": "4a0e43fa2153185b99e2eba3124e6caa4805c08d89e11f87850e0e52099bc589"
+    },
+    {
+      "path": "docs/MODEL_CARDS.md",
+      "size_bytes": 1218,
+      "sha256": "1d63f5259e3249a9743ad234bf95f65a9f78e7df36d3ebcb46d0f7ef1df003ed"
+    },
+    {
+      "path": "docs/OFFICIAL_PSA_DATA.md",
+      "size_bytes": 2140,
+      "sha256": "6fb3a8800fdfe4af3f0345ba645a08255ab7c340d7ce2611110e1064733ac1c7"
+    },
+    {
+      "path": "docs/REHABILITATION_PLANNING.md",
+      "size_bytes": 1891,
+      "sha256": "caabbfcf097b89cddb86ac3c016cc4a0ba9f99f0d184a0c251449e29448a0013"
+    },
+    {
+      "path": "docs/TESTING.md",
+      "size_bytes": 1196,
+      "sha256": "fdd92d5d1becde9362881e534ef93a1cf106e49e239c6b2568e73b9de03f8645"
+    },
+    {
+      "path": "docs/TROUBLESHOOTING.md",
+      "size_bytes": 2430,
+      "sha256": "1edbed4361e42db235cc7044a615bb636c7a22888f558360d5d9587fce1071d4"
+    },
+    {
+      "path": "docs/USER_GUIDE.md",
+      "size_bytes": 5271,
+      "sha256": "6330f549937c58e6a15358b7ab0bbac7291778a8ff0fef4874b2d31185b37fe1"
+    },
+    {
+      "path": "docs/reference/COCOGUARD_Mathematical_Framework_Source.docx",
+      "size_bytes": 395343,
+      "sha256": "06b54f6d11fe2d19644e0bb4dbad2a7be8ee88dea14f072f5c0be9810e0e25c6"
+    },
+    {
+      "path": "docs/reference/COCO_AID_Project_Vision_Source.docx",
+      "size_bytes": 69732,
+      "sha256": "4acd85a6f93de159156f098d68c448a954a91f553adbb764cb9a202df824ebe9"
+    },
+    {
+      "path": "launcher.py",
+      "size_bytes": 1307,
+      "sha256": "17a0b412d8d8b22e72839ff34d2ab0d6f2f3dd022da9ee9a596a836724672ce6"
+    },
+    {
+      "path": "rebuild_models.bat",
+      "size_bytes": 347,
+      "sha256": "bd194743e96ab3a3df5c2ccc7283aa61f711e968ee0db7bc62a4d4dc316e0cc7"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 355,
+      "sha256": "b5c6c7a0c801e3e352775ff4c90dafdfcddfe04d197c2fd0c652a25d88cadb83"
+    },
+    {
+      "path": "run.bat",
+      "size_bytes": 412,
+      "sha256": "4f9f921e8c5fe8870ded38906e8127522ae35e18b40010e8fc1372385eca6ea7"
+    },
+    {
+      "path": "scripts/ensure_models.py",
+      "size_bytes": 945,
+      "sha256": "3b93587be80dfe0fa4520b767bc86596ed9b097b97e76b3c54be091912496155"
+    },
+    {
+      "path": "scripts/generate_data.py",
+      "size_bytes": 12932,
+      "sha256": "b50c3bede52abc9f385ab6d4902426716ba8c515c4dfd37e7578f89a2d849949"
+    },
+    {
+      "path": "scripts/prepare_climate_demo.py",
+      "size_bytes": 3816,
+      "sha256": "99ab68a4d4a08206f1c0af11aa819d99a9168f32ad3a01eeaa7d41300b023cfe"
+    },
+    {
+      "path": "scripts/train_models.py",
+      "size_bytes": 6613,
+      "sha256": "210e4121d1e0ecd29dcb7168fde1bb1a043bbea52ce261d4ff8b2e70b294ae26"
+    },
+    {
+      "path": "scripts/verify_installation.py",
+      "size_bytes": 3931,
+      "sha256": "3489edfad6151e7005e76b246b9ea4cf3e9febc7bd8b7d7e23f0e4b1303c9a2f"
+    },
+    {
+      "path": "setup.bat",
+      "size_bytes": 1554,
+      "sha256": "bbb781570aaedcfac84af044aaa2021e5c28d3b9453d8d9b82093196853bd646"
+    },
+    {
+      "path": "test.bat",
+      "size_bytes": 319,
+      "sha256": "4d6de6253435a09fda276de04bd37f034dea25f5b146203a2e82256ad10ed9c1"
+    },
+    {
+      "path": "tests/conftest.py",
+      "size_bytes": 647,
+      "sha256": "1320ced42626c0c7287e83b30791b77ae422305c147172376cfa85b239a58401"
+    },
+    {
+      "path": "tests/integration/test_api.py",
+      "size_bytes": 7976,
+      "sha256": "6f68b02e44782427243af96ba9f3e577c362abd1ebabf9eabd0c0c926f284725"
+    },
+    {
+      "path": "tests/integration/test_v21_api.py",
+      "size_bytes": 4017,
+      "sha256": "fc74e4080c0572a7ed2b5558575c10377a558169fbbbfb4ea0c83aeab7a749f6"
+    },
+    {
+      "path": "tests/mathematical/test_bayes.py",
+      "size_bytes": 784,
+      "sha256": "c1beb965cff7eea0e2cad3566bebdbc7879653027bb85d051fa56b837e6ff3a3"
+    },
+    {
+      "path": "tests/mathematical/test_state.py",
+      "size_bytes": 1042,
+      "sha256": "c06bf05c6f6304da127e8082e6aeabdb59e25d2f318126648de199047210b347"
+    },
+    {
+      "path": "tests/mathematical/test_suitability.py",
+      "size_bytes": 557,
+      "sha256": "0088bbab4021720da79f5d26be21b19246c6df4137588efd5a719b100b620823"
+    },
+    {
+      "path": "tests/unit/test_audit_regressions.py",
+      "size_bytes": 7849,
+      "sha256": "ee42edf00d85d93c5b2d93d7a3f489dbdacfeb00caea1ca286952b0637a33e05"
+    },
+    {
+      "path": "tests/unit/test_climate.py",
+      "size_bytes": 838,
+      "sha256": "012ddc73644868292d1c2139d5abbbf23db2a7775a4218bb0e550ea025c5c149"
+    },
+    {
+      "path": "tests/unit/test_data.py",
+      "size_bytes": 1130,
+      "sha256": "4506c096a118630a3534d507585f9b854e2f22160a14256289fb622ec38db8a5"
+    },
+    {
+      "path": "tests/unit/test_farm_site_forecast.py",
+      "size_bytes": 4660,
+      "sha256": "799ac1a294d1fba6cd1f8005349754722f551d7f4bc3d42e069d991e5716c561"
+    },
+    {
+      "path": "tests/unit/test_models.py",
+      "size_bytes": 747,
+      "sha256": "ea43478e47e19adad13471d0c6e13f71e4238f71718a2e9b7847609b84d89654"
+    },
+    {
+      "path": "tests/unit/test_official_production.py",
+      "size_bytes": 2044,
+      "sha256": "64d04b92d38ca77a967a01617ad3eadbff00a418a7b595082973d320d51c28e9"
+    },
+    {
+      "path": "tests/unit/test_simulation.py",
+      "size_bytes": 1671,
+      "sha256": "71cef924bff69f7c32d1657c1bf4d4644b0c1990c64216d082dc7d741c96b4d5"
+    },
+    {
+      "path": "tests/unit/test_v210_audio_navigation.py",
+      "size_bytes": 2790,
+      "sha256": "6cddc12c7bec5ecf65b202e75494aa038776a489d62bb64ea691f477b30b5679"
+    },
+    {
+      "path": "tests/unit/test_v211_sidebar_refinement.py",
+      "size_bytes": 1423,
+      "sha256": "0bcae47845dad68ba28a1d4cc4ddfee6e04f4ce59c2c98c6980f0f9faf21726a"
+    },
+    {
+      "path": "tests/unit/test_v21_features.py",
+      "size_bytes": 3984,
+      "sha256": "b6b861c9582a56b4a710cda849bd3f04771f16f724b737e3ae8298fce15854eb"
+    },
+    {
+      "path": "tests/unit/test_v223_bugfix.py",
+      "size_bytes": 3589,
+      "sha256": "f4036a58ea1d53711410aa22fa6b9a7407139ec6aace290990b2c3220db60bfb"
+    },
+    {
+      "path": "tests/unit/test_v22_features.py",
+      "size_bytes": 4693,
+      "sha256": "4cd796e41d3c7eacbd67719aeef79682f86567a44afbc0334cf082cbad52bed5"
+    },
+    {
+      "path": "tests/unit/test_v23_features.py",
+      "size_bytes": 4827,
+      "sha256": "47c2d05bbde2133aeb168280e6591729b8bce0535695dd8047726aea0658a45d"
+    },
+    {
+      "path": "tests/unit/test_v241_assistant_reliability.py",
+      "size_bytes": 5336,
+      "sha256": "748c040cdf76996d79f4e521c42a7e510d49c776d6057f475713c812a426b34a"
+    },
+    {
+      "path": "tests/unit/test_v24_rehabilitation.py",
+      "size_bytes": 5302,
+      "sha256": "6f47a0d136c0a04c65fe9a672c0e95835469f2aa6881f93b55f6558fa7ab393b"
+    },
+    {
+      "path": "tests/unit/test_v25_ui.py",
+      "size_bytes": 1992,
+      "sha256": "f3ccd17b4a94f0558bf4f63cf70cab274ec99471e86883bd96fa3be939ec3070"
+    },
+    {
+      "path": "tests/unit/test_v26_liquid_glass.py",
+      "size_bytes": 1777,
+      "sha256": "e28845b33816043a2ef6ab4d8abd22d97c5eeb4f3457f0407ddbc3807d22a4e4"
+    },
+    {
+      "path": "tests/unit/test_v27_refinements.py",
+      "size_bytes": 1887,
+      "sha256": "147bcfac5acc7aeb4410dc2df1fd0efd45e7579edadd817f2bf5abe605aaef26"
+    },
+    {
+      "path": "tests/unit/test_v28_official_branding.py",
+      "size_bytes": 1253,
+      "sha256": "370c2fee7d83c03488ac4eafbd3dde5ddd2806fe718bd7fbaac9074c9a07365c"
+    },
+    {
+      "path": "tests/unit/test_weather.py",
+      "size_bytes": 684,
+      "sha256": "5b1442be4bf8b60c1818bdc4f065591b4a6ec8e2d568534bdc682ff95756e936"
+    }
+  ]
+}

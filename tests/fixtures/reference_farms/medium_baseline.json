@@ -1,0 +1,93 @@
+{
+  "name": "Reference Farm B - Medium Baseline",
+  "location": {
+    "region": "Region XII",
+    "province": "South Cotabato",
+    "municipality": "Tupi",
+    "barangay": "Palian",
+    "latitude": 6.334,
+    "longitude": 124.952,
+    "polygon": [
+      [
+        6.325,
+        124.943
+      ],
+      [
+        6.343,
+        124.943
+      ],
+      [
+        6.343,
+        124.961
+      ],
+      [
+        6.325,
+        124.961
+      ]
+    ]
+  },
+  "area_hectares": 5.0,
+  "trees": {
+    "total_trees": 650,
+    "young": 70,
+    "productive": 360,
+    "aging": 110,
+    "stressed": 45,
+    "infested": 25,
+    "recovering": 20,
+    "dead": 20,
+    "average_age_years": 34,
+    "variety": "Tall"
+  },
+  "production": {
+    "annual_production_tons": 16.0,
+    "yield_tons_per_hectare": 3.2,
+    "copra_weight_kg": 5100,
+    "nut_count": 37000,
+    "oil_content_percent": 61
+  },
+  "soil_terrain": {
+    "elevation_m": 150,
+    "slope_degrees": 4.5,
+    "soil_ph": 6.0,
+    "nitrogen_index": 0.62,
+    "phosphorus_index": 0.55,
+    "potassium_index": 0.66,
+    "drainage_index": 0.72
+  },
+  "symptoms": {
+    "yellowing": false,
+    "crown_decline": false,
+    "frond_cuts": false,
+    "visible_scale_insects": false,
+    "rhinoceros_beetle_damage": false,
+    "premature_nut_fall": false,
+    "nearby_reports": false,
+    "severity": 0
+  },
+  "management": {
+    "fertilizer_activity": false,
+    "soil_rehabilitation": false,
+    "pest_control": false,
+    "replanting_percent": 0,
+    "monitoring_activity": false,
+    "intervention_burden_score": 0
+  },
+  "events": [
+    {
+      "event_type": "drought",
+      "year": 2024,
+      "description": "Farmer-reported dry-season production decline.",
+      "trees_affected": 85,
+      "production_loss_percent": 8,
+      "evidence_source": "farmer_reported",
+      "confidence": "moderate"
+    }
+  ],
+  "provenance": {
+    "area_hectares": "farmer_reported",
+    "trees": "farmer_reported",
+    "production": "farmer_reported",
+    "soil_terrain": "estimated"
+  }
+}

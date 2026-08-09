@@ -1,0 +1,51 @@
+{
+  "BayesianDiagnostics": {
+    "description": "Particle-filter diagnostics, conservation status, seed, and effective sample size.",
+    "module": "app.domain.bayesian",
+    "name": "BayesianDiagnostics",
+    "schema_sha256": "a899c9b65a4de2823048a53ebf6606327a0f95834dc382b9f6b2b8c644df742d",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "BayesianEngineOutput": {
+    "description": "Complete Phase 5 posterior, evidence trace, and diagnostics.",
+    "module": "app.domain.bayesian",
+    "name": "BayesianEngineOutput",
+    "schema_sha256": "741bffdfa6c7edeee4f04871dc35c0b367a3b0510a210b593f38ea151dbfa84f",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "BayesianEvidenceObservation": {
+    "description": "Typed, status-controlled farm evidence for Bayesian updating.",
+    "module": "app.domain.bayesian",
+    "name": "BayesianEvidenceObservation",
+    "schema_sha256": "2d00a94854c95c4e132c32e74eb87dcf2bccc46aba6bd1f40f0cc6448e1a3040",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "BayesianPosterior": {
+    "description": "Posterior farm state and uncertainty after evidence assimilation.",
+    "module": "app.domain.bayesian",
+    "name": "BayesianPosterior",
+    "schema_sha256": "59a7a16e23b60e775ca0496b9eb4c43c9fb9428010773e2e82ee0330d3fc3999",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "BayesianSimulationRequest": {
+    "description": "Reproducible particle-filter request linked to a Phase 4 production forecast.",
+    "module": "app.domain.bayesian",
+    "name": "BayesianSimulationRequest",
+    "schema_sha256": "26141d263d6d04a86b27a18f072c33eec427e41e9f265c70b25a7ae55ed3d873",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "EvidenceAssimilationResult": {
+    "description": "Trace of whether and how one observation updated particle weights.",
+    "module": "app.domain.bayesian",
+    "name": "EvidenceAssimilationResult",
+    "schema_sha256": "08c5d97c5b4d19cdb185144eca2113c546622b5b075b897539c56581170725ae",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "StatePosteriorInterval": {
+    "description": "Credible interval for a palm-state count or soil-state index.",
+    "module": "app.domain.bayesian",
+    "name": "StatePosteriorInterval",
+    "schema_sha256": "de75935a8ce6f023aedbc2c0bbcf95220f7d4d543de281658ca522014cf1134c",
+    "schema_version": "3.0.0-draft.10"
+  }
+}

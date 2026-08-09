@@ -1,0 +1,21 @@
+{
+  "catalog_version": "phase2-pca-reference-1",
+  "counts": {
+    "canopy_light_parameters": 81,
+    "coconut_varieties": 30,
+    "farmer_import_runs": 0,
+    "farmer_quality_flags": 0,
+    "farmer_registry_records": 0,
+    "fertilization_scenarios": 2,
+    "intercrop_candidates": 35,
+    "intercrop_economic_profiles": 3,
+    "intercrop_requirement_profiles": 35,
+    "pest_evidence_rules": 17,
+    "pest_management_actions": 14,
+    "pest_profiles": 5,
+    "protected_farmer_identities": 0,
+    "source_documents": 16,
+    "variety_parameters": 408
+  },
+  "public_source_document_count": 14
+}

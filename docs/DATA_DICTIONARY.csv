@@ -1,0 +1,76 @@
+field,dtype,description,unit_or_domain,provenance
+record_id,object,Unique synthetic farm-year record identifier,See description,synthetic_reference_based
+farm_id,object,Anonymous synthetic farm identifier,See description,synthetic_reference_based
+year,int64,Observation year,See description,synthetic_reference_based
+region,object,Philippine administrative region label used in generation,See description,synthetic_reference_based
+province,object,Province label used in generation,See description,synthetic_reference_based
+latitude,float64,Synthetic farm latitude in decimal degrees,See description,synthetic_reference_based
+longitude,float64,Synthetic farm longitude in decimal degrees,See description,synthetic_reference_based
+elevation_m,float64,Elevation above mean sea level in metres,See description,synthetic_reference_based
+slope_degrees,float64,Terrain slope in degrees,See description,synthetic_reference_based
+farm_area_hectares,float64,Farm area in hectares,See description,synthetic_reference_based
+tree_density_per_hectare,float64,Coconut planting positions per hectare,See description,synthetic_reference_based
+total_trees,int64,Total tree states/planting positions,See description,synthetic_reference_based
+young_trees,int64,Young or newly replanted palms,See description,synthetic_reference_based
+productive_trees,int64,Productive palms,See description,synthetic_reference_based
+aging_trees,int64,Aging or senescent palms,See description,synthetic_reference_based
+stressed_trees,int64,Environmentally stressed palms,See description,synthetic_reference_based
+infested_trees,int64,Infested or diseased palms,See description,synthetic_reference_based
+recovering_trees,int64,Recovering or rehabilitating palms,See description,synthetic_reference_based
+dead_trees,int64,Dead palms or vacant positions,See description,synthetic_reference_based
+average_tree_age,float64,Average palm age in years,See description,synthetic_reference_based
+variety,object,"Tall, Dwarf, or Hybrid development category",See description,synthetic_reference_based
+soil_ph,float64,Soil pH,See description,synthetic_reference_based
+nitrogen_index,float64,Normalized nitrogen availability index,See description,synthetic_reference_based
+phosphorus_index,float64,Normalized phosphorus availability index,See description,synthetic_reference_based
+potassium_index,float64,Normalized potassium availability index,See description,synthetic_reference_based
+drainage_index,float64,Normalized drainage suitability proxy,See description,synthetic_reference_based
+annual_rainfall_mm,float64,Annual rainfall in millimetres,See description,synthetic_reference_based
+mean_temperature_c,float64,Annual mean temperature in degrees Celsius,See description,synthetic_reference_based
+relative_humidity_percent,float64,Mean relative humidity percent,See description,synthetic_reference_based
+drought_exposure,float64,Normalized drought exposure index,See description,synthetic_reference_based
+typhoon_exposure,float64,Normalized typhoon exposure proxy,See description,synthetic_reference_based
+weather_event,object,Generated annual event category,See description,synthetic_reference_based
+weather_severity,float64,Normalized event severity,See description,synthetic_reference_based
+intervention,object,Synthetic management intervention,See description,synthetic_reference_based
+pest_control,int64,Pest-control indicator,See description,synthetic_reference_based
+soil_rehabilitation,int64,Soil-rehabilitation indicator,See description,synthetic_reference_based
+replanting,int64,Replanting indicator,See description,synthetic_reference_based
+yellowing,int64,Yellowing symptom indicator,See description,synthetic_reference_based
+crown_decline,int64,Crown-decline symptom indicator,See description,synthetic_reference_based
+frond_cuts,int64,Frond-cut symptom indicator,See description,synthetic_reference_based
+visible_scale_insects,int64,Visible scale-insect indicator,See description,synthetic_reference_based
+rhinoceros_beetle_damage,int64,Rhinoceros-beetle damage indicator,See description,synthetic_reference_based
+premature_nut_fall,int64,Premature nut-fall indicator,See description,synthetic_reference_based
+nearby_reports,int64,Nearby pest-report indicator,See description,synthetic_reference_based
+symptom_severity,int64,Ordinal symptom severity 0–3,See description,synthetic_reference_based
+pest_probability,float64,Synthetic generative pest probability,See description,synthetic_reference_based
+pest_outcome,int64,Synthetic binary pest outcome,See description,synthetic_reference_based
+suitability_score,float64,Synthetic target suitability score 0–1,See description,synthetic_reference_based
+suitability_class,int64,Synthetic suitability class,See description,synthetic_reference_based
+annual_production_tons,float64,Synthetic annual coconut production in metric tons,See description,synthetic_reference_based
+yield_tons_per_hectare,float64,Synthetic annual yield per hectare,See description,synthetic_reference_based
+replanting_survival,float64,Synthetic replanting survival outcome,See description,synthetic_reference_based
+rehabilitation_success,int64,Synthetic rehabilitation success outcome,See description,synthetic_reference_based
+data_source_type,object,Data provenance category,See description,synthetic_reference_based
+is_synthetic,bool,True for generated records,See description,synthetic_reference_based
+generation_version,object,Generator version,See description,synthetic_reference_based
+generation_seed,int64,Reproducibility seed,See description,synthetic_reference_based
+reference_group,object,Reference grouping label,See description,synthetic_reference_based
+created_at,object,UTC creation timestamp,See description,synthetic_reference_based
+quality_flag,object,Development-use quality classification,See description,synthetic_reference_based
+weather_model_run_id,object,Immutable identifier for one provider weather retrieval,UUID,weather_provider
+weather_provider,object,External weather data provider name,Open-Meteo,weather_provider
+weather_provider_model,object,Requested or resolved provider model identifier,provider identifier,weather_provider
+weather_provider_run_at,datetime64,Provider initialization timestamp when explicitly exposed; otherwise null,UTC datetime or null,weather_provider
+weather_retrieved_at,datetime64,Time COCOAID retrieved the provider payload,UTC datetime,weather_provider
+weather_valid_from,datetime64,Earliest live current or forecast validity time,UTC datetime,weather_provider
+weather_valid_to,datetime64,Latest live forecast validity time capped at 16 days,UTC datetime,weather_provider
+weather_raw_payload_sha256,object,SHA-256 of canonical provider content,64 lowercase hexadecimal characters,weather_provider
+weather_period_kind,object,Classification of a stored value,historical|current|forecast,weather_provider
+weather_resolution,object,Temporal resolution of a stored value,current|hourly|daily,weather_provider
+weather_feature_set_id,object,Identifier for one versioned agricultural weather feature set,UUID,model_output
+weather_feature_adapter_version,object,Exact feature-engineering implementation version,weather-features-1.0.0,model_output
+weather_feature_name,object,Canonical agricultural weather feature name,feature catalog,model_output
+weather_feature_value,float64,Finite agricultural weather feature value,feature-specific,model_output
+weather_feature_quality_flags,object,Missing/stale/reference-only/coverage classifications,quality flag list,model_output

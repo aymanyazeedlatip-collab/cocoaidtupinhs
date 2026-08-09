@@ -1,0 +1,744 @@
+{
+  "files": [
+    {
+      "path": "data/official/psa_province_profiles.json",
+      "extension": ".json",
+      "lines": 51407,
+      "size_bytes": 1416777
+    },
+    {
+      "path": "app/static/styles.css",
+      "extension": ".css",
+      "lines": 3464,
+      "size_bytes": 101283
+    },
+    {
+      "path": "app/static/app.js",
+      "extension": ".js",
+      "lines": 2808,
+      "size_bytes": 112068
+    },
+    {
+      "path": "app/static/weather-viewer/app.js",
+      "extension": ".js",
+      "lines": 2096,
+      "size_bytes": 68281
+    },
+    {
+      "path": "app/static/weather-viewer/styles.css",
+      "extension": ".css",
+      "lines": 1343,
+      "size_bytes": 30055
+    },
+    {
+      "path": "app/simulation/farm_site_forecast.py",
+      "extension": ".py",
+      "lines": 996,
+      "size_bytes": 49777
+    },
+    {
+      "path": "app/static/index.html",
+      "extension": ".html",
+      "lines": 976,
+      "size_bytes": 48830
+    },
+    {
+      "path": "app/simulation/engine.py",
+      "extension": ".py",
+      "lines": 541,
+      "size_bytes": 23970
+    },
+    {
+      "path": "app/reports/docx.py",
+      "extension": ".py",
+      "lines": 511,
+      "size_bytes": 24326
+    },
+    {
+      "path": "app/reports/pdf.py",
+      "extension": ".py",
+      "lines": 508,
+      "size_bytes": 25353
+    },
+    {
+      "path": "app/api/routes.py",
+      "extension": ".py",
+      "lines": 487,
+      "size_bytes": 20640
+    },
+    {
+      "path": "app/gis/analysis.py",
+      "extension": ".py",
+      "lines": 476,
+      "size_bytes": 25594
+    },
+    {
+      "path": "app/static/weather-viewer/index.html",
+      "extension": ".html",
+      "lines": 400,
+      "size_bytes": 13833
+    },
+    {
+      "path": "app/services/assistant.py",
+      "extension": ".py",
+      "lines": 365,
+      "size_bytes": 15152
+    },
+    {
+      "path": "app/weather/providers.py",
+      "extension": ".py",
+      "lines": 355,
+      "size_bytes": 17277
+    },
+    {
+      "path": "app/math/pest_specific.py",
+      "extension": ".py",
+      "lines": 337,
+      "size_bytes": 18332
+    },
+    {
+      "path": "app/storage/database.py",
+      "extension": ".py",
+      "lines": 263,
+      "size_bytes": 10466
+    },
+    {
+      "path": "CHANGELOG.md",
+      "extension": ".md",
+      "lines": 260,
+      "size_bytes": 16942
+    },
+    {
+      "path": "app/reports/visuals.py",
+      "extension": ".py",
+      "lines": 221,
+      "size_bytes": 10595
+    },
+    {
+      "path": "app/schemas/analysis.py",
+      "extension": ".py",
+      "lines": 209,
+      "size_bytes": 8803
+    },
+    {
+      "path": "scripts/generate_data.py",
+      "extension": ".py",
+      "lines": 206,
+      "size_bytes": 12932
+    },
+    {
+      "path": "app/math/state.py",
+      "extension": ".py",
+      "lines": 203,
+      "size_bytes": 8985
+    },
+    {
+      "path": "app/climate/projections.py",
+      "extension": ".py",
+      "lines": 188,
+      "size_bytes": 10051
+    },
+    {
+      "path": "app/services/analysis.py",
+      "extension": ".py",
+      "lines": 187,
+      "size_bytes": 7989
+    },
+    {
+      "path": "tests/integration/test_api.py",
+      "extension": ".py",
+      "lines": 182,
+      "size_bytes": 7976
+    },
+    {
+      "path": "tests/unit/test_audit_regressions.py",
+      "extension": ".py",
+      "lines": 177,
+      "size_bytes": 7849
+    },
+    {
+      "path": "README.md",
+      "extension": ".md",
+      "lines": 170,
+      "size_bytes": 11745
+    },
+    {
+      "path": "app/data/official_production.py",
+      "extension": ".py",
+      "lines": 162,
+      "size_bytes": 6207
+    },
+    {
+      "path": "tests/unit/test_v24_rehabilitation.py",
+      "extension": ".py",
+      "lines": 135,
+      "size_bytes": 5302
+    },
+    {
+      "path": "scripts/train_models.py",
+      "extension": ".py",
+      "lines": 130,
+      "size_bytes": 6613
+    },
+    {
+      "path": "app/schemas/farm.py",
+      "extension": ".py",
+      "lines": 126,
+      "size_bytes": 5102
+    },
+    {
+      "path": "tests/unit/test_v241_assistant_reliability.py",
+      "extension": ".py",
+      "lines": 124,
+      "size_bytes": 5336
+    },
+    {
+      "path": "app/math/bayes.py",
+      "extension": ".py",
+      "lines": 117,
+      "size_bytes": 4609
+    },
+    {
+      "path": "tests/unit/test_v23_features.py",
+      "extension": ".py",
+      "lines": 114,
+      "size_bytes": 4827
+    },
+    {
+      "path": "app/main.py",
+      "extension": ".py",
+      "lines": 111,
+      "size_bytes": 4039
+    },
+    {
+      "path": "app/schemas/weather.py",
+      "extension": ".py",
+      "lines": 106,
+      "size_bytes": 3687
+    },
+    {
+      "path": "tests/unit/test_v22_features.py",
+      "extension": ".py",
+      "lines": 104,
+      "size_bytes": 4693
+    },
+    {
+      "path": "docs/USER_GUIDE.md",
+      "extension": ".md",
+      "lines": 101,
+      "size_bytes": 5271
+    },
+    {
+      "path": "tests/unit/test_farm_site_forecast.py",
+      "extension": ".py",
+      "lines": 100,
+      "size_bytes": 4660
+    },
+    {
+      "path": "tests/unit/test_v223_bugfix.py",
+      "extension": ".py",
+      "lines": 97,
+      "size_bytes": 3589
+    },
+    {
+      "path": "tests/integration/test_v21_api.py",
+      "extension": ".py",
+      "lines": 96,
+      "size_bytes": 4017
+    },
+    {
+      "path": "app/models/registry.py",
+      "extension": ".py",
+      "lines": 95,
+      "size_bytes": 3054
+    },
+    {
+      "path": "docs/API.md",
+      "extension": ".md",
+      "lines": 89,
+      "size_bytes": 3786
+    },
+    {
+      "path": "tests/unit/test_v21_features.py",
+      "extension": ".py",
+      "lines": 88,
+      "size_bytes": 3984
+    },
+    {
+      "path": "docs/MATHEMATICAL_MODEL.md",
+      "extension": ".md",
+      "lines": 86,
+      "size_bytes": 4333
+    },
+    {
+      "path": "PROJECT_STATE.md",
+      "extension": ".md",
+      "lines": 78,
+      "size_bytes": 4995
+    },
+    {
+      "path": "app/simulation/compare.py",
+      "extension": ".py",
+      "lines": 77,
+      "size_bytes": 3683
+    },
+    {
+      "path": "tests/unit/test_v210_audio_navigation.py",
+      "extension": ".py",
+      "lines": 75,
+      "size_bytes": 2790
+    },
+    {
+      "path": "scripts/prepare_climate_demo.py",
+      "extension": ".py",
+      "lines": 73,
+      "size_bytes": 3816
+    },
+    {
+      "path": "app/math/suitability.py",
+      "extension": ".py",
+      "lines": 67,
+      "size_bytes": 2762
+    },
+    {
+      "path": "docs/DATA_DICTIONARY.md",
+      "extension": ".md",
+      "lines": 66,
+      "size_bytes": 4048
+    },
+    {
+      "path": "scripts/verify_installation.py",
+      "extension": ".py",
+      "lines": 66,
+      "size_bytes": 3931
+    },
+    {
+      "path": "app/core/config.py",
+      "extension": ".py",
+      "lines": 56,
+      "size_bytes": 2287
+    },
+    {
+      "path": "app/services/cache.py",
+      "extension": ".py",
+      "lines": 56,
+      "size_bytes": 1751
+    },
+    {
+      "path": "tests/unit/test_v25_ui.py",
+      "extension": ".py",
+      "lines": 53,
+      "size_bytes": 1992
+    },
+    {
+      "path": "docs/TROUBLESHOOTING.md",
+      "extension": ".md",
+      "lines": 52,
+      "size_bytes": 2430
+    },
+    {
+      "path": "tests/unit/test_v26_liquid_glass.py",
+      "extension": ".py",
+      "lines": 49,
+      "size_bytes": 1777
+    },
+    {
+      "path": "tests/unit/test_v27_refinements.py",
+      "extension": ".py",
+      "lines": 48,
+      "size_bytes": 1887
+    },
+    {
+      "path": "app/services/persistent_cache.py",
+      "extension": ".py",
+      "lines": 46,
+      "size_bytes": 1483
+    },
+    {
+      "path": "RELEASE_NOTES_v2.4.md",
+      "extension": ".md",
+      "lines": 44,
+      "size_bytes": 2574
+    },
+    {
+      "path": "launcher.py",
+      "extension": ".py",
+      "lines": 44,
+      "size_bytes": 1307
+    },
+    {
+      "path": "data/metadata/DATASET_CARD.md",
+      "extension": ".md",
+      "lines": 43,
+      "size_bytes": 1643
+    },
+    {
+      "path": "docs/OFFICIAL_PSA_DATA.md",
+      "extension": ".md",
+      "lines": 42,
+      "size_bytes": 2140
+    },
+    {
+      "path": "tests/unit/test_official_production.py",
+      "extension": ".py",
+      "lines": 42,
+      "size_bytes": 2044
+    },
+    {
+      "path": "app/schemas/common.py",
+      "extension": ".py",
+      "lines": 41,
+      "size_bytes": 1316
+    },
+    {
+      "path": "tests/unit/test_v211_sidebar_refinement.py",
+      "extension": ".py",
+      "lines": 38,
+      "size_bytes": 1423
+    },
+    {
+      "path": "app/weather/http.py",
+      "extension": ".py",
+      "lines": 36,
+      "size_bytes": 1798
+    },
+    {
+      "path": "docs/HYBRID_WEATHER_FARM_FORECAST.md",
+      "extension": ".md",
+      "lines": 36,
+      "size_bytes": 1856
+    },
+    {
+      "path": "tests/unit/test_simulation.py",
+      "extension": ".py",
+      "lines": 36,
+      "size_bytes": 1671
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "extension": ".md",
+      "lines": 34,
+      "size_bytes": 2133
+    },
+    {
+      "path": "RELEASE_NOTES_v2.3.md",
+      "extension": ".md",
+      "lines": 32,
+      "size_bytes": 1463
+    },
+    {
+      "path": "data/metadata/MODEL_EVALUATION.json",
+      "extension": ".json",
+      "lines": 31,
+      "size_bytes": 615
+    },
+    {
+      "path": "docs/REHABILITATION_PLANNING.md",
+      "extension": ".md",
+      "lines": 31,
+      "size_bytes": 1891
+    },
+    {
+      "path": "docs/MODEL_CARDS.md",
+      "extension": ".md",
+      "lines": 30,
+      "size_bytes": 1218
+    },
+    {
+      "path": "scripts/ensure_models.py",
+      "extension": ".py",
+      "lines": 30,
+      "size_bytes": 945
+    },
+    {
+      "path": "artifacts/model_cards/PEST_MODEL_CARD.json",
+      "extension": ".json",
+      "lines": 29,
+      "size_bytes": 751
+    },
+    {
+      "path": "tests/unit/test_v28_official_branding.py",
+      "extension": ".py",
+      "lines": 29,
+      "size_bytes": 1253
+    },
+    {
+      "path": "docs/TESTING.md",
+      "extension": ".md",
+      "lines": 28,
+      "size_bytes": 1196
+    },
+    {
+      "path": "docs/DATA_SOURCES.md",
+      "extension": ".md",
+      "lines": 26,
+      "size_bytes": 1179
+    },
+    {
+      "path": "RELEASE_NOTES_v2.5.md",
+      "extension": ".md",
+      "lines": 24,
+      "size_bytes": 1108
+    },
+    {
+      "path": "tests/conftest.py",
+      "extension": ".py",
+      "lines": 24,
+      "size_bytes": 647
+    },
+    {
+      "path": "tests/mathematical/test_bayes.py",
+      "extension": ".py",
+      "lines": 24,
+      "size_bytes": 784
+    },
+    {
+      "path": "tests/mathematical/test_state.py",
+      "extension": ".py",
+      "lines": 24,
+      "size_bytes": 1042
+    },
+    {
+      "path": "app/schemas/assistant.py",
+      "extension": ".py",
+      "lines": 21,
+      "size_bytes": 630
+    },
+    {
+      "path": "tests/unit/test_data.py",
+      "extension": ".py",
+      "lines": 21,
+      "size_bytes": 1130
+    },
+    {
+      "path": "RELEASE_NOTES_v2.1.md",
+      "extension": ".md",
+      "lines": 20,
+      "size_bytes": 1765
+    },
+    {
+      "path": "RELEASE_NOTES_v2.2.1.md",
+      "extension": ".md",
+      "lines": 20,
+      "size_bytes": 993
+    },
+    {
+      "path": "RELEASE_NOTES_v2.6.md",
+      "extension": ".md",
+      "lines": 20,
+      "size_bytes": 967
+    },
+    {
+      "path": "RELEASE_NOTES_v2.10.md",
+      "extension": ".md",
+      "lines": 19,
+      "size_bytes": 819
+    },
+    {
+      "path": "RELEASE_NOTES_v2.2.md",
+      "extension": ".md",
+      "lines": 19,
+      "size_bytes": 1468
+    },
+    {
+      "path": "tests/unit/test_climate.py",
+      "extension": ".py",
+      "lines": 19,
+      "size_bytes": 838
+    },
+    {
+      "path": "app/__init__.py",
+      "extension": ".py",
+      "lines": 18,
+      "size_bytes": 496
+    },
+    {
+      "path": "app/core/errors.py",
+      "extension": ".py",
+      "lines": 18,
+      "size_bytes": 306
+    },
+    {
+      "path": "tests/unit/test_models.py",
+      "extension": ".py",
+      "lines": 18,
+      "size_bytes": 747
+    },
+    {
+      "path": "RELEASE_NOTES_v2.9.md",
+      "extension": ".md",
+      "lines": 17,
+      "size_bytes": 856
+    },
+    {
+      "path": "data/official/psa_metadata.json",
+      "extension": ".json",
+      "lines": 17,
+      "size_bytes": 852
+    },
+    {
+      "path": "artifacts/model_cards/PRODUCTION_MODEL_CARD.json",
+      "extension": ".json",
+      "lines": 15,
+      "size_bytes": 510
+    },
+    {
+      "path": "artifacts/model_cards/SUITABILITY_MODEL_CARD.json",
+      "extension": ".json",
+      "lines": 15,
+      "size_bytes": 516
+    },
+    {
+      "path": "docs/LIMITATIONS.md",
+      "extension": ".md",
+      "lines": 14,
+      "size_bytes": 1555
+    },
+    {
+      "path": "tests/mathematical/test_suitability.py",
+      "extension": ".py",
+      "lines": 14,
+      "size_bytes": 557
+    },
+    {
+      "path": "tests/unit/test_weather.py",
+      "extension": ".py",
+      "lines": 14,
+      "size_bytes": 684
+    },
+    {
+      "path": "data/metadata/GENERATION_REPORT.json",
+      "extension": ".json",
+      "lines": 13,
+      "size_bytes": 229
+    },
+    {
+      "path": "RELEASE_NOTES_v2.11.md",
+      "extension": ".md",
+      "lines": 11,
+      "size_bytes": 572
+    },
+    {
+      "path": "RELEASE_NOTES_v2.7.md",
+      "extension": ".md",
+      "lines": 11,
+      "size_bytes": 719
+    },
+    {
+      "path": "app/core/logging.py",
+      "extension": ".py",
+      "lines": 10,
+      "size_bytes": 216
+    },
+    {
+      "path": "RELEASE_NOTES_v2.4.1.md",
+      "extension": ".md",
+      "lines": 7,
+      "size_bytes": 330
+    },
+    {
+      "path": "app/schemas/__init__.py",
+      "extension": ".py",
+      "lines": 4,
+      "size_bytes": 133
+    },
+    {
+      "path": "app/api/__init__.py",
+      "extension": ".py",
+      "lines": 0,
+      "size_bytes": 0
+    },
+    {
+      "path": "app/climate/__init__.py",
+      "extension": ".py",
+      "lines": 0,
+      "size_bytes": 0
+    },
+    {
+      "path": "app/core/__init__.py",
+      "extension": ".py",
+      "lines": 0,
+      "size_bytes": 0
+    },
+    {
+      "path": "app/data/__init__.py",
+      "extension": ".py",
+      "lines": 0,
+      "size_bytes": 0
+    },
+    {
+      "path": "app/gis/__init__.py",
+      "extension": ".py",
+      "lines": 0,
+      "size_bytes": 0
+    },
+    {
+      "path": "app/math/__init__.py",
+      "extension": ".py",
+      "lines": 0,
+      "size_bytes": 0
+    },
+    {
+      "path": "app/models/__init__.py",
+      "extension": ".py",
+      "lines": 0,
+      "size_bytes": 0
+    },
+    {
+      "path": "app/reports/__init__.py",
+      "extension": ".py",
+      "lines": 0,
+      "size_bytes": 0
+    },
+    {
+      "path": "app/services/__init__.py",
+      "extension": ".py",
+      "lines": 0,
+      "size_bytes": 0
+    },
+    {
+      "path": "app/simulation/__init__.py",
+      "extension": ".py",
+      "lines": 0,
+      "size_bytes": 0
+    },
+    {
+      "path": "app/storage/__init__.py",
+      "extension": ".py",
+      "lines": 0,
+      "size_bytes": 0
+    },
+    {
+      "path": "app/weather/__init__.py",
+      "extension": ".py",
+      "lines": 0,
+      "size_bytes": 0
+    }
+  ],
+  "by_extension": {
+    ".json": {
+      "files": 7,
+      "lines": 51527
+    },
+    ".css": {
+      "files": 2,
+      "lines": 4807
+    },
+    ".js": {
+      "files": 2,
+      "lines": 4904
+    },
+    ".py": {
+      "files": 77,
+      "lines": 9308
+    },
+    ".html": {
+      "files": 2,
+      "lines": 1376
+    },
+    ".md": {
+      "files": 29,
+      "lines": 1430
+    }
+  }
+}

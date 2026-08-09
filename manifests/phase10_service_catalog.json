@@ -1,0 +1,15 @@
+{
+  "formal_report_generator_version": "formal-report-generator-1.1.0",
+  "formats": [
+    "docx",
+    "pdf"
+  ],
+  "parameter_version": "coco-pilot-grounding-parameters-1.0.0",
+  "prompt_version": "coco-pilot-structured-prompt-1.0.0",
+  "providers": [
+    "deterministic",
+    "gemini_if_configured"
+  ],
+  "service_id": "v3.coco_pilot",
+  "version": "1.0.0"
+}

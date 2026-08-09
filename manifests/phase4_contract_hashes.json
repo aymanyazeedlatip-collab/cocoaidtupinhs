@@ -1,0 +1,51 @@
+{
+  "LegacyProductionFeatureSnapshot": {
+    "description": "Immutable ordered feature payload supplied to the retained production model.",
+    "module": "app.domain.production",
+    "name": "LegacyProductionFeatureSnapshot",
+    "schema_sha256": "c3d8a3e70dd36946d7293390557c91d8f1986d18337b915b1ebbb3ab608cd265",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "ProductEstimate": {
+    "description": "A direct or variety-converted coconut product quantity.",
+    "module": "app.domain.production",
+    "name": "ProductEstimate",
+    "schema_sha256": "d4a05690d6bdf25d37c6cf3c79a0f69357c690cc596b5accf72691e96033212e",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "ProductionActualInput": {
+    "description": "Observed production used for later actual-versus-predicted monitoring.",
+    "module": "app.domain.production",
+    "name": "ProductionActualInput",
+    "schema_sha256": "59a4e4247f7590ab86e83f42d6b07cbce988d5a0ec8bc3023f1fc77d78253b00",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "ProductionEngineOutput": {
+    "description": "Complete Phase 4 production result with traceable features and shadow comparison.",
+    "module": "app.domain.production",
+    "name": "ProductionEngineOutput",
+    "schema_sha256": "fb3926d333b50a652a0d2231a3c28f3d0edaa72feed9121b3a7eb20af83aaf7d",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "ProductionEngineRequest": {
+    "description": "Validated inputs for the retained production model and Phase 4 adapter.",
+    "module": "app.domain.production",
+    "name": "ProductionEngineRequest",
+    "schema_sha256": "8a71eb21bb1c75589f02d515ab87e148157f0e731b3e77bf401ded3524759272",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "ProductionForecast": {
+    "description": "Traceable product forecast separating raw ML, named-variety adjustment, and Bayesian status.",
+    "module": "app.domain.production",
+    "name": "ProductionForecast",
+    "schema_sha256": "fcf3b677eff66ede7bec1f757c6739b760cb2ff1ff9618b7c1153a663059bb13",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "ProductionShadowComparison": {
+    "description": "Comparison between the v2.11 bounded correction and v3 outputs.",
+    "module": "app.domain.production",
+    "name": "ProductionShadowComparison",
+    "schema_sha256": "1350aae1303573a0f52d8df682a3eb591b9df0e798c8606829fcf2b68b3efea8",
+    "schema_version": "3.0.0-draft.10"
+  }
+}

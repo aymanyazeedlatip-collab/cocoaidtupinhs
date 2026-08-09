@@ -1,0 +1,15 @@
+{
+  "confidence": "low",
+  "domain": "Spatial intercropping suitability, canopy light, competition, pest conflict, and economic scaling",
+  "limitations": [
+    "PCA brochure directly supports crop light bands and canopy light-transmission table values.",
+    "Non-light candidate requirements and scoring constants are development assumptions pending expert validation.",
+    "Economic profiles represent historical gross revenue, not net profit or guaranteed future income."
+  ],
+  "parameter_count": 15,
+  "parameter_set_id": "intercrop-suitability",
+  "source_references": [],
+  "status": "experimental_phase_7",
+  "values_sha256": "ab5d13eb6b3b34168e4488c0dd545601494d5dacbdbc8a7319451ab4c6ddd940",
+  "version": "intercrop-suitability-parameters-1.0.0"
+}

@@ -1,0 +1,57 @@
+services:
+  - type: web
+    name: cocoaid-backend
+    runtime: python
+    plan: standard
+    region: singapore
+    autoDeployTrigger: commit
+    buildCommand: pip install --disable-pip-version-check --prefer-binary -r requirements.deploy.txt
+    startCommand: bash scripts/start_production.sh
+    healthCheckPath: /api/health
+    maxShutdownDelaySeconds: 120
+    numInstances: 1
+    disk:
+      name: cocoaid-data
+      mountPath: /var/data/cocoaid
+      sizeGB: 1
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: PERSISTENT_DATA_DIR
+        value: /var/data/cocoaid
+      - key: AUTO_PHASE_WORKFLOWS
+        value: "true"
+      - key: AUTO_PHASE_POLL_SECONDS
+        value: "90"
+      - key: ALLOW_RUNTIME_API_KEY_CONFIGURATION
+        value: "false"
+      - key: AUTO_SEED_REFERENCE_DATA
+        value: "true"
+      - key: ENABLE_V2_CONTRACT_API
+        value: "true"
+      - key: ENABLE_LEGACY_API
+        value: "true"
+      - key: ENABLE_REQUEST_METRICS
+        value: "true"
+      - key: STRICT_MODEL_RUNTIME_COMPATIBILITY
+        value: "true"
+      - key: LOG_LEVEL
+        value: INFO
+      - key: LOG_FORMAT
+        value: json
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: WEATHER_CONNECT_TIMEOUT_SECONDS
+        value: "20"
+      - key: WEATHER_READ_TIMEOUT_SECONDS
+        value: "60"
+      - key: WEATHER_REQUEST_ATTEMPTS
+        value: "2"
+      - key: WEATHER_DIRECT_CONNECTION_FALLBACK
+        value: "true"
+      - key: WEATHER_USE_SYSTEM_TRUST_STORE
+        value: "true"
+      - key: GEMINI_MODEL
+        value: gemini-flash-latest

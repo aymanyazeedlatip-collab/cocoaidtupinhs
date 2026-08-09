@@ -1,0 +1,11 @@
+{
+  "profile_count": 5,
+  "supported_profile_ids": [
+    "bud-nut-rot",
+    "coconut-leaf-beetle",
+    "rhinoceros-beetle",
+    "asiatic-palm-weevil",
+    "coconut-scale-insect"
+  ],
+  "taxonomy_boundary": "Asiatic palm weevil is not merged with legacy red palm weevil."
+}

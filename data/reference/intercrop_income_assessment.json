@@ -1,0 +1,382 @@
+{
+  "approved_uses": [
+    "Empirical gross-revenue priors for cacao and coffee intercropping scenarios after inflation and market-date normalization.",
+    "Reference distributions for area, planting material counts, reported harvest quantity, unit price, and gross revenue per hectare.",
+    "Site-level scenario calibration and sensitivity analysis."
+  ],
+  "assessment_version": "intercrop-income-assessment-1.0.0",
+  "crop_profiles": {
+    "cacao": {
+      "area_hectares": {
+        "count": 59,
+        "max": 3.0,
+        "mean": 1.0932203389830508,
+        "median": 1.0,
+        "min": 0.5,
+        "p25": 1.0,
+        "p75": 1.0
+      },
+      "baseline_coconut_income_php": {
+        "count": 59,
+        "max": 185000.0,
+        "mean": 68722.8813559322,
+        "median": 60500.0,
+        "min": 45000.0,
+        "p25": 56850.0,
+        "p75": 69000.0
+      },
+      "gross_income_per_hectare_php": {
+        "count": 59,
+        "max": 153600.0,
+        "mean": 39454.91525423729,
+        "median": 32000.0,
+        "min": 15360.0,
+        "p25": 30720.0,
+        "p75": 36000.0
+      },
+      "gross_income_year_php": {
+        "count": 59,
+        "max": 144000.0,
+        "mean": 39522.71186440678,
+        "median": 33600.0,
+        "min": 24000.0,
+        "p25": 30720.0,
+        "p75": 36960.0
+      },
+      "quantity_per_reported_harvest": {
+        "count": 59,
+        "max": 150.0,
+        "mean": 41.16949152542373,
+        "median": 35.0,
+        "min": 25.0,
+        "p25": 32.0,
+        "p75": 38.5
+      },
+      "record_count": 59,
+      "reported_cost_total_php": {
+        "count": 59,
+        "max": 19200.0,
+        "mean": 7159.322033898305,
+        "median": 4800.0,
+        "min": 4800.0,
+        "p25": 4800.0,
+        "p75": 9600.0
+      },
+      "seedlings_qty": {
+        "count": 59,
+        "max": 1500.0,
+        "mean": 546.6101694915254,
+        "median": 500.0,
+        "min": 250.0,
+        "p25": 500.0,
+        "p75": 500.0
+      },
+      "site_count": 1,
+      "unit_price_php": {
+        "count": 59,
+        "max": 80.0,
+        "mean": 80.0,
+        "median": 80.0,
+        "min": 80.0,
+        "p25": 80.0,
+        "p75": 80.0
+      }
+    },
+    "coffee": {
+      "area_hectares": {
+        "count": 68,
+        "max": 2.0,
+        "mean": 1.0294117647058822,
+        "median": 1.0,
+        "min": 1.0,
+        "p25": 1.0,
+        "p75": 1.0
+      },
+      "baseline_coconut_income_php": {
+        "count": 68,
+        "max": 103488.00000000001,
+        "mean": 31253.08823529412,
+        "median": 10000.0,
+        "min": 10000.0,
+        "p25": 10000.0,
+        "p75": 63470.00000000001
+      },
+      "gross_income_per_hectare_php": {
+        "count": 68,
+        "max": 158400.0,
+        "mean": 59336.813725490196,
+        "median": 49660.0,
+        "min": 15600.0,
+        "p25": 30550.0,
+        "p75": 84600.0
+      },
+      "gross_income_year_php": {
+        "count": 68,
+        "max": 158400.0,
+        "mean": 60074.75490196078,
+        "median": 50440.0,
+        "min": 15600.0,
+        "p25": 31200.0,
+        "p75": 84600.0
+      },
+      "quantity_per_reported_harvest": {
+        "count": 68,
+        "max": 792.0,
+        "mean": 282.4642156862745,
+        "median": 200.0,
+        "min": 78.0,
+        "p25": 130.0,
+        "p75": 423.0
+      },
+      "record_count": 68,
+      "reported_cost_total_php": {
+        "count": 68,
+        "max": 25514.53784347826,
+        "mean": 12263.537251349815,
+        "median": 15717.444910144928,
+        "min": 1500.0,
+        "p25": 1500.0,
+        "p75": 19436.21641014493
+      },
+      "seedlings_qty": {
+        "count": 68,
+        "max": 1000.0,
+        "mean": 514.7058823529412,
+        "median": 500.0,
+        "min": 500.0,
+        "p25": 500.0,
+        "p75": 500.0
+      },
+      "site_count": 2,
+      "unit_price_php": {
+        "count": 68,
+        "max": 260.0,
+        "mean": 222.05882352941177,
+        "median": 200.0,
+        "min": 200.0,
+        "p25": 200.0,
+        "p75": 260.0
+      }
+    }
+  },
+  "intercrop_record_count": 127,
+  "prohibited_or_deferred_uses": [
+    "Do not train a supervised intercropping model from this workbook alone.",
+    "Do not compute net profit or ROI because cost coverage is incomplete and may represent establishment support rather than full recurring cost.",
+    "Do not add baseline coconut income and intercrop income as guaranteed total income without verifying overlapping periods and units.",
+    "Do not expose farmer names or row-level source records through public APIs."
+  ],
+  "quality_findings": {
+    "column_semantics_issue": "For coffee records, the field labeled Gross Income Per Month is used as one reported harvest income and harvesting frequency is text ('once'), not a numeric annual frequency.",
+    "explicit_duplicate_farmer_entries": 1,
+    "malformed_year_214_dates": 14,
+    "pca_investment_missing_rows": 84,
+    "rows_with_source_remarks": 3,
+    "summary_formula_issue": "The summary sheet uses broken external workbook references such as [1]edited!R39, producing #NAME? in some spreadsheet engines.",
+    "text_dates_requiring_normalization": 61
+  },
+  "site_profiles": [
+    {
+      "area_hectares": {
+        "count": 59,
+        "max": 3.0,
+        "mean": 1.0932203389830508,
+        "median": 1.0,
+        "min": 0.5,
+        "p25": 1.0,
+        "p75": 1.0
+      },
+      "crop": "cacao",
+      "frequency_labels": {
+        "12": 59
+      },
+      "gross_income_per_hectare_php": {
+        "count": 59,
+        "max": 153600.0,
+        "mean": 39454.91525423729,
+        "median": 32000.0,
+        "min": 15360.0,
+        "p25": 30720.0,
+        "p75": 36000.0
+      },
+      "gross_income_year_php": {
+        "count": 59,
+        "max": 144000.0,
+        "mean": 39522.71186440678,
+        "median": 33600.0,
+        "min": 24000.0,
+        "p25": 30720.0,
+        "p75": 36960.0
+      },
+      "record_count": 59,
+      "reported_cost_total_php": {
+        "count": 59,
+        "max": 19200.0,
+        "mean": 7159.322033898305,
+        "median": 4800.0,
+        "min": 4800.0,
+        "p25": 4800.0,
+        "p75": 9600.0
+      },
+      "seedlings_qty": {
+        "count": 59,
+        "max": 1500.0,
+        "mean": 546.6101694915254,
+        "median": 500.0,
+        "min": 250.0,
+        "p25": 500.0,
+        "p75": 500.0
+      },
+      "site_code": "site-cacao-topland",
+      "unit_price_php": {
+        "count": 59,
+        "max": 80.0,
+        "mean": 80.0,
+        "median": 80.0,
+        "min": 80.0,
+        "p25": 80.0,
+        "p75": 80.0
+      }
+    },
+    {
+      "area_hectares": {
+        "count": 43,
+        "max": 1.0,
+        "mean": 1.0,
+        "median": 1.0,
+        "min": 1.0,
+        "p25": 1.0,
+        "p75": 1.0
+      },
+      "crop": "coffee",
+      "frequency_labels": {
+        "once": 43
+      },
+      "gross_income_per_hectare_php": {
+        "count": 43,
+        "max": 158400.0,
+        "mean": 70456.12403100776,
+        "median": 72000.0,
+        "min": 15600.0,
+        "p25": 29900.0,
+        "p75": 105763.8095238095
+      },
+      "gross_income_year_php": {
+        "count": 43,
+        "max": 158400.0,
+        "mean": 70456.12403100776,
+        "median": 72000.0,
+        "min": 15600.0,
+        "p25": 29900.0,
+        "p75": 105763.8095238095
+      },
+      "record_count": 43,
+      "reported_cost_total_php": {
+        "count": 43,
+        "max": 25514.53784347826,
+        "mean": 18451.640304460176,
+        "median": 18781.435843478263,
+        "min": 13624.826510144927,
+        "p25": 15928.364576811593,
+        "p75": 20302.931176811595
+      },
+      "seedlings_qty": {
+        "count": 43,
+        "max": 500.0,
+        "mean": 500.0,
+        "median": 500.0,
+        "min": 500.0,
+        "p25": 500.0,
+        "p75": 500.0
+      },
+      "site_code": "site-coffee-buenaflores",
+      "unit_price_php": {
+        "count": 43,
+        "max": 200.0,
+        "mean": 200.0,
+        "median": 200.0,
+        "min": 200.0,
+        "p25": 200.0,
+        "p75": 200.0
+      }
+    },
+    {
+      "area_hectares": {
+        "count": 25,
+        "max": 2.0,
+        "mean": 1.08,
+        "median": 1.0,
+        "min": 1.0,
+        "p25": 1.0,
+        "p75": 1.0
+      },
+      "crop": "coffee",
+      "frequency_labels": {
+        "once": 25
+      },
+      "gross_income_per_hectare_php": {
+        "count": 25,
+        "max": 62400.0,
+        "mean": 40211.6,
+        "median": 36400.0,
+        "min": 24180.0,
+        "p25": 31200.0,
+        "p75": 49920.0
+      },
+      "gross_income_year_php": {
+        "count": 25,
+        "max": 62400.0,
+        "mean": 42218.8,
+        "median": 44200.0,
+        "min": 24960.0,
+        "p25": 33800.0,
+        "p75": 50960.0
+      },
+      "record_count": 25,
+      "reported_cost_total_php": {
+        "count": 25,
+        "max": 3000.0,
+        "mean": 1620.0,
+        "median": 1500.0,
+        "min": 1500.0,
+        "p25": 1500.0,
+        "p75": 1500.0
+      },
+      "seedlings_qty": {
+        "count": 25,
+        "max": 1000.0,
+        "mean": 540.0,
+        "median": 500.0,
+        "min": 500.0,
+        "p25": 500.0,
+        "p75": 500.0
+      },
+      "site_code": "site-coffee-mnlfllscfo",
+      "unit_price_php": {
+        "count": 25,
+        "max": 260.0,
+        "mean": 260.0,
+        "median": 260.0,
+        "min": 260.0,
+        "p25": 260.0,
+        "p75": 260.0
+      }
+    }
+  ],
+  "source_access_class": "restricted_pii",
+  "source_sha256": "29a36f885cdacab4fe88b289ccf03b306a6ad2a247dadcbc63b362c45242e270",
+  "source_sheets": {
+    "Edited": {
+      "records": 127,
+      "role": "cacao and coffee intercrop gross-income records"
+    },
+    "SM 5 a Summary": {
+      "records": null,
+      "role": "regional summary with cached values and broken external-reference formulas"
+    },
+    "SM5 a farmers": {
+      "records": 199,
+      "role": "coconut-only gross-income reference records"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "PestAssessmentRequest": {
+    "description": "Traceable request for one or more PCA-supported pest-specific assessments.",
+    "module": "app.domain.pest",
+    "name": "PestAssessmentRequest",
+    "schema_sha256": "53bba87b90b497c185ea7e4e470bbced850fc9cbc6463237602c328709bb9f52",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "PestAssessmentSummary": {
+    "description": "Cross-profile inspection-priority summary with overlap warning.",
+    "module": "app.domain.pest",
+    "name": "PestAssessmentSummary",
+    "schema_sha256": "ba5351e435ccbb453c132f9e652b990deeea6760ff63f8187d47b0ad25b019bc",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "PestEngineOutput": {
+    "description": "Complete Phase 6 multi-profile pest inference result and evidence audit.",
+    "module": "app.domain.pest",
+    "name": "PestEngineOutput",
+    "schema_sha256": "c2d342e8621605a259b84853985f661405c73dcd1fac697b010b5c741365b1d4",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "PestEvidenceContribution": {
+    "description": "Decomposable evidence contribution with likelihood ratio and log-odds delta.",
+    "module": "app.domain.pest",
+    "name": "PestEvidenceContribution",
+    "schema_sha256": "4627151c14ea85fee8734b4e61d5188271d8cea912c4be45ffac4dac5131e247",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "PestFarmContext": {
+    "description": "Cell-level palm, management, drainage, wound, and symptom context for Phase 6 inference.",
+    "module": "app.domain.pest",
+    "name": "PestFarmContext",
+    "schema_sha256": "6a4fff057c5bda584e4d886ea48a78dfa805af54dc7a3894469d16523e8af4d8",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "PestManagementAction": {
+    "description": "PCA-sourced management action without invented chemical dosage.",
+    "module": "app.domain.pest",
+    "name": "PestManagementAction",
+    "schema_sha256": "6d9d209fe0c4e88c9d4f5d67369ba4baa681760d298310417d34cf3e279e11ab",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "PestObservation": {
+    "description": "Status-controlled pest or disease evidence with optional Bayesian prevalence linkage.",
+    "module": "app.domain.pest",
+    "name": "PestObservation",
+    "schema_sha256": "1f9688a24a12e65b534896a0740e863ae52c8ef491348bb81a272f9b374ad035",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "PestProfileAssessment": {
+    "description": "One PCA pest or disease probability with conditional and expected production loss.",
+    "module": "app.domain.pest",
+    "name": "PestProfileAssessment",
+    "schema_sha256": "be46e87bdb19989311dd85380c0204b8cb5d1f5d5ccd1f6935b678de8206fdd0",
+    "schema_version": "3.0.0-draft.10"
+  }
+}

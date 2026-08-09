@@ -1,0 +1,9 @@
+{
+  "contract_api_version": "3.0.0-draft.10",
+  "endpoints": [
+    "GET /api/v2/rehabilitation/status",
+    "POST /api/v2/rehabilitation/plan",
+    "GET /api/v2/rehabilitation/plans",
+    "GET /api/v2/rehabilitation/plans/{plan_id}"
+  ]
+}

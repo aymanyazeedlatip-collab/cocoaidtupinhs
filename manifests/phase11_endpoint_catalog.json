@@ -1,0 +1,9 @@
+{
+  "decision_support": "/api/v2/decision-support/status",
+  "formal_reports": "/api/v2/formal-reports",
+  "interface_status": "/api/v2/interface/status",
+  "main_interface": "/",
+  "weather_interface": "/weather-viewer",
+  "automatic_phase9_10_status": "/api/v2/workflows/auto-phase9-10/status",
+  "automatic_phase9_10_bootstrap": "/api/v2/workflows/auto-phase9-10/bootstrap"
+}

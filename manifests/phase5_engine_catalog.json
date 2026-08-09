@@ -1,0 +1,21 @@
+{
+  "availability": "available",
+  "dependencies": [
+    "v3.production",
+    "v3.weather_assimilation",
+    "bayesian_parameter_registry"
+  ],
+  "deterministic_with_seed": true,
+  "engine_id": "v3.bayesian",
+  "input_contract": "BayesianSimulationRequest",
+  "limitations": [
+    "Transition rates and parameter priors require field calibration",
+    "Weather-history features are archived forecast reference data rather than station observations",
+    "Posterior particles are summarized rather than stored individually",
+    "Monthly dynamics are experimental and are not official PCA diagnoses"
+  ],
+  "maturity": "experimental",
+  "name": "Bayesian Farm-State Simulator",
+  "output_contract": "BayesianEngineOutput",
+  "version": "1.0.0"
+}

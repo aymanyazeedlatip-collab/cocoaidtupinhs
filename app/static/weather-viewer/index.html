@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#ffffff" name="theme-color"/>
+<title>Weather GIS</title>
+<link href="/static/assets/brand/weather-gis-icon-64.png" rel="icon" type="image/png"/>
+<link href="https://unpkg.com" rel="preconnect"/>
+<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet"/>
+<link href="/static/weather-viewer/styles.css" rel="stylesheet"/><link href="/static/weather-viewer/phase11.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="app">
+<header class="topbar">
+<button aria-label="Open weather layers" class="icon-button mobile-only" id="layersMobileButton" type="button">
+          ☰
+        </button>
+<div class="brand">
+<img alt="Weather GIS" class="brand-logo weather-gis-brand-icon" src="/static/assets/brand/weather-gis-icon-128.png"/>
+<div>
+<img alt="COCO-AID" class="brand-wordmark" src="/static/assets/brand/coco-aid-wordmark.png"/>
+<span>Weather GIS · radar and animated forecast fields</span>
+</div>
+</div>
+<div class="search-wrap">
+<input autocomplete="off" id="searchInput" placeholder="Search city, municipality or place" type="search"/>
+<button id="searchButton" type="button">Search</button>
+<div class="search-results hidden" id="searchResults"></div>
+</div>
+<div class="top-actions">
+<button aria-label="Use my location" class="icon-button" id="locateButton" title="Use my location" type="button">
+            ⌖
+          </button>
+<button aria-label="Refresh data" class="icon-button" id="refreshButton" title="Refresh data" type="button">
+            ↻
+          </button>
+<button class="source-status" id="sourcesButton" type="button">
+<span id="sourceDot"></span> Sources
+          </button>
+<button aria-label="Open weather details" class="icon-button mobile-only" id="detailsMobileButton" type="button">
+            ☁
+          </button>
+</div>
+</header>
+<aside class="panel layers-panel" id="layersPanel">
+<div class="panel-heading">
+<div>
+<h1>Weather layers</h1>
+<p>Toggle observations and forecasts</p>
+</div>
+<button class="panel-close mobile-only" data-close="layersPanel" type="button">
+            ×
+          </button>
+</div>
+<section class="layer-group">
+<h2>Observations</h2>
+<label class="layer-row">
+<input checked="" id="radarToggle" type="checkbox"/>
+<span class="layer-icon radar-icon"></span>
+<span><strong>Weather radar</strong><small>RainViewer composite</small></span>
+<span class="badge" id="radarState">Loading</span>
+</label>
+<label class="layer-row">
+<input id="satelliteToggle" type="checkbox"/>
+<span class="layer-icon satellite-icon"></span>
+<span><strong>Satellite</strong><small>NASA daily true color</small></span>
+</label>
+<div class="opacity-control">
+<label for="observationOpacity">Observation opacity</label>
+<input id="observationOpacity" max="100" min="10" type="range" value="72"/>
+</div>
+</section>
+<section class="layer-group">
+<h2>Forecast fields</h2>
+<p class="layer-status" id="forecastStatus">
+            Loading the model forecast cube once, then animating cloud and rain
+            movement locally.
+          </p>
+<label class="layer-row forecast-row featured-layer">
+<input checked="" name="forecastLayer" type="radio" value="rain_clouds"/>
+<span class="layer-icon rain-cloud-icon"></span>
+<span><strong>Animated rain intensity</strong><small>Transparent → blue → yellow → red</small></span>
+<span class="badge">NEW</span>
+</label>
+<button class="secondary-button next-rain-button" id="nextRainButton" type="button">
+            Jump to next forecast rain near map point
+          </button>
+<label class="layer-row forecast-row">
+<input name="forecastLayer" type="radio" value="precipitation"/>
+<span class="layer-icon precip-icon"></span>
+<span><strong>Precipitation</strong><small>Hourly amount, mm</small></span>
+</label>
+<label class="layer-row forecast-row">
+<input name="forecastLayer" type="radio" value="temperature_2m"/>
+<span class="layer-icon temp-icon"></span>
+<span><strong>Temperature</strong><small>2-m air temperature</small></span>
+</label>
+<label class="layer-row forecast-row">
+<input name="forecastLayer" type="radio" value="cloud_cover"/>
+<span class="layer-icon cloud-icon"></span>
+<span><strong>Cloud cover</strong><small>Plain total cloud percentage</small></span>
+</label>
+<label class="layer-row forecast-row">
+<input name="forecastLayer" type="radio" value="pressure_msl"/>
+<span class="layer-icon pressure-icon"></span>
+<span><strong>Pressure contours</strong><small>Mean sea-level pressure</small></span>
+</label>
+<label class="layer-row">
+<input id="windToggle" type="checkbox"/>
+<span class="layer-icon wind-icon"></span>
+<span><strong>Wind arrows</strong><small>10-m forecast wind</small></span>
+</label>
+<label class="layer-row clear-layer-row">
+<input name="forecastLayer" type="radio" value="none"/>
+<span class="layer-icon clear-icon"></span>
+<span><strong>No forecast shading</strong><small>Clear the raster layer</small></span>
+</label>
+<div class="opacity-control">
+<label for="forecastOpacity">Forecast opacity</label>
+<input id="forecastOpacity" max="95" min="10" type="range" value="66"/>
+</div>
+</section>
+<section class="layer-group">
+<h2>Hazards</h2>
+<label class="layer-row">
+<input checked="" id="stormsToggle" type="checkbox"/>
+<span class="layer-icon storm-icon"></span>
+<span><strong>Tropical cyclones</strong><small>GDACS supplemental feed</small></span>
+<span class="badge" id="stormCount">0</span>
+</label>
+<button class="official-button" id="pagasaButton" type="button">
+            Open official PAGASA bulletin ↗
+          </button>
+</section>
+<section class="layer-group compact">
+<h2>Forecast model</h2>
+<select id="modelSelect">
+<option value="auto">Open-Meteo Best Match</option>
+<option value="gfs_seamless">NOAA GFS Seamless</option>
+<option value="icon_seamless">DWD ICON Seamless</option>
+<option value="jma_seamless">JMA Seamless</option>
+</select>
+<p class="note">
+            Availability varies by location and variable. Best Match is the
+            safest default.
+          </p>
+</section>
+</aside>
+<main id="mapWrap">
+<div aria-label="Interactive weather map" id="map"></div>
+<canvas id="windCanvas"></canvas>
+<div class="map-message hidden" id="mapMessage"></div>
+<div class="legend hidden" id="legend"></div>
+<div class="map-badges">
+<span class="map-badge hidden" id="farmSiteBadge">Farm site linked</span>
+<span class="map-badge" id="activeDataBadge">Radar observation</span>
+<span class="map-badge" id="validTimeBadge">Waiting for data</span>
+</div>
+</main>
+<aside class="panel details-panel" id="detailsPanel">
+<div class="panel-heading">
+<div>
+<h1 id="locationTitle">Philippines overview</h1>
+<p id="locationCoords">Click the map for a local forecast</p>
+</div>
+<button class="panel-close mobile-only" data-close="detailsPanel" type="button">
+            ×
+          </button>
+</div>
+<div class="loading-block hidden" id="weatherLoading">
+          Loading weather forecast…
+        </div>
+<div class="empty-state" id="weatherEmpty">
+<div class="empty-icon">⌁</div>
+<strong>Select a location</strong>
+<p>
+            Click anywhere on the map, search for a place, or use your current
+            location.
+          </p>
+</div>
+<div class="hidden" id="weatherContent">
+<section class="current-weather">
+<div>
+<span class="condition-label" id="currentCondition">—</span>
+<strong id="currentTemp">—</strong>
+<span id="feelsLike">Feels like —</span>
+</div>
+<div class="weather-symbol" id="weatherSymbol">☁</div>
+</section>
+<div class="metric-grid">
+<div><span>Rain</span><strong id="metricRain">—</strong></div>
+<div>
+<span>Humidity</span><strong id="metricHumidity">—</strong>
+</div>
+<div><span>Wind</span><strong id="metricWind">—</strong></div>
+<div><span>Gusts</span><strong id="metricGust">—</strong></div>
+<div>
+<span>Pressure</span><strong id="metricPressure">—</strong>
+</div>
+<div><span>Cloud</span><strong id="metricCloud">—</strong></div>
+</div>
+<section class="forecast-section">
+<div class="section-title">
+<h2>Next 24 hours</h2>
+<span id="forecastTimezone"></span>
+</div>
+<div class="hourly-scroll" id="hourlyForecast"></div>
+</section>
+<section class="forecast-section">
+<div class="section-title"><h2>16-day outlook</h2></div>
+<div class="daily-list" id="dailyForecast"></div>
+</section>
+<section class="metadata-card">
+<div class="section-title"><h2>Data transparency</h2></div>
+<dl id="pointMetadata"></dl>
+</section>
+</div>
+</aside>
+<section aria-label="Weather timeline" class="timeline-panel">
+<div class="timeline-tabs">
+<button class="timeline-tab active" id="radarTimelineTab" type="button">
+            Radar
+          </button>
+<button class="timeline-tab" id="forecastTimelineTab" type="button">
+            Forecast
+          </button>
+</div>
+<button aria-label="Previous time" class="timeline-button" id="previousFrameButton" type="button">
+          ‹
+        </button>
+<button aria-label="Play timeline" class="play-button" id="playButton" type="button">
+          ▶
+        </button>
+<button aria-label="Next time" class="timeline-button" id="nextFrameButton" type="button">
+          ›
+        </button>
+<div class="timeline-main">
+<div class="timeline-labels">
+<strong aria-live="polite" id="timelineLocal">—</strong><span id="timelineUtc">—</span>
+</div>
+<input aria-label="Weather time" id="timelineSlider" max="0" min="0" type="range" value="0"/>
+<div class="timeline-foot">
+<span id="timelineKind">Observation</span><span id="timelineSource">Source pending</span>
+</div>
+</div>
+<select aria-label="Playback speed" id="playbackSpeed">
+<option value="1000">1×</option>
+<option value="600">1.5×</option>
+<option value="350">2×</option>
+</select>
+</section>
+</div>
+<dialog id="sourcesDialog">
+<div class="dialog-heading">
+<div>
+<h2>Data sources</h2>
+<p>What each layer represents and where it comes from.</p>
+</div>
+<button id="closeSourcesButton" type="button">×</button>
+</div>
+<div class="sources-list" id="sourcesList"></div>
+</dialog>
+<script crossorigin="" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script defer="" src="/static/weather-viewer/app.js"></script><script defer="True" src="/static/weather-viewer/phase11.js"></script>
+</body>
+</html>

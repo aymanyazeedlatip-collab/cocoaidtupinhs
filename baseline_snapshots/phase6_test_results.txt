@@ -1,0 +1,9 @@
+COCOAID Phase 6 Final Test Snapshot
+===================================
+Result: PASS
+Total: 210 tests
+Isolation: 62 fully isolated test-file processes
+Pytest policy: all emitted diagnostics are treated as errors
+Contract API: 3.0.0-draft.6
+Migration target: 6
+Release engine: v3.pest_inference 1.0.0

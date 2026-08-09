@@ -1,0 +1,495 @@
+{
+  "contract_api_version": "3.0.0-draft.10",
+  "contracts": [
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "AnalysisRun",
+      "module": "app.domain.analysis",
+      "schema_sha256": "a7a9cf9409864aa45a5b41b2a4ad1579e3858b1a635c25f1600d2c975e11d34b",
+      "description": "Top-level orchestration record for a multi-engine analysis."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "BayesianDiagnostics",
+      "module": "app.domain.bayesian",
+      "schema_sha256": "a899c9b65a4de2823048a53ebf6606327a0f95834dc382b9f6b2b8c644df742d",
+      "description": "Particle-filter diagnostics, conservation status, seed, and effective sample size."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "BayesianEngineOutput",
+      "module": "app.domain.bayesian",
+      "schema_sha256": "741bffdfa6c7edeee4f04871dc35c0b367a3b0510a210b593f38ea151dbfa84f",
+      "description": "Complete Phase 5 posterior, evidence trace, and diagnostics."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "BayesianEvidenceObservation",
+      "module": "app.domain.bayesian",
+      "schema_sha256": "2d00a94854c95c4e132c32e74eb87dcf2bccc46aba6bd1f40f0cc6448e1a3040",
+      "description": "Typed, status-controlled farm evidence for Bayesian updating."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "BayesianPosterior",
+      "module": "app.domain.bayesian",
+      "schema_sha256": "59a7a16e23b60e775ca0496b9eb4c43c9fb9428010773e2e82ee0330d3fc3999",
+      "description": "Posterior farm state and uncertainty after evidence assimilation."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "BayesianSimulationRequest",
+      "module": "app.domain.bayesian",
+      "schema_sha256": "26141d263d6d04a86b27a18f072c33eec427e41e9f265c70b25a7ae55ed3d873",
+      "description": "Reproducible particle-filter request linked to a Phase 4 production forecast."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "CanopyLightEstimate",
+      "module": "app.domain.intercropping",
+      "schema_sha256": "e009170f6e8eda909bf04cd9e660c265bac324a98695f97cab2c764b0c578754",
+      "description": "PCA-table canopy transmission estimate with explicit interpolation trace."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "CocoPilotCitation",
+      "module": "app.domain.coco_pilot",
+      "schema_sha256": "8f08f8ee64e8ffaff142e2c37d1f3ae1df207b62ff2a62060bdf638d6b380744",
+      "description": "Traceable analytical or PCA source citation used by CoCO-PILOT."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "CocoPilotRedactionSummary",
+      "module": "app.domain.coco_pilot",
+      "schema_sha256": "b75e57d4f5892f5fbed268d093295623c49aa688c3e7138a547403054ed47828",
+      "description": "Privacy boundary and PII-removal summary for one assistant run."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "CocoPilotRequest",
+      "module": "app.domain.coco_pilot",
+      "schema_sha256": "710e34bf8a5ff38befc87f28e63924390001dd9489320c44e239f911750e8503",
+      "description": "Phase 10 grounded explanation request linked to one decision-support run."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "CocoPilotResponse",
+      "module": "app.domain.coco_pilot",
+      "schema_sha256": "675e9858c8102660eef5dd459944d8045ef9e3dbd6b487cca524d0b566b502e3",
+      "description": "Grounded deterministic or validated optional-AI explanation."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "CostEstimate",
+      "module": "app.domain.rehabilitation",
+      "schema_sha256": "75351c8eea49b11b06d551e53f92db03435a1759d0a430829331b1fa88fcc04c",
+      "description": "Transparent materials, labor, other-cost, and person-day estimate."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "DataProvenance",
+      "module": "app.domain.provenance",
+      "schema_sha256": "21487d8cb4e90dd48670f7febe47544c7a116f662de862bd6aced2cd399ae361",
+      "description": "Source, timing, quality, and transformation lineage for data."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "DecisionComponentResult",
+      "module": "app.domain.decision_support",
+      "schema_sha256": "0717645e3d6c24b5b968d6dfe3da0739e4e6ae5d086c4b99a9fee2c4a70bacd0",
+      "description": "Resolution status and summary for one analytical component."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "DecisionEvidence",
+      "module": "app.domain.decision_support",
+      "schema_sha256": "2e6fcb391a11ad1e287ae57042810fcb85d11c9d7d188853a63f53e8e204af77",
+      "description": "Traceable evidence supporting a deterministic decision recommendation."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "DecisionOverview",
+      "module": "app.domain.decision_support",
+      "schema_sha256": "b7a7116bbfcd65c4b95fd39fb0d2e279ea16b951ac0d4d695a2425712ed4ab0b",
+      "description": "Consolidated production, risk, intercropping, and rehabilitation overview."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "DecisionRecommendation",
+      "module": "app.domain.decision_support",
+      "schema_sha256": "473f99d62ee57ed4e27e659a64ddb72b5d95ce7c336ec1d7efe9b56cdcfbde3f",
+      "description": "Prioritized, evidence-linked farm-management recommendation."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "DecisionSupportEngineOutput",
+      "module": "app.domain.decision_support",
+      "schema_sha256": "c7865fe48dc976f358da702ab40e6b77e1294c9114c8c78e66799a120e97aeb9",
+      "description": "Complete Phase 9 integrated decision-support network output."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "DecisionSupportRecord",
+      "module": "app.domain.decision_support",
+      "schema_sha256": "f1da34a73895fe75e35af6e4a78ac983367dbc34d77dafec8aff48bc10b1d170",
+      "description": "Persistent integrated decision-support record for one farm run."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "DecisionSupportRequest",
+      "module": "app.domain.decision_support",
+      "schema_sha256": "a8e8ddec54ae73d0dcad0584d0a57034eaa182d9354c309883e457813dd0a68a",
+      "description": "Phase 9 request linking versioned analytical outputs into one decision-support run."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "DecisionSupportSummary",
+      "module": "app.domain.decision_support",
+      "schema_sha256": "3d1e36ff292a02e12dfc430aa4901e40d0539fbd666af554a28ceb5f41f430a1",
+      "description": "Compact status and completeness summary for a decision-support run."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "DecisionTraceEdge",
+      "module": "app.domain.decision_support",
+      "schema_sha256": "5ab172900c44e60b4e412bcff61eb207a4697d420e85d6cd92406d583f15e68e",
+      "description": "Dependency and lineage edge between analytical component records."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "EngineResultEnvelope",
+      "module": "app.domain.analysis",
+      "schema_sha256": "ef5ad0d479a2460b056d41b7b6d2fe2d766d2965c77ee46c602124541514b6db",
+      "description": "Standard success, failure, skip, or degraded engine result."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "EvidenceAssimilationResult",
+      "module": "app.domain.bayesian",
+      "schema_sha256": "08c5d97c5b4d19cdb185144eca2113c546622b5b075b897539c56581170725ae",
+      "description": "Trace of whether and how one observation updated particle weights."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "FarmCell",
+      "module": "app.domain.farm",
+      "schema_sha256": "a32a93601ff2f26b4da4f97b39b2ad2857a97d3fea7e1e22e93011b0fd8417b9",
+      "description": "Spatial analysis cell belonging to a farm."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "FarmObservation",
+      "module": "app.domain.farm",
+      "schema_sha256": "ef151b36f18e9eeb98ae4039ef9df2b345ea7e7093deedef4e35667bc04814c2",
+      "description": "A time-stamped real-world or reported farm observation."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "FarmProfile",
+      "module": "app.domain.farm",
+      "schema_sha256": "c5164e12410d516552c2c9e938f35d36895d79c9a5c5af817aff188fde261d97",
+      "description": "Canonical farm identity, location, area, and source lineage."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "FormalReportRecord",
+      "module": "app.domain.coco_pilot",
+      "schema_sha256": "ab262f0a2c35df1bc7ed8a2757f5d5163186ade1a7aa668f89022a8c12e04ad4",
+      "description": "Stored formal-report artifact metadata, checksum, fingerprint, and provenance."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "FormalReportRequest",
+      "module": "app.domain.coco_pilot",
+      "schema_sha256": "f6e7308c15890a7ee5bd32cadd1d9189b74b1bd59931d0b211004a9b13e7bee5",
+      "description": "Request for a versioned DOCX or PDF report from a saved decision-support run."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "IntercropAssessment",
+      "module": "app.domain.intercropping",
+      "schema_sha256": "e3ea5e8a8ef2b02c4dd6664c28cdd46101a44bddf417ddfa723908e54594394a",
+      "description": "Compatibility cell-level intercropping assessment contract."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "IntercropAssessmentRequest",
+      "module": "app.domain.intercropping",
+      "schema_sha256": "291cfeda5b746cf240a2bc6cf00f2ce8ae976eef211f67f0abb15ef7289a106a",
+      "description": "Traceable multi-cell, multi-candidate Phase 7 assessment request."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "IntercropCandidate",
+      "module": "app.domain.intercropping",
+      "schema_sha256": "6c0d8296ccaff438ce7ee7974ac34390f3a95571076bd2ce53423b0526a23939",
+      "description": "Reference requirements for a possible intercrop."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "IntercropCandidateAssessment",
+      "module": "app.domain.intercropping",
+      "schema_sha256": "d1232341e5be001e327dc7cc4637c4edcc1197a13f27b9d7cf0795f5650e0379",
+      "description": "One candidate-by-cell suitability result with competition and pest penalties."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "IntercropCandidateSnapshot",
+      "module": "app.domain.intercropping",
+      "schema_sha256": "f41566c423184bb3f4059c59c1b0e4eb3c91b0b7e6d91050c0c3ab5925e35518",
+      "description": "Immutable candidate light and requirement profile snapshot."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "IntercropCellContext",
+      "module": "app.domain.intercropping",
+      "schema_sha256": "d4bedba86be070235fb8355039f3cadedd5acb6ca936e83e08e823c1ca9c7ddb",
+      "description": "Cell canopy, soil, space, slope, management, and market context for Phase 7."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "IntercropEconomicPotential",
+      "module": "app.domain.intercropping",
+      "schema_sha256": "e46d949fdfc7c9b3dfe11d901d5164a3234e17127ddf717ca96904a33943bf8b",
+      "description": "Gross-revenue scenario or explicit unavailable state."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "IntercropEngineOutput",
+      "module": "app.domain.intercropping",
+      "schema_sha256": "eb2f5673526d494a41f4515f3f656d8b567b7acdc3b0a5d485312f8f717691ac",
+      "description": "Complete Phase 7 intercropping potential run."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "IntercropEngineSummary",
+      "module": "app.domain.intercropping",
+      "schema_sha256": "f35bffa73663cd9dd082526b6d14487cc4e8b3bc1f958580fb8cd0ebc2187f6d",
+      "description": "Cross-cell summary and best candidate map."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "LegacyProductionFeatureSnapshot",
+      "module": "app.domain.production",
+      "schema_sha256": "c3d8a3e70dd36946d7293390557c91d8f1986d18337b915b1ebbb3ab608cd265",
+      "description": "Immutable ordered feature payload supplied to the retained production model."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "PestAssessment",
+      "module": "app.domain.pest",
+      "schema_sha256": "d6e4be2ce59b18496b6c830f1807ba0886463c784b4cfe48227bb77974799376",
+      "description": "Compatibility pest-specific probability, conditional loss, and expected loss contract."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "PestAssessmentRequest",
+      "module": "app.domain.pest",
+      "schema_sha256": "53bba87b90b497c185ea7e4e470bbced850fc9cbc6463237602c328709bb9f52",
+      "description": "Traceable request for one or more PCA-supported pest-specific assessments."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "PestAssessmentSummary",
+      "module": "app.domain.pest",
+      "schema_sha256": "ba5351e435ccbb453c132f9e652b990deeea6760ff63f8187d47b0ad25b019bc",
+      "description": "Cross-profile inspection-priority summary with overlap warning."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "PestEngineOutput",
+      "module": "app.domain.pest",
+      "schema_sha256": "c2d342e8621605a259b84853985f661405c73dcd1fac697b010b5c741365b1d4",
+      "description": "Complete Phase 6 multi-profile pest inference result and evidence audit."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "PestEvidenceContribution",
+      "module": "app.domain.pest",
+      "schema_sha256": "4627151c14ea85fee8734b4e61d5188271d8cea912c4be45ffac4dac5131e247",
+      "description": "Decomposable evidence contribution with likelihood ratio and log-odds delta."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "PestFarmContext",
+      "module": "app.domain.pest",
+      "schema_sha256": "6a4fff057c5bda584e4d886ea48a78dfa805af54dc7a3894469d16523e8af4d8",
+      "description": "Cell-level palm, management, drainage, wound, and symptom context for Phase 6 inference."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "PestManagementAction",
+      "module": "app.domain.pest",
+      "schema_sha256": "6d9d209fe0c4e88c9d4f5d67369ba4baa681760d298310417d34cf3e279e11ab",
+      "description": "PCA-sourced management action without invented chemical dosage."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "PestObservation",
+      "module": "app.domain.pest",
+      "schema_sha256": "1f9688a24a12e65b534896a0740e863ae52c8ef491348bb81a272f9b374ad035",
+      "description": "Status-controlled pest or disease evidence with optional Bayesian prevalence linkage."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "PestProfileAssessment",
+      "module": "app.domain.pest",
+      "schema_sha256": "be46e87bdb19989311dd85380c0204b8cb5d1f5d5ccd1f6935b678de8206fdd0",
+      "description": "One PCA pest or disease probability with conditional and expected production loss."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "ProductEstimate",
+      "module": "app.domain.production",
+      "schema_sha256": "d4a05690d6bdf25d37c6cf3c79a0f69357c690cc596b5accf72691e96033212e",
+      "description": "A direct or variety-converted coconut product quantity."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "ProductionActualInput",
+      "module": "app.domain.production",
+      "schema_sha256": "59a4e4247f7590ab86e83f42d6b07cbce988d5a0ec8bc3023f1fc77d78253b00",
+      "description": "Observed production used for later actual-versus-predicted monitoring."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "ProductionEngineOutput",
+      "module": "app.domain.production",
+      "schema_sha256": "fb3926d333b50a652a0d2231a3c28f3d0edaa72feed9121b3a7eb20af83aaf7d",
+      "description": "Complete Phase 4 production result with traceable features and shadow comparison."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "ProductionEngineRequest",
+      "module": "app.domain.production",
+      "schema_sha256": "8a71eb21bb1c75589f02d515ab87e148157f0e731b3e77bf401ded3524759272",
+      "description": "Validated inputs for the retained production model and Phase 4 adapter."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "ProductionForecast",
+      "module": "app.domain.production",
+      "schema_sha256": "fcf3b677eff66ede7bec1f757c6739b760cb2ff1ff9618b7c1153a663059bb13",
+      "description": "Traceable product forecast separating raw ML, named-variety adjustment, and Bayesian status."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "ProductionRecord",
+      "module": "app.domain.farm",
+      "schema_sha256": "7e4aba51adbf022c3dba250ea7692f547b4b8eb972fd69fa2cb4bf383effedeb",
+      "description": "Observed production for a product and time period."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "ProductionShadowComparison",
+      "module": "app.domain.production",
+      "schema_sha256": "1350aae1303573a0f52d8df682a3eb591b9df0e798c8606829fcf2b68b3efea8",
+      "description": "Comparison between the v2.11 bounded correction and v3 outputs."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "RehabilitationAction",
+      "module": "app.domain.rehabilitation",
+      "schema_sha256": "9fbedc92fa8e0f9b60bed057a98598f21283f219281df315c35dc154a6c223ce",
+      "description": "Cell-linked action with timing, evidence, cost, recovery range, and confirmation requirement."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "RehabilitationCellContext",
+      "module": "app.domain.rehabilitation",
+      "schema_sha256": "260ee3ea768a1854332104fb03f676460662a9fea8e57cd71b071b1105a01e6a",
+      "description": "Palm-state, soil, drainage, damage, and operational context for one farm cell."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "RehabilitationEngineOutput",
+      "module": "app.domain.rehabilitation",
+      "schema_sha256": "68a90bb10b2e24a126fef0721e5e60bd2edc90df9094031469886b7fd008d883",
+      "description": "Complete Phase 8 rehabilitation and scenario-optimization result."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "RehabilitationEngineSummary",
+      "module": "app.domain.rehabilitation",
+      "schema_sha256": "a731986be60116643a69c6ab55f173cf1a328547d8d0f0922f29e2319fd50075",
+      "description": "Compact Phase 8 planning and feasibility summary."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "RehabilitationPlan",
+      "module": "app.domain.rehabilitation",
+      "schema_sha256": "660d88918709227752891df14b696e88fd4008f9298c0fdcdc5bd98e649491e1",
+      "description": "Budget-constrained, evidence-linked rehabilitation work plan and scenario comparison."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "RehabilitationPlanRequest",
+      "module": "app.domain.rehabilitation",
+      "schema_sha256": "c9d45d33af71e0b7002b4d15d81cfb2c77680516430496d488d0046d45a43ecc",
+      "description": "Budget-, labor-, and risk-aware Phase 8 planning request."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "RehabilitationScenarioResult",
+      "module": "app.domain.rehabilitation",
+      "schema_sha256": "33bb0313d694f0df4444db1d60a09350f5a744516981d5a46ba4870c9d8d1340",
+      "description": "Comparable no-action or intervention scenario with uncertainty, feasibility, and utility."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "RehabilitationTrigger",
+      "module": "app.domain.rehabilitation",
+      "schema_sha256": "55357e2180fb8d7cfa7df33ec3c1b3337a5c45753cfb2ac2aeefa4deba3d3e17",
+      "description": "Evidence-linked rehabilitation trigger with explicit confirmation semantics."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "RunProvenance",
+      "module": "app.domain.provenance",
+      "schema_sha256": "ff115a9dd7fc45e2db5c4807b3a69d8f1ee08c07583f106b5ed44e1520f60102",
+      "description": "Model, parameter, source, seed, and farm versions for a run."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "StatePosteriorInterval",
+      "module": "app.domain.bayesian",
+      "schema_sha256": "de75935a8ce6f023aedbc2c0bbcf95220f7d4d543de281658ca522014cf1134c",
+      "description": "Credible interval for a palm-state count or soil-state index."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "SuitabilityComponent",
+      "module": "app.domain.intercropping",
+      "schema_sha256": "14dd7ed6131db1c6da3ef9e3f262d86424d662c26da1cb90e51e912e4d211681",
+      "description": "One decomposable weighted component of an intercropping score."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "TreeCohort",
+      "module": "app.domain.farm",
+      "schema_sha256": "9a5b5340a0259d9e01686d28c7e897b99e7aff064b879a2e0896b789874ed611",
+      "description": "A palm cohort with variety, age, count, and health state."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "WeatherAssimilationPayload",
+      "module": "app.domain.weather",
+      "schema_sha256": "7279075f1659310190894fdaa79b8e45f65c82eff3f1a24b3221a4e677034b4b",
+      "description": "Provider payload and run settings accepted by the executable weather assimilation engine."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "WeatherFeatureSet",
+      "module": "app.domain.weather",
+      "schema_sha256": "84d6c8282de5dddfad313a79879c2455a781ad1d9d557033240bf83488e2f69b",
+      "description": "Versioned agricultural weather features derived from a weather run."
+    },
+    {
+      "schema_version": "3.0.0-draft.10",
+      "name": "WeatherModelRun",
+      "module": "app.domain.weather",
+      "schema_sha256": "c53095d3a91ffef1803c539e2cdd2b240cf7479cd16174886af3a681d202d216",
+      "description": "Immutable observed, forecast, historical, or climate weather run."
+    }
+  ]
+}

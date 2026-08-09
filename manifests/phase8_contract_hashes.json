@@ -1,0 +1,65 @@
+{
+  "CostEstimate": {
+    "description": "Transparent materials, labor, other-cost, and person-day estimate.",
+    "module": "app.domain.rehabilitation",
+    "name": "CostEstimate",
+    "schema_sha256": "75351c8eea49b11b06d551e53f92db03435a1759d0a430829331b1fa88fcc04c",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "RehabilitationAction": {
+    "description": "Cell-linked action with timing, evidence, cost, recovery range, and confirmation requirement.",
+    "module": "app.domain.rehabilitation",
+    "name": "RehabilitationAction",
+    "schema_sha256": "9fbedc92fa8e0f9b60bed057a98598f21283f219281df315c35dc154a6c223ce",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "RehabilitationCellContext": {
+    "description": "Palm-state, soil, drainage, damage, and operational context for one farm cell.",
+    "module": "app.domain.rehabilitation",
+    "name": "RehabilitationCellContext",
+    "schema_sha256": "260ee3ea768a1854332104fb03f676460662a9fea8e57cd71b071b1105a01e6a",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "RehabilitationEngineOutput": {
+    "description": "Complete Phase 8 rehabilitation and scenario-optimization result.",
+    "module": "app.domain.rehabilitation",
+    "name": "RehabilitationEngineOutput",
+    "schema_sha256": "68a90bb10b2e24a126fef0721e5e60bd2edc90df9094031469886b7fd008d883",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "RehabilitationEngineSummary": {
+    "description": "Compact Phase 8 planning and feasibility summary.",
+    "module": "app.domain.rehabilitation",
+    "name": "RehabilitationEngineSummary",
+    "schema_sha256": "a731986be60116643a69c6ab55f173cf1a328547d8d0f0922f29e2319fd50075",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "RehabilitationPlan": {
+    "description": "Budget-constrained, evidence-linked rehabilitation work plan and scenario comparison.",
+    "module": "app.domain.rehabilitation",
+    "name": "RehabilitationPlan",
+    "schema_sha256": "660d88918709227752891df14b696e88fd4008f9298c0fdcdc5bd98e649491e1",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "RehabilitationPlanRequest": {
+    "description": "Budget-, labor-, and risk-aware Phase 8 planning request.",
+    "module": "app.domain.rehabilitation",
+    "name": "RehabilitationPlanRequest",
+    "schema_sha256": "c9d45d33af71e0b7002b4d15d81cfb2c77680516430496d488d0046d45a43ecc",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "RehabilitationScenarioResult": {
+    "description": "Comparable no-action or intervention scenario with uncertainty, feasibility, and utility.",
+    "module": "app.domain.rehabilitation",
+    "name": "RehabilitationScenarioResult",
+    "schema_sha256": "33bb0313d694f0df4444db1d60a09350f5a744516981d5a46ba4870c9d8d1340",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "RehabilitationTrigger": {
+    "description": "Evidence-linked rehabilitation trigger with explicit confirmation semantics.",
+    "module": "app.domain.rehabilitation",
+    "name": "RehabilitationTrigger",
+    "schema_sha256": "55357e2180fb8d7cfa7df33ec3c1b3337a5c45753cfb2ac2aeefa4deba3d3e17",
+    "schema_version": "3.0.0-draft.10"
+  }
+}

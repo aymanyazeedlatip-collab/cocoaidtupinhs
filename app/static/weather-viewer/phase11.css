@@ -1,0 +1,105 @@
+/* COCOAID Phase 11 Weather GIS — solid, official agri-tech styling */
+:root,
+html[data-theme="light"],
+html[data-theme="dark"] {
+  color-scheme: light;
+  --bg: #f4f7f2;
+  --panel: #ffffff;
+  --panel-2: #ffffff;
+  --card: #eef3eb;
+  --border: #d5dfd2;
+  --text: #172219;
+  --muted: #637168;
+  --accent: #246b32;
+  --accent-2: #72ad23;
+  --danger: #b7463c;
+  --success: #67a821;
+  --warning: #e58b09;
+  --shadow: 0 9px 24px rgba(25, 51, 29, .09);
+}
+html, body, #app { font-family: "Segoe UI", Arial, sans-serif; background: var(--bg); }
+#app {
+  grid-template-columns: 294px minmax(0, 1fr) 342px;
+  grid-template-rows: 66px minmax(0, 1fr) 104px;
+}
+.topbar, .panel, .timeline, .legend, .map-toolbar, .popup-card {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+.topbar {
+  background: #fff !important;
+  border-bottom: 1px solid var(--border);
+  box-shadow: none;
+}
+.brand { min-width: 270px; }
+.brand-logo { border-radius: 9px; }
+.brand-wordmark { max-height: 26px; width: auto; }
+.search-wrap input { background: #fff !important; border-color: var(--border) !important; border-radius: 8px 0 0 8px !important; }
+.search-wrap button { background: var(--accent); border-color: var(--accent); border-radius: 0 8px 8px 0; }
+.icon-button, .source-status { background: #fff !important; border-color: var(--border) !important; border-radius: 8px !important; }
+.panel { background: #fff !important; border-color: var(--border) !important; box-shadow: none !important; }
+.layers-panel { border-right: 1px solid var(--border); }
+.details-panel { border-left: 1px solid var(--border); }
+.panel-heading { background: #fff !important; border-bottom: 1px solid var(--border); }
+.layer-group { border-bottom-color: var(--border) !important; }
+.layer-row { border-radius: 8px !important; border: 1px solid transparent; }
+.layer-row:hover { background: var(--card) !important; border-color: var(--border); }
+.featured-layer { background: #edf5e8 !important; border-color: #bed1b6 !important; }
+.badge { border-radius: 5px !important; }
+#map { background: #e5ebe2; }
+.leaflet-control-zoom a, .leaflet-bar a { color: var(--accent) !important; background: #fff !important; border-color: var(--border) !important; }
+.map-toolbar, .legend, .coordinate-card, .model-badge {
+  background: #fff !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 9px !important;
+  box-shadow: var(--shadow) !important;
+}
+.timeline {
+  background: #fff !important;
+  border-top: 1px solid var(--border) !important;
+  box-shadow: 0 -6px 18px rgba(25,51,29,.06) !important;
+}
+.timeline input[type="range"], input[type="range"] { accent-color: var(--accent); }
+.timeline-progress, .progress-fill {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--warning)) !important;
+}
+.primary-button, #playButton {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+}
+.secondary-button { background: #fff !important; border-color: var(--border) !important; color: var(--accent) !important; border-radius: 8px !important; }
+.metric-card, .weather-card, .storm-card, .source-card {
+  background: #fff !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}
+.metric-card strong { color: var(--accent); }
+.source-status #sourceDot.ok { background: var(--accent-2); }
+.weather-scan-indicator {
+  position: absolute;
+  z-index: 580;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 11px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--accent);
+  border-radius: 7px;
+  box-shadow: var(--shadow);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+.weather-scan-indicator span { width: 24px; height: 2px; background: linear-gradient(90deg, var(--accent), var(--warning)); animation: weatherPulse 1.8s ease-in-out infinite; }
+@keyframes weatherPulse { 0%,100% { transform: scaleX(.4); opacity: .45; } 50% { transform: scaleX(1); opacity: 1; } }
+@media (max-width: 1080px) { #app { grid-template-columns: 260px minmax(0,1fr) 310px; } }
+@media (max-width: 850px) { .weather-scan-indicator { display: none; } }

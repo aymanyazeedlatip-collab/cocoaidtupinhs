@@ -1,0 +1,26 @@
+{
+  "artifact_feature_order_matches": true,
+  "feature_adapter_version": "production-feature-adapter-1.0.0",
+  "feature_count": 19,
+  "feature_order": [
+    "farm_area_hectares",
+    "productive_trees",
+    "aging_trees",
+    "stressed_trees",
+    "infested_trees",
+    "recovering_trees",
+    "annual_rainfall_mm",
+    "mean_temperature_c",
+    "relative_humidity_percent",
+    "drought_exposure",
+    "weather_severity",
+    "soil_ph",
+    "nitrogen_index",
+    "phosphorus_index",
+    "potassium_index",
+    "suitability_score",
+    "pest_probability",
+    "variety",
+    "intervention"
+  ]
+}

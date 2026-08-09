@@ -1,0 +1,258 @@
+{
+  "health": {
+    "status": "healthy",
+    "project": "COCO-AID",
+    "environment": "development",
+    "api_version": "2.11.0",
+    "offline_mode": true,
+    "timestamp": "2026-08-03T03:30:47.104174+00:00"
+  },
+  "config": {
+    "project": "COCO-AID",
+    "api_version": "2.11.0",
+    "calculation_version": "coco-aid-math-2.4.1",
+    "parameter_version": "psa-calibrated-parameters-2.4.1",
+    "default_simulation_runs": 1000,
+    "default_start_year": 2026,
+    "default_end_year": 2050,
+    "offline_mode": true,
+    "development_data_mode": true,
+    "official_data_mode": true,
+    "data_notice": "Official PSA provincial coconut-production data are used where available. Unavailable periods and future values are model-estimated and tagged in provenance."
+  },
+  "sources": {
+    "sources": [
+      {
+        "id": "psa-coconut-production",
+        "name": "Philippine Statistics Authority Coconut Production",
+        "type": "Official agricultural statistics",
+        "enabled": true,
+        "attribution": "Philippine Statistics Authority (PSA)",
+        "coverage": "2010-2026",
+        "latest_update": "2026-06-04",
+        "table_code": "2E4EVCP1",
+        "limitations": [
+          "2026 contains preliminary Quarter 1 data; unavailable cells are model-estimated and tagged in provenance."
+        ]
+      },
+      {
+        "id": "open-meteo",
+        "name": "Open-Meteo",
+        "type": "Deterministic short-term forecast",
+        "enabled": false,
+        "attribution": "Weather data by Open-Meteo.com and underlying agencies",
+        "url": "https://open-meteo.com/",
+        "limitations": [
+          "Forecast fields are model output, not observations."
+        ]
+      },
+      {
+        "id": "rainviewer",
+        "name": "RainViewer",
+        "type": "Radar observation",
+        "enabled": false,
+        "attribution": "RainViewer and original radar providers",
+        "url": "https://www.rainviewer.com/",
+        "limitations": [
+          "Coverage and public tile availability vary by location."
+        ]
+      },
+      {
+        "id": "nasa-gibs",
+        "name": "NASA GIBS",
+        "type": "Satellite observation imagery",
+        "enabled": false,
+        "attribution": "NASA EOSDIS GIBS",
+        "url": "https://www.earthdata.nasa.gov/eosdis/science-system-description/eosdis-components/gibs"
+      },
+      {
+        "id": "gdacs",
+        "name": "GDACS",
+        "type": "Supplemental tropical-cyclone information",
+        "enabled": false,
+        "attribution": "GDACS and contributing agencies",
+        "url": "https://www.gdacs.org/",
+        "limitations": [
+          "Use PAGASA for official Philippine warnings."
+        ]
+      },
+      {
+        "id": "pagasa",
+        "name": "PAGASA",
+        "type": "Official Philippine warning reference",
+        "enabled": true,
+        "attribution": "DOST-PAGASA",
+        "url": "https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin"
+      },
+      {
+        "id": "openstreetmap",
+        "name": "OpenStreetMap",
+        "type": "Basemap",
+        "enabled": true,
+        "attribution": "© OpenStreetMap contributors",
+        "url": "https://www.openstreetmap.org/copyright"
+      },
+      {
+        "id": "climate-demo",
+        "name": "COCO-AID climate projection layer",
+        "type": "Model-estimated long-term climate projection",
+        "enabled": true,
+        "attribution": "Scenario-based projection layer structured around CMIP6 periods and SSP conventions",
+        "limitations": [
+          "Future conditions are projections, not exact daily forecasts."
+        ]
+      }
+    ]
+  },
+  "models": {
+    "models": {
+      "production": {
+        "available": true,
+        "version": "production-synthetic-1.0",
+        "features": [
+          "farm_area_hectares",
+          "productive_trees",
+          "aging_trees",
+          "stressed_trees",
+          "infested_trees",
+          "recovering_trees",
+          "annual_rainfall_mm",
+          "mean_temperature_c",
+          "relative_humidity_percent",
+          "drought_exposure",
+          "weather_severity",
+          "soil_ph",
+          "nitrogen_index",
+          "phosphorus_index",
+          "potassium_index",
+          "suitability_score",
+          "pest_probability",
+          "variety",
+          "intervention"
+        ],
+        "card": {
+          "model": "production",
+          "version": "production-synthetic-1.0",
+          "data_source_type": "synthetic_reference_based",
+          "metrics": {
+            "mae": 2.2110527564442832,
+            "rmse": 3.9669733434255896,
+            "r2": 0.5177233648063471
+          },
+          "statement": "The model learned the relationships encoded in the synthetic reference-based development dataset. Real-world validation remains required.",
+          "training_rows": 2240,
+          "test_rows": 640,
+          "split": "grouped by synthetic farm ID",
+          "random_seed": 42
+        },
+        "fallback_active": false
+      },
+      "pest": {
+        "available": true,
+        "version": "pest-synthetic-1.0",
+        "features": [
+          "annual_rainfall_mm",
+          "mean_temperature_c",
+          "relative_humidity_percent",
+          "average_tree_age",
+          "yellowing",
+          "crown_decline",
+          "frond_cuts",
+          "visible_scale_insects",
+          "rhinoceros_beetle_damage",
+          "premature_nut_fall",
+          "nearby_reports",
+          "symptom_severity",
+          "pest_control"
+        ],
+        "card": {
+          "model": "pest",
+          "version": "pest-synthetic-1.0",
+          "data_source_type": "synthetic_reference_based",
+          "metrics": {
+            "accuracy": 0.996875,
+            "precision": 0.9863013698630136,
+            "recall": 1.0,
+            "f1": 0.993103448275862,
+            "roc_auc": 0.9999859991039426,
+            "brier": 0.0030899562212003376,
+            "log_loss": 0.016501258472795828,
+            "confusion_matrix": [
+              [
+                494,
+                2
+              ],
+              [
+                0,
+                144
+              ]
+            ]
+          },
+          "statement": "The model learned the relationships encoded in the synthetic reference-based development dataset. Real-world validation remains required.",
+          "training_rows": 2240,
+          "test_rows": 640,
+          "split": "grouped by synthetic farm ID",
+          "random_seed": 42
+        },
+        "fallback_active": false
+      },
+      "suitability": {
+        "available": true,
+        "version": "suitability-synthetic-1.0",
+        "features": [
+          "annual_rainfall_mm",
+          "mean_temperature_c",
+          "relative_humidity_percent",
+          "elevation_m",
+          "slope_degrees",
+          "soil_ph",
+          "nitrogen_index",
+          "phosphorus_index",
+          "potassium_index",
+          "drainage_index",
+          "drought_exposure",
+          "typhoon_exposure"
+        ],
+        "card": {
+          "model": "suitability",
+          "version": "suitability-synthetic-1.0",
+          "data_source_type": "synthetic_reference_based",
+          "metrics": {
+            "mae": 0.006199448983744945,
+            "rmse": 0.008985876749124641,
+            "r2": 0.9276547293662936
+          },
+          "statement": "The model learned the relationships encoded in the synthetic reference-based development dataset. Real-world validation remains required.",
+          "training_rows": 2240,
+          "test_rows": 640,
+          "split": "grouped by synthetic farm ID",
+          "random_seed": 42
+        },
+        "fallback_active": false
+      }
+    }
+  },
+  "official_data_summary": {
+    "title": "Non-Food and Industrial Crops: Volume of Production, by Region, Province, Quarter, and Semester, 2010-2026",
+    "source": "Philippine Statistics Authority (PSA)",
+    "source_workbook": "COCONUT PRODUCTION, ALL PROVINCES 2010-2026.xlsx",
+    "table_code": "2E4EVCP1",
+    "unit": "metric tons",
+    "latest_update": "2026-06-04",
+    "coverage": "2010-2026",
+    "products": {
+      "coconut_w_husk": "Coconut (w/ husk)",
+      "coconut_mature": "Coconut Mature",
+      "coconut_young": "Coconut Young"
+    },
+    "official_note": "Final data through Quarter 4, Semester 2, and Annual 2025; preliminary Quarter 1 2026.",
+    "gap_method": "Unavailable cells are estimated from location-specific seasonal shares and annual interpolation/extrapolation. Estimated cells are tagged estimated_gap and are not represented as official observations.",
+    "provinces": 88
+  },
+  "database_summary_before": {
+    "farms": 0,
+    "analyses": 0,
+    "forecasts": 0,
+    "reports": 0
+  }
+}

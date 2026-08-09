@@ -1,0 +1,21 @@
+{
+  "availability": "available",
+  "dependencies": [
+    "legacy.production",
+    "v3.weather_assimilation",
+    "variety_parameter_registry"
+  ],
+  "deterministic_with_seed": false,
+  "engine_id": "v3.production",
+  "input_contract": "ProductionEngineRequest",
+  "limitations": [
+    "Retained model uses synthetic/reference-based training data",
+    "Weather history is archived forecast reference data",
+    "Named-variety adjustment is bounded and requires field calibration",
+    "Bayesian posterior is not generated in Phase 4"
+  ],
+  "maturity": "experimental",
+  "name": "Versioned Coconut Production Engine",
+  "output_contract": "ProductionEngineOutput",
+  "version": "1.0.0"
+}

@@ -1,0 +1,29 @@
+{
+  "contract_api_version": "3.0.0-draft.10",
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/api/v2/weather/status"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2/weather/assimilate"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/weather/runs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/weather/runs/{run_id}"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/weather/runs/{run_id}/features"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/weather/compare"
+    }
+  ]
+}

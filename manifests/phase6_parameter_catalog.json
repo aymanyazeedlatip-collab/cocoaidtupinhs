@@ -1,0 +1,15 @@
+{
+  "confidence": "low",
+  "domain": "PCA pest-specific evidence inference, spatial pressure, and loss separation",
+  "limitations": [
+    "PCA references provide qualitative evidence rules but not calibrated likelihood ratios or farm prevalence priors.",
+    "Likelihood ratios, spatial decay, and severity coefficients are transparent development assumptions pending expert and field calibration.",
+    "The engine produces inspection priority and probabilistic decision support, not laboratory diagnosis."
+  ],
+  "parameter_count": 8,
+  "parameter_set_id": "v3.pest_inference",
+  "source_references": [],
+  "status": "experimental_phase_6",
+  "values_sha256": "8bbbbd9b316aa7ed174072589da446324e3ad8ff1b663df16b5516059ca0ce25",
+  "version": "pest-inference-parameters-1.0.0"
+}

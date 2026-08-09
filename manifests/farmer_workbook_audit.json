@@ -1,0 +1,326 @@
+{
+  "source": "data_sources/raw/farmers/Farmers_Lists_Updated.xlsx",
+  "sheet_count": 12,
+  "total_records": 17798,
+  "columns": [
+    "Region",
+    "Province",
+    "Municipality",
+    "Barangay",
+    "Lastname",
+    "Firstname",
+    "Middlename",
+    "Suffix",
+    "Gender",
+    "Absolutearea",
+    "Coconutarea",
+    "No. of Trees",
+    "No. of Parcel"
+  ],
+  "sheets": [
+    {
+      "sheet": "Banga",
+      "records": 2787,
+      "barangay_count": 22,
+      "gender_counts": {
+        "MALE": 1585,
+        "FEMALE": 1202
+      },
+      "quality_flags": {
+        "positive_coconut_area_zero_trees": 69,
+        "positive_trees_zero_coconut_area": 101,
+        "coconut_area_exceeds_absolute_area": 1,
+        "tree_density_over_1000_per_ha": 3,
+        "tree_density_below_10_per_ha": 8
+      },
+      "max_values": {
+        "absolute_area": 100.0,
+        "coconut_area": 100.0,
+        "trees": 2100.0,
+        "tree_density": 2021.0
+      }
+    },
+    {
+      "sheet": "Koronadal City",
+      "records": 1047,
+      "barangay_count": 26,
+      "gender_counts": {
+        "MALE": 574,
+        "FEMALE": 473
+      },
+      "quality_flags": {
+        "positive_trees_zero_coconut_area": 20,
+        "positive_coconut_area_zero_trees": 41,
+        "tree_density_below_10_per_ha": 6,
+        "tree_density_over_1000_per_ha": 1
+      },
+      "max_values": {
+        "absolute_area": 2000.0,
+        "coconut_area": 2000.0,
+        "trees": 2179.0,
+        "tree_density": 1008.9743589743589
+      }
+    },
+    {
+      "sheet": "General Santos City",
+      "records": 3103,
+      "barangay_count": 26,
+      "gender_counts": {
+        "MALE": 1652,
+        "FEMALE": 1451
+      },
+      "quality_flags": {
+        "positive_coconut_area_zero_trees": 737,
+        "positive_trees_zero_coconut_area": 22,
+        "tree_density_below_10_per_ha": 4,
+        "coconut_area_exceeds_absolute_area": 6
+      },
+      "max_values": {
+        "absolute_area": 250.0,
+        "coconut_area": 250.0,
+        "trees": 6000.0,
+        "tree_density": 830.0
+      }
+    },
+    {
+      "sheet": "Lake Sebu",
+      "records": 1022,
+      "barangay_count": 18,
+      "gender_counts": {
+        "FEMALE": 394,
+        "MALE": 628
+      },
+      "quality_flags": {
+        "positive_coconut_area_zero_trees": 241,
+        "tree_density_below_10_per_ha": 20,
+        "positive_trees_zero_coconut_area": 32,
+        "coconut_area_exceeds_absolute_area": 2,
+        "tree_density_over_1000_per_ha": 1
+      },
+      "max_values": {
+        "absolute_area": 200.0,
+        "coconut_area": 200.0,
+        "trees": 2098.0,
+        "tree_density": 2098.0
+      }
+    },
+    {
+      "sheet": "Norala",
+      "records": 937,
+      "barangay_count": 14,
+      "gender_counts": {
+        "FEMALE": 417,
+        "MALE": 520
+      },
+      "quality_flags": {
+        "positive_trees_zero_coconut_area": 58,
+        "tree_density_below_10_per_ha": 5,
+        "positive_coconut_area_zero_trees": 23,
+        "coconut_area_exceeds_absolute_area": 4,
+        "zero_absolute_area_positive_coconut_area": 4
+      },
+      "max_values": {
+        "absolute_area": 35.0,
+        "coconut_area": 50.0,
+        "trees": 2500.0,
+        "tree_density": 700.0
+      }
+    },
+    {
+      "sheet": "Polomolok",
+      "records": 977,
+      "barangay_count": 23,
+      "gender_counts": {
+        "FEMALE": 454,
+        "MALE": 523
+      },
+      "quality_flags": {
+        "positive_coconut_area_zero_trees": 77,
+        "tree_density_below_10_per_ha": 5,
+        "positive_trees_zero_coconut_area": 33,
+        "tree_density_over_1000_per_ha": 1
+      },
+      "max_values": {
+        "absolute_area": 2000.0,
+        "coconut_area": 2000.0,
+        "trees": 20000.0,
+        "tree_density": 2105.2631578947367
+      }
+    },
+    {
+      "sheet": "Santo Niño",
+      "records": 479,
+      "barangay_count": 10,
+      "gender_counts": {
+        "MALE": 265,
+        "FEMALE": 214
+      },
+      "quality_flags": {
+        "rows_with_suspected_encoding_artifact": 479,
+        "tree_density_below_10_per_ha": 4,
+        "positive_coconut_area_zero_trees": 10,
+        "positive_trees_zero_coconut_area": 24,
+        "coconut_area_exceeds_absolute_area": 2,
+        "tree_density_over_1000_per_ha": 1,
+        "zero_absolute_area_positive_coconut_area": 1
+      },
+      "max_values": {
+        "absolute_area": 5001.8,
+        "coconut_area": 5000.0,
+        "trees": 810.0,
+        "tree_density": 5000.0
+      }
+    },
+    {
+      "sheet": "Surallah",
+      "records": 1681,
+      "barangay_count": 17,
+      "gender_counts": {
+        "FEMALE": 743,
+        "MALE": 938
+      },
+      "quality_flags": {
+        "positive_trees_zero_coconut_area": 41,
+        "tree_density_over_1000_per_ha": 1,
+        "positive_coconut_area_zero_trees": 120,
+        "coconut_area_exceeds_absolute_area": 6,
+        "tree_density_below_10_per_ha": 8,
+        "zero_absolute_area_positive_coconut_area": 1
+      },
+      "max_values": {
+        "absolute_area": 203.0,
+        "coconut_area": 202.0,
+        "trees": 1200.0,
+        "tree_density": 1200.0
+      }
+    },
+    {
+      "sheet": "Tampakan",
+      "records": 1970,
+      "barangay_count": 14,
+      "gender_counts": {
+        "MALE": 1084,
+        "FEMALE": 886
+      },
+      "quality_flags": {
+        "positive_trees_zero_coconut_area": 98,
+        "positive_coconut_area_zero_trees": 91,
+        "coconut_area_exceeds_absolute_area": 38,
+        "tree_density_below_10_per_ha": 8,
+        "zero_absolute_area_positive_coconut_area": 1,
+        "tree_density_over_1000_per_ha": 1
+      },
+      "max_values": {
+        "absolute_area": 75.0,
+        "coconut_area": 20105.0,
+        "trees": 4550.0,
+        "tree_density": 1400.0
+      }
+    },
+    {
+      "sheet": "Tantangan",
+      "records": 940,
+      "barangay_count": 13,
+      "gender_counts": {
+        "FEMALE": 352,
+        "MALE": 588
+      },
+      "quality_flags": {
+        "positive_trees_zero_coconut_area": 26,
+        "tree_density_below_10_per_ha": 5,
+        "positive_coconut_area_zero_trees": 29,
+        "tree_density_over_1000_per_ha": 1
+      },
+      "max_values": {
+        "absolute_area": 75.0,
+        "coconut_area": 75.0,
+        "trees": 1450.0,
+        "tree_density": 1540.0
+      }
+    },
+    {
+      "sheet": "T'Boli",
+      "records": 778,
+      "barangay_count": 21,
+      "gender_counts": {
+        "FEMALE": 282,
+        "MALE": 496
+      },
+      "quality_flags": {
+        "positive_coconut_area_zero_trees": 28,
+        "tree_density_below_10_per_ha": 7,
+        "positive_trees_zero_coconut_area": 20
+      },
+      "max_values": {
+        "absolute_area": 19.19,
+        "coconut_area": 19.19,
+        "trees": 3000.0,
+        "tree_density": 1000.0
+      }
+    },
+    {
+      "sheet": "Tupi",
+      "records": 2077,
+      "barangay_count": 14,
+      "gender_counts": {
+        "FEMALE": 987,
+        "MALE": 1090
+      },
+      "quality_flags": {
+        "positive_coconut_area_zero_trees": 70,
+        "positive_trees_zero_coconut_area": 105,
+        "tree_density_below_10_per_ha": 20,
+        "coconut_area_exceeds_absolute_area": 17,
+        "zero_absolute_area_positive_coconut_area": 16,
+        "tree_density_over_1000_per_ha": 3
+      },
+      "max_values": {
+        "absolute_area": 4818.0,
+        "coconut_area": 4818.0,
+        "trees": 3600.0,
+        "tree_density": 3600.0
+      }
+    }
+  ],
+  "global": {
+    "positive_coconut_area_zero_trees": 1536,
+    "positive_trees_zero_coconut_area": 580,
+    "coconut_area_exceeds_absolute_area": 76,
+    "tree_density_over_1000_per_ha": 13,
+    "tree_density_below_10_per_ha": 100,
+    "zero_absolute_area_positive_coconut_area": 23,
+    "rows_with_suspected_encoding_artifact": 479,
+    "duplicate_identity_groups": 337,
+    "records_in_duplicate_identity_groups": 847,
+    "max_values": {
+      "absolute_area": [
+        5001.8,
+        {
+          "sheet": "Santo Niño",
+          "row": 236
+        }
+      ],
+      "coconut_area": [
+        20105.0,
+        {
+          "sheet": "Tampakan",
+          "row": 778
+        }
+      ],
+      "trees": [
+        20000.0,
+        {
+          "sheet": "Polomolok",
+          "row": 182
+        }
+      ],
+      "tree_density": [
+        5000.0,
+        {
+          "sheet": "Santo Niño",
+          "row": 258
+        }
+      ]
+    }
+  }
+}

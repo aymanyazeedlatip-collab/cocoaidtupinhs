@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#ffffff" name="theme-color"/>
+<title>COCO-AID</title>
+<link href="/static/assets/brand/coco-aid-favicon.png" rel="icon" type="image/png"/>
+<link as="image" href="/static/assets/brand/coco-aid-wordmark.png" rel="preload"/>
+<link href="https://unpkg.com" rel="preconnect"/>
+<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" rel="stylesheet"/>
+<link href="/static/styles.css?v=11.3.23" rel="stylesheet"/><link href="/static/phase11.css?v=11.3.23" rel="stylesheet"/>
+</head>
+<body class="preview-active">
+<div aria-hidden="true" class="orbit-field">
+<span class="orbit orbit-a"><i></i></span><span class="orbit orbit-b"><i></i></span><span class="orbit orbit-c"><i></i></span>
+</div>
+<section aria-label="COCO-AID opening experience" aria-modal="true" class="experience-preview entry-screen entry-screen-carousel" id="experiencePreview" role="dialog">
+<div aria-hidden="true" class="entry-background-carousel">
+<div class="entry-background-slide entry-background-slide-01"></div>
+<div class="entry-background-slide entry-background-slide-02"></div>
+<div class="entry-background-slide entry-background-slide-03"></div>
+<div class="entry-background-slide entry-background-slide-04"></div>
+<div class="entry-background-slide entry-background-slide-05"></div>
+<div class="entry-background-slide entry-background-slide-06"></div>
+<div class="entry-background-slide entry-background-slide-07"></div>
+</div>
+<div aria-hidden="true" class="entry-background-overlay"></div>
+<div aria-hidden="true" class="entry-orbit-system">
+<div class="entry-center-pulse"></div>
+<div class="entry-center-orbit entry-center-orbit-a"><i></i></div>
+<div class="entry-center-orbit entry-center-orbit-b"><i></i></div>
+<div class="entry-center-orbit entry-center-orbit-c"><i></i></div>
+<div class="entry-center-orbit entry-center-orbit-d"><i></i></div>
+</div>
+<div class="entry-panel entry-panel-carousel">
+<span class="entry-kicker">Coconut farm intelligence made practical</span>
+<h1>Welcome to COCO-AID</h1>
+<p>Understand your farm today, explore what could happen next, and receive a clear path toward better coconut production and smarter rehabilitation decisions.</p>
+<button class="preview-enter-button entry-button" id="enterWebsiteButton" type="button"><span>Enter COCOAID</span><b aria-hidden="true">→</b></button>
+<div class="entry-assurance">
+<span><i></i>Official PSA annual production baseline</span>
+<span><i></i>Farmer-friendly guided workflow</span>
+<span><i></i>Evidence-linked recommendations</span>
+</div>
+<small id="previewAudioHint">Background music begins on this preview page after you enter and remains controllable in Settings.</small>
+</div>
+<div aria-hidden="true" class="entry-carousel-progress"><span></span></div>
+</section>
+<button aria-expanded="false" aria-label="Open COCOAID navigation" class="global-menu-button" id="globalNavButton" type="button"><span aria-hidden="true" class="global-menu-icon">☰</span><b>Menu</b></button>
+<div class="app-shell" id="appShell">
+<aside class="sidebar" id="sidebar">
+<a aria-label="COCO-AID Home" class="brand" data-section-link="landing" href="#landing">
+<img alt="" class="brand-logo" src="/static/assets/brand/coco-aid-logo-192.png"/>
+<span class="brand-copy"><img alt="COCO-AID" class="brand-wordmark" src="/static/assets/brand/coco-aid-wordmark.png"/></span>
+</a>
+<button aria-expanded="true" aria-label="Collapse navigation" class="sidebar-collapse-button" id="sidebarCollapseButton" title="Collapse navigation" type="button"><span aria-hidden="true" class="sidebar-collapse-arrow">‹</span><span class="sidebar-collapse-label">Collapse</span></button>
+<nav aria-label="Primary navigation" class="nav-list nav-group-list" id="nav">
+<button class="nav-direct-item nav-item active" data-section="landing" type="button"><span class="nav-icon nav-svg-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5"/><path d="M9.5 20v-5h5v5"/></svg></span><span class="nav-label">Home</span></button>
+<button class="nav-direct-item nav-item" data-section="farm-setup" type="button"><span class="nav-icon nav-svg-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M8 20v-6h8v6"/><path d="M4 12h16"/></svg></span><span class="nav-label">Farm Profile</span></button>
+<div class="nav-group" data-nav-group="production-forecast">
+<button aria-expanded="false" class="nav-group-toggle" data-nav-group-toggle="production-forecast" type="button"><span class="nav-icon nav-svg-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18V6M4 18h16"/><path d="m7 14 4-4 3 2 5-5"/><circle cx="19" cy="7" r="1.5"/></svg></span><span class="nav-label">Production Forecast</span><span aria-hidden="true" class="nav-caret">⌄</span></button>
+<div class="nav-sublist">
+<button class="nav-subitem nav-item" data-section="outlook" type="button"><span class="nav-subicon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17h10a4 4 0 0 0 .5-8A5.5 5.5 0 0 0 7 10a3.5 3.5 0 0 0 0 7Z"/><path d="m8 20-1 2M12 20l-1 2M16 20l-1 2"/></svg></span><span class="nav-label">Long-Term Weather Forecast</span></button>
+<button class="nav-subitem nav-item" data-section="extreme-weather" type="button"><span class="nav-subicon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2.8 20h18.4L12 3Z"/><path d="M12 9v5M12 17.5v.2"/></svg></span><span class="nav-label">Extreme Weather Events</span></button>
+<button class="nav-subitem nav-item" data-section="intercropping" type="button"><span class="nav-subicon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V8"/><path d="M12 11C8 11 5.5 8.8 5 5c4 0 6.5 2.2 7 6Z"/><path d="M12 15c4 0 6.5-2.2 7-6-4 0-6.5 2.2-7 6Z"/></svg></span><span class="nav-label">Intercropping Potential</span></button>
+</div>
+</div>
+<div class="nav-group" data-nav-group="farm-intelligence">
+<button aria-expanded="false" class="nav-group-toggle" data-nav-group-toggle="farm-intelligence" type="button"><span class="nav-icon nav-svg-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-4.3 7-11a4 4 0 0 0-7-2.7A4 4 0 0 0 5 10c0 6.7 7 11 7 11Z"/><path d="M8 13h2l1-3 2 6 1-3h2"/></svg></span><span class="nav-label">Farm Intelligence</span><span aria-hidden="true" class="nav-caret">⌄</span></button>
+<div class="nav-sublist">
+<button class="nav-subitem nav-item" data-section="health" type="button"><span class="nav-subicon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18c5-1 8-4 9-9 4 1 6 4 7 8"/><path d="M4 18h16"/><path d="M8 14c-2-2-2-5-1-8 3 1 5 3 6 6"/></svg></span><span class="nav-label">Farm Rehabilitation</span></button>
+<button class="nav-subitem nav-item" data-section="pest-risk" type="button"><span class="nav-subicon"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="13" rx="5" ry="6"/><path d="M9 7 7 4M15 7l2-3M7 11H3M17 11h4M7 15H3M17 15h4M9 19l-2 2M15 19l2 2"/></svg></span><span class="nav-label">Pest Risk Analysis</span></button>
+</div>
+</div>
+<div class="nav-group" data-nav-group="operations-planning">
+<button aria-expanded="false" class="nav-group-toggle" data-nav-group-toggle="operations-planning" type="button"><span class="nav-icon nav-svg-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg></span><span class="nav-label">Farm Operations Planning</span><span aria-hidden="true" class="nav-caret">⌄</span></button>
+<div class="nav-sublist">
+<button class="nav-subitem nav-item" data-section="intelligence" type="button"><span class="nav-subicon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h7M13 6h7M8 6v12M8 12h8M16 12v6"/><circle cx="4" cy="6" r="1.5"/><circle cx="20" cy="6" r="1.5"/><circle cx="8" cy="18" r="1.5"/><circle cx="16" cy="18" r="1.5"/></svg></span><span class="nav-label">Decision Support Network</span></button>
+<button class="nav-subitem nav-item" data-section="database" type="button"><span class="nav-subicon"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span><span class="nav-label">Farm Database</span></button>
+<button class="nav-subitem nav-item" data-section="reports" type="button"><span class="nav-subicon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6Z"/><path d="M15 3v4h4M9 11h6M9 15h6M9 19h4"/></svg></span><span class="nav-label">Assisted Report Generation</span></button>
+</div>
+</div>
+<button class="nav-direct-item nav-item" data-section="about" type="button"><span class="nav-icon nav-svg-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 10v7M12 7h.01"/></svg></span><span class="nav-label">About</span></button>
+</nav>
+<div class="sidebar-bottom">
+<button class="nav-item settings-trigger" id="settingsButton">
+<span class="nav-icon">⚙</span><span class="nav-label">Settings</span>
+</button>
+<div class="api-state">
+<span id="apiDot"></span><span id="apiText">Connecting…</span>
+</div>
+</div>
+</aside>
+<main class="main">
+<header class="topbar">
+<button aria-label="Open navigation" class="icon-button mobile-menu legacy-menu-button" id="menuButton">
+            ☰
+          </button>
+<div class="page-heading">
+<span id="pageEyebrow"></span>
+<h1 id="pageTitle"></h1>
+</div>
+<div class="top-actions">
+<span class="source-badge" id="dataStatusBadge">PSA data connected</span>
+<button aria-label="Toggle theme" class="icon-button" id="themeButton">
+              ☾
+            </button>
+<button class="primary" id="quickForecastButton">
+              Start Forecast
+            </button>
+</div>
+</header>
+<section class="page active landing-page" id="landing">
+<div class="farmer-home-hero">
+<div aria-hidden="true" class="home-atmosphere"><span></span><span></span><span></span></div>
+<div class="farmer-home-copy">
+<span class="home-eyebrow">COCONUT FARM INTELLIGENCE, MADE PRACTICAL</span>
+<h2>Plant Sharper,<br/><span>Harvest Better</span></h2>
+<p class="home-lead">Turn your farm details, local weather, crop conditions, and management choices into a clearer coconut production plan. COCOAID keeps the science in the system and gives farmers the decisions that matter.</p>
+<div class="hero-actions farmer-home-actions">
+<button class="primary large home-primary-action" id="heroDrawButton" type="button"><span>Start Farm Analysis</span><b aria-hidden="true">→</b></button>
+<button class="secondary large home-secondary-action" id="heroSetupButton" type="button"><span aria-hidden="true">☰</span> Explore Workspace</button>
+</div>
+<div aria-label="COCOAID advantages" class="home-trust-strip">
+<span><i aria-hidden="true"></i><strong>Weather-aware</strong><small>Live farm conditions</small></span>
+<span><i aria-hidden="true"></i><strong>Farmer-friendly</strong><small>Simple guided steps</small></span>
+<span><i aria-hidden="true"></i><strong>Evidence-linked</strong><small>Traceable recommendations</small></span>
+</div>
+</div>
+<div class="farmer-home-visual">
+<div class="home-hologram-frame">
+<div aria-label="Interactive three-dimensional hologram alternating between a coconut fruit and coconut tree. Drag or use arrow keys to rotate." class="coconut-hologram coconut-hologram-3d" id="coconutHologramWorkspace" role="img" tabindex="0">
+<div aria-hidden="true" class="holo-grid-disc"></div>
+<span aria-hidden="true" class="holo-ring holo-ring-a"></span>
+<span aria-hidden="true" class="holo-ring holo-ring-b"></span>
+<span aria-hidden="true" class="holo-ring holo-ring-c"></span>
+<div class="holo-stage">
+<canvas aria-hidden="true" class="holo-coconut-mesh"></canvas>
+<div aria-hidden="true" class="holo-coconut-3d legacy-hologram-body">
+<span class="holo-axis axis-x"></span><span class="holo-axis axis-y"></span><span class="holo-axis axis-z"></span>
+<div class="holo-shell-layer layer-back"></div><div class="holo-shell-layer layer-1"></div><div class="holo-shell-layer layer-2"></div><div class="holo-shell-layer layer-3"></div><div class="holo-shell-layer layer-4"></div><div class="holo-shell-layer layer-5"></div><div class="holo-shell-layer layer-front"></div>
+<div class="holo-core"></div><div class="holo-equator"></div><div class="holo-lat lat-1"></div><div class="holo-lat lat-2"></div><div class="holo-lat lat-3"></div>
+<div class="holo-meridian meridian-a"></div><div class="holo-meridian meridian-b"></div><div class="holo-meridian meridian-c"></div>
+<div class="holo-sprout-3d sprout-a"></div><div class="holo-sprout-3d sprout-b"></div>
+<div class="holo-node node-a"></div><div class="holo-node node-b"></div><div class="holo-node node-c"></div>
+</div>
+</div>
+<div aria-hidden="true" class="holo-scan"></div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="home-scroll-cue"><span></span><small>SCROLL TO EXPLORE</small></div>
+</div>
+<div class="home-below-fold" id="homeLearnMore">
+<section class="home-intro-section">
+<div class="home-section-heading">
+<span class="home-section-kicker">ONE FARM. ONE CLEAR WORKFLOW.</span>
+<h2>From your farm boundary to a practical action plan.</h2>
+<p>COCOAID turns detailed agricultural models into a guided experience. You provide what you know about the farm, and the system organizes weather, production, risk, intercropping, and rehabilitation evidence around it.</p>
+</div>
+<div class="home-workflow-grid">
+<article><b>01</b><span>Show us the farm</span><p>Draw the actual farm boundary and enter simple location details.</p></article>
+<article><b>02</b><span>Describe the coconut trees</span><p>Tell COCOAID how many palms you have and what condition they are in.</p></article>
+<article><b>03</b><span>Run farm intelligence</span><p>Weather, production, pest, rehabilitation, and intercropping engines work from the same farm profile.</p></article>
+<article><b>04</b><span>Review the next move</span><p>See the most important risks, opportunities, and recommended actions in one place.</p></article>
+</div><div aria-label="COCOAID farm intelligence reference coverage" class="home-reference-strip">
+<div><span>LIVE WEATHER WINDOW</span><strong>16 days</strong><small>Genuine forecast data stays separate from long-term simulation.</small></div>
+<div><span>COCONUT VARIETIES</span><strong>30</strong><small>Reference varieties available to support variety-aware analysis.</small></div>
+<div><span>INTERCROP OPTIONS</span><strong>35</strong><small>Crops screened for under-canopy suitability and farm conditions.</small></div>
+<div><span>PEST PROFILES</span><strong>5</strong><small>Independent pest and disease evidence profiles are assessed separately.</small></div>
+</div>
+</section>
+<section class="home-decision-section">
+<div class="home-decision-copy">
+<span class="home-section-kicker">BUILT AROUND FARM DECISIONS</span>
+<h2>See what matters before it becomes a problem.</h2>
+<p>The interface is designed to answer practical questions without forcing farmers to understand the mathematics behind every model.</p>
+<button class="primary large" data-section-link="farm-setup" type="button">Create my farm profile →</button>
+</div>
+<div class="home-decision-grid">
+<article><i>☁</i><div><strong>What weather is coming?</strong><p>Follow live and forecast farm weather with a dedicated GIS workspace.</p></div></article>
+<article><i>◒</i><div><strong>How could production change?</strong><p>Review weather-responsive productivity and uncertainty over time.</p></div></article>
+<article><i>✦</i><div><strong>Which risks need attention?</strong><p>Surface pest pressure, tree stress, and rehabilitation priorities.</p></div></article>
+<article><i>↟</i><div><strong>What else can grow here?</strong><p>Explore evidence-based intercropping potential under the coconut canopy.</p></div></article>
+</div><div aria-label="COCOAID analytical coverage counts" class="home-scope-chart">
+<div class="home-scope-chart-head"><div><span>WHAT COCOAID CHECKS</span><strong>A wider view of the farm, not just one number.</strong></div><small>Reference coverage · not a score</small></div>
+<div class="scope-row"><span>Intercrop candidates</span><div class="scope-track"><i style="--scope:100%"></i></div><b>35</b></div>
+<div class="scope-row"><span>Weather features</span><div class="scope-track"><i style="--scope:40%"></i></div><b>14</b></div>
+<div class="scope-row"><span>Palm condition states</span><div class="scope-track"><i style="--scope:20%"></i></div><b>7</b></div>
+<div class="scope-row"><span>Rehabilitation scenarios</span><div class="scope-track"><i style="--scope:17%"></i></div><b>6</b></div>
+<div class="scope-row"><span>Pest / disease profiles</span><div class="scope-track"><i style="--scope:14%"></i></div><b>5</b></div>
+</div>
+<div aria-label="Weather signals used by the production model" class="home-farmer-data-card">
+<div class="home-farmer-data-head"><div><span>WEATHER SIGNALS FARMERS CAN WATCH</span><strong>What changes the model's coconut response?</strong></div><small>Model response references · not universal agronomy limits</small></div>
+<div class="home-farmer-data-grid">
+<article><b>150 mm</b><span>4-week rainfall center</span><p>The production response is strongest around this broad antecedent-rainfall reference in the current development model.</p></article>
+<article><b>32°C</b><span>Heat-stress onset</span><p>Daily maximum temperature above this point begins increasing the model's heat-stress term.</p></article>
+<article><b>80%</b><span>Humidity response center</span><p>Young-coconut response uses a broad humidity-support curve centered near this value.</p></article>
+<article><b>38 km/h</b><span>Wind-stress onset</span><p>Wind above this development-model reference begins increasing the modeled stress penalty.</p></article>
+</div>
+</div>
+</section>
+<section class="home-evidence-section">
+<div class="home-section-heading compact">
+<span class="home-section-kicker">SCIENCE UNDERNEATH. SIMPLE ON TOP.</span>
+<h2>Farmer-friendly does not mean less rigorous.</h2>
+</div>
+<div class="home-evidence-grid">
+<article><span>01</span><strong>Evidence-linked</strong><p>Recommendations stay connected to the analytical records and source data that produced them.</p></article>
+<article><span>02</span><strong>Weather-aware</strong><p>Current weather and genuine forecast data are kept separate from long-term climate-conditioned simulation.</p></article>
+<article><span>03</span><strong>Uncertainty-aware</strong><p>COCOAID can show ranges and probabilities instead of pretending every future outcome is certain.</p></article>
+<article><span>04</span><strong>Action-oriented</strong><p>Results are organized around decisions a farmer can inspect, compare, save, and report.</p></article>
+</div><div class="home-performance-panel">
+<div class="home-performance-copy">
+<span class="performance-badge">DEVELOPMENT VALIDATION</span>
+<h3>Performance is measured — and the limitations stay visible.</h3>
+<p>The current machine-learning artifacts were evaluated on synthetic/reference-based development data. These figures show internal development performance, not guaranteed farm-level accuracy.</p>
+<div class="performance-test-stat"><strong>400</strong><span>automated tests passed in the Phase 11.3.23 release verification</span></div>
+</div>
+<div aria-label="COCOAID model development benchmark chart" class="home-performance-chart">
+<div class="performance-row"><div><span>Pest classifier</span><small>Accuracy</small></div><div class="performance-track"><i style="--metric:99.6875%"></i></div><strong>99.7%</strong></div>
+<div class="performance-row"><div><span>Pest classifier</span><small>Recall</small></div><div class="performance-track"><i style="--metric:100%"></i></div><strong>100%</strong></div>
+<div class="performance-row"><div><span>Land suitability model</span><small>R²</small></div><div class="performance-track"><i style="--metric:92.765%"></i></div><strong>0.928</strong></div>
+<div class="performance-row"><div><span>Production model</span><small>R²</small></div><div class="performance-track"><i style="--metric:51.772%"></i></div><strong>0.518</strong></div>
+<p class="performance-footnote">Real-world validation with longitudinal farm records is still required. COCOAID therefore presents uncertainty and evidence provenance instead of treating model output as certainty.</p>
+</div>
+</div>
+</section>
+<section class="home-final-cta">
+<div><span class="home-section-kicker">READY WHEN YOU ARE</span><h2>Start with the farm you know.</h2><p>No technical background is required. The Farm Profile now guides you one step at a time.</p><div class="home-cta-facts"><span>14 weather features</span><span>7 palm states</span><span>6 rehabilitation scenarios</span></div></div>
+<button class="primary large" data-section-link="farm-setup" type="button">Start Farm Profile →</button>
+</section>
+</div>
+<div aria-hidden="true" class="home-legacy-support" inert="">
+<p>Four steps from farm details to a clear action plan</p>
+<p>Official PSA annual production</p>
+<div class="map" id="landingMap"></div>
+<strong id="landingMapStatus">Draw a polygon to begin</strong>
+<span id="landingArea">No farm area selected</span>
+<button id="landingClear" type="button">Clear</button>
+<button disabled="" id="landingContinue" type="button">Continue to farm profile</button>
+<div id="phase11EngineGrid"></div>
+<button id="syncWeatherFarmButton" type="button">Sync current farm</button>
+<button id="expandWeatherButton" type="button">Open large viewer</button>
+<div id="weatherHomeMount"><iframe id="weatherViewerFrame" src="/weather-viewer" title="COCO-AID Weather GIS"></iframe></div>
+<div aria-live="polite" class="draw-tutorial" hidden="" id="drawTutorial">
+<div aria-hidden="true" class="tutorial-arrow"></div>
+<strong id="drawTutorialTitle">Draw your farm boundary</strong>
+<p id="drawTutorialText">Select the polygon tool on the map.</p>
+<div class="tutorial-actions"><span id="drawTutorialStep">1 of 3</span><button id="drawTutorialClose" type="button">Close</button></div>
+</div>
+</div>
+</section>
+<section class="page farmer-profile-page" data-workflow-stage="boundary" id="farm-setup">
+<div class="section-intro farmer-profile-intro">
+<div>
+<span class="eyebrow">Farm Profile · Guided setup</span>
+<h2>Set up your farm without the technical clutter</h2>
+<p>COCOAID shows only one task at a time. First mark the farm on the map. When that is finished, the next small set of questions opens automatically.</p>
+</div>
+<div class="action-row farm-record-actions">
+<select aria-label="Choose a saved farm" id="savedFarmSelect"><option value="">Load a saved farm</option></select>
+<button class="secondary" id="loadFarmButton" type="button">Load</button>
+<button class="primary" id="saveFarmButton" type="button">Save Farm Profile</button>
+</div>
+</div>
+<div class="farm-guide-banner" id="farmGuideBanner">
+<div class="farm-guide-message"><span aria-hidden="true">1</span><div><strong id="farmGuideTitle">First, mark the farm boundary</strong><p id="farmGuideMessage">Choose Polygon for most farms or Square for a rectangular farm. Finish the orange shape and COCOAID will open the next questions automatically.</p></div></div>
+<div class="farm-guide-progress"><span id="farmGuideProgressBar"></span></div>
+</div>
+<div class="setup-layout farmer-guided-layout">
+<article class="panel form-panel farmer-guided-form">
+<div class="farm-boundary-summary-bar" id="farmBoundarySummaryBar"><div><span aria-hidden="true">✓</span><p><strong>Farm boundary ready</strong><small id="farmBoundarySummaryText">The orange farm shape has been saved.</small></p></div><button class="secondary" id="returnToFarmMapButton" type="button">Edit farm boundary</button></div>
+<div aria-label="Farm profile steps" class="subnav farm-step-nav" role="tablist">
+<button class="subtab active" data-form-tab="identity" type="button"><b>1</b><span><strong>Basic details</strong><small>Name &amp; location</small></span><i aria-hidden="true">✓</i></button>
+<button class="subtab" data-form-tab="trees" type="button"><b>2</b><span><strong>Tree data</strong><small>Your coconut palms</small></span><i aria-hidden="true">✓</i></button>
+<button class="subtab" data-form-tab="soil" type="button"><b>3</b><span><strong>Soil &amp; care</strong><small>Simple farm conditions</small></span><i aria-hidden="true">✓</i></button>
+<button class="subtab" data-form-tab="symptoms" type="button"><b>4</b><span><strong>Tree health</strong><small>What you can see</small></span><i aria-hidden="true">✓</i></button>
+</div>
+<div class="form-tab active" data-form-panel="identity">
+<div class="farm-step-heading"><span>BASIC DETAILS</span><h3>Where is your farm?</h3><p>Enter only the basic details below. The map beside this form will calculate the farm area and center coordinates for you after you draw the boundary.</p></div><section class="farm-input-group"><div class="farm-input-group-head"><span>1A</span><div><h4>Give the farm a name</h4><p>This helps you recognize the correct farm later when you save more than one profile.</p></div></div><div class="form-grid farmer-simple-grid"><label><span>What do you call this farm? <em>Required</em></span><input id="farmName" value="COCO-AID Demonstration Farm"/><small>Example: Latip Coconut Farm</small></label></div></section><section class="farm-input-group"><div class="farm-input-group-head"><span>1B</span><div><h4>Tell us where the farm is</h4><p>Location connects the farm to the correct provincial reference data and weather. Barangay and municipality are enough for most farmers.</p></div></div><div class="form-grid farmer-simple-grid"><label><span>Region</span><input id="region" readonly="" value="Region XII"/><small>Automatically kept with the farm record.</small></label><label><span>Province <em>Required</em></span><select id="province"><option>South Cotabato</option></select><small>Choose the province where the farm is located.</small></label><label><span>Municipality or city <em>Required</em></span><input id="municipality" value="Tupi"/><small>Example: Tupi</small></label><label><span>Barangay <em>Required</em></span><input id="barangay" value="Palian"/><small>Example: Palian</small></label></div></section><section class="farm-input-group"><div class="farm-input-group-head"><span>1C</span><div><h4>Confirm the farm size and map position</h4><p>The farm boundary is used to calculate area and center coordinates. Draw the shape on the map; only type these values manually if you already know them.</p></div></div><div class="form-grid farmer-simple-grid"><label class="farm-area-field"><span>Farm area in hectares</span><input id="area" min="0.01" step="0.01" type="number" value="5"/><small id="farmAreaHelper">Draw your farm on the map and this will update automatically.</small></label></div><details class="farm-advanced-details">
+<summary>Advanced location details <small>Usually filled by the map</small></summary>
+<div class="form-grid">
+<label>Latitude<input id="latitude" step="0.000001" type="number" value="6.334"/><small>North/south position of the farm center.</small></label>
+<label>Longitude<input id="longitude" step="0.000001" type="number" value="124.952"/><small>East/west position of the farm center.</small></label>
+</div>
+</details><div class="official-card farmer-reference-card">
+<span>PSA provincial reference</span><strong id="officialProvinceReference">Loading South Cotabato history…</strong>
+<p id="officialReferenceNote">The provincial baseline calibrates product shares and seasonality; farm-scale production remains based on your farm inputs.</p>
+</div></section>
+<div class="farm-step-actions"><span class="farm-auto-note">We will move to Step 2 after you finish the required basic details.</span><button class="primary" id="identityContinueButton" type="button">Continue to Tree Data →</button></div>
+</div>
+<div class="form-tab" data-form-panel="trees">
+<div class="farm-step-heading"><span>TREE DATA</span><h3>Tell us about your coconut trees</h3><p>If you know the exact numbers, enter them below. If not, use the Easy Tree Estimate first and adjust anything that looks wrong.</p></div><section class="farm-input-group"><div class="farm-input-group-head"><span>2A</span><div><h4>Start with the total number of palms</h4><p>If exact tree-condition counts are difficult, use the easy estimate. It creates an editable starting point, not a final answer.</p></div></div><div class="farmer-helper-card tree-helper-card">
+<div><span class="helper-badge">EASY OPTION</span><h4>Not sure how to divide your trees?</h4><p>Enter the total number of coconut palms and choose the description that looks closest to your farm. COCOAID will create a starting estimate that you can edit.</p></div>
+<div class="tree-helper-controls">
+<label>Total coconut palms<input id="farmerTreeCount" min="1" placeholder="Example: 650" step="1" type="number"/></label>
+<label>My farm is mostly<select id="treeConditionPreset"><option value="mixed">A mix of young, productive, and old trees</option><option value="productive">Healthy and producing normally</option><option value="young">Young or newly planted</option><option value="aging">Older trees with lower production</option></select></label>
+<button class="secondary" id="applyTreeEstimateButton" type="button">Create easy estimate</button>
+</div>
+<small class="helper-disclaimer">This is only a starting estimate. Replace the numbers below whenever you have actual counts.</small>
+</div><div class="tree-total-strip"><span>Total tree positions</span><strong id="treeTotalDisplay">650</strong><small>The total updates automatically as you edit the groups below.</small><input id="totalTrees" readonly="" type="number" value="650"/></div></section><section class="farm-input-group"><div class="farm-input-group-head"><span>2B</span><div><h4>Sort the palms by what condition they are in</h4><p>COCOAID uses these groups to separate productive palms from young, aging, stressed, damaged, recovering, and empty positions. Rough counts are acceptable when exact counts are unavailable.</p></div></div><div class="form-grid farmer-tree-grid"><label><span>Young trees</span><input id="youngTrees" type="number" value="70"/><small>Not producing coconuts yet.</small></label><label><span>Productive trees</span><input id="productiveTrees" type="number" value="360"/><small>Bearing coconuts normally.</small></label><label><span>Aging trees</span><input id="agingTrees" type="number" value="110"/><small>Older palms with declining production.</small></label><label><span>Stressed trees</span><input id="stressedTrees" type="number" value="45"/><small>Weak, drought-stressed, or visibly struggling.</small></label><label><span>Infested or diseased</span><input id="infestedTrees" type="number" value="25"/><small>Showing known pest or disease problems.</small></label><label><span>Recovering trees</span><input id="recoveringTrees" type="number" value="20"/><small>Recently treated or improving.</small></label><label><span>Dead or empty positions</span><input id="deadTrees" type="number" value="20"/><small>Dead palms or planting spots with no tree.</small></label></div></section><section class="farm-input-group"><div class="farm-input-group-head"><span>2C</span><div><h4>Describe the typical coconut tree</h4><p>Average age and variety help the system interpret expected production, life stage, and variety-related differences.</p></div></div><div class="form-grid farmer-simple-grid"><label><span>Average tree age</span><input id="averageAge" type="number" value="34"/><small>A rough estimate in years is fine.</small></label><label><span>Coconut type</span><select id="variety"><option>Tall</option><option>Dwarf</option><option>Hybrid</option><option>Unknown</option></select><small>Choose Unknown if you are not sure.</small></label></div></section><section class="farm-input-group"><div class="farm-input-group-head"><span>2D</span><div><h4>Add the production you already know</h4><p>Past or typical production gives the forecast a farm-specific reference. If you do not have detailed measurements, the optional fields can stay blank.</p></div></div><div class="form-grid farmer-simple-grid"><label><span>Annual production</span><input id="annualProduction" step="0.01" type="number" value="16"/><small>Total tonnes produced by the farm in a typical year.</small></label><label><span>Yield per hectare</span><input id="yieldPerHa" step="0.01" type="number" value="3.2"/><small>Leave the current value if you do not have a separate record.</small></label></div><details class="farm-advanced-details">
+<summary>Optional production measurements <small>Only fill these if you actually measured them</small></summary>
+<div class="form-grid">
+<label>Copra weight (kg)<input id="copraWeight" min="0" placeholder="Not measured" step="0.01" type="number"/></label>
+<label>Annual nut count<input id="nutCount" min="0" placeholder="Not counted" step="1" type="number"/></label>
+<label>Oil content %<input id="oilContent" max="100" min="0" placeholder="Laboratory result" step="0.1" type="number"/></label>
+</div>
+</details></section>
+<div class="farm-step-actions"><button class="secondary farm-back-button" data-farm-back="identity" type="button">← Back</button><button class="primary" id="treeContinueButton" type="button">Continue to Soil &amp; Care →</button></div>
+</div>
+<div class="form-tab" data-form-panel="soil">
+<div class="farm-step-heading"><span>SOIL &amp; CARE</span><h3>What is the farm soil and care like?</h3><p>You can answer using simple descriptions. Exact technical measurements remain available below for farms with soil-test or survey data.</p></div><section class="farm-input-group"><div class="farm-input-group-head"><span>3A</span><div><h4>Describe the land and drainage</h4><p>Slope and drainage affect water movement, erosion risk, access, and how coconut roots experience wet or dry periods. Choose the plain-language answers if you do not have measurements.</p></div></div><div class="form-grid farmer-simple-grid"><label>How steep is the farm?<select id="farmerSlopeChoice"><option value="">Choose one</option><option value="1.5">Mostly flat</option><option value="5">Gentle slope</option><option value="12">Moderately sloping</option><option value="22">Steep</option></select></label><label>What happens after heavy rain?<select id="farmerDrainageChoice"><option value="">Choose one</option><option value="0.35">Water stays for a long time</option><option value="0.55">Water drains slowly</option><option value="0.72">Water drains normally</option><option value="0.88">Water drains very quickly</option></select></label><label><span>Elevation, if known</span><input id="elevation" type="number" value="150"/><small>Height above sea level in meters.</small></label></div><details class="farm-advanced-details"><summary>Exact terrain numbers (optional)</summary><div class="form-grid farmer-simple-grid"><label>Slope (°)<input id="slope" step="0.1" type="number" value="4.5"/></label><label>Drainage index<input id="drainage" step="0.01" type="number" value="0.72"/></label></div></details></section><section class="farm-input-group"><div class="farm-input-group-head"><span>3B</span><div><h4>Describe the soil fertility</h4><p>Soil fertility and pH help COCOAID interpret nutrient limitations. A visual fertility estimate is allowed when laboratory results are unavailable.</p></div></div><div class="form-grid farmer-simple-grid"><label>How fertile does the soil seem?<select id="farmerFertilityChoice"><option value="">Choose one</option><option value="0.38">Poor</option><option value="0.55">Fair</option><option value="0.72">Good</option><option value="0.85">Very good</option></select></label><label><span>Soil pH, if tested</span><input id="soilPh" step="0.1" type="number" value="6.0"/><small>Use your soil-test result when available.</small></label></div><details class="farm-advanced-details"><summary>Soil-test nutrient numbers (optional)</summary><div class="form-grid farmer-simple-grid"><label>Nitrogen index<input id="nitrogen" step="0.01" type="number" value="0.62"/></label><label>Phosphorus index<input id="phosphorus" step="0.01" type="number" value="0.55"/></label><label>Potassium index<input id="potassium" step="0.01" type="number" value="0.66"/></label></div></details></section><section class="farm-input-group"><div class="farm-input-group-head"><span>3C</span><div><h4>Tell us what care the farm receives</h4><p>Current management changes how the system interprets recovery, pest pressure, and rehabilitation options. Select only activities actually happening on the farm.</p></div></div><div class="farm-care-question"><h4>Which farm activities are happening now?</h4><p>Select all that apply. Leave everything unchecked if none are currently happening.</p></div><div class="check-grid farmer-care-grid">
+<label><input id="fertilizerActivity" type="checkbox"/><span><strong>Applying fertilizer</strong><small>Any current fertilizer program</small></span></label>
+<label><input id="soilRehabilitation" type="checkbox"/><span><strong>Improving the soil</strong><small>Mulching, amendments, or rehabilitation</small></span></label>
+<label><input id="pestControl" type="checkbox"/><span><strong>Managing pests</strong><small>Current pest-control activity</small></span></label>
+<label><input id="monitoringActivity" type="checkbox"/><span><strong>Regular monitoring</strong><small>Routine farm inspection or scouting</small></span></label>
+</div><div class="rehab-auto-note"><span aria-hidden="true">↻</span><div><strong>Replanting need is calculated automatically</strong><small>You do not have to guess how much land should be replanted. The rehabilitation analysis estimates where replanting is needed and how large the affected area is.</small></div></div><details class="farm-advanced-details"><summary>Advanced management burden (optional)</summary><div class="form-grid farmer-simple-grid"><label>Intervention burden (0–10)<input id="interventionBurden" max="10" min="0" step="0.1" type="number" value="0"/></label></div></details></section>
+<div class="farm-step-actions"><button class="secondary farm-back-button" data-farm-back="trees" type="button">← Back</button><button class="primary" id="soilContinueButton" type="button">Continue to Tree Health →</button></div>
+</div>
+<div class="form-tab" data-form-panel="symptoms">
+<div class="farm-step-heading"><span>TREE HEALTH</span><h3>What can you see on the trees right now?</h3><p>This step is based on visible observations. If you see none of these problems, leave the boxes unchecked and choose “No visible problem.”</p></div><section class="farm-input-group"><div class="farm-input-group-head"><span>4A</span><div><h4>Look at the leaves and crown</h4><p>These visible signs can indicate stress or feeding damage. Tick only what you can actually see; leaving all boxes blank is valid.</p></div></div><div class="check-grid symptom-grid farmer-symptom-grid grouped-symptoms"><label><input id="symptomYellowing" type="checkbox"/><span><strong>Leaves turning yellow</strong><small>Unusual yellowing on the leaves or fronds</small></span></label><label><input id="symptomCrownDecline" type="checkbox"/><span><strong>Top of tree getting weak</strong><small>The crown looks thin, weak, or declining</small></span></label><label><input id="symptomFrondCuts" type="checkbox"/><span><strong>Cuts or chewing on fronds</strong><small>Visible cuts, notches, or feeding damage</small></span></label></div></section><section class="farm-input-group"><div class="farm-input-group-head"><span>4B</span><div><h4>Look for obvious pest damage</h4><p>These observations help the pest-risk engine weigh field evidence. They are not treated as a laboratory diagnosis.</p></div></div><div class="check-grid symptom-grid farmer-symptom-grid grouped-symptoms"><label><input id="symptomScale" type="checkbox"/><span><strong>Small scale insects visible</strong><small>Scale-like insects or patches on leaves</small></span></label><label><input id="symptomBeetle" type="checkbox"/><span><strong>Rhinoceros beetle damage</strong><small>Typical boring or V-shaped feeding damage</small></span></label></div></section><section class="farm-input-group"><div class="farm-input-group-head"><span>4C</span><div><h4>Check what is happening across the farm</h4><p>Premature nut fall and nearby pest reports provide context beyond a single tree and help prioritize inspection.</p></div></div><div class="check-grid symptom-grid farmer-symptom-grid grouped-symptoms"><label><input id="symptomNutFall" type="checkbox"/><span><strong>Coconuts falling too early</strong><small>Premature nut fall beyond what is normal</small></span></label><label><input id="symptomNearby" type="checkbox"/><span><strong>Nearby farms have pest reports</strong><small>Known pest problems close to this farm</small></span></label></div></section><section class="farm-input-group"><div class="farm-input-group-head"><span>4D</span><div><h4>Give one overall severity estimate</h4><p>This final rating tells COCOAID how widespread the visible problem appears. Choose “No visible problem” when the farm looks normal.</p></div></div><label class="farmer-severity-label"><span>Overall, how serious does the problem look?</span><select id="symptomSeverity"><option value="0">No visible problem</option><option value="1">A few trees look affected</option><option value="2">Several trees look affected</option><option value="3">Many trees look badly affected</option></select></label><div class="official-card farmer-reference-card"><span>How COCOAID handles this</span><strong>Your visible observations update the pest-risk evidence</strong><p>The system keeps predicted risk separate from confirmed field evidence and does not treat a forecast as a diagnosis.</p></div></section>
+<div class="farm-step-actions"><button class="secondary farm-back-button" data-farm-back="soil" type="button">← Back</button><button class="primary" id="healthContinueButton" type="button">Finish Farm Details ✓</button></div>
+</div>
+<div class="form-footer farmer-form-footer">
+<div><strong id="farmValidation">Tree-state totals are valid.</strong><small id="farmCompletionHint">Complete the four steps and draw the farm boundary before starting the forecast.</small></div>
+<button aria-disabled="true" class="primary large" disabled="" id="startForecastButton" type="button">Complete Farm Setup First</button>
+</div>
+</article>
+<article class="panel map-panel farmer-map-panel">
+<div class="panel-head farmer-map-head">
+<div><span class="eyebrow">FIRST TASK · FARM BOUNDARY</span><h3>Show COCOAID exactly where your farm is</h3><p>This map is the only thing you need to do right now. Choose a shape, trace the farm, and finish the orange boundary. Side lengths will be calculated automatically in kilometers.</p></div>
+<button class="text-button" id="clearFarmPolygon" type="button">Clear shape</button>
+</div>
+<div class="farm-map-instructions">
+<div><b>1</b><span><strong>Choose a drawing tool</strong><small>Use Polygon for an irregular farm, or Square if the farm is roughly square.</small></span></div>
+<div><b>2</b><span><strong>Click the farm corners</strong><small>For Polygon, click each corner around the farm. Click the first point again to finish.</small></span></div>
+<div><b>3</b><span><strong>Finish the orange shape</strong><small>COCOAID measures every side in kilometers, darkens the area outside the farm, then opens the next questions automatically.</small></span></div>
+</div>
+<div aria-label="Easy farm drawing tools" class="farm-map-tool-buttons">
+<button class="farm-draw-tool primary" id="mapPolygonGuideButton" type="button"><span aria-hidden="true" class="shape-icon polygon-icon"></span><strong>Draw my farm</strong><small>Best for most farms</small></button>
+<button class="farm-draw-tool secondary" id="mapRectangleGuideButton" type="button"><span aria-hidden="true" class="shape-icon rectangle-icon"></span><strong>Draw a square</strong><small>Square or rectangular farms</small></button>
+<button class="farm-draw-tool secondary" id="mapEditGuideButton" type="button"><span aria-hidden="true" class="edit-shape-icon">✎</span><strong>Edit farm shape</strong><small>Move boundary corners</small></button>
+</div><button class="farm-map-save-edit primary" hidden="" id="mapSaveEditButton" type="button"><span aria-hidden="true">✓</span><strong>Save Farm Shape Changes</strong><small>Press this when the orange boundary is correct</small></button>
+<div class="farm-map-live-guide" id="farmMapLiveGuide" role="status"><span aria-hidden="true">➜</span><strong>Choose Polygon or Square above to begin.</strong></div>
+<div class="map setup-map" id="farmMap"></div>
+<div class="farm-boundary-success" hidden="" id="farmBoundarySuccess"><span aria-hidden="true">✓</span><div><strong>Farm shape confirmed</strong><small>Side lengths and area are calculated. Opening the next questions now…</small></div></div>
+<div class="map-summary"><strong id="polygonInfo">No polygon drawn</strong><span>Drawing the map automatically updates farm area and coordinates.</span></div>
+</article>
+</div>
+</section><section class="page weather-dedicated-page" id="weather-gis-page">
+<div class="section-intro">
+<div><span class="eyebrow">Live atmospheric intelligence</span><h2>Weather GIS command workspace</h2><p>Control radar, rain intensity, cloud, temperature, pressure, wind, and the genuine 16-day numerical forecast from a dedicated full-height map.</p></div>
+<div class="action-row"><button class="secondary" id="weatherPageSync" type="button">Sync farm boundary</button><button class="primary" id="weatherPageExpand" type="button">Open floating viewer</button></div>
+</div>
+<div class="weather-dedicated-shell"><iframe id="weatherDedicatedFrame" src="/weather-viewer" title="COCOAID full Weather GIS workspace"></iframe></div>
+</section>
+<section class="page forecast-fullscreen-page" id="outlook">
+<div class="forecast-map-workspace" id="forecastMapWorkspace">
+<div class="map forecast-map forecast-map-fullscreen" id="forecastMap"></div>
+<canvas aria-hidden="true" class="forecast-wind-canvas" id="forecastWindCanvas"></canvas>
+<header class="forecast-floating-header">
+<div class="forecast-title-card">
+<span class="mode-badge" id="forecastModeBadge">WAITING FOR LONG-TERM FORECAST</span>
+<h2>Long-Term Model Forecast</h2>
+<h3 id="forecastDate">Refresh the forecast to begin</h3>
+<p id="forecastWeekLabel">The timeline will connect map conditions and all charts.</p>
+</div>
+<button class="primary forecast-refresh-button" id="runForecastButton" type="button">Refresh Forecast</button>
+</header>
+<div aria-label="Long-term forecast tools" class="forecast-floating-tools">
+<button class="forecast-tool-button" data-forecast-panel="summary" type="button"><span>◎</span><b>Summary</b></button>
+<button class="forecast-tool-button" data-forecast-panel="layers" type="button"><span>◫</span><b>Layers</b></button>
+<button class="forecast-tool-button" data-forecast-panel="graphs" type="button"><span>⌁</span><b>Graphs</b></button>
+<button class="forecast-tool-button" data-forecast-panel="timeline" type="button"><span>◷</span><b>Timeline</b></button>
+</div>
+<aside class="forecast-float-panel forecast-summary-panel" data-forecast-panel-body="summary" id="forecastSummaryPanel">
+<div class="forecast-panel-head"><div><span>FORECAST SUMMARY</span><strong>What matters now</strong></div><button aria-label="Close summary" data-close-forecast-panel="" type="button">×</button></div>
+<div class="forecast-source-boundary compact" id="forecastSourceBoundary">
+<article class="provider-source"><span>FIRST 16 DAYS</span><strong>Hourly forecast timeline</strong><small id="forecastLiveWindowLabel">Open-Meteo numerical forecast shown at the original hourly model control points used by Weather GIS.</small></article>
+<article class="model-source"><span>AFTER DAY 16 → 2050</span><strong>Daily modeled snapshots</strong><small>Climate-conditioned modeled weather. Daily resolution avoids false quarter-hour precision in long-range projections.</small></article>
+</div>
+<div class="metric-grid outlook-metrics">
+<article class="metric-card">
+<span>2050 median production</span><strong id="forecast2050">—</strong><small id="forecastRange">5th–95th percentile</small>
+</article>
+<article class="metric-card">
+<span>Rehabilitation probability</span><strong id="forecastRecovery">—</strong><small>Posterior estimate</small>
+</article>
+<article class="metric-card">
+<span>Severe-loss probability</span><strong id="forecastLoss">—</strong><small>Below selected threshold</small>
+</article>
+<article class="metric-card">
+<span>Next major hazard</span><strong id="forecastNextHazard">—</strong><small>Scenario-dependent after provider horizon</small>
+</article>
+</div>
+<div class="forecast-current-grid">
+<div><span>Rain</span><strong id="mapRain">—</strong></div>
+<div><span>Temperature</span><strong id="mapTemp">—</strong></div>
+<div><span>Farm condition</span><strong id="mapCondition">—</strong></div>
+<div><span>Output</span><strong id="mapProduction">—</strong></div>
+</div>
+<span hidden="" id="forecastWeatherSyncStatus"></span>
+</aside>
+<aside class="forecast-float-panel forecast-layers-panel" data-forecast-panel-body="layers" id="forecastMiniWeatherControl">
+<div class="forecast-panel-head"><div><span>MAP LAYERS</span><strong>Weather map controls</strong></div><button aria-label="Close layers" data-close-forecast-panel="" type="button">×</button></div>
+<p class="forecast-panel-note">Rain and wind use the same provider weather grid as the 16-day forecast window. Satellite is the latest available NASA GIBS true-color observation.</p>
+<div aria-label="Forecast map layers" class="forecast-layer-list" role="group">
+<button class="active" data-forecast-map-layer="rain" type="button"><i class="weather-dot rain-dot"></i><span><strong>Rain</strong><small>Forecast precipitation field</small></span><span aria-hidden="true" class="forecast-layer-toggle"><i></i></span><b class="forecast-layer-status">ON</b></button>
+<button class="active" data-forecast-map-layer="wind" type="button"><i class="weather-dot wind-dot"></i><span><strong>Wind</strong><small>Animated Weather GIS-style flow</small></span><span aria-hidden="true" class="forecast-layer-toggle"><i></i></span><b class="forecast-layer-status">ON</b></button>
+<button data-forecast-map-layer="satellite" type="button"><i class="weather-dot satellite-dot"></i><span><strong>Satellite</strong><small>NASA GIBS true-color imagery</small></span><span aria-hidden="true" class="forecast-layer-toggle"><i></i></span><b class="forecast-layer-status">OFF</b></button>
+<button class="active" data-forecast-map-layer="farm" type="button"><i class="weather-dot farm-dot"></i><span><strong>Farm</strong><small>Boundary and condition overlay</small></span><span aria-hidden="true" class="forecast-layer-toggle"><i></i></span><b class="forecast-layer-status">ON</b></button>
+</div>
+<div class="forecast-mini-values">
+<div><span>Rain</span><strong id="forecastMiniRain">—</strong></div>
+<div><span>Temp</span><strong id="forecastMiniTemp">—</strong></div>
+<div><span>Humidity</span><strong id="forecastMiniHumidity">—</strong></div>
+<div><span>Cloud</span><strong id="forecastMiniCloud">—</strong></div>
+<div class="wide"><span>Wind</span><strong id="forecastMiniWind">—</strong></div>
+</div>
+<small id="forecastMiniSource">Waiting for forecast</small>
+</aside>
+<aside class="forecast-float-panel forecast-graphs-panel" data-forecast-panel-body="graphs" id="forecastGraphsPanel">
+<div class="forecast-panel-head sticky"><div><span>ANALYTICAL GRAPHS</span><strong>Model evidence</strong></div><button aria-label="Close graphs" data-close-forecast-panel="" type="button">×</button></div>
+<div class="chart-grid">
+<article class="panel chart-panel wide">
+<div class="panel-head">
+<div>
+<h3>Farm production through 2050</h3>
+<p>
+                    Total with husk is always highest; mature and young respond differently to moisture, heat, wind, and pest pressure. Trend index is the clearest default comparison.
+                  </p>
+</div>
+<div class="chart-actions">
+<div aria-label="Production chart mode" class="segmented production-mode" role="group">
+<button class="active" id="productionIndexMode" type="button">Trend index</button>
+<button id="productionTonsMode" type="button">Absolute tons</button>
+</div>
+<button class="text-button chart-reset" data-chart="production">Reset zoom</button>
+</div>
+</div>
+<div class="chart-box tall">
+<canvas id="productionChart"></canvas>
+</div>
+</article>
+<article class="panel chart-panel">
+<div class="panel-head">
+<div>
+<h3>Rainfall and temperature</h3>
+<p>Focused weather window around the selected daily frame</p>
+</div>
+<button class="text-button chart-reset" data-chart="weather">
+                  Reset
+                </button>
+</div>
+<div class="chart-box"><canvas id="weatherChart"></canvas></div>
+</article>
+<article class="panel chart-panel">
+<div class="panel-head"><div><h3>Relative humidity</h3><p>Focused around the selected date</p></div><button class="text-button chart-reset" data-chart="humidity">Reset</button></div>
+<div class="chart-box"><canvas id="humidityChart"></canvas></div>
+</article>
+<article class="panel chart-panel">
+<div class="panel-head"><div><h3>Cloud cover</h3><p>Focused around the selected date</p></div><button class="text-button chart-reset" data-chart="cloud">Reset</button></div>
+<div class="chart-box"><canvas id="cloudChart"></canvas></div>
+</article>
+<article class="panel chart-panel">
+<div class="panel-head"><div><h3>Wind speed</h3><p>Focused around the selected date</p></div><button class="text-button chart-reset" data-chart="wind">Reset</button></div>
+<div class="chart-box"><canvas id="windChart"></canvas></div>
+</article>
+<article class="panel chart-panel">
+<div class="panel-head"><div><h3>Atmospheric pressure</h3><p>Focused around the selected date</p></div><button class="text-button chart-reset" data-chart="pressure">Reset</button></div>
+<div class="chart-box"><canvas id="pressureChart"></canvas></div>
+</article>
+<article class="panel chart-panel">
+<div class="panel-head">
+<div>
+<h3>Farm condition and pest pressure</h3>
+<p>Mathematical state indicator</p>
+</div>
+<button class="text-button chart-reset" data-chart="condition">
+                  Reset
+                </button>
+</div>
+<div class="chart-box"><canvas id="conditionChart"></canvas></div>
+</article>
+<article class="panel chart-panel">
+<div class="panel-head">
+<div>
+<h3>Official provincial production history</h3>
+<p id="officialChartSubtitle">
+                    PSA official annual production through 2025; estimated 2026
+                    points are diamond-marked and dashed
+                  </p>
+</div>
+<button class="text-button chart-reset" data-chart="official">
+                  Reset
+                </button>
+</div>
+<div class="chart-box">
+<canvas id="officialHistoryChart"></canvas>
+</div>
+</article>
+</div>
+</aside>
+<div class="rain-legend forecast-floating-legend" id="forecastLegend">
+<span>Rain intensity</span><i></i><small>0</small><small>Light</small><small>Moderate</small><small>Heavy</small><small>Extreme</small>
+</div>
+<div class="forecast-timeline-dock" data-forecast-panel-body="timeline" id="forecastTimelineDock">
+<div class="forecast-timeline-top">
+<div class="timeline-actions"><button class="icon-button" id="forecastPrev">‹</button><button class="round-play" id="forecastPlay">▶</button><button class="icon-button" id="forecastNext">›</button></div>
+<div class="forecast-resolution-label"><strong id="forecastResolutionLabel">Hourly forecast steps</strong><small id="forecastResolutionNote">Open-Meteo hourly numerical-model frames</small></div>
+<button aria-expanded="false" aria-label="Open forecast calendar" class="timeline-calendar-toggle" id="forecastTimelineCollapse" type="button"><span>▦</span><b>Calendar</b></button>
+</div>
+<div class="forecast-slider-shell">
+  <input aria-label="Forecast timeline slider" class="forecast-slider-visible" id="forecastSlider" max="0" min="0" type="range" value="0"/>
+  <div class="forecast-slider-labels"><span id="timelineStart">—</span><strong id="timelineSelected">—</strong><span id="timelineEnd">—</span></div>
+  <div aria-label="Forecast data source timeline" class="timeline-source-key compact-source-key">
+    <span class="timeline-source-live"><b>DAY 1–16 · HOURLY</b><small>Open-Meteo</small></span>
+    <span class="timeline-source-model"><b>DAY 17 → 2050 · DAILY</b><small>COCOAID climate-conditioned modeled weather</small></span>
+  </div>
+</div>
+<div class="timeline-strip" id="forecastTimelineStrip">
+<div class="forecast-calendar" id="forecastCalendar">
+  <div class="forecast-calendar-head">
+    <button aria-label="Previous month" class="calendar-nav-button" id="forecastCalendarPrev" type="button">‹</button>
+    <div><span>FORECAST CALENDAR</span><strong id="forecastCalendarMonth">—</strong></div>
+    <button aria-label="Next month" class="calendar-nav-button" id="forecastCalendarNext" type="button">›</button>
+  </div>
+  <div aria-hidden="true" class="forecast-calendar-weekdays"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+  <div aria-label="Forecast dates" class="forecast-calendar-grid" id="forecastCalendarGrid"></div>
+  <div class="forecast-hour-picker" id="forecastHourPicker">
+    <div class="forecast-hour-picker-head"><span>HOUR</span><strong id="forecastHourLabel">Select an hourly frame</strong></div>
+    <div class="forecast-hour-scroll" id="forecastHourScroll"></div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="page hazard-redesign-page" id="extreme-weather">
+<div class="section-intro hazard-redesign-intro">
+<div><span class="eyebrow">Hazard Intelligence</span><h2>Extreme Weather Detection</h2><p>See the most important weather threat first, then inspect every flagged period only when you need more detail.</p></div>
+<button class="secondary" id="refreshHazardsButton">Use latest forecast</button>
+</div>
+<div class="hazard-glance-grid">
+<article class="hazard-glance-card count-card"><div><span>Flagged periods</span><strong id="hazardCount">—</strong><small>Across the selected horizon</small></div><div class="hazard-mini-gauge" id="hazardCountGauge" aria-hidden="true"><i></i><b>EVENTS</b></div></article>
+<article class="hazard-glance-card severity-card"><div><span>Highest severity</span><strong id="hazardPeak">—</strong><small>Normalized 0–100 score</small></div><div class="hazard-mini-gauge" id="hazardPeakGauge" aria-hidden="true"><i></i><b>RISK</b></div></article>
+<article class="hazard-glance-card loss-card"><div><span>Estimated production at risk</span><strong id="hazardLoss">—</strong><small>Total across flagged periods</small></div><div class="hazard-mini-gauge" id="hazardLossGauge" aria-hidden="true"><i></i><b>LOSS</b></div></article>
+<article class="hazard-glance-card trees-card"><div><span>Maximum trees affected</span><strong id="hazardTrees">—</strong><small>Single-event estimate</small></div><div class="hazard-mini-gauge" id="hazardTreesGauge" aria-hidden="true"><i></i><b>TREES</b></div></article>
+</div>
+<div class="hazard-command-layout">
+<article class="panel hazard-focus-card">
+<div class="hazard-focus-top"><div><span class="eyebrow">SELECTED THREAT</span><h3 id="hazardFocusType">No hazard selected</h3><p id="hazardFocusWindow">Run a farm forecast to populate hazard intelligence.</p></div><div class="hazard-focus-nav"><button aria-label="Previous extreme-weather event" id="hazardPrevEvent" type="button">‹</button><strong id="hazardFocusPosition">0 / 0</strong><button aria-label="Next extreme-weather event" id="hazardNextEvent" type="button">›</button></div></div>
+<div class="hazard-focus-score"><div><span>Severity</span><strong id="hazardFocusSeverity">—</strong><i><b id="hazardFocusSeverityBar"></b></i></div><div><span>Production loss</span><strong id="hazardFocusLoss">—</strong><i><b id="hazardFocusLossBar"></b></i></div></div>
+<p class="hazard-focus-summary" id="hazardFocusSummary">COCOAID will summarize the expected farm impact here.</p>
+<div class="hazard-event-summary-visual">
+  <div class="hazard-event-icon" id="hazardEventIcon" aria-hidden="true"><span>☁</span></div>
+  <div class="hazard-event-visual-copy"><span>EVENT SIGNATURE</span><strong id="hazardEventBrief">Select a threat to inspect its weather signature.</strong><p>Values below summarize the full flagged period, not just its first day, so the displayed weather stays consistent with the event classification.</p></div>
+</div>
+<div class="hazard-forecast-snapshot">
+  <div class="hazard-snapshot-head"><div><span>LONG-TERM MODEL FORECAST SNAPSHOT</span><strong id="hazardSnapshotTitle">Waiting for a selected event</strong></div><div class="hazard-snapshot-date" id="hazardSnapshotDate">—</div></div>
+  <div class="hazard-snapshot-map" id="hazardSnapshotMap" aria-label="Weather snapshot from the Long-Term Model Forecast"></div>
+  <div class="hazard-snapshot-footer"><span id="hazardSnapshotSource">Same forecast-frame renderer used by Long-Term Model Forecast</span><button type="button" class="text-button" id="openHazardInForecast">Open this date in Model Forecast →</button></div>
+</div>
+<div class="hazard-weather-details">
+  <div><span>Rain signal</span><strong id="hazardWeatherRain">—</strong></div>
+  <div><span>Temperature</span><strong id="hazardWeatherTemp">—</strong></div>
+  <div><span>Wind</span><strong id="hazardWeatherWind">—</strong></div>
+  <div><span>Humidity</span><strong id="hazardWeatherHumidity">—</strong></div>
+</div>
+<div class="hazard-first-action"><span>FIRST FARM ACTION</span><strong id="hazardFocusAction">Review the selected threat and inspect the affected part of the farm.</strong></div>
+<div class="hazard-focus-details"><div><span>Trees to inspect</span><strong id="hazardFocusTrees">—</strong></div><div><span>Confidence</span><strong id="hazardFocusConfidence">—</strong></div><div><span>Data source</span><strong id="hazardFocusSource">—</strong></div></div>
+</article>
+<article class="panel hazard-list-card">
+<div class="panel-head"><div><h3>All flagged periods</h3><p>Select a period to inspect it. Provider-backed events and long-range modeled events stay clearly labeled.</p></div></div>
+<div aria-label="Extreme weather calendar" class="hazard-calendar-shell" id="hazardDateRail"><div class="empty-state">Run a farm outlook first.</div></div>
+<div class="hazard-calendar-legend"><span><i class="provider"></i>Provider window</span><span><i class="modeled"></i>Modeled event</span><span><i class="severe"></i>High severity</span></div>
+<div class="hazard-timeline hazard-list" id="hazardTimeline"><div class="empty-state">Run a farm outlook first.</div></div>
+</article>
+</div>
+<details class="panel hazard-technical-panel">
+<summary><span><strong>Technical comparison</strong><small>Severity and estimated production loss for every flagged event</small></span><b>Show graph</b></summary>
+<div class="chart-box tall"><canvas id="hazardChart"></canvas></div>
+</details>
+</section>
+<section class="page health-map-first-page" id="health">
+<div class="section-intro health-map-first-intro">
+<div><span class="eyebrow">Farm Health Monitoring</span><h2>See the farm first, then inspect the evidence</h2><p>The rehabilitation heatmap is the center of this workspace. Scores and charts explain what the map is showing without hiding the field picture.</p></div>
+<div class="action-row"><button class="secondary" data-section-link="pest-risk" type="button">Open Pest Risk →</button><button class="primary" id="runHealthButton">Analyze farm health</button></div>
+</div>
+<div class="health-map-stage">
+<article class="panel map-panel rehab-panel health-primary-map">
+<div class="panel-head rehab-panel-head"><div><span class="eyebrow">Event-linked rehabilitation</span><h3>Farm health and rehabilitation map</h3><p>Select a projected hazard to see damaged zones, inspection timing, and rehabilitation priorities.</p></div></div>
+<div aria-label="Rehabilitation event navigation" class="rehab-event-navigator"><button aria-label="Previous rehabilitation event date" class="rehab-nav-arrow" id="rehabPrevEvent" type="button">‹</button><div class="rehab-event-strip" id="rehabEventStrip"><div class="empty-state">Run the farm forecast to generate event-specific rehabilitation maps.</div></div><button aria-label="Next rehabilitation event date" class="rehab-nav-arrow" id="rehabNextEvent" type="button">›</button></div>
+<div aria-label="Rehabilitation heatmap legend" class="rehab-legend"><span><i class="no-damage"></i>Green · No Damage</span><span><i class="inspection"></i>Yellow · Needs inspection</span><span><i class="rehabilitation"></i>Red · Needs Rehabilitation</span></div>
+<div class="map rehab-map" id="rehabMap"></div>
+<div class="rehab-details" id="rehabDetails">Run health analysis to generate event-specific rehabilitation priorities.</div>
+</article>
+<div class="health-map-side">
+<aside class="rehab-calendar-side-panel"><div class="rehab-schedule rehab-calendar" id="rehabSchedule"><div class="empty-state">Run the forecast to build the rehabilitation calendar.</div></div></aside>
+<div class="health-donut-grid health-donut-stack">
+<article class="panel health-donut-card"><div class="health-donut"><canvas id="healthPestDonut"></canvas><strong id="healthPest">—</strong></div><div><span>Bayesian pest pressure</span><small>Bayesian signal conditioned by the selected weather event</small></div></article>
+<article class="panel health-donut-card"><div class="health-donut"><canvas id="healthSuitabilityDonut"></canvas><strong id="healthSuitability">—</strong></div><div><span>Land suitability</span><small>Event-conditioned agronomic fit for coconut</small></div></article>
+<article class="panel health-donut-card"><div class="health-donut"><canvas id="healthConditionDonut"></canvas><strong id="healthCondition">—</strong></div><div><span>Farm condition</span><small>Current biological condition</small></div></article>
+<article class="metric-card health-priority-card"><span>Priority cells</span><strong id="healthPriorityCells">—</strong><small>Red rehabilitation zones</small></article>
+</div>
+</div>
+</div>
+<div class="health-visual-grid">
+<article class="panel chart-panel health-overview-panel"><div class="panel-head"><div><span class="eyebrow">Health overview</span><h3>Farm health scorecard</h3><p>Four farmer-facing indicators in one comparison.</p></div></div><div class="chart-box"><canvas id="healthOverviewChart"></canvas></div></article>
+<article class="panel chart-panel"><div class="panel-head"><div><h3>Tree-state structure</h3><p>Current distribution and projected state</p></div></div><div class="chart-box"><canvas id="treeStateChart"></canvas></div></article>
+
+</div>
+<div hidden aria-hidden="true" class="legacy-health-evidence-compat"><div id="pestEvidenceList"></div><i id="pestProbabilityBar"></i><div id="suitabilityFactors"></div></div>
+<article class="panel rehab-ai-panel"><div class="panel-head"><div><span class="eyebrow">CoCO-PILOT rehabilitation planner</span><h3>Rehabilitation procedure and AI recommendation</h3><p>The built-in procedure is shown immediately. CoCO-PILOT can turn it into a concise farm-specific work plan.</p></div><button class="secondary" id="generateRehabAiButton" type="button">Generate AI recommendation</button></div><div class="rehab-procedure" id="rehabProcedure"><div class="empty-state">Select a hazard plan after running the farm forecast.</div></div><div class="rehab-ai-result" id="rehabAiResult"><strong>AI recommendation</strong><p>Add an AI API key in Settings, then generate a tailored plan for the selected event.</p></div></article>
+</section>
+<section class="page pest-risk-page" id="pest-risk">
+<div class="section-intro pest-risk-intro"><div><span class="eyebrow">Pest-Specific Risk Inference</span><h2>Which pest deserves attention first?</h2><p>Compare pest threats in one focused workspace. COCOAID ranks the PCA-supported profiles, explains the environmental drivers, and keeps the detailed field signs and recommendations one click away.</p><div class="pest-intro-chips"><span>5 PCA-supported pest profiles</span><span>Weather-linked inference</span><span>Evidence-ranked priorities</span></div></div><div class="action-row"><button class="secondary" data-section-link="health" type="button">← Farm Health</button><button class="primary" id="runPestAnalysisButton" type="button">Refresh pest analysis</button></div></div>
+<div class="pest-risk-dashboard">
+<article class="panel pest-ranking-panel"><div class="panel-head"><div><span class="eyebrow">Risk ranking</span><h3>Highest-risk pests first</h3><p>Outbreak score from climate, tree vulnerability, symptoms, and management protection.</p></div><div class="pest-overall"><span>Highest outbreak score</span><strong id="pestHighestScore">—</strong><small id="pestTopRisk">Waiting for analysis</small></div></div><div class="chart-box tall"><canvas id="pestRankingChart"></canvas></div></article>
+<article class="panel pest-driver-panel"><div class="panel-head"><div><span class="eyebrow">Shared drivers</span><h3>What is influencing pest pressure?</h3><p>Average contribution of the strongest drivers reported across the pest models.</p></div></div><div class="chart-box tall"><canvas id="pestDriverChart"></canvas></div></article>
+</div>
+<article class="panel pest-risk-section"><div class="panel-head pest-risk-head"><div><span class="eyebrow">Detailed pest cards</span><h3>Environmental and symptom-based pest risk</h3><p>Select each pest card to see characteristic signs and farm-specific recommendations.</p></div></div><div class="pest-card-deck" id="pestCardDeck"><div class="empty-state">Run the forecast or farm-health analysis to calculate pest-specific risks.</div></div></article>
+</section>
+<section class="page intercropping-page" id="intercropping">
+  <div class="section-intro intercrop-intro">
+    <div><span class="eyebrow">Intercropping Potential</span><h2>See what can grow beneath your coconut canopy</h2><p>Explore all PCA-referenced intercrop candidates, adjust the light reaching the understory, and compare how each crop fits the selected canopy condition. Integrated Phase 9 scores appear when the automatic workflow has completed.</p></div>
+    <div class="intercrop-intro-status"><span>ENGINE STATUS</span><strong id="intercropEngineStatus">Loading candidate catalog…</strong><small id="intercropRunStatus">Canopy preview is available even before Phase 9 finishes.</small></div>
+  </div>
+  <div class="intercrop-workspace-grid">
+    <article class="panel intercrop-scene-panel">
+      <div class="panel-head intercrop-scene-head"><div><span class="eyebrow">Interactive 3D farm preview</span><h3>Canopy and intercrop simulator</h3><p>Drag to orbit the camera, use the mouse wheel to zoom, and move the canopy slider to change coconut crown density and the light reaching the intercrop layer.</p></div><button class="secondary intercrop-reset-camera" id="intercropResetCamera" type="button">Reset camera</button></div>
+      <div class="intercrop-scene-controls">
+        <label class="intercrop-crop-picker"><span>Intercrop shown in 3D</span><select id="intercropCropSelect"></select></label>
+        <label class="intercrop-canopy-control"><span><b>Under-canopy light</b><strong id="intercropLightValue">36%</strong></span><input id="intercropCanopySlider" type="range" min="5" max="100" step="1" value="36"/><small>Lower values create denser coconut crowns and deeper shade. Higher values open the canopy and increase understory light.</small></label>
+      </div>
+      <div class="intercrop-scene-shell" id="intercropSceneShell">
+        <canvas id="intercrop3dCanvas" aria-label="Interactive 3D coconut farm and intercrop visualization"></canvas>
+        <div class="intercrop-scene-hud top-left"><span>SELECTED CROP</span><strong id="intercropSceneCropName">—</strong><small id="intercropSceneCropClass">Waiting for candidate data</small></div>
+        <div class="intercrop-scene-hud top-right"><span>CANOPY FIT</span><strong id="intercropSceneFit">—</strong><small id="intercropSceneIntegrated">Integrated Phase 9: waiting</small></div>
+        <div class="intercrop-scene-hint">Drag to orbit · Scroll to zoom · Highlight pulse marks the intercrop layer</div>
+      </div>
+      <div class="intercrop-scene-metrics">
+        <div><span>Current canopy fit</span><strong id="intercropCurrentFit">—</strong><small id="intercropCurrentClass">—</small></div>
+        <div><span>Preferred light band</span><strong id="intercropPreferredLight">—</strong><small>PCA-referenced canopy-light range</small></div>
+        <div><span>Integrated suitability</span><strong id="intercropIntegratedScore">—</strong><small>Latest Phase 9 assessment when available</small></div>
+        <div><span>Competition pressure</span><strong id="intercropCompetition">—</strong><small>Latest integrated assessment</small></div>
+      </div>
+    </article>
+    <aside class="panel intercrop-ranking-panel">
+      <div class="panel-head"><div><span class="eyebrow">Live ranking</span><h3>Best crops at this canopy level</h3><p>The ranking updates immediately as you move the light slider.</p></div></div>
+      <div class="intercrop-ranking" id="intercropRanking"><div class="empty-state">Loading intercrop candidates…</div></div>
+      <div class="intercrop-canopy-chart-wrap"><div><span>SELECTED CROP RESPONSE</span><strong id="intercropChartTitle">Canopy suitability across light levels</strong></div><div class="chart-box"><canvas id="intercropCanopyChart"></canvas></div></div>
+    </aside>
+  </div>
+  <article class="panel intercrop-card-section">
+    <div class="panel-head"><div><span class="eyebrow">Implementation cards</span><h3>Suitability, effectiveness, and practical establishment guidance</h3><p>Each card centers the current canopy-fit score and shows the crop's reference light range. Where Phase 9 has assessed the crop, its integrated score is shown separately.</p></div><div class="intercrop-card-key"><span><i class="excellent"></i>Excellent</span><span><i class="good"></i>Good</span><span><i class="limited"></i>Limited</span></div></div>
+    <div class="intercrop-card-deck" id="intercropCardDeck"><div class="empty-state">Loading candidate cards…</div></div>
+    <p class="intercrop-data-note">Canopy-light bands are source-backed by the project PCA brochure catalog. Temperature, rainfall, soil, competition, and management requirement ranges in the integrated engine remain versioned development assumptions pending PCA/expert verification and field calibration.</p>
+  </article>
+</section><section class="page intelligence-page" id="intelligence">
+<div class="section-intro">
+<div><span class="eyebrow">Integrated traceability layer</span><h2>Decision-support network</h2><p>Inspect how versioned weather, production, Bayesian, pest, intercropping, and rehabilitation records converge into a defensible recommendation.</p></div>
+<div class="action-row"><button class="secondary" id="refreshIntelligenceButton" type="button">Refresh records</button><button class="primary" id="openPilotFromIntelligence" type="button">Open CoCO-PILOT</button></div>
+</div>
+<div class="auto-workflow-strip intelligence-auto-strip" data-auto-workflow-status>
+  <div class="auto-workflow-copy"><span>AUTOMATED INTEGRATION</span><strong>Phase 9 → Phase 10 runs automatically when eligible data is available.</strong><small data-auto-workflow-message>Checking the latest production forecast and evidence…</small></div>
+  <div class="auto-phase-node" data-auto-phase="9"><i></i><span>Phase 9</span><strong>Decision integration</strong><small>Waiting</small></div>
+  <div class="auto-phase-link"><b></b></div>
+  <div class="auto-phase-node" data-auto-phase="10"><i></i><span>Phase 10</span><strong>CoCO-PILOT + reports</strong><small>Waiting</small></div>
+  <button type="button" class="secondary auto-workflow-run" data-run-auto-workflow>Run now</button>
+</div>
+<div aria-label="COCOAID decision network flow" class="intelligence-flow interactive-network">
+<article tabindex="0" data-network-node="1"><strong>01 · Farm evidence</strong><small>Boundary, palm cohorts, observations, soil, and management.</small></article>
+<article tabindex="0" data-network-node="2"><strong>02 · Environmental state</strong><small>Versioned weather run and agricultural stress features.</small></article>
+<article tabindex="0" data-network-node="3"><strong>03 · Predictive engines</strong><small>ML production, Bayesian uncertainty, pests, and intercrops.</small></article>
+<article tabindex="0" data-network-node="4"><strong>04 · Optimization</strong><small>Budget, labor, risk, and six rehabilitation scenarios.</small></article>
+<article tabindex="0" data-network-node="5"><strong>05 · Traceable output</strong><small>Evidence-linked decisions, CoCO-PILOT, DOCX, and PDF.</small></article>
+</div>
+<div class="network-live-detail" id="networkLiveDetail"><span>LIVE TRACE</span><strong>Select a network stage</strong><p>Click a stage above to inspect what data enters it, what it produces, and where that record moves next.</p><div class="network-pulse-line"><i></i><i></i><i></i><i></i></div></div>
+<div class="phase11-intelligence-grid">
+<article class="panel"><div class="panel-head"><div><span class="eyebrow">System readiness</span><h3>Integrated engine</h3></div></div><div class="phase11-data-list" id="intelligenceStatus"></div></article>
+<article class="panel"><div class="panel-head"><div><span class="eyebrow">Most recent record</span><h3>Decision-support run</h3></div></div><div class="phase11-data-list" id="intelligenceRecentRun"></div></article>
+<article class="panel"><div class="panel-head"><div><span class="eyebrow">Formal output</span><h3>Recent reports</h3></div></div><div class="phase11-data-list" id="intelligenceReports"></div></article>
+<article class="panel"><div class="panel-head"><div><span class="eyebrow">Interpretation policy</span><h3>Responsible AI boundary</h3></div></div><div class="phase11-data-list"><div class="phase11-data-row"><span>Analytical engines remain authoritative</span><strong>Yes</strong></div><div class="phase11-data-row"><span>Unsupported chemical dosage</span><strong>Blocked</strong></div><div class="phase11-data-row"><span>Farmer PII sent to provider</span><strong>No</strong></div><div class="phase11-data-row"><span>Partial runs disclosed</span><strong>Yes</strong></div></div></article>
+</div>
+</section>
+<section class="page" id="reports">
+<div class="section-intro">
+<div>
+<span class="eyebrow">Step 5</span>
+<h2>Reports and forecast storage</h2>
+<p>
+                Collect farm, weather, production, hazard, health, model, and
+                provenance outputs in one file.
+              </p>
+</div>
+</div>
+<div class="auto-workflow-strip reports-auto-strip" data-auto-workflow-status>
+  <div class="auto-workflow-copy"><span>BACKGROUND WORKFLOW</span><strong>Decision integration and formal-output preparation</strong><small data-auto-workflow-message>Checking Phase 9 and Phase 10 status…</small></div>
+  <div class="auto-phase-node" data-auto-phase="9"><i></i><span>Phase 9</span><strong>Integrated record</strong><small>Waiting</small></div>
+  <div class="auto-phase-link"><b></b></div>
+  <div class="auto-phase-node" data-auto-phase="10"><i></i><span>Phase 10</span><strong>Narrative + files</strong><small>Waiting</small></div>
+  <button type="button" class="secondary auto-workflow-run" data-run-auto-workflow>Run now</button>
+</div>
+<div class="report-motion-pipeline" aria-label="Report workflow">
+  <button type="button" data-report-stage="collect"><i>01</i><strong>Collect</strong><span>Farm + forecast</span></button><b></b>
+  <button type="button" data-report-stage="integrate"><i>02</i><strong>Integrate</strong><span>Phase 9 record</span></button><b></b>
+  <button type="button" data-report-stage="explain"><i>03</i><strong>Explain</strong><span>Phase 10 narrative</span></button><b></b>
+  <button type="button" data-report-stage="export"><i>04</i><strong>Export</strong><span>PDF / DOCX</span></button>
+</div>
+<div class="reports-grid enhanced-reports-grid">
+<article class="panel report-builder">
+<h3>Create complete report</h3>
+<p>
+                The report uses the latest full analysis and links the official
+                provincial reference where available.
+              </p>
+<label>File format<select id="reportFormat">
+<option value="pdf">PDF report</option>
+<option value="docx">Word document</option>
+</select></label>
+<div class="button-stack">
+<button class="secondary" id="runFullAnalysisButton">
+                  Refresh full analysis</button><button class="primary" id="generateReportButton">
+                  Generate report
+                </button>
+</div>
+<div class="result-box" id="reportResult">
+                No report generated.
+              </div>
+</article>
+<article class="panel report-builder">
+<h3>Save current forecast</h3>
+<p>
+                Store the complete weekly timeline and summary in the local
+                COCO-AID database.
+              </p>
+<label>Forecast name<input id="forecastSaveName" value="Farm outlook to 2050"/></label><button class="primary" id="saveForecastButton">
+                Save forecast to database
+              </button>
+<div class="result-box" id="forecastSaveResult">
+                Forecast not saved.
+              </div>
+</article>
+<article class="panel">
+<h3>Included report sections</h3>
+<ul class="check-list">
+<li>Farm profile and boundary</li>
+<li>PSA production history</li>
+<li>Weekly weather and production outlook</li>
+<li>
+                  Extreme-weather timeline, critical-date map snapshots, and
+                  impact
+                </li>
+<li>Bayesian and pest-specific outbreak-risk assessment</li>
+<li>Suitability and rehabilitation map</li>
+<li>Scenario comparison and uncertainty</li>
+<li>Model versions, assumptions and limitations</li>
+</ul>
+</article>
+</div>
+</section>
+<section class="page" id="database">
+<div class="section-intro">
+<div>
+<span class="eyebrow">Workspace storage</span>
+<h2>COCO-AID Database</h2>
+<p>
+                Load farms, saved weekly forecasts, analysis runs, and generated
+                reports from local SQLite storage.
+              </p>
+</div>
+<button class="secondary" id="refreshDatabaseButton">
+              Refresh database
+            </button>
+</div>
+<div class="auto-workflow-strip database-auto-strip" data-auto-workflow-status>
+  <div class="auto-workflow-copy"><span>AUTOMATIC RECORD PIPELINE</span><strong>New eligible forecast data can flow through Phase 9 and Phase 10 without pasted IDs.</strong><small data-auto-workflow-message>Checking workflow readiness…</small></div>
+  <div class="auto-phase-node" data-auto-phase="9"><i></i><span>Phase 9</span><strong>Analysis record</strong><small>Waiting</small></div>
+  <div class="auto-phase-link"><b></b></div>
+  <div class="auto-phase-node" data-auto-phase="10"><i></i><span>Phase 10</span><strong>Report records</strong><small>Waiting</small></div>
+  <button type="button" class="secondary auto-workflow-run" data-run-auto-workflow>Run now</button>
+</div>
+<div class="database-live-rail"><span>DATABASE ACTIVITY</span><div><i></i><b>Farms</b></div><div><i></i><b>Forecasts</b></div><div><i></i><b>Analyses</b></div><div><i></i><b>Reports</b></div></div>
+<div class="metric-grid database-metric-grid">
+<article class="metric-card database-orbit-card">
+<span>Saved farms</span><strong id="dbFarmCount">0</strong>
+</article>
+<article class="metric-card database-orbit-card">
+<span>Saved forecasts</span><strong id="dbForecastCount">0</strong>
+</article>
+<article class="metric-card database-orbit-card">
+<span>Analysis runs</span><strong id="dbAnalysisCount">0</strong>
+</article>
+<article class="metric-card database-orbit-card">
+<span>Reports</span><strong id="dbReportCount">0</strong>
+</article>
+</div>
+<div class="database-grid">
+<article class="panel">
+<div class="panel-head"><h3>Farms</h3></div>
+<div class="record-list" id="farmDatabaseList"></div>
+</article>
+<article class="panel">
+<div class="panel-head"><h3>Forecasts</h3></div>
+<div class="record-list" id="forecastDatabaseList"></div>
+</article>
+<article class="panel">
+<div class="panel-head"><h3>Analyses</h3></div>
+<div class="record-list" id="analysisDatabaseList"></div>
+</article>
+<article class="panel">
+<div class="panel-head"><h3>Reports</h3></div>
+<div class="record-list" id="reportDatabaseList"></div>
+</article>
+</div>
+</section>
+<section class="page about-experience-page" id="about"><div class="about-v2-hero"><div class="about-v2-copy"><span class="about-v2-kicker">COCO-AID RESEARCH SYSTEM</span><img alt="Official COCO-AID logo and research framework title" class="about-official-lockup about-v2-lockup" src="/static/assets/brand/coco-aid-official-lockup.png"/><h2>A living decision-support architecture for coconut farm resilience.</h2><p>COCO-AID connects official production records, geospatial farm context, live weather, climate-conditioned simulation, Bayesian pest inference, intercropping potential, rehabilitation planning, and explainable reports in one traceable research workflow.</p><div class="about-v2-actions"><button class="primary" data-about-jump="aboutSystemExplorer" type="button">Explore the system</button><button class="secondary" data-about-jump="formulaCatalogTitle" type="button">Inspect the mathematics</button></div><div class="about-v2-stats"><article><strong>16 days</strong><span>genuine forecast horizon</span></article><article><strong>2050</strong><span>long-term simulation horizon</span></article><article><strong>35</strong><span>intercrop candidates</span></article><article><strong>5</strong><span>pest / disease profiles</span></article></div></div><div class="about-hologram-shell"><div class="about-hologram-head"><span>SYSTEM HOLOGRAM</span><small>Drag to rotate · select a layer below</small></div><div class="about-hologram-stage" id="aboutHologramStage"><canvas aria-label="Interactive COCO-AID research-system hologram" id="aboutHologramCanvas"></canvas><span class="about-holo-ring ring-one"></span><span class="about-holo-ring ring-two"></span><span class="about-holo-ring ring-three"></span><svg aria-hidden="true" class="about-holo-connectors" viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="15" y1="28" x2="50" y2="50"></line><line x1="85" y1="25" x2="50" y2="50"></line><line x1="16" y1="76" x2="50" y2="50"></line><line x1="84" y1="74" x2="50" y2="50"></line></svg><div class="about-holo-core"><img alt="COCO-AID logo" src="/static/assets/brand/coco-aid-logo-192.png"/></div><span class="about-holo-label label-data">DATA</span><span class="about-holo-label label-weather">WEATHER</span><span class="about-holo-label label-model">MODELS</span><span class="about-holo-label label-action">ACTION</span></div><div class="about-hologram-legend"><span><i></i>Observed / official</span><span><i></i>Modeled / probabilistic</span><span><i></i>Decision output</span></div></div></div><section class="about-system-explorer panel" id="aboutSystemExplorer"><div class="about-explorer-head"><div><span class="eyebrow">Interactive architecture</span><h3>Explore what happens inside COCO-AID</h3><p>Select a layer to see its role, inputs, outputs, and scientific boundary. The hologram responds to the selected system layer.</p></div><div class="about-live-chip"><i></i><span>TRACEABLE PIPELINE</span></div></div><div class="about-explorer-grid"><div class="about-module-buttons" role="tablist" aria-label="COCO-AID system layers"><button class="active" data-about-module="foundation" type="button"><span>01</span><i>▦</i><div><strong>Data Foundation</strong><small>Official + farm records</small></div></button><button data-about-module="weather" type="button"><span>02</span><i>◌</i><div><strong>Weather & Climate</strong><small>Live + modeled boundary</small></div></button><button data-about-module="models" type="button"><span>03</span><i>⌁</i><div><strong>Probabilistic Models</strong><small>ML + Bayesian + Monte Carlo</small></div></button><button data-about-module="intercrop" type="button"><span>04</span><i>♧</i><div><strong>Intercropping</strong><small>Canopy-aware crop fit</small></div></button><button data-about-module="decision" type="button"><span>05</span><i>⌬</i><div><strong>Decision & Reports</strong><small>Rehabilitation + explanation</small></div></button></div><div class="about-module-detail" id="aboutModuleDetail"><span id="aboutModuleEyebrow">LAYER 01 · EVIDENCE BASE</span><h4 id="aboutModuleTitle">Data Foundation</h4><p id="aboutModuleDescription">Official PSA coconut-production records, farm geometry, tree condition, soil and management observations provide the traceable evidence base used by downstream engines.</p><div class="about-module-flow"><div><small>INPUTS</small><strong id="aboutModuleInputs">PSA records · farm polygon · field observations</strong></div><b>→</b><div><small>OUTPUT</small><strong id="aboutModuleOutput">Versioned farm and evidence records</strong></div></div><div class="about-module-boundary"><i>!</i><p id="aboutModuleBoundary">The platform preserves whether data are official, observed, estimated, or modeled instead of presenting all values as equivalent evidence.</p></div></div></div></section><div class="auto-workflow-strip about-auto-strip" data-auto-workflow-status><div class="auto-workflow-copy"><span>LIVE SYSTEM TRACE</span><strong>Phase 9 integration and Phase 10 explanation are connected to the same persisted analytical records.</strong><small data-auto-workflow-message>Checking traceability state…</small></div><div class="auto-phase-node" data-auto-phase="9"><i></i><span>Phase 9</span><strong>Integration</strong><small>Waiting</small></div><div class="auto-phase-link"><b></b></div><div class="auto-phase-node" data-auto-phase="10"><i></i><span>Phase 10</span><strong>Explanation</strong><small>Waiting</small></div><button type="button" class="secondary auto-workflow-run" data-run-auto-workflow>Refresh trace</button></div><section class="about-principles-section"><div class="about-section-title"><span class="eyebrow">Research principles</span><h3>Built to show both the answer and where the answer came from.</h3></div><div class="about-grid interactive-methodology-cards"><article class="panel about-card"><span class="about-number">01</span><i class="about-card-icon">◎</i><h3>Farm-centered</h3><p>Every analysis is anchored to the farmer's mapped boundary, palm population, production baseline, observations, and selected farm context.</p><button class="about-card-toggle" type="button">Why it matters <b>+</b></button><div class="about-card-extra">A shared farm identity prevents production, weather, pest, intercropping, and rehabilitation results from becoming disconnected analyses.</div></article><article class="panel about-card"><span class="about-number">02</span><i class="about-card-icon">◒</i><h3>Uncertainty-aware</h3><p>Bayesian updating and Monte Carlo simulation express uncertainty as probabilities, distributions, and ranges instead of guaranteed outcomes.</p><button class="about-card-toggle" type="button">Why it matters <b>+</b></button><div class="about-card-extra">Long-term projections are explicitly climate-conditioned modeled futures, while genuine short-term forecast data remain separately labeled.</div></article><article class="panel about-card"><span class="about-number">03</span><i class="about-card-icon">▦</i><h3>Evidence-linked</h3><p>Analytical records preserve data source, model/parameter versions, scenario, simulation seed, and dependency identifiers for traceability.</p><button class="about-card-toggle" type="button">Why it matters <b>+</b></button><div class="about-card-extra">A recommendation can be traced backward to the forecast, Bayesian evidence, pest assessment, intercropping run, and rehabilitation record that produced it.</div></article><article class="panel about-card"><span class="about-number">04</span><i class="about-card-icon">♧</i><h3>Agroecosystem-aware</h3><p>COCO-AID treats coconut production, canopy structure, intercrops, pests, weather, soil, and rehabilitation as interacting parts of one farm system.</p><button class="about-card-toggle" type="button">Why it matters <b>+</b></button><div class="about-card-extra">Intercropping is screened against canopy light and competition rather than being presented as a generic list of companion crops.</div></article><article class="panel about-card"><span class="about-number">05</span><i class="about-card-icon">⌬</i><h3>Decision-oriented</h3><p>The architecture ends in ranked farm actions and formal reports, not isolated model scores.</p><button class="about-card-toggle" type="button">Why it matters <b>+</b></button><div class="about-card-extra">The system integrates production, pest pressure, suitability, intercropping, and rehabilitation evidence before generating narrative guidance.</div></article><article class="panel about-card"><span class="about-number">06</span><i class="about-card-icon">!</i><h3>Responsible use</h3><p>COCO-AID supports planning and inspection. It does not replace agronomists, laboratory diagnosis, field validation, or local extension guidance.</p><button class="about-card-toggle" type="button">Why it matters <b>+</b></button><div class="about-card-extra">Development assumptions and synthetic/reference-based validation remain disclosed wherever they materially affect interpretation.</div></article></div></section><section aria-labelledby="formulaCatalogTitle" class="panel about-formulas about-formulas-v2"><div class="panel-head"><div><span class="eyebrow">Mathematical transparency</span><h3 id="formulaCatalogTitle">Core formula catalogue</h3><p>Click an equation to reveal what it contributes to the farm decision pipeline.</p></div><span class="about-formula-hint">INTERACTIVE EQUATIONS</span></div><div class="formula-catalog interactive-formula-catalog"><article tabindex="0"><span>Bayesian evidence update</span><code>P(H|E) = P(E|H)P(H) / [P(E|H)P(H) + P(E|¬H)P(¬H)]</code><small>Updates pest-outbreak probability after symptoms and environmental evidence.</small></article><article tabindex="0"><span>Bayesian odds combination</span><code>O(H|E₁…Eₙ) = O(H) × ∏ LRᵢ</code><small>Combines multiple evidence likelihood ratios under the stated conditional-independence assumption.</small></article><article tabindex="0"><span>Beta posterior</span><code>p | D ~ Beta(α + successes, β + failures)</code><small>Represents uncertainty in recurring rates such as outbreak incidence or replanting survival.</small></article><article tabindex="0"><span>Farm-state transition</span><code>Sₜ₊₁ = f(Sₜ, Xₜ, Uₜ, θ) + εₜ</code><small>Moves young, productive, aging, stressed, infested, recovering, and dead tree states through time.</small></article><article tabindex="0"><span>Production response</span><code>Yₜ = Nproductive × ybase × Fclimate × Fsoil × Fhealth × Fmanagement × Fevent</code><small>Links productive tree population and multiplicative farm-condition factors to annual output.</small></article><article tabindex="0"><span>Land suitability</span><code>S = Σ wⱼ μⱼ(xⱼ)</code><small>Combines normalized soil, terrain, rainfall, temperature, drainage, and stress memberships.</small></article><article tabindex="0"><span>Wet-day process</span><code>P(Zd = 1 | Zd−1, month, scenario, location)</code><small>Preserves seasonal and consecutive wet/dry-day behavior in plausible future weather paths.</small></article><article tabindex="0"><span>Wet-day rainfall amount</span><code>Rd | Zd = 1 ~ Gamma(k, θ)</code><small>Generates non-negative rainfall amounts with realistic right-skewed variability.</small></article><article tabindex="0"><span>Temperature persistence</span><code>Td = μd + φ(Td−1 − μd) + εd</code><small>Models day-to-day temperature persistence around a climate-conditioned mean.</small></article><article tabindex="0"><span>Monte Carlo recovery probability</span><code>P̂(recovery) = (1/M) Σ I(YT ≥ threshold)</code><small>Reports the share of simulated futures that meet the defined rehabilitation target.</small></article><article tabindex="0"><span>Severe-loss probability</span><code>P̂(loss) = (1/M) Σ I(YT < severe-loss threshold)</code><small>Quantifies the chance that final production falls beneath the selected critical level.</small></article><article tabindex="0"><span>Expected utility</span><code>U(a) = E[Σ δᵗ⁻¹Yₜ] − C(a) − λP(severe loss | a)</code><small>Balances discounted production, intervention burden, and downside risk when ranking actions.</small></article></div></section><div class="about-process panel about-process-v2"><div><span class="eyebrow">Integrated research workflow</span><h3>One evidence chain from farm definition to action.</h3><p>Hover or focus on each stage to follow the direction of information through the platform.</p></div><div class="about-flow animated-method-flow"><span><i>⌖</i>Farm setup</span><b></b><span><i>◌</i>Weather & climate</span><b></b><span><i>◒</i>Production</span><b></b><span><i>!</i>Hazards & pests</span><b></b><span><i>♧</i>Intercropping</span><b></b><span><i>⌬</i>Decision & reports</span></div></div><div class="about-credit-footer panel"><div><span>Researcher</span><strong>Gavrielle Munoz</strong></div><div><span>School</span><strong>Tupi National High School</strong></div><div><span>Research horizon</span><strong>Coconut farm resilience through 2050</strong></div><div><span>System principle</span><strong>Evidence before certainty</strong></div></div></section>
+</main>
+</div>
+<button aria-label="Open Weather GIS" class="floating-tool weather-float" id="weatherFloatButton" title="Open Weather GIS" type="button">
+<img alt="" class="official-floating-icon weather-gis-official-icon" src="/static/assets/brand/weather-gis-icon.png"/>
+</button>
+<div aria-hidden="true" class="weather-modal" id="weatherModal">
+<div aria-labelledby="weatherModalTitle" aria-modal="true" class="weather-modal-shell" role="dialog">
+<div class="weather-modal-head"><div class="weather-modal-identity"><img alt="" src="/static/assets/brand/weather-gis-icon-128.png"/><div><span class="eyebrow">Floating atmospheric workspace</span><h2 id="weatherModalTitle">COCO-AID Weather GIS</h2></div></div><button aria-label="Close Weather GIS" class="icon-button" id="weatherModalClose">×</button></div>
+<div class="weather-modal-mount" id="weatherModalMount"></div>
+</div>
+</div>
+<button aria-label="Open CoCO-PILOT" class="floating-tool pilot-float" id="cocoPilotButton" title="Open CoCO-PILOT" type="button">
+<img alt="" class="official-floating-icon coco-pilot-official-icon" src="/static/assets/brand/coco-pilot-icon.png"/>
+</button>
+<aside aria-hidden="true" class="pilot-panel" id="cocoPilotPanel">
+<div class="pilot-ncs-hologram waiting" id="pilotNcsHologram" aria-hidden="true"><div class="pilot-sphere-core"></div><i class="sphere-ring ring-a"></i><i class="sphere-ring ring-b"></i><i class="sphere-ring ring-c"></i><i class="sphere-ring ring-d"></i><span class="sphere-orbit-dot dot-a"></span><span class="sphere-orbit-dot dot-b"></span><div class="sphere-wave wave-a"></div><div class="sphere-wave wave-b"></div></div>
+<header class="pilot-head"><div class="pilot-avatar"><img alt="CoCO-PILOT" src="/static/assets/brand/coco-pilot-icon-128.png"/></div><div><strong>CoCO-PILOT</strong><small id="pilotStatus">Coconut farming assistant</small></div><button aria-label="Close CoCO-PILOT" class="icon-button" id="pilotClose">×</button></header>
+<div class="pilot-attachment-bar" hidden="" id="pilotAttachmentBar"></div>
+<div aria-live="polite" class="pilot-messages" id="pilotMessages">
+<div class="pilot-welcome"><strong>What should we inspect?</strong><p>I can explain your forecast, compare hazards, interpret pest risk, and read PDF or Word reports.</p></div>
+</div>
+<div class="pilot-templates" id="pilotTemplates">
+<button data-prompt="Summarize my farm forecast and the three most important actions." type="button">Summarize forecast</button>
+<button data-prompt="Which pest risks need attention first, and what should I inspect this week?" type="button">Review pest risks</button>
+<button data-prompt="Explain the next major weather hazard and its likely production effect." type="button">Explain hazards</button>
+<button data-prompt="Compare the recommended rehabilitation strategy with doing nothing." type="button">Compare strategy</button>
+</div>
+<div class="pilot-tools"><button class="text-button" id="pilotAttachContext" type="button">Use current COCO-AID results</button><button class="text-button" id="pilotAttachReport" type="button">Use latest report</button><label class="text-button file-label">Upload PDF/DOCX<input accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document" hidden="" id="pilotFileInput" type="file"/></label></div>
+<div class="pilot-compose"><textarea id="pilotInput" maxlength="8000" placeholder="Ask CoCO-PILOT about your coconut farm…" rows="2"></textarea><button aria-label="Send message" class="primary" id="pilotSend" type="button">Send</button></div>
+<small class="pilot-disclaimer">AI advice supports, but does not replace, field inspection or local agricultural-extension guidance.</small>
+</aside>
+<aside aria-hidden="true" class="settings-drawer" id="settingsDrawer">
+<div class="settings-head">
+<div>
+<span class="eyebrow">Workspace preferences</span>
+<h2>Settings</h2>
+</div>
+<button class="icon-button" id="settingsClose">×</button>
+</div>
+<div class="settings-body">
+<label class="switch-row"><span><strong>Dark theme</strong><small>Switch the entire interface and Weather GIS.</small></span><input id="darkThemeSetting" type="checkbox"/></label>
+<label class="switch-row"><span><strong>Background orbit animation</strong><small>Disable for reduced visual motion.</small></span><input checked="" id="orbitSetting" type="checkbox"/></label>
+<div class="automatic-forecast-setting"><span aria-hidden="true">↻</span><div><strong>Long-term forecast configuration is automatic</strong><small>COCOAID uses its fixed research baseline, rehabilitation strategy, and simulation count so farmers do not need to choose technical model settings.</small></div></div>
+<div aria-hidden="true" class="legacy-auto-forecast-settings" hidden="">
+<select id="defaultScenarioSetting"><option selected="" value="ssp245">SSP2-4.5</option></select>
+<select id="defaultInterventionSetting"><option selected="" value="combined_rehabilitation">Combined rehabilitation</option></select>
+<select id="defaultRunsSetting"><option selected="" value="1000">1000</option></select>
+</div>
+<label>Rain-layer opacity<input id="rainOpacitySetting" max="95" min="25" type="range" value="72"/><output id="rainOpacityOutput">72%</output></label>
+<label>Farm forecast playback<select disabled="" id="timelineSpeedSetting"><option selected="" value="500">1 second = 2 days</option></select></label>
+<section class="settings-group sound-settings-group">
+<span class="eyebrow">Sound</span>
+<h3>Music and narration</h3>
+<p class="settings-help">Control the background soundtrack and personal-agent voice guidance independently.</p>
+<label class="switch-row"><span><strong>Background music</strong><small>Loop the COCO-AID soundtrack while you work.</small></span><input checked="" id="bgmEnabledSetting" type="checkbox"/></label>
+<div class="fixed-audio-level"><span><strong>Music volume</strong><small>Fixed at a gentle background level.</small></span><output id="bgmVolumeOutput">10%</output></div>
+<label class="switch-row"><span><strong>Tab voice guidance</strong><small>Play a short personal-agent narration when a section opens.</small></span><input checked="" id="voiceEnabledSetting" type="checkbox"/></label>
+<label>Voice volume<input id="voiceVolumeSetting" max="100" min="10" type="range" value="88"/><output id="voiceVolumeOutput">88%</output></label>
+<div class="action-row"><button class="secondary" id="testVoiceButton" type="button">Test voice line</button><button class="text-button" id="stopAudioButton" type="button">Stop narration</button></div>
+</section>
+<section class="settings-group assistant-settings-group">
+<span class="eyebrow">CoCO-PILOT</span>
+<h3>CoCO-PILOT AI connection</h3>
+<p class="settings-help">The key is stored only in this local COCO-AID folder and is never included in reports.</p>
+<label>Google AI API key<input autocomplete="off" id="geminiApiKeySetting" placeholder="Paste API key from Google AI Studio" type="password"/></label>
+<div class="action-row"><button class="primary" id="saveGeminiKeyButton" type="button">Save locally</button><button class="secondary" id="clearGeminiKeyButton" type="button">Clear</button></div>
+<small id="geminiStatusText">Checking configuration…</small>
+</section>
+<button class="danger" id="resetSettingsButton">
+          Reset preferences
+        </button>
+</div>
+</aside>
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+<div class="toast" id="toast" role="status"></div>
+<div aria-live="polite" class="loading-overlay show boot-loading" id="loadingOverlay">
+<div class="loading-stage minimalist-loading">
+<div class="loading-logo-ring"><span class="loading-ring-orbit"></span><img alt="COCO-AID loading" src="/static/assets/brand/coco-aid-logo.png"/></div>
+<div aria-hidden="true" class="loading-hologram-stage"><div class="coconut-hologram loading-mini-hologram" data-hologram-start-offset-ms="0" tabindex="-1"><canvas class="holo-coconut-mesh"></canvas></div></div>
+<div aria-label="Loading progress" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="loading-segment-bar" id="loadingSegmentBar" role="progressbar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<strong class="loading-status-text" id="loadingText">Preparing the farm intelligence workspace…</strong>
+<p class="loading-tip" id="loadingTip">Tip: Draw the farm boundary as accurately as possible for better area-based estimates.</p>
+</div>
+</div>
+<audio autoplay="" id="backgroundMusic" loop="" playsinline="" preload="auto" src="/static/assets/audio/bgm-1.mp3"></audio>
+<audio id="voiceNarration" preload="auto"></audio>
+<script crossorigin="" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.2.0/dist/chartjs-plugin-zoom.min.js"></script>
+<script src="/static/app.js?v=11.3.23"></script><script src="/static/phase11.js?v=11.3.23"></script>
+</body>
+</html>

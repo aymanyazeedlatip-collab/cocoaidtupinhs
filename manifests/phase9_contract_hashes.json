@@ -1,0 +1,65 @@
+{
+  "DecisionComponentResult": {
+    "description": "Resolution status and summary for one analytical component.",
+    "module": "app.domain.decision_support",
+    "name": "DecisionComponentResult",
+    "schema_sha256": "0717645e3d6c24b5b968d6dfe3da0739e4e6ae5d086c4b99a9fee2c4a70bacd0",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "DecisionEvidence": {
+    "description": "Traceable evidence supporting a deterministic decision recommendation.",
+    "module": "app.domain.decision_support",
+    "name": "DecisionEvidence",
+    "schema_sha256": "2e6fcb391a11ad1e287ae57042810fcb85d11c9d7d188853a63f53e8e204af77",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "DecisionOverview": {
+    "description": "Consolidated production, risk, intercropping, and rehabilitation overview.",
+    "module": "app.domain.decision_support",
+    "name": "DecisionOverview",
+    "schema_sha256": "b7a7116bbfcd65c4b95fd39fb0d2e279ea16b951ac0d4d695a2425712ed4ab0b",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "DecisionRecommendation": {
+    "description": "Prioritized, evidence-linked farm-management recommendation.",
+    "module": "app.domain.decision_support",
+    "name": "DecisionRecommendation",
+    "schema_sha256": "473f99d62ee57ed4e27e659a64ddb72b5d95ce7c336ec1d7efe9b56cdcfbde3f",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "DecisionSupportEngineOutput": {
+    "description": "Complete Phase 9 integrated decision-support network output.",
+    "module": "app.domain.decision_support",
+    "name": "DecisionSupportEngineOutput",
+    "schema_sha256": "c7865fe48dc976f358da702ab40e6b77e1294c9114c8c78e66799a120e97aeb9",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "DecisionSupportRecord": {
+    "description": "Persistent integrated decision-support record for one farm run.",
+    "module": "app.domain.decision_support",
+    "name": "DecisionSupportRecord",
+    "schema_sha256": "f1da34a73895fe75e35af6e4a78ac983367dbc34d77dafec8aff48bc10b1d170",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "DecisionSupportRequest": {
+    "description": "Phase 9 request linking versioned analytical outputs into one decision-support run.",
+    "module": "app.domain.decision_support",
+    "name": "DecisionSupportRequest",
+    "schema_sha256": "a8e8ddec54ae73d0dcad0584d0a57034eaa182d9354c309883e457813dd0a68a",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "DecisionSupportSummary": {
+    "description": "Compact status and completeness summary for a decision-support run.",
+    "module": "app.domain.decision_support",
+    "name": "DecisionSupportSummary",
+    "schema_sha256": "3d1e36ff292a02e12dfc430aa4901e40d0539fbd666af554a28ceb5f41f430a1",
+    "schema_version": "3.0.0-draft.10"
+  },
+  "DecisionTraceEdge": {
+    "description": "Dependency and lineage edge between analytical component records.",
+    "module": "app.domain.decision_support",
+    "name": "DecisionTraceEdge",
+    "schema_sha256": "5ab172900c44e60b4e412bcff61eb207a4697d420e85d6cd92406d583f15e68e",
+    "schema_version": "3.0.0-draft.10"
+  }
+}

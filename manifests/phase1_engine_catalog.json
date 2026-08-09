@@ -1,0 +1,198 @@
+{
+  "engines": [
+    {
+      "engine_id": "legacy.bayesian",
+      "name": "Legacy Farm Simulation",
+      "version": "coco-aid-math-2.4.1",
+      "maturity": "legacy",
+      "availability": "available",
+      "input_contract": "legacy.SimulationRequest",
+      "output_contract": "legacy.simulation_result",
+      "deterministic_with_seed": true,
+      "dependencies": [],
+      "limitations": [
+        "Not yet observation-aware",
+        "Retained only for shadow comparison"
+      ]
+    },
+    {
+      "engine_id": "legacy.pest",
+      "name": "Legacy Pest Risk Model",
+      "version": "pest-synthetic-1.0",
+      "maturity": "legacy",
+      "availability": "available",
+      "input_contract": "legacy.PestRiskRequest",
+      "output_contract": "legacy.pest_result",
+      "deterministic_with_seed": false,
+      "dependencies": [],
+      "limitations": [
+        "Synthetic/reference-based training data"
+      ]
+    },
+    {
+      "engine_id": "legacy.production",
+      "name": "Legacy Production Model",
+      "version": "production-synthetic-1.0",
+      "maturity": "legacy",
+      "availability": "available",
+      "input_contract": "legacy.FarmCreate",
+      "output_contract": "legacy.production_prediction",
+      "deterministic_with_seed": false,
+      "dependencies": [],
+      "limitations": [
+        "Synthetic/reference-based training data",
+        "Legacy feature contract"
+      ]
+    },
+    {
+      "engine_id": "v3.bayesian",
+      "name": "Bayesian Farm-State Simulator",
+      "version": "1.0.0",
+      "maturity": "experimental",
+      "availability": "available",
+      "input_contract": "BayesianSimulationRequest",
+      "output_contract": "BayesianEngineOutput",
+      "deterministic_with_seed": true,
+      "dependencies": [
+        "v3.production",
+        "v3.weather_assimilation",
+        "bayesian_parameter_registry"
+      ],
+      "limitations": [
+        "Transition rates and parameter priors require field calibration",
+        "Weather-history features are archived forecast reference data rather than station observations",
+        "Posterior particles are summarized rather than stored individually",
+        "Monthly dynamics are experimental and are not official PCA diagnoses"
+      ]
+    },
+    {
+      "engine_id": "v3.decision_support",
+      "name": "Integrated Decision-Support Network",
+      "version": "1.0.0",
+      "maturity": "experimental",
+      "availability": "available",
+      "input_contract": "DecisionSupportRequest",
+      "output_contract": "DecisionSupportEngineOutput",
+      "deterministic_with_seed": false,
+      "dependencies": [
+        "v3.production",
+        "v3.bayesian",
+        "v3.pest_inference",
+        "v3.intercropping",
+        "v3.rehabilitation"
+      ],
+      "limitations": [
+        "Consolidates previously computed engine outputs rather than replacing their scientific logic.",
+        "Recommendations require field verification where source evidence is predicted, suspected, or incomplete."
+      ]
+    },
+    {
+      "engine_id": "v3.intercropping",
+      "name": "Spatial Intercropping Potential Engine",
+      "version": "1.0.0",
+      "maturity": "experimental",
+      "availability": "available",
+      "input_contract": "IntercropAssessmentRequest",
+      "output_contract": "IntercropEngineOutput",
+      "deterministic_with_seed": false,
+      "dependencies": [
+        "v3.weather_assimilation",
+        "v3.production",
+        "v3.pest_inference",
+        "canopy_light_registry",
+        "intercrop_requirement_registry"
+      ],
+      "limitations": [
+        "Only light requirements and canopy transmission are directly supported by the uploaded PCA brochure",
+        "Non-light numerical requirements require expert validation",
+        "Pest conflict is conditional on a supplied Phase 6 assessment run",
+        "Economic estimates are gross-revenue scenarios for cacao and coffee only",
+        "No supervised intercropping model is claimed"
+      ]
+    },
+    {
+      "engine_id": "v3.pest_inference",
+      "name": "PCA Pest-Specific Risk Inference Engine",
+      "version": "1.0.0",
+      "maturity": "experimental",
+      "availability": "available",
+      "input_contract": "PestAssessmentRequest",
+      "output_contract": "PestEngineOutput",
+      "deterministic_with_seed": false,
+      "dependencies": [
+        "v3.weather_assimilation",
+        "v3.production",
+        "v3.bayesian",
+        "pest_profile_registry"
+      ],
+      "limitations": [
+        "Qualitative PCA rules require calibrated likelihood ratios and local prevalence data",
+        "Output indicates outbreak plausibility and inspection priority, not confirmed diagnosis",
+        "Expected losses across pests overlap and are not independent additive realized losses",
+        "Only PCA-supported management text is returned; chemical dosage is intentionally excluded"
+      ]
+    },
+    {
+      "engine_id": "v3.production",
+      "name": "Versioned Coconut Production Engine",
+      "version": "1.0.0",
+      "maturity": "experimental",
+      "availability": "available",
+      "input_contract": "ProductionEngineRequest",
+      "output_contract": "ProductionEngineOutput",
+      "deterministic_with_seed": false,
+      "dependencies": [
+        "legacy.production",
+        "v3.weather_assimilation",
+        "variety_parameter_registry"
+      ],
+      "limitations": [
+        "Retained model uses synthetic/reference-based training data",
+        "Weather history is archived forecast reference data",
+        "Named-variety adjustment is bounded and requires field calibration",
+        "Bayesian posterior is not generated in Phase 4"
+      ]
+    },
+    {
+      "engine_id": "v3.rehabilitation",
+      "name": "Rehabilitation and Scenario Optimization Engine",
+      "version": "1.0.0",
+      "maturity": "experimental",
+      "availability": "available",
+      "input_contract": "RehabilitationPlanRequest",
+      "output_contract": "RehabilitationEngineOutput",
+      "deterministic_with_seed": false,
+      "dependencies": [
+        "v3.production",
+        "v3.bayesian",
+        "v3.pest_inference",
+        "v3.intercropping"
+      ],
+      "limitations": [
+        "Cost and labor catalog requires local validation.",
+        "Recovery effects are scenario assumptions rather than causal field estimates.",
+        "No pesticide dosage is generated.",
+        "Predicted events are not treated as confirmed damage."
+      ]
+    },
+    {
+      "engine_id": "v3.weather_assimilation",
+      "name": "Weather Assimilation Engine",
+      "version": "1.0.0",
+      "maturity": "experimental",
+      "availability": "available",
+      "input_contract": "WeatherAssimilationPayload",
+      "output_contract": "WeatherFeatureSet",
+      "deterministic_with_seed": false,
+      "dependencies": [
+        "open_meteo_forecast_api",
+        "weather_run_repository"
+      ],
+      "limitations": [
+        "Past-day values from the Forecast API are archived forecasts, not field observations.",
+        "The seamless Open-Meteo endpoint does not expose one authoritative provider initialization time.",
+        "Long-term climate-conditioned scenarios are intentionally outside this engine."
+      ]
+    }
+  ]
+}

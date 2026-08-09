@@ -1,0 +1,260 @@
+{
+  "path": "data/coco_aid.sqlite3",
+  "exists": true,
+  "size_bytes": 49152,
+  "tables": [
+    {
+      "name": "analyses",
+      "row_count": 0,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "input_payload",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "result_payload",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "metadata_payload",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "created_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "idx_analyses_created",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0
+        },
+        {
+          "seq": 1,
+          "name": "sqlite_autoindex_analyses_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0
+        }
+      ],
+      "sql": "CREATE TABLE analyses (\n                id TEXT PRIMARY KEY,\n                input_payload TEXT NOT NULL,\n                result_payload TEXT NOT NULL,\n                metadata_payload TEXT NOT NULL,\n                created_at TEXT NOT NULL\n            )"
+    },
+    {
+      "name": "farms",
+      "row_count": 0,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "payload",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "created_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "updated_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "idx_farms_updated",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0
+        },
+        {
+          "seq": 1,
+          "name": "sqlite_autoindex_farms_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0
+        }
+      ],
+      "sql": "CREATE TABLE farms (\n                id TEXT PRIMARY KEY,\n                payload TEXT NOT NULL,\n                created_at TEXT NOT NULL,\n                updated_at TEXT NOT NULL\n            )"
+    },
+    {
+      "name": "reports",
+      "row_count": 0,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "analysis_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "report_type",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": "'pdf'",
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "filepath",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "created_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "sqlite_autoindex_reports_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0
+        }
+      ],
+      "sql": "CREATE TABLE reports (\n                id TEXT PRIMARY KEY,\n                analysis_id TEXT,\n                report_type TEXT NOT NULL DEFAULT 'pdf',\n                filepath TEXT NOT NULL,\n                created_at TEXT NOT NULL\n            )"
+    },
+    {
+      "name": "saved_forecasts",
+      "row_count": 0,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "farm_id",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "summary_payload",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "forecast_payload",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "created_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "updated_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "idx_forecasts_updated",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0
+        },
+        {
+          "seq": 1,
+          "name": "sqlite_autoindex_saved_forecasts_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0
+        }
+      ],
+      "sql": "CREATE TABLE saved_forecasts (\n                id TEXT PRIMARY KEY,\n                farm_id TEXT,\n                name TEXT NOT NULL,\n                summary_payload TEXT NOT NULL,\n                forecast_payload TEXT NOT NULL,\n                created_at TEXT NOT NULL,\n                updated_at TEXT NOT NULL\n            )"
+    }
+  ]
+}

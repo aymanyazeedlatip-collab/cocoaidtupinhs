@@ -1,0 +1,27 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+cache/*.gz
+reports_generated/*.pdf
+*.log
+.DS_Store
+data/private_settings.json
+cache/assistant_documents/
+cache/assistant_uploads/
+reports_generated/*.docx
+data/*.sqlite3
+data/*.sqlite3-shm
+data/*.sqlite3-wal
+
+# COCOAID v3 development inputs and generated runtime files
+data_sources/raw/
+baseline_snapshots/runtime/
+*.coverage
+coverage.xml
+htmlcov/
+
+.cocoaid_venv_path
+manual_test_outputs/
+vercel_dist/

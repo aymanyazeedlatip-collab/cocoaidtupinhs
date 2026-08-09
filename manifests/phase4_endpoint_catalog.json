@@ -1,0 +1,291 @@
+{
+  "contract_api_version": "3.0.0-draft.4",
+  "paths": {
+    "/api/v2/data-foundation/intercrop-income-assessment": {
+      "get": {
+        "operationId": "intercrop_income_assessment_api_v2_data_foundation_intercrop_income_assessment_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "title": "Response Intercrop Income Assessment Api V2 Data Foundation Intercrop Income Assessment Get",
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Intercrop Income Assessment",
+        "tags": [
+          "COCOAID v3 Contracts"
+        ]
+      }
+    },
+    "/api/v2/production/actuals": {
+      "post": {
+        "operationId": "production_actual_api_v2_production_actuals_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductionActualInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "title": "Response Production Actual Api V2 Production Actuals Post",
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Production Actual",
+        "tags": [
+          "COCOAID v3 Contracts"
+        ]
+      }
+    },
+    "/api/v2/production/forecast": {
+      "post": {
+        "operationId": "production_forecast_api_v2_production_forecast_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductionEngineRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "title": "Response Production Forecast Api V2 Production Forecast Post",
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Production Forecast",
+        "tags": [
+          "COCOAID v3 Contracts"
+        ]
+      }
+    },
+    "/api/v2/production/forecasts": {
+      "get": {
+        "operationId": "production_forecasts_api_v2_production_forecasts_get",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "farm_id",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Farm Id"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "default": 50,
+              "maximum": 200,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "title": "Response Production Forecasts Api V2 Production Forecasts Get",
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Production Forecasts",
+        "tags": [
+          "COCOAID v3 Contracts"
+        ]
+      }
+    },
+    "/api/v2/production/forecasts/{forecast_id}": {
+      "get": {
+        "operationId": "production_forecast_record_api_v2_production_forecasts__forecast_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "forecast_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Forecast Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "title": "Response Production Forecast Record Api V2 Production Forecasts  Forecast Id  Get",
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Production Forecast Record",
+        "tags": [
+          "COCOAID v3 Contracts"
+        ]
+      }
+    },
+    "/api/v2/production/forecasts/{forecast_id}/performance": {
+      "get": {
+        "operationId": "production_forecast_performance_api_v2_production_forecasts__forecast_id__performance_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "forecast_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Forecast Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "title": "Response Production Forecast Performance Api V2 Production Forecasts  Forecast Id  Performance Get",
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Production Forecast Performance",
+        "tags": [
+          "COCOAID v3 Contracts"
+        ]
+      }
+    },
+    "/api/v2/production/status": {
+      "get": {
+        "operationId": "production_status_api_v2_production_status_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "title": "Response Production Status Api V2 Production Status Get",
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Production Status",
+        "tags": [
+          "COCOAID v3 Contracts"
+        ]
+      }
+    }
+  }
+}

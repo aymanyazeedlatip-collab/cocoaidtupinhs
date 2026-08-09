@@ -1,0 +1,4381 @@
+{
+  "catalog_version": "phase2-pca-reference-1",
+  "varieties": [
+    {
+      "id": "agdt",
+      "name": "Aguinaldo Tall",
+      "code": "AGDT",
+      "variety_class": "tall",
+      "source_document_id": "pca-opv-tall",
+      "source_page": 1,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1428,
+          "uncertainty": 141,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 382,
+          "uncertainty": 56,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 276,
+          "uncertainty": 25,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 459,
+          "uncertainty": 46,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 304,
+          "uncertainty": 66,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.4,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 276,
+          "uncertainty": 30,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 87,
+          "uncertainty": 63,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 11688,
+          "uncertainty": 8467,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 25,
+          "uncertainty": 20,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 3,
+          "uncertainty": 3,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "rit",
+      "name": "Rennel Island Tall",
+      "code": "RIT",
+      "variety_class": "tall",
+      "source_document_id": "pca-opv-tall",
+      "source_page": 1,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1725,
+          "uncertainty": 181,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 417,
+          "uncertainty": 38,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 277,
+          "uncertainty": 25,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 585,
+          "uncertainty": 61,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 447,
+          "uncertainty": 82,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.5,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 327,
+          "uncertainty": 33,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 72,
+          "uncertainty": 27,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 9756,
+          "uncertainty": 3686,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 24,
+          "uncertainty": 10,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 3,
+          "uncertainty": 1,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "snrt",
+      "name": "San Ramon Tall",
+      "code": "SNRT",
+      "variety_class": "tall",
+      "source_document_id": "pca-opv-tall",
+      "source_page": 1,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1515,
+          "uncertainty": 138,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 374,
+          "uncertainty": 29,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 273,
+          "uncertainty": 26,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 496,
+          "uncertainty": 69,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 372,
+          "uncertainty": 55,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.4,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 308,
+          "uncertainty": 34,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 73,
+          "uncertainty": 38,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 9911,
+          "uncertainty": 5129,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 23,
+          "uncertainty": 13,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 3,
+          "uncertainty": 2,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "tagt",
+      "name": "Tagnanan Tall",
+      "code": "TAGT",
+      "variety_class": "tall",
+      "source_document_id": "pca-opv-tall",
+      "source_page": 1,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1658,
+          "uncertainty": 158,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 369,
+          "uncertainty": 31,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 286,
+          "uncertainty": 21,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 549,
+          "uncertainty": 59,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 454,
+          "uncertainty": 71,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.5,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 331,
+          "uncertainty": 31,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 67,
+          "uncertainty": 31,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 9000,
+          "uncertainty": 4163,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 22,
+          "uncertainty": 11,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 3,
+          "uncertainty": 1,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "lagt",
+      "name": "Laguna Tall",
+      "code": "LAGT",
+      "variety_class": "tall",
+      "source_document_id": "pca-opv-tall",
+      "source_page": 1,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1305,
+          "uncertainty": 106,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 365,
+          "uncertainty": 48,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 220,
+          "uncertainty": 18,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 430,
+          "uncertainty": 46,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 291,
+          "uncertainty": 37,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.4,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 262,
+          "uncertainty": 31,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 76,
+          "uncertainty": 36,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 10230,
+          "uncertainty": 4913,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 20,
+          "uncertainty": 11,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 3,
+          "uncertainty": 2,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "tpkt",
+      "name": "Tampakan Tall",
+      "code": "TPKT",
+      "variety_class": "tall",
+      "source_document_id": "pca-opv-tall",
+      "source_page": 1,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1326,
+          "uncertainty": 203,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 341,
+          "uncertainty": 48,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 233,
+          "uncertainty": 38,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 476,
+          "uncertainty": 69,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 275,
+          "uncertainty": 78,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.5,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 285,
+          "uncertainty": 44,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 61,
+          "uncertainty": 46,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 8828,
+          "uncertainty": 6142,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 18,
+          "uncertainty": 14,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 3,
+          "uncertainty": 2,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "bayt",
+      "name": "Baybay Tall",
+      "code": "BAYT",
+      "variety_class": "tall",
+      "source_document_id": "pca-opv-tall",
+      "source_page": 2,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1458,
+          "uncertainty": 139,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 376,
+          "uncertainty": 45,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 245,
+          "uncertainty": 41,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 348,
+          "uncertainty": 53,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 297,
+          "uncertainty": 25,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.4,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 297,
+          "uncertainty": 25,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 107,
+          "uncertainty": 47,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 14501,
+          "uncertainty": 6297,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 33,
+          "uncertainty": 17,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 4,
+          "uncertainty": 2,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "vent",
+      "name": "Venus Tall",
+      "code": "VENT",
+      "variety_class": "tall",
+      "source_document_id": "pca-opv-tall",
+      "source_page": 2,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1438,
+          "uncertainty": 134,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 345,
+          "uncertainty": 15,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 274,
+          "uncertainty": 16,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 487,
+          "uncertainty": 44,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 332,
+          "uncertainty": 72,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.4,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 309,
+          "uncertainty": 25,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 101,
+          "uncertainty": 64,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 13688,
+          "uncertainty": 8630,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 31,
+          "uncertainty": 21,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 4,
+          "uncertainty": 3,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "gatt",
+      "name": "Gatusan Tall",
+      "code": "GATT",
+      "variety_class": "tall",
+      "source_document_id": "pca-opv-tall",
+      "source_page": 2,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1101,
+          "uncertainty": 111,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 308,
+          "uncertainty": 38,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 187,
+          "uncertainty": 30,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 387,
+          "uncertainty": 36,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 220,
+          "uncertainty": 33,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.4,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 236,
+          "uncertainty": 37,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 129,
+          "uncertainty": 96,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 17437,
+          "uncertainty": 12938,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 29,
+          "uncertainty": 25,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 4,
+          "uncertainty": 3,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "zamt",
+      "name": "Zamboanga Tall",
+      "code": "ZAMT",
+      "variety_class": "tall",
+      "source_document_id": "pca-opv-tall",
+      "source_page": 2,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1510,
+          "uncertainty": 102,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 374,
+          "uncertainty": 22,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 277,
+          "uncertainty": 27,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 502,
+          "uncertainty": 41,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 357,
+          "uncertainty": 33,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.4,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 307,
+          "uncertainty": 36,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 84,
+          "uncertainty": 41,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 11322,
+          "uncertainty": 5533,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 27,
+          "uncertainty": 14,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 4,
+          "uncertainty": 2,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "salt",
+      "name": "Salambuyan Tall",
+      "code": "SALT",
+      "variety_class": "tall",
+      "source_document_id": "pca-opv-tall",
+      "source_page": 2,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1496,
+          "uncertainty": 185,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 384,
+          "uncertainty": 44,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 258,
+          "uncertainty": 25,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 499,
+          "uncertainty": 59,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 356,
+          "uncertainty": 83,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.4,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 308,
+          "uncertainty": 28,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 81,
+          "uncertainty": 60,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 10960,
+          "uncertainty": 8069,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 26,
+          "uncertainty": 20,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 4,
+          "uncertainty": 3,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "baot",
+      "name": "Bago Oshiro Tall",
+      "code": "BAOT",
+      "variety_class": "tall",
+      "source_document_id": "pca-opv-tall",
+      "source_page": 2,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1532,
+          "uncertainty": 184,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 366,
+          "uncertainty": 34,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 270,
+          "uncertainty": 25,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 515,
+          "uncertainty": 67,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 381,
+          "uncertainty": 78,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.5,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 313,
+          "uncertainty": 34,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 77,
+          "uncertainty": 38,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 10347,
+          "uncertainty": 5157,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 24,
+          "uncertainty": 13,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 3,
+          "uncertainty": 2,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "arod",
+      "name": "Aromatic Green Dwarf",
+      "code": "AROD",
+      "variety_class": "dwarf",
+      "source_document_id": "pca-opv-dwarf",
+      "source_page": 1,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 676,
+          "uncertainty": 109,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 197,
+          "uncertainty": 31,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 114,
+          "uncertainty": 19,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 201,
+          "uncertainty": 26,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 164,
+          "uncertainty": 52,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.4,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 120,
+          "uncertainty": 15,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 93,
+          "uncertainty": 78,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 15951,
+          "uncertainty": 13276,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 12,
+          "uncertainty": 11,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 2,
+          "uncertainty": 2,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "gald",
+      "name": "Galas Green Dwarf",
+      "code": "GALD",
+      "variety_class": "dwarf",
+      "source_document_id": "pca-opv-dwarf",
+      "source_page": 1,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1080,
+          "uncertainty": 147,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 321,
+          "uncertainty": 42,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 180,
+          "uncertainty": 30,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 356,
+          "uncertainty": 48,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 222,
+          "uncertainty": 53,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.4,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 217,
+          "uncertainty": 50,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 79,
+          "uncertainty": 48,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 13460,
+          "uncertainty": 8274,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 18,
+          "uncertainty": 14,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 3,
+          "uncertainty": 2,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "tacd",
+      "name": "Tacunan Green Dwarf",
+      "code": "TACD",
+      "variety_class": "dwarf",
+      "source_document_id": "pca-opv-dwarf",
+      "source_page": 1,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1337,
+          "uncertainty": 214,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 440,
+          "uncertainty": 84,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 218,
+          "uncertainty": 35,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 404,
+          "uncertainty": 46,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 274,
+          "uncertainty": 64,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.4,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 238,
+          "uncertainty": 22,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 109,
+          "uncertainty": 40,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 18638,
+          "uncertainty": 6808,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 26,
+          "uncertainty": 11,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 5,
+          "uncertainty": 2,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "vibd",
+      "name": "La Victoria Brown Dwarf",
+      "code": "VIBD",
+      "variety_class": "dwarf",
+      "source_document_id": "pca-opv-dwarf",
+      "source_page": 1,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1081,
+          "uncertainty": 152,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 290,
+          "uncertainty": 44,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 189,
+          "uncertainty": 28,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 368,
+          "uncertainty": 56,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 235,
+          "uncertainty": 57,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.4,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 223,
+          "uncertainty": 39,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 116,
+          "uncertainty": 67,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 19861,
+          "uncertainty": 11441,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 30,
+          "uncertainty": 18,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 5,
+          "uncertainty": 3,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "bagd",
+      "name": "Baguer Green Dwarf",
+      "code": "BAGD",
+      "variety_class": "dwarf",
+      "source_document_id": "pca-opv-dwarf",
+      "source_page": 1,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1029,
+          "uncertainty": 151,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 214,
+          "uncertainty": 29,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 156,
+          "uncertainty": 21,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 429,
+          "uncertainty": 54,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 230,
+          "uncertainty": 66,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.5,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 249,
+          "uncertainty": 31,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 109,
+          "uncertainty": 65,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 18703,
+          "uncertainty": 11026,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 28,
+          "uncertainty": 16,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 5,
+          "uncertainty": 3,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "catd",
+      "name": "Catigan Green Dwarf",
+      "code": "CATD",
+      "variety_class": "dwarf",
+      "source_document_id": "pca-opv-dwarf",
+      "source_page": 1,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1115,
+          "uncertainty": 138,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 389,
+          "uncertainty": 58,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 170,
+          "uncertainty": 22,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 366,
+          "uncertainty": 35,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 191,
+          "uncertainty": 41,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.4,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 212,
+          "uncertainty": 15,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 91,
+          "uncertainty": 50,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 15586,
+          "uncertainty": 8522,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 19,
+          "uncertainty": 12,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 3,
+          "uncertainty": 2,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "band",
+      "name": "Bañga Green Dwarf",
+      "code": "BAND",
+      "variety_class": "dwarf",
+      "source_document_id": "pca-opv-dwarf",
+      "source_page": 2,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1035,
+          "uncertainty": 170,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 303,
+          "uncertainty": 53,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 177,
+          "uncertainty": 37,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 384,
+          "uncertainty": 50,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 171,
+          "uncertainty": 44,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.5,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 230,
+          "uncertainty": 44,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 100,
+          "uncertainty": 72,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 17121,
+          "uncertainty": 12283,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 25,
+          "uncertainty": 25,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 4,
+          "uncertainty": 4,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "kapd",
+      "name": "Kapatagan Green Dwarf",
+      "code": "KAPD",
+      "variety_class": "dwarf",
+      "source_document_id": "pca-opv-dwarf",
+      "source_page": 2,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1259,
+          "uncertainty": 139,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 354,
+          "uncertainty": 52,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 223,
+          "uncertainty": 28,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 423,
+          "uncertainty": 49,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 260,
+          "uncertainty": 44,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.4,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 247,
+          "uncertainty": 44,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 90,
+          "uncertainty": 54,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 15406,
+          "uncertainty": 9240,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 24,
+          "uncertainty": 17,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 4,
+          "uncertainty": 3,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "snid",
+      "name": "San Isidro Green Dwarf",
+      "code": "SNID",
+      "variety_class": "dwarf",
+      "source_document_id": "pca-opv-dwarf",
+      "source_page": 2,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1202,
+          "uncertainty": 251,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 380,
+          "uncertainty": 65,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 204,
+          "uncertainty": 36,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 392,
+          "uncertainty": 71,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 226,
+          "uncertainty": 88,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.4,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 239,
+          "uncertainty": 39,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 91,
+          "uncertainty": 52,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 15483,
+          "uncertainty": 8881,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 23,
+          "uncertainty": 16,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 4,
+          "uncertainty": 3,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "makd",
+      "name": "Makilala Green Dwarf",
+      "code": "MAKD",
+      "variety_class": "dwarf",
+      "source_document_id": "pca-opv-dwarf",
+      "source_page": 2,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1175,
+          "uncertainty": 167,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 348,
+          "uncertainty": 63,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 180,
+          "uncertainty": 25,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 413,
+          "uncertainty": 50,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 236,
+          "uncertainty": 56,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.4,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 256,
+          "uncertainty": 28,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 79,
+          "uncertainty": 55,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 13475,
+          "uncertainty": 9344,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 21,
+          "uncertainty": 16,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 4,
+          "uncertainty": 3,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "kind",
+      "name": "Kinabalan Green Dwarf",
+      "code": "KIND",
+      "variety_class": "dwarf",
+      "source_document_id": "pca-opv-dwarf",
+      "source_page": 2,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1102,
+          "uncertainty": 154,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 323,
+          "uncertainty": 55,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 167,
+          "uncertainty": 23,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 392,
+          "uncertainty": 51,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 42,
+          "uncertainty": 26,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.5,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 244,
+          "uncertainty": 26,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 82,
+          "uncertainty": 46,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 14079,
+          "uncertainty": 7867,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 20,
+          "uncertainty": 13,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 4,
+          "uncertainty": 2,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "magd",
+      "name": "Magtud Green Dwarf",
+      "code": "MAGD",
+      "variety_class": "dwarf",
+      "source_document_id": "pca-opv-dwarf",
+      "source_page": 2,
+      "confidence": "high",
+      "parameters": {
+        "fruit_weight_g": {
+          "value": 1488,
+          "uncertainty": 156,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 417,
+          "uncertainty": 44,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 230,
+          "uncertainty": 26,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 475,
+          "uncertainty": 59,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 366,
+          "uncertainty": 59,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.4,
+          "uncertainty": 0.0,
+          "unit": "index"
+        },
+        "copra_per_nut_g": {
+          "value": 298,
+          "uncertainty": 40,
+          "unit": "g"
+        },
+        "nuts_per_palm": {
+          "value": 62,
+          "uncertainty": 48,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 10613,
+          "uncertainty": 8156,
+          "unit": "count/ha/year"
+        },
+        "copra_per_palm_kg": {
+          "value": 20,
+          "uncertainty": 17,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 3,
+          "uncertainty": 3,
+          "unit": "t/ha/year"
+        }
+      }
+    },
+    {
+      "id": "pca15-4",
+      "name": "PCA 15-4",
+      "code": "PCA15-4",
+      "variety_class": "hybrid",
+      "female_parent_code": "CATD",
+      "male_parent_code": "TAGT",
+      "first_flowering_years": [
+        3.0,
+        3.5
+      ],
+      "source_document_id": "pca-hybrids",
+      "source_page": 1,
+      "confidence": "high",
+      "parameters": {
+        "nuts_per_palm": {
+          "value": 119,
+          "uncertainty": null,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 18571,
+          "uncertainty": null,
+          "unit": "count/ha/year"
+        },
+        "copra_per_nut_g": {
+          "value": 277,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "copra_per_palm_kg": {
+          "value": 33,
+          "uncertainty": null,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 5,
+          "uncertainty": null,
+          "unit": "t/ha/year"
+        },
+        "fruit_weight_g": {
+          "value": 1429,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 377,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 225,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 473,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 354,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.4,
+          "uncertainty": null,
+          "unit": "index"
+        },
+        "mcfa_c6_c12_percent": {
+          "value": 73.13,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "lauric_c12_percent": {
+          "value": 53.66,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "oleic_c18_1_percent": {
+          "value": 3.36,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "linoleic_c18_2_percent": {
+          "value": 0.37,
+          "uncertainty": null,
+          "unit": "%"
+        }
+      }
+    },
+    {
+      "id": "pca15-8",
+      "name": "PCA 15-8",
+      "code": "PCA15-8",
+      "variety_class": "hybrid",
+      "female_parent_code": "TACD",
+      "male_parent_code": "BAOT",
+      "first_flowering_years": [
+        3.0,
+        3.5
+      ],
+      "source_document_id": "pca-hybrids",
+      "source_page": 1,
+      "confidence": "high",
+      "parameters": {
+        "nuts_per_palm": {
+          "value": 127,
+          "uncertainty": null,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 17832,
+          "uncertainty": null,
+          "unit": "count/ha/year"
+        },
+        "copra_per_nut_g": {
+          "value": 310,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "copra_per_palm_kg": {
+          "value": 39,
+          "uncertainty": null,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 6,
+          "uncertainty": null,
+          "unit": "t/ha/year"
+        },
+        "fruit_weight_g": {
+          "value": 1423,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 312,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 239,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 507,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 365,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.48,
+          "uncertainty": null,
+          "unit": "index"
+        },
+        "mcfa_c6_c12_percent": {
+          "value": 73.31,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "lauric_c12_percent": {
+          "value": 52.57,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "oleic_c18_1_percent": {
+          "value": 2.76,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "linoleic_c18_2_percent": {
+          "value": 0.37,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "vco_per_nut_ml": {
+          "value": 77.69,
+          "uncertainty": null,
+          "unit": "mL/nut"
+        },
+        "vco_per_palm_l": {
+          "value": 6.91,
+          "uncertainty": null,
+          "unit": "L/palm/year"
+        },
+        "vco_per_hectare_l": {
+          "value": 934.32,
+          "uncertainty": null,
+          "unit": "L/ha/year"
+        },
+        "tocopherol_mg_kg": {
+          "value": 143.87,
+          "uncertainty": 0.14,
+          "unit": "mg/kg"
+        },
+        "total_sugar_percent": {
+          "value": 82.25,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "reducing_sugar_percent": {
+          "value": 4.15,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "glucose_percent": {
+          "value": 1.18,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "sucrose_percent": {
+          "value": 88.88,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "fructose_percent": {
+          "value": 1.12,
+          "uncertainty": null,
+          "unit": "%"
+        }
+      }
+    },
+    {
+      "id": "pca15-9",
+      "name": "PCA 15-9",
+      "code": "PCA15-9",
+      "variety_class": "hybrid",
+      "female_parent_code": "TACD",
+      "male_parent_code": "TAGT",
+      "first_flowering_years": [
+        3.0,
+        3.5
+      ],
+      "source_document_id": "pca-hybrids",
+      "source_page": 1,
+      "confidence": "high",
+      "parameters": {
+        "nuts_per_palm": {
+          "value": 128,
+          "uncertainty": null,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 17295,
+          "uncertainty": null,
+          "unit": "count/ha/year"
+        },
+        "copra_per_nut_g": {
+          "value": 303,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "copra_per_palm_kg": {
+          "value": 39,
+          "uncertainty": null,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 6,
+          "uncertainty": null,
+          "unit": "t/ha/year"
+        },
+        "fruit_weight_g": {
+          "value": 1404,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 320,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 235,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 502,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 346,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.48,
+          "uncertainty": null,
+          "unit": "index"
+        },
+        "mcfa_c6_c12_percent": {
+          "value": 70.33,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "lauric_c12_percent": {
+          "value": 52.3,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "oleic_c18_1_percent": {
+          "value": 2.89,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "linoleic_c18_2_percent": {
+          "value": 0.35,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "vco_per_nut_ml": {
+          "value": 66.64,
+          "uncertainty": null,
+          "unit": "mL/nut"
+        },
+        "vco_per_palm_l": {
+          "value": 5.6,
+          "uncertainty": null,
+          "unit": "L/palm/year"
+        },
+        "vco_per_hectare_l": {
+          "value": 751.09,
+          "uncertainty": null,
+          "unit": "L/ha/year"
+        },
+        "tocopherol_mg_kg": {
+          "value": 72.68,
+          "uncertainty": 1.29,
+          "unit": "mg/kg"
+        },
+        "total_sugar_percent": {
+          "value": 92.6,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "reducing_sugar_percent": {
+          "value": 3.68,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "glucose_percent": {
+          "value": 1.17,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "sucrose_percent": {
+          "value": 92.34,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "fructose_percent": {
+          "value": 1.24,
+          "uncertainty": null,
+          "unit": "%"
+        }
+      }
+    },
+    {
+      "id": "pca15-1",
+      "name": "PCA 15-1",
+      "code": "PCA15-1",
+      "variety_class": "hybrid",
+      "female_parent_code": "CATD",
+      "male_parent_code": "LAGT",
+      "first_flowering_years": [
+        3.0,
+        4.0
+      ],
+      "source_document_id": "pca-hybrids",
+      "source_page": 2,
+      "confidence": "high",
+      "parameters": {
+        "nuts_per_palm": {
+          "value": 117,
+          "uncertainty": null,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 17903,
+          "uncertainty": null,
+          "unit": "count/ha/year"
+        },
+        "copra_per_nut_g": {
+          "value": 254,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "copra_per_palm_kg": {
+          "value": 30,
+          "uncertainty": null,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 4,
+          "uncertainty": null,
+          "unit": "t/ha/year"
+        },
+        "fruit_weight_g": {
+          "value": 1325,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 374,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 206,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 437,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 308,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.43,
+          "uncertainty": null,
+          "unit": "index"
+        },
+        "mcfa_c6_c12_percent": {
+          "value": 68.38,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "lauric_c12_percent": {
+          "value": 52.2,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "oleic_c18_1_percent": {
+          "value": 4.03,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "linoleic_c18_2_percent": {
+          "value": 0.39,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "vco_per_nut_ml": {
+          "value": 55.57,
+          "uncertainty": null,
+          "unit": "mL/nut"
+        },
+        "vco_per_palm_l": {
+          "value": 4.89,
+          "uncertainty": null,
+          "unit": "L/palm/year"
+        },
+        "vco_per_hectare_l": {
+          "value": 657.18,
+          "uncertainty": null,
+          "unit": "L/ha/year"
+        },
+        "tocopherol_mg_kg": {
+          "value": 156.54,
+          "uncertainty": 5.03,
+          "unit": "mg/kg"
+        },
+        "daily_toddy_yield_l_ha": {
+          "value": 240.4,
+          "uncertainty": null,
+          "unit": "L/ha/day"
+        },
+        "monthly_toddy_yield_l_ha": {
+          "value": 7213,
+          "uncertainty": null,
+          "unit": "L/ha/month"
+        },
+        "yearly_toddy_yield_l_ha": {
+          "value": 937.0,
+          "uncertainty": null,
+          "unit": "L/ha/year"
+        },
+        "total_sugar_percent": {
+          "value": 95.24,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "reducing_sugar_percent": {
+          "value": 1.36,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "glucose_percent": {
+          "value": 1.15,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "sucrose_percent": {
+          "value": 82.02,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "fructose_percent": {
+          "value": 1.16,
+          "uncertainty": null,
+          "unit": "%"
+        }
+      }
+    },
+    {
+      "id": "pca15-2",
+      "name": "PCA 15-2",
+      "code": "PCA15-2",
+      "variety_class": "hybrid",
+      "female_parent_code": "MRD",
+      "male_parent_code": "TAGT",
+      "first_flowering_years": [
+        3.0,
+        4.0
+      ],
+      "source_document_id": "pca-hybrids",
+      "source_page": 2,
+      "confidence": "high",
+      "parameters": {
+        "nuts_per_palm": {
+          "value": 155,
+          "uncertainty": null,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 20972,
+          "uncertainty": null,
+          "unit": "count/ha/year"
+        },
+        "copra_per_nut_g": {
+          "value": 272,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "copra_per_palm_kg": {
+          "value": 42,
+          "uncertainty": null,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 6,
+          "uncertainty": null,
+          "unit": "t/ha/year"
+        },
+        "fruit_weight_g": {
+          "value": 1254,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 298,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 202,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 456,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 298,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.48,
+          "uncertainty": null,
+          "unit": "index"
+        },
+        "mcfa_c6_c12_percent": {
+          "value": 72.19,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "lauric_c12_percent": {
+          "value": 54.21,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "oleic_c18_1_percent": {
+          "value": 3.37,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "linoleic_c18_2_percent": {
+          "value": 0.32,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "vco_per_nut_ml": {
+          "value": 58.49,
+          "uncertainty": null,
+          "unit": "mL/nut"
+        },
+        "vco_per_palm_l": {
+          "value": 5.62,
+          "uncertainty": null,
+          "unit": "L/palm/year"
+        },
+        "vco_per_hectare_l": {
+          "value": 756.36,
+          "uncertainty": null,
+          "unit": "L/ha/year"
+        },
+        "tocopherol_mg_kg": {
+          "value": 35.3,
+          "uncertainty": 5.03,
+          "unit": "mg/kg"
+        },
+        "daily_toddy_yield_l_ha": {
+          "value": 285.8,
+          "uncertainty": null,
+          "unit": "L/ha/day"
+        },
+        "monthly_toddy_yield_l_ha": {
+          "value": 8574,
+          "uncertainty": null,
+          "unit": "L/ha/month"
+        },
+        "yearly_toddy_yield_l_ha": {
+          "value": 1112.1,
+          "uncertainty": null,
+          "unit": "L/ha/year"
+        },
+        "total_sugar_percent": {
+          "value": 89.86,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "reducing_sugar_percent": {
+          "value": 4.63,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "glucose_percent": {
+          "value": 1.04,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "sucrose_percent": {
+          "value": 85.96,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "fructose_percent": {
+          "value": 1.16,
+          "uncertainty": null,
+          "unit": "%"
+        }
+      }
+    },
+    {
+      "id": "pca15-3",
+      "name": "PCA 15-3",
+      "code": "PCA15-3",
+      "variety_class": "hybrid",
+      "female_parent_code": "MRD",
+      "male_parent_code": "BAYT",
+      "first_flowering_years": [
+        3.0,
+        4.0
+      ],
+      "source_document_id": "pca-hybrids",
+      "source_page": 2,
+      "confidence": "high",
+      "parameters": {
+        "nuts_per_palm": {
+          "value": 144,
+          "uncertainty": null,
+          "unit": "count/palm/year"
+        },
+        "nuts_per_hectare": {
+          "value": 21968,
+          "uncertainty": null,
+          "unit": "count/ha/year"
+        },
+        "copra_per_nut_g": {
+          "value": 271,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "copra_per_palm_kg": {
+          "value": 39,
+          "uncertainty": null,
+          "unit": "kg/palm/year"
+        },
+        "copra_per_hectare_t": {
+          "value": 6,
+          "uncertainty": null,
+          "unit": "t/ha/year"
+        },
+        "fruit_weight_g": {
+          "value": 1193,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "husk_weight_g": {
+          "value": 307,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "shell_weight_g": {
+          "value": 180,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "meat_weight_g": {
+          "value": 447,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "water_weight_g": {
+          "value": 259,
+          "uncertainty": null,
+          "unit": "g"
+        },
+        "fruit_quality_value": {
+          "value": 0.48,
+          "uncertainty": null,
+          "unit": "index"
+        },
+        "mcfa_c6_c12_percent": {
+          "value": 63.17,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "lauric_c12_percent": {
+          "value": 52.04,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "oleic_c18_1_percent": {
+          "value": 5.43,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "linoleic_c18_2_percent": {
+          "value": 0.72,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "vco_per_nut_ml": {
+          "value": 64.27,
+          "uncertainty": null,
+          "unit": "mL/nut"
+        },
+        "vco_per_palm_l": {
+          "value": 6.56,
+          "uncertainty": null,
+          "unit": "L/palm/year"
+        },
+        "vco_per_hectare_l": {
+          "value": 995.26,
+          "uncertainty": null,
+          "unit": "L/ha/year"
+        },
+        "tocopherol_mg_kg": {
+          "value": 182.54,
+          "uncertainty": 7.8,
+          "unit": "mg/kg"
+        },
+        "daily_toddy_yield_l_ha": {
+          "value": 269.2,
+          "uncertainty": null,
+          "unit": "L/ha/day"
+        },
+        "monthly_toddy_yield_l_ha": {
+          "value": 8074,
+          "uncertainty": null,
+          "unit": "L/ha/month"
+        },
+        "yearly_toddy_yield_l_ha": {
+          "value": 999.1,
+          "uncertainty": null,
+          "unit": "L/ha/year"
+        },
+        "total_sugar_percent": {
+          "value": 87.98,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "reducing_sugar_percent": {
+          "value": 4.45,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "glucose_percent": {
+          "value": 1.15,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "sucrose_percent": {
+          "value": 88.88,
+          "uncertainty": null,
+          "unit": "%"
+        },
+        "fructose_percent": {
+          "value": 1.15,
+          "uncertainty": null,
+          "unit": "%"
+        }
+      }
+    }
+  ],
+  "pests": [
+    {
+      "id": "bud-nut-rot",
+      "common_name": "Coconut bud and nut rot",
+      "scientific_name": "Phytophthora palmivora",
+      "profile_type": "disease",
+      "confidence": "high",
+      "source_document_id": "pca-bud-rot",
+      "source_page": 2,
+      "notes": "PCA techno guide No. 06-2022.",
+      "rules": [
+        [
+          "relative_humidity_94_100",
+          "increases_risk",
+          {
+            "relative_humidity_percent": {
+              "min": 94,
+              "max": 100
+            }
+          },
+          null,
+          "high",
+          "Disease spread is favored by relative humidity of 94–100%."
+        ],
+        [
+          "temperature_at_or_below_24c",
+          "increases_risk",
+          {
+            "temperature_c": {
+              "max": 24
+            }
+          },
+          null,
+          "high",
+          "Disease spread is favored at 24 °C and below."
+        ],
+        [
+          "young_palms_under_20",
+          "increases_risk",
+          {
+            "palm_age_years": {
+              "max_exclusive": 20
+            }
+          },
+          null,
+          "high",
+          "Young palms under 20 years are more susceptible."
+        ],
+        [
+          "waterlogging_or_poor_drainage",
+          "increases_risk",
+          {
+            "waterlogging": true
+          },
+          null,
+          "high",
+          "Water movement and inadequate drainage support disease spread."
+        ],
+        [
+          "spear_leaf_wilting",
+          "diagnostic_signal",
+          {
+            "symptom": "spear_leaf_wilting"
+          },
+          null,
+          "high",
+          "Wilting spear leaf is an external visible symptom."
+        ]
+      ],
+      "actions": [
+        [
+          "mechanical",
+          "after_confirmation",
+          "Cut and safely dispose of infected trees as soon as disease is confirmed to limit spread."
+        ],
+        [
+          "cultural",
+          "preventive",
+          "Use proper spacing, regular field sanitation, and adequate drainage in waterlogged areas."
+        ],
+        [
+          "cropping",
+          "preventive",
+          "Avoid alternate-host intercrops listed by the source under disease-favorable conditions: cacao, durian, papaya, and black pepper."
+        ],
+        [
+          "biological",
+          "preventive",
+          "Use organic and biological control approaches such as Trichoderma only under an approved agronomic protocol."
+        ],
+        [
+          "chemical",
+          "expert_supervised",
+          "The source mentions trunk injection with a Fosetyl-Al fungicide within 20 m of infected palms; dosage and authorization must come from an accredited authority."
+        ]
+      ]
+    },
+    {
+      "id": "coconut-leaf-beetle",
+      "common_name": "Coconut leaf beetle",
+      "scientific_name": null,
+      "profile_type": "insect",
+      "confidence": "moderate",
+      "source_document_id": "pca-leaf-beetle",
+      "source_page": 1,
+      "notes": "Risk factors require expert calibration before likelihood ratios are assigned.",
+      "rules": [
+        [
+          "young_palms",
+          "increases_risk",
+          {
+            "palm_stage": "young"
+          },
+          null,
+          "moderate",
+          "The PCA material identifies young palms as vulnerable."
+        ],
+        [
+          "poor_maintenance",
+          "increases_risk",
+          {
+            "farm_maintenance": "poor"
+          },
+          null,
+          "moderate",
+          "Poorly maintained palms are described as higher risk."
+        ],
+        [
+          "dry_conditions",
+          "increases_risk",
+          {
+            "dry_period": true
+          },
+          null,
+          "moderate",
+          "Dry conditions are described as favorable to risk."
+        ],
+        [
+          "beneficial_organisms_present",
+          "decreases_risk",
+          {
+            "natural_enemies_present": true
+          },
+          null,
+          "moderate",
+          "Predators and parasitoids can suppress pest pressure."
+        ]
+      ],
+      "actions": [
+        [
+          "cultural",
+          "preventive",
+          "Maintain farm sanitation and monitor young palms."
+        ],
+        [
+          "biological",
+          "preventive",
+          "Protect beneficial organisms; compatible cover crops, legumes, and banana may support biological-control activity where locally appropriate."
+        ]
+      ]
+    },
+    {
+      "id": "rhinoceros-beetle",
+      "common_name": "Coconut rhinoceros beetle",
+      "scientific_name": "Oryctes rhinoceros",
+      "profile_type": "insect",
+      "confidence": "moderate",
+      "source_document_id": "pca-rhinoceros-beetle",
+      "source_page": 1,
+      "notes": "PCA/ATI integrated management guide.",
+      "rules": [
+        [
+          "breeding_material",
+          "increases_risk",
+          {
+            "decaying_organic_breeding_material": true
+          },
+          null,
+          "moderate",
+          "Decaying coconut and organic material can provide breeding sites."
+        ],
+        [
+          "crown_damage",
+          "diagnostic_signal",
+          {
+            "symptom": "crown_or_spear_damage"
+          },
+          null,
+          "moderate",
+          "Characteristic crown damage should trigger field inspection."
+        ]
+      ],
+      "actions": [
+        [
+          "cultural",
+          "preventive",
+          "Remove or manage decaying breeding material and maintain sanitation."
+        ],
+        [
+          "biological",
+          "preventive",
+          "The source identifies Oryctes nudivirus as a biological-control option under authorized programs."
+        ],
+        [
+          "pheromone",
+          "monitoring",
+          "Use properly managed pheromone traps with bait as a monitoring and management tool."
+        ]
+      ]
+    },
+    {
+      "id": "asiatic-palm-weevil",
+      "common_name": "Asiatic palm weevil",
+      "scientific_name": null,
+      "profile_type": "insect",
+      "confidence": "moderate",
+      "source_document_id": "pca-palm-weevil",
+      "source_page": 1,
+      "notes": "Do not merge with a red-palm-weevil profile until taxonomy is reconciled by an expert.",
+      "rules": [
+        [
+          "fresh_wounds",
+          "increases_risk",
+          {
+            "fresh_palm_wounds": true
+          },
+          null,
+          "moderate",
+          "Wounded or damaged palms warrant inspection."
+        ],
+        [
+          "storm_damage",
+          "increases_risk",
+          {
+            "storm_damage": true
+          },
+          null,
+          "moderate",
+          "Storm-damaged palms can be more vulnerable."
+        ],
+        [
+          "internal_feeding_symptoms",
+          "diagnostic_signal",
+          {
+            "symptom": "internal_feeding_or_boring"
+          },
+          null,
+          "low",
+          "Suspected internal feeding requires confirmation."
+        ]
+      ],
+      "actions": [
+        [
+          "inspection",
+          "after_damage",
+          "Inspect wounded and storm-damaged palms promptly."
+        ],
+        [
+          "cultural",
+          "preventive",
+          "Avoid unnecessary injuries and maintain sanitation around damaged material."
+        ]
+      ]
+    },
+    {
+      "id": "coconut-scale-insect",
+      "common_name": "Coconut scale insect",
+      "scientific_name": "Aspidiotus rigidus",
+      "profile_type": "insect",
+      "confidence": "moderate",
+      "source_document_id": "pca-scale-insect",
+      "source_page": 1,
+      "notes": "Profile from the PCA coconut-scale-insect management material and brochure.",
+      "rules": [
+        [
+          "confirmed_nearby_case",
+          "increases_risk",
+          {
+            "nearby_confirmed_case": true
+          },
+          null,
+          "moderate",
+          "Nearby confirmed infestations increase inspection priority."
+        ],
+        [
+          "scale_colonies",
+          "diagnostic_signal",
+          {
+            "symptom": "scale_colonies_on_leaflets"
+          },
+          null,
+          "high",
+          "Visible scale colonies on leaflets require confirmation and response."
+        ],
+        [
+          "natural_enemies",
+          "decreases_risk",
+          {
+            "natural_enemies_present": true
+          },
+          null,
+          "moderate",
+          "Natural enemies are part of integrated management."
+        ]
+      ],
+      "actions": [
+        [
+          "quarantine",
+          "on_confirmation",
+          "Follow current PCA quarantine and movement-control instructions for confirmed infestations."
+        ],
+        [
+          "integrated_management",
+          "on_confirmation",
+          "Use cultural, mechanical, biological, or chemical measures only under the current PCA protocol and local authority guidance."
+        ]
+      ]
+    }
+  ],
+  "intercrop_candidates": [
+    {
+      "id": "black-pepper",
+      "common_name": "Black pepper",
+      "scientific_name": null,
+      "light_group": "A",
+      "min_light_fraction": 0.12,
+      "max_light_fraction": 0.36,
+      "confidence": "moderate",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "Light requirement transcribed from the photographed PCA brochure; other soil, climate, pest, and market requirements remain separate."
+    },
+    {
+      "id": "cacao",
+      "common_name": "Cacao",
+      "scientific_name": null,
+      "light_group": "A",
+      "min_light_fraction": 0.12,
+      "max_light_fraction": 0.36,
+      "confidence": "moderate",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "Light requirement transcribed from the photographed PCA brochure; other soil, climate, pest, and market requirements remain separate."
+    },
+    {
+      "id": "cloves",
+      "common_name": "Cloves",
+      "scientific_name": null,
+      "light_group": "A",
+      "min_light_fraction": 0.12,
+      "max_light_fraction": 0.36,
+      "confidence": "moderate",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "Light requirement transcribed from the photographed PCA brochure; other soil, climate, pest, and market requirements remain separate."
+    },
+    {
+      "id": "vanilla",
+      "common_name": "Vanilla",
+      "scientific_name": null,
+      "light_group": "A",
+      "min_light_fraction": 0.12,
+      "max_light_fraction": 0.36,
+      "confidence": "moderate",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "Light requirement transcribed from the photographed PCA brochure; other soil, climate, pest, and market requirements remain separate."
+    },
+    {
+      "id": "coleus",
+      "common_name": "Coleus",
+      "scientific_name": null,
+      "light_group": "A",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.36,
+      "confidence": "moderate",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "Light requirement transcribed from the photographed PCA brochure; other soil, climate, pest, and market requirements remain separate."
+    },
+    {
+      "id": "cinnamon",
+      "common_name": "Cinnamon",
+      "scientific_name": null,
+      "light_group": "A",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.36,
+      "confidence": "moderate",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "Light requirement transcribed from the photographed PCA brochure; other soil, climate, pest, and market requirements remain separate."
+    },
+    {
+      "id": "ginger",
+      "common_name": "Ginger",
+      "scientific_name": null,
+      "light_group": "A",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.36,
+      "confidence": "moderate",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "Light requirement transcribed from the photographed PCA brochure; other soil, climate, pest, and market requirements remain separate."
+    },
+    {
+      "id": "violets",
+      "common_name": "Violets",
+      "scientific_name": null,
+      "light_group": "A",
+      "min_light_fraction": 0.12,
+      "max_light_fraction": 0.32,
+      "confidence": "moderate",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "Light requirement transcribed from the photographed PCA brochure; other soil, climate, pest, and market requirements remain separate."
+    },
+    {
+      "id": "snap-leaf-vandas",
+      "common_name": "Snap-leaf vandas",
+      "scientific_name": null,
+      "light_group": "A",
+      "min_light_fraction": 0.06,
+      "max_light_fraction": 0.1,
+      "confidence": "moderate",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "Light requirement transcribed from the photographed PCA brochure; other soil, climate, pest, and market requirements remain separate."
+    },
+    {
+      "id": "begonia",
+      "common_name": "Begonia",
+      "scientific_name": null,
+      "light_group": "A",
+      "min_light_fraction": 0.06,
+      "max_light_fraction": 0.13,
+      "confidence": "moderate",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "Light requirement transcribed from the photographed PCA brochure; other soil, climate, pest, and market requirements remain separate."
+    },
+    {
+      "id": "dendrobium",
+      "common_name": "Dendrobium",
+      "scientific_name": null,
+      "light_group": "A",
+      "min_light_fraction": 0.12,
+      "max_light_fraction": 0.36,
+      "confidence": "moderate",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "Light requirement transcribed from the photographed PCA brochure; other soil, climate, pest, and market requirements remain separate."
+    },
+    {
+      "id": "saintpaulia-violets",
+      "common_name": "Saintpaulia violets",
+      "scientific_name": null,
+      "light_group": "A",
+      "min_light_fraction": 0.12,
+      "max_light_fraction": 0.36,
+      "confidence": "moderate",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "Light requirement transcribed from the photographed PCA brochure; other soil, climate, pest, and market requirements remain separate."
+    },
+    {
+      "id": "african-violets",
+      "common_name": "African violets",
+      "scientific_name": null,
+      "light_group": "A",
+      "min_light_fraction": 0.06,
+      "max_light_fraction": 0.12,
+      "confidence": "moderate",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "Light requirement transcribed from the photographed PCA brochure; other soil, climate, pest, and market requirements remain separate."
+    },
+    {
+      "id": "ferns",
+      "common_name": "Ferns",
+      "scientific_name": null,
+      "light_group": "A",
+      "min_light_fraction": 0.06,
+      "max_light_fraction": 0.12,
+      "confidence": "moderate",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "Light requirement transcribed from the photographed PCA brochure; other soil, climate, pest, and market requirements remain separate."
+    },
+    {
+      "id": "philodendron",
+      "common_name": "Philodendron",
+      "scientific_name": null,
+      "light_group": "A",
+      "min_light_fraction": 0.06,
+      "max_light_fraction": 0.12,
+      "confidence": "moderate",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "Light requirement transcribed from the photographed PCA brochure; other soil, climate, pest, and market requirements remain separate."
+    },
+    {
+      "id": "banana",
+      "common_name": "Banana",
+      "scientific_name": null,
+      "light_group": "B",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.85,
+      "confidence": "low",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "The brochure places this crop within Group B (wide light range). The group range is stored pending crop-specific expert verification."
+    },
+    {
+      "id": "pineapple",
+      "common_name": "Pineapple",
+      "scientific_name": null,
+      "light_group": "B",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.85,
+      "confidence": "low",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "The brochure places this crop within Group B (wide light range). The group range is stored pending crop-specific expert verification."
+    },
+    {
+      "id": "papaya",
+      "common_name": "Papaya",
+      "scientific_name": null,
+      "light_group": "B",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.85,
+      "confidence": "low",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "The brochure places this crop within Group B (wide light range). The group range is stored pending crop-specific expert verification."
+    },
+    {
+      "id": "coffee",
+      "common_name": "Coffee",
+      "scientific_name": null,
+      "light_group": "B",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.85,
+      "confidence": "low",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "The brochure places this crop within Group B (wide light range). The group range is stored pending crop-specific expert verification."
+    },
+    {
+      "id": "citrus",
+      "common_name": "Citrus",
+      "scientific_name": null,
+      "light_group": "B",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.85,
+      "confidence": "low",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "The brochure places this crop within Group B (wide light range). The group range is stored pending crop-specific expert verification."
+    },
+    {
+      "id": "mangosteen",
+      "common_name": "Mangosteen",
+      "scientific_name": null,
+      "light_group": "B",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.85,
+      "confidence": "low",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "The brochure places this crop within Group B (wide light range). The group range is stored pending crop-specific expert verification."
+    },
+    {
+      "id": "corn",
+      "common_name": "Corn",
+      "scientific_name": null,
+      "light_group": "B",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.85,
+      "confidence": "low",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "The brochure places this crop within Group B (wide light range). The group range is stored pending crop-specific expert verification."
+    },
+    {
+      "id": "rice",
+      "common_name": "Rice",
+      "scientific_name": null,
+      "light_group": "B",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.85,
+      "confidence": "low",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "The brochure places this crop within Group B (wide light range). The group range is stored pending crop-specific expert verification."
+    },
+    {
+      "id": "cotton",
+      "common_name": "Cotton",
+      "scientific_name": null,
+      "light_group": "B",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.85,
+      "confidence": "low",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "The brochure places this crop within Group B (wide light range). The group range is stored pending crop-specific expert verification."
+    },
+    {
+      "id": "tobacco",
+      "common_name": "Tobacco",
+      "scientific_name": null,
+      "light_group": "B",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.85,
+      "confidence": "low",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "The brochure places this crop within Group B (wide light range). The group range is stored pending crop-specific expert verification."
+    },
+    {
+      "id": "coconut",
+      "common_name": "Coconut",
+      "scientific_name": null,
+      "light_group": "B",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.85,
+      "confidence": "low",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "The brochure places this crop within Group B (wide light range). The group range is stored pending crop-specific expert verification."
+    },
+    {
+      "id": "winged-bean",
+      "common_name": "Winged bean",
+      "scientific_name": null,
+      "light_group": "B",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.85,
+      "confidence": "low",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "The brochure places this crop within Group B (wide light range). The group range is stored pending crop-specific expert verification."
+    },
+    {
+      "id": "lima-bean",
+      "common_name": "Lima bean",
+      "scientific_name": null,
+      "light_group": "B",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.85,
+      "confidence": "low",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "The brochure places this crop within Group B (wide light range). The group range is stored pending crop-specific expert verification."
+    },
+    {
+      "id": "orchid",
+      "common_name": "Orchid",
+      "scientific_name": null,
+      "light_group": "B",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.85,
+      "confidence": "low",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "The brochure places this crop within Group B (wide light range). The group range is stored pending crop-specific expert verification."
+    },
+    {
+      "id": "muskmelon",
+      "common_name": "Muskmelon",
+      "scientific_name": null,
+      "light_group": "B",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.85,
+      "confidence": "low",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "The brochure places this crop within Group B (wide light range). The group range is stored pending crop-specific expert verification."
+    },
+    {
+      "id": "grapes",
+      "common_name": "Grapes",
+      "scientific_name": null,
+      "light_group": "B",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.85,
+      "confidence": "low",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "The brochure places this crop within Group B (wide light range). The group range is stored pending crop-specific expert verification."
+    },
+    {
+      "id": "peanut",
+      "common_name": "Peanut",
+      "scientific_name": null,
+      "light_group": "B",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.85,
+      "confidence": "low",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "The brochure places this crop within Group B (wide light range). The group range is stored pending crop-specific expert verification."
+    },
+    {
+      "id": "pigeon-pea",
+      "common_name": "Pigeon pea",
+      "scientific_name": null,
+      "light_group": "B",
+      "min_light_fraction": 0.24,
+      "max_light_fraction": 0.85,
+      "confidence": "low",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "The brochure places this crop within Group B (wide light range). The group range is stored pending crop-specific expert verification."
+    },
+    {
+      "id": "sugarcane",
+      "common_name": "Sugarcane",
+      "scientific_name": null,
+      "light_group": "C",
+      "min_light_fraction": 0.72,
+      "max_light_fraction": 1.0,
+      "confidence": "moderate",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "Light requirement transcribed from the photographed PCA brochure; other soil, climate, pest, and market requirements remain separate."
+    },
+    {
+      "id": "wheat",
+      "common_name": "Wheat",
+      "scientific_name": null,
+      "light_group": "C",
+      "min_light_fraction": 0.63,
+      "max_light_fraction": 1.0,
+      "confidence": "moderate",
+      "source_document_id": "pca-intercropping-brochure",
+      "source_page": 1,
+      "notes": "Light requirement transcribed from the photographed PCA brochure; other soil, climate, pest, and market requirements remain separate."
+    }
+  ],
+  "canopy_light_parameters": [
+    {
+      "id": "7-x-7-m-sq-40",
+      "spacing_label": "7 x 7 m sq",
+      "design": "square",
+      "spacing_x_m": 7,
+      "spacing_y_m": 7,
+      "palms_per_hectare": 204,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.22,
+      "suitable_crop_groups": "A",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "7p5-x-7p5-m-sq-20",
+      "spacing_label": "7.5 x 7.5 m sq",
+      "design": "square",
+      "spacing_x_m": 7.5,
+      "spacing_y_m": 7.5,
+      "palms_per_hectare": 178,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.11,
+      "suitable_crop_groups": "A",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "7p5-x-7p5-m-sq-40",
+      "spacing_label": "7.5 x 7.5 m sq",
+      "design": "square",
+      "spacing_x_m": 7.5,
+      "spacing_y_m": 7.5,
+      "palms_per_hectare": 178,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.3,
+      "suitable_crop_groups": "A",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "7p5-x-7p5-m-tri-20",
+      "spacing_label": "7.5 x 7.5 m tri",
+      "design": "triangular",
+      "spacing_x_m": 7.5,
+      "spacing_y_m": 7.5,
+      "palms_per_hectare": 205,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.01,
+      "suitable_crop_groups": "",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "7p5-x-7p5-m-tri-40",
+      "spacing_label": "7.5 x 7.5 m tri",
+      "design": "triangular",
+      "spacing_x_m": 7.5,
+      "spacing_y_m": 7.5,
+      "palms_per_hectare": 205,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.22,
+      "suitable_crop_groups": "A",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8-x-8-m-sq-20",
+      "spacing_label": "8 x 8 m sq",
+      "design": "square",
+      "spacing_x_m": 8,
+      "spacing_y_m": 8,
+      "palms_per_hectare": 156,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.2,
+      "suitable_crop_groups": "A",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8-x-8-m-sq-40",
+      "spacing_label": "8 x 8 m sq",
+      "design": "square",
+      "spacing_x_m": 8,
+      "spacing_y_m": 8,
+      "palms_per_hectare": 156,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.37,
+      "suitable_crop_groups": "A,B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8-x-8-m-tri-20",
+      "spacing_label": "8 x 8 m tri",
+      "design": "triangular",
+      "spacing_x_m": 8,
+      "spacing_y_m": 8,
+      "palms_per_hectare": 180,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.1,
+      "suitable_crop_groups": "A",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8-x-8-m-tri-40",
+      "spacing_label": "8 x 8 m tri",
+      "design": "triangular",
+      "spacing_x_m": 8,
+      "spacing_y_m": 8,
+      "palms_per_hectare": 180,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.3,
+      "suitable_crop_groups": "A",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8p5-x-8p5-m-sq-20",
+      "spacing_label": "8.5 x 8.5 m sq",
+      "design": "square",
+      "spacing_x_m": 8.5,
+      "spacing_y_m": 8.5,
+      "palms_per_hectare": 138,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.27,
+      "suitable_crop_groups": "A",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8p5-x-8p5-m-sq-40",
+      "spacing_label": "8.5 x 8.5 m sq",
+      "design": "square",
+      "spacing_x_m": 8.5,
+      "spacing_y_m": 8.5,
+      "palms_per_hectare": 138,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.43,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8p5-x-8p5-m-tri-20",
+      "spacing_label": "8.5 x 8.5 m tri",
+      "design": "triangular",
+      "spacing_x_m": 8.5,
+      "spacing_y_m": 8.5,
+      "palms_per_hectare": 160,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.18,
+      "suitable_crop_groups": "A",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8p5-x-8p5-m-tri-40",
+      "spacing_label": "8.5 x 8.5 m tri",
+      "design": "triangular",
+      "spacing_x_m": 8.5,
+      "spacing_y_m": 8.5,
+      "palms_per_hectare": 160,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.36,
+      "suitable_crop_groups": "A,B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "9-x-9-m-sq-20",
+      "spacing_label": "9 x 9 m sq",
+      "design": "square",
+      "spacing_x_m": 9,
+      "spacing_y_m": 9,
+      "palms_per_hectare": 123,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.32,
+      "suitable_crop_groups": "A",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "9-x-9-m-sq-40",
+      "spacing_label": "9 x 9 m sq",
+      "design": "square",
+      "spacing_x_m": 9,
+      "spacing_y_m": 9,
+      "palms_per_hectare": 123,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.47,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "9-x-9-m-tri-20",
+      "spacing_label": "9 x 9 m tri",
+      "design": "triangular",
+      "spacing_x_m": 9,
+      "spacing_y_m": 9,
+      "palms_per_hectare": 143,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.25,
+      "suitable_crop_groups": "A",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "9-x-9-m-tri-40",
+      "spacing_label": "9 x 9 m tri",
+      "design": "triangular",
+      "spacing_x_m": 9,
+      "spacing_y_m": 9,
+      "palms_per_hectare": 143,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.41,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "10-x-10-m-sq-20",
+      "spacing_label": "10 x 10 m sq",
+      "design": "square",
+      "spacing_x_m": 10,
+      "spacing_y_m": 10,
+      "palms_per_hectare": 100,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.41,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "10-x-10-m-sq-40",
+      "spacing_label": "10 x 10 m sq",
+      "design": "square",
+      "spacing_x_m": 10,
+      "spacing_y_m": 10,
+      "palms_per_hectare": 100,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.55,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "10-x-10-m-tri-20",
+      "spacing_label": "10 x 10 m tri",
+      "design": "triangular",
+      "spacing_x_m": 10,
+      "spacing_y_m": 10,
+      "palms_per_hectare": 115,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.36,
+      "suitable_crop_groups": "A,B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "10-x-10-m-tri-40",
+      "spacing_label": "10 x 10 m tri",
+      "design": "triangular",
+      "spacing_x_m": 10,
+      "spacing_y_m": 10,
+      "palms_per_hectare": 115,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.5,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "11-x-11-m-sq-20",
+      "spacing_label": "11 x 11 m sq",
+      "design": "square",
+      "spacing_x_m": 11,
+      "spacing_y_m": 11,
+      "palms_per_hectare": 83,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.48,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "11-x-11-m-sq-40",
+      "spacing_label": "11 x 11 m sq",
+      "design": "square",
+      "spacing_x_m": 11,
+      "spacing_y_m": 11,
+      "palms_per_hectare": 83,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.6,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "11-x-11-m-tri-20",
+      "spacing_label": "11 x 11 m tri",
+      "design": "triangular",
+      "spacing_x_m": 11,
+      "spacing_y_m": 11,
+      "palms_per_hectare": 95,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.43,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "11-x-11-m-tri-40",
+      "spacing_label": "11 x 11 m tri",
+      "design": "triangular",
+      "spacing_x_m": 11,
+      "spacing_y_m": 11,
+      "palms_per_hectare": 95,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.56,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "12-x-12-m-sq-20",
+      "spacing_label": "12 x 12 m sq",
+      "design": "square",
+      "spacing_x_m": 12,
+      "spacing_y_m": 12,
+      "palms_per_hectare": 69,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.53,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "12-x-12-m-sq-40",
+      "spacing_label": "12 x 12 m sq",
+      "design": "square",
+      "spacing_x_m": 12,
+      "spacing_y_m": 12,
+      "palms_per_hectare": 69,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.64,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "12-x-12-m-tri-20",
+      "spacing_label": "12 x 12 m tri",
+      "design": "triangular",
+      "spacing_x_m": 12,
+      "spacing_y_m": 12,
+      "palms_per_hectare": 80,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.49,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "12-x-12-m-tri-40",
+      "spacing_label": "12 x 12 m tri",
+      "design": "triangular",
+      "spacing_x_m": 12,
+      "spacing_y_m": 12,
+      "palms_per_hectare": 80,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.61,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "7-x-8-m-rec-20",
+      "spacing_label": "7 x 8 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 7,
+      "spacing_y_m": 8,
+      "palms_per_hectare": 178,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.11,
+      "suitable_crop_groups": "A",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "7-x-8-m-rec-40",
+      "spacing_label": "7 x 8 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 7,
+      "spacing_y_m": 8,
+      "palms_per_hectare": 178,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.3,
+      "suitable_crop_groups": "A,B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "7-x-9-m-rec-20",
+      "spacing_label": "7 x 9 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 7,
+      "spacing_y_m": 9,
+      "palms_per_hectare": 159,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.19,
+      "suitable_crop_groups": "A",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "7-x-9-m-rec-40",
+      "spacing_label": "7 x 9 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 7,
+      "spacing_y_m": 9,
+      "palms_per_hectare": 159,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.36,
+      "suitable_crop_groups": "A,B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "7-x-10-m-rec-20",
+      "spacing_label": "7 x 10 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 7,
+      "spacing_y_m": 10,
+      "palms_per_hectare": 143,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.25,
+      "suitable_crop_groups": "A",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "7-x-10-m-rec-40",
+      "spacing_label": "7 x 10 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 7,
+      "spacing_y_m": 10,
+      "palms_per_hectare": 143,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.41,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "7-x-11-m-rec-20",
+      "spacing_label": "7 x 11 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 7,
+      "spacing_y_m": 11,
+      "palms_per_hectare": 130,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.26,
+      "suitable_crop_groups": "A",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "7-x-11-m-rec-40",
+      "spacing_label": "7 x 11 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 7,
+      "spacing_y_m": 11,
+      "palms_per_hectare": 130,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.42,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "7-x-12-m-rec-20",
+      "spacing_label": "7 x 12 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 7,
+      "spacing_y_m": 12,
+      "palms_per_hectare": 119,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.34,
+      "suitable_crop_groups": "A",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "7-x-12-m-rec-40",
+      "spacing_label": "7 x 12 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 7,
+      "spacing_y_m": 12,
+      "palms_per_hectare": 119,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.49,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "7-x-13-m-rec-20",
+      "spacing_label": "7 x 13 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 7,
+      "spacing_y_m": 13,
+      "palms_per_hectare": 110,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.38,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "7-x-13-m-rec-40",
+      "spacing_label": "7 x 13 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 7,
+      "spacing_y_m": 13,
+      "palms_per_hectare": 110,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.51,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "7-x-14-m-rec-20",
+      "spacing_label": "7 x 14 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 7,
+      "spacing_y_m": 14,
+      "palms_per_hectare": 102,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.41,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "7-x-14-m-rec-40",
+      "spacing_label": "7 x 14 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 7,
+      "spacing_y_m": 14,
+      "palms_per_hectare": 102,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.54,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "7-x-15-m-rec-20",
+      "spacing_label": "7 x 15 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 7,
+      "spacing_y_m": 15,
+      "palms_per_hectare": 95,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.43,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "7-x-15-m-rec-40",
+      "spacing_label": "7 x 15 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 7,
+      "spacing_y_m": 15,
+      "palms_per_hectare": 95,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.56,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8-x-9-m-rec-20",
+      "spacing_label": "8 x 9 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 8,
+      "spacing_y_m": 9,
+      "palms_per_hectare": 139,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.26,
+      "suitable_crop_groups": "A",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8-x-9-m-rec-40",
+      "spacing_label": "8 x 9 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 8,
+      "spacing_y_m": 9,
+      "palms_per_hectare": 139,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.42,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8-x-10-m-rec-20",
+      "spacing_label": "8 x 10 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 8,
+      "spacing_y_m": 10,
+      "palms_per_hectare": 125,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.32,
+      "suitable_crop_groups": "A",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8-x-10-m-rec-40",
+      "spacing_label": "8 x 10 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 8,
+      "spacing_y_m": 10,
+      "palms_per_hectare": 125,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.47,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8-x-11-m-rec-20",
+      "spacing_label": "8 x 11 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 8,
+      "spacing_y_m": 11,
+      "palms_per_hectare": 114,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.36,
+      "suitable_crop_groups": "A,B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8-x-11-m-rec-40",
+      "spacing_label": "8 x 11 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 8,
+      "spacing_y_m": 11,
+      "palms_per_hectare": 114,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.5,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8-x-12-m-rec-20",
+      "spacing_label": "8 x 12 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 8,
+      "spacing_y_m": 12,
+      "palms_per_hectare": 104,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.4,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8-x-12-m-rec-40",
+      "spacing_label": "8 x 12 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 8,
+      "spacing_y_m": 12,
+      "palms_per_hectare": 104,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.53,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8-x-13-m-rec-20",
+      "spacing_label": "8 x 13 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 8,
+      "spacing_y_m": 13,
+      "palms_per_hectare": 96,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.43,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8-x-13-m-rec-40",
+      "spacing_label": "8 x 13 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 8,
+      "spacing_y_m": 13,
+      "palms_per_hectare": 96,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.56,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8-x-14-m-rec-20",
+      "spacing_label": "8 x 14 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 8,
+      "spacing_y_m": 14,
+      "palms_per_hectare": 89,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.46,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8-x-14-m-rec-40",
+      "spacing_label": "8 x 14 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 8,
+      "spacing_y_m": 14,
+      "palms_per_hectare": 89,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.58,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8-x-15-m-rec-20",
+      "spacing_label": "8 x 15 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 8,
+      "spacing_y_m": 15,
+      "palms_per_hectare": 83,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.48,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "8-x-15-m-rec-40",
+      "spacing_label": "8 x 15 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 8,
+      "spacing_y_m": 15,
+      "palms_per_hectare": 83,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.6,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "9-x-10-m-rec-20",
+      "spacing_label": "9 x 10 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 9,
+      "spacing_y_m": 10,
+      "palms_per_hectare": 111,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.37,
+      "suitable_crop_groups": "A,B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "9-x-10-m-rec-40",
+      "spacing_label": "9 x 10 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 9,
+      "spacing_y_m": 10,
+      "palms_per_hectare": 111,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.51,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "9-x-11-m-rec-20",
+      "spacing_label": "9 x 11 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 9,
+      "spacing_y_m": 11,
+      "palms_per_hectare": 101,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.41,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "9-x-11-m-rec-40",
+      "spacing_label": "9 x 11 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 9,
+      "spacing_y_m": 11,
+      "palms_per_hectare": 101,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.54,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "9-x-12-m-rec-20",
+      "spacing_label": "9 x 12 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 9,
+      "spacing_y_m": 12,
+      "palms_per_hectare": 92,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.44,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "9-x-12-m-rec-40",
+      "spacing_label": "9 x 12 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 9,
+      "spacing_y_m": 12,
+      "palms_per_hectare": 92,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.57,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "9-x-13-m-rec-20",
+      "spacing_label": "9 x 13 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 9,
+      "spacing_y_m": 13,
+      "palms_per_hectare": 85,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.47,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "9-x-13-m-rec-40",
+      "spacing_label": "9 x 13 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 9,
+      "spacing_y_m": 13,
+      "palms_per_hectare": 85,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.59,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "9-x-14-m-rec-20",
+      "spacing_label": "9 x 14 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 9,
+      "spacing_y_m": 14,
+      "palms_per_hectare": 79,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.49,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "9-x-14-m-rec-40",
+      "spacing_label": "9 x 14 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 9,
+      "spacing_y_m": 14,
+      "palms_per_hectare": 79,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.61,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "9-x-15-m-rec-20",
+      "spacing_label": "9 x 15 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 9,
+      "spacing_y_m": 15,
+      "palms_per_hectare": 74,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.51,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "9-x-15-m-rec-40",
+      "spacing_label": "9 x 15 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 9,
+      "spacing_y_m": 15,
+      "palms_per_hectare": 74,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.63,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "10-x-11-m-rec-20",
+      "spacing_label": "10 x 11 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 10,
+      "spacing_y_m": 11,
+      "palms_per_hectare": 91,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.45,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "10-x-11-m-rec-40",
+      "spacing_label": "10 x 11 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 10,
+      "spacing_y_m": 11,
+      "palms_per_hectare": 91,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.57,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "10-x-12-m-rec-20",
+      "spacing_label": "10 x 12 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 10,
+      "spacing_y_m": 12,
+      "palms_per_hectare": 83,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.48,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "10-x-12-m-rec-40",
+      "spacing_label": "10 x 12 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 10,
+      "spacing_y_m": 12,
+      "palms_per_hectare": 83,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.6,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "10-x-13-m-rec-20",
+      "spacing_label": "10 x 13 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 10,
+      "spacing_y_m": 13,
+      "palms_per_hectare": 77,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.5,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "10-x-13-m-rec-40",
+      "spacing_label": "10 x 13 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 10,
+      "spacing_y_m": 13,
+      "palms_per_hectare": 77,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.62,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "10-x-14-m-rec-20",
+      "spacing_label": "10 x 14 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 10,
+      "spacing_y_m": 14,
+      "palms_per_hectare": 71,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.53,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "10-x-14-m-rec-40",
+      "spacing_label": "10 x 14 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 10,
+      "spacing_y_m": 14,
+      "palms_per_hectare": 71,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.64,
+      "suitable_crop_groups": "B,C",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "10-x-15-m-rec-20",
+      "spacing_label": "10 x 15 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 10,
+      "spacing_y_m": 15,
+      "palms_per_hectare": 67,
+      "palm_age_years": 20,
+      "transmitted_light_fraction": 0.54,
+      "suitable_crop_groups": "B",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    },
+    {
+      "id": "10-x-15-m-rec-40",
+      "spacing_label": "10 x 15 m rec",
+      "design": "rectangular",
+      "spacing_x_m": 10,
+      "spacing_y_m": 15,
+      "palms_per_hectare": 67,
+      "palm_age_years": 40,
+      "transmitted_light_fraction": 0.65,
+      "suitable_crop_groups": "B,C",
+      "confidence": "high",
+      "source_document_id": "pca-intercropping-brochure-panel2",
+      "source_page": 1
+    }
+  ],
+  "fertilization_scenarios": [
+    {
+      "id": "intermittent-2-on-1-off",
+      "name": "Intermittent fertilizer application: two years on, one year off",
+      "scenario_type": "intermittent_inorganic",
+      "frequency_text": "Apply in two consecutive years and skip the third year, then repeat only when applicable.",
+      "timing_text": "Use only in suitable sites and with local agronomic validation.",
+      "confidence": "high",
+      "source_document_id": "pca-intermittent-fertilizer",
+      "source_page": 2,
+      "notes": "Management scenario, not a compulsory recommendation.",
+      "requirements": {
+        "cycle": [
+          "apply",
+          "apply",
+          "skip"
+        ],
+        "fertilizer_rates_per_tree": {
+          "field_planting": {
+            "ammonium_sulfate_g": 150,
+            "potassium_chloride_g": 200
+          },
+          "6_months": {
+            "ammonium_sulfate_g": 200,
+            "potassium_chloride_g": 250
+          },
+          "1_year": {
+            "ammonium_sulfate_g": 500,
+            "potassium_chloride_g": 500
+          },
+          "2_years": {
+            "ammonium_sulfate_g": 750,
+            "potassium_chloride_g": 900
+          },
+          "3_years": {
+            "ammonium_sulfate_kg": 1.0,
+            "potassium_chloride_kg": 1.5
+          },
+          "4_years": {
+            "ammonium_sulfate_kg": 1.5,
+            "potassium_chloride_kg": 1.7
+          },
+          "5_years_and_up": {
+            "ammonium_sulfate_kg": 1.5,
+            "potassium_chloride_kg": 2.0
+          }
+        }
+      }
+    },
+    {
+      "id": "organic-amendments-six-monthly",
+      "name": "Organic soil amendments every six months",
+      "scenario_type": "organic",
+      "frequency_text": "Every six months.",
+      "timing_text": "Any time of year; best at the start and end of the rainy season in dry and intermediate growing zones.",
+      "confidence": "high",
+      "source_document_id": "pca-organic-fertilization",
+      "source_page": 2,
+      "notes": "Material safety and nutrient analysis remain required.",
+      "requirements": {
+        "options": [
+          {
+            "material": "dried goat manure",
+            "rate_kg_per_palm": 10,
+            "placement_m_from_base": 2
+          },
+          {
+            "material": "coconut coir-based organic fertilizer",
+            "rate_kg_per_palm": 10,
+            "placement_m_from_base": 2
+          },
+          {
+            "material": "seasoned cocopeat",
+            "minimum_seasoning_months": 6,
+            "placement_m_from_base": 2
+          },
+          {
+            "material": "coconut crown residues",
+            "placement_m_from_base": 2
+          },
+          {
+            "material": "coconut husk mulch",
+            "placement_m_from_base": 2
+          }
+        ],
+        "minimum_total_npk_percent": [
+          5,
+          7
+        ],
+        "minimum_organic_matter_percent": 20
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "candidate_count": 35,
+  "economic_profile_candidates": [
+    "cacao",
+    "coffee"
+  ],
+  "expected_profile_version": "intercrop-requirements-1.0.0",
+  "notice": "PCA brochure supports light bands. Non-light numerical ranges are transparent development assumptions and must not be presented as official PCA recommendations.",
+  "profile_version": "intercrop-requirements-1.0.0",
+  "sha256": "0354cf82008dd436c5af7c96a771fdc59c1b44948c3e046fb6758f2c58b63531"
+}

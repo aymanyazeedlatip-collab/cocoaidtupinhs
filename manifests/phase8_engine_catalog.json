@@ -1,0 +1,22 @@
+{
+  "availability": "available",
+  "dependencies": [
+    "v3.production",
+    "v3.bayesian",
+    "v3.pest_inference",
+    "v3.intercropping"
+  ],
+  "deterministic_with_seed": false,
+  "engine_id": "v3.rehabilitation",
+  "input_contract": "RehabilitationPlanRequest",
+  "limitations": [
+    "Cost and labor catalog requires local validation.",
+    "Recovery effects are scenario assumptions rather than causal field estimates.",
+    "No pesticide dosage is generated.",
+    "Predicted events are not treated as confirmed damage."
+  ],
+  "maturity": "experimental",
+  "name": "Rehabilitation and Scenario Optimization Engine",
+  "output_contract": "RehabilitationEngineOutput",
+  "version": "1.0.0"
+}

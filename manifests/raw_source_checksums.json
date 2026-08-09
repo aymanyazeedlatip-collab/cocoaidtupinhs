@@ -1,0 +1,92 @@
+[
+  {
+    "path": "data_sources/raw/brochures/csi_brochure_panel_1.jpg",
+    "size_bytes": 507952,
+    "sha256": "845a2d98ece7f115148771e47064b5f25391cb16d92641ef0e72737355fbfb22",
+    "extension": ".jpg"
+  },
+  {
+    "path": "data_sources/raw/brochures/csi_brochure_panel_2.jpg",
+    "size_bytes": 461039,
+    "sha256": "a1338092bef8d0ff1aee888eb917b8d635d29ced0287feefdaaa276ba29aae6f",
+    "extension": ".jpg"
+  },
+  {
+    "path": "data_sources/raw/brochures/intercropping_brochure_panel_1.jpg",
+    "size_bytes": 566347,
+    "sha256": "03a6bd2e5dadae8d1379c53a90a33245cdd8824c76c41aa42b113fae9799dfb7",
+    "extension": ".jpg"
+  },
+  {
+    "path": "data_sources/raw/brochures/intercropping_brochure_panel_2.jpg",
+    "size_bytes": 524476,
+    "sha256": "070565c5411402119bb5b033d301e044ff77461383a81b89e117e252e0788a32",
+    "extension": ".jpg"
+  },
+  {
+    "path": "data_sources/raw/farmers/Farmers_Lists_Updated.xlsx",
+    "size_bytes": 1077576,
+    "sha256": "7674174cfc5f1ed1a5cfe69bdcd32d9bbb2d84e39bea75b2e3e9ff61f503b0da",
+    "extension": ".xlsx"
+  },
+  {
+    "path": "data_sources/raw/pca/FERTILIZATION/AS_Intermittent_Fertilizer_Application_for_Coconut.pdf",
+    "size_bytes": 564553,
+    "sha256": "015f47a655bea9ef361cd00bbae2e736ca1583e4cf9fee4a55b78105cdd06a4d",
+    "extension": ".pdf"
+  },
+  {
+    "path": "data_sources/raw/pca/FERTILIZATION/Organic_Fertilization.pdf",
+    "size_bytes": 3310349,
+    "sha256": "45bf299488699f8fb4f5f4bd506e360e13c326ada957fc713e2a8fd9f3d50857",
+    "extension": ".pdf"
+  },
+  {
+    "path": "data_sources/raw/pca/PESTS/Coconut_BudRot.pdf",
+    "size_bytes": 6350477,
+    "sha256": "51e68e62466ed33afcdb4cae1cc3bfe4cf6f5ee17a91a6d8b7f2508f6cfeb0e0",
+    "extension": ".pdf"
+  },
+  {
+    "path": "data_sources/raw/pca/PESTS/Coconut_Leaf_Beetle.pdf",
+    "size_bytes": 845527,
+    "sha256": "bcd56893a56047cc1f13936681011e25c610ed974c66fea89cab2c2c10a12c86",
+    "extension": ".pdf"
+  },
+  {
+    "path": "data_sources/raw/pca/PESTS/IPM on Rhinoceros Beetle.pdf",
+    "size_bytes": 4178084,
+    "sha256": "be759b7245e6f2d6307b8c9e6eb6e5dba1f8bba779313fd70d1c4beaf7fd97e2",
+    "extension": ".pdf"
+  },
+  {
+    "path": "data_sources/raw/pca/PESTS/Management of Asiatic Palm Weevil.pdf",
+    "size_bytes": 3699818,
+    "sha256": "3efb07ec7e18fdd8b33ca9d7b3c3b8fbc78692dcd4236242eaa6f7a2ae1b4b6a",
+    "extension": ".pdf"
+  },
+  {
+    "path": "data_sources/raw/pca/PESTS/Management_of_Coconut_Scale_Insect.pdf",
+    "size_bytes": 1363350,
+    "sha256": "e977124d13e7e9bb1fabe96a4451054cca49929ae88286c39300c25c95a9d001",
+    "extension": ".pdf"
+  },
+  {
+    "path": "data_sources/raw/pca/VARIETIES/VI_Coconut_Hybrids.pdf",
+    "size_bytes": 1456887,
+    "sha256": "a570367db1c7de8f9c628d5d709f7c217462028798fcfccf583d91f95b286a5c",
+    "extension": ".pdf"
+  },
+  {
+    "path": "data_sources/raw/pca/VARIETIES/VI_OPV_Dwarf.pdf",
+    "size_bytes": 1818463,
+    "sha256": "a6e90e59c630d937d3655915235521bf3ab5594e867575f01f7083e6acd93164",
+    "extension": ".pdf"
+  },
+  {
+    "path": "data_sources/raw/pca/VARIETIES/VI_OPV_Tall.pdf",
+    "size_bytes": 1804040,
+    "sha256": "635460c5e3f9ae50cdc6bd52c23bbf7ee92c3dba93d8b9ec139af43fb52b6180",
+    "extension": ".pdf"
+  }
+]
