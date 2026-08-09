@@ -34,7 +34,20 @@ def _load(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def seed_reference_data(*, database_path: Path | None = None, verify_files: bool = True) -> dict[str, int]:
+def seed_reference_data(*, database_path: Path | None = None, verify_files: bool | None = None) -> dict[str, int]:
+    """Seed the versioned reference catalog into SQLite.
+
+    Local/research runs verify the original source files and their checksums by
+    default. Production deployments seed from the committed, checksummed JSON
+    catalogs because ``data_sources/raw`` is intentionally excluded from Git
+    (it contains large and potentially restricted research inputs). This keeps
+    the public Render checkout reproducible without publishing restricted source
+    files. Callers can still pass ``verify_files=True`` explicitly when they
+    require strict source-file verification.
+    """
+    if verify_files is None:
+        verify_files = settings.environment != "production"
+
     source_catalog = _load(SOURCE_CATALOG)
     catalog = _load(REFERENCE_CATALOG)
     now = _now()

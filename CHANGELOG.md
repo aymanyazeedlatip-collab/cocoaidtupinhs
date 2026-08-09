@@ -1,3 +1,11 @@
+# COCOAID v3 Phase 11.3.23 — Render/GitHub final startup fix
+
+- Fixed production startup when `data_sources/raw/` is intentionally absent from the GitHub/Render checkout.
+- Production reference seeding now uses committed versioned/checksummed catalogs; local research verification remains strict against original raw sources.
+- Preserved `.gitignore` protection for raw research inputs and the restricted farmer workbook.
+- Added deployment verification that fails if production startup attempts to hash a gitignored raw source.
+- Validated FastAPI startup and `/api/health` from an actual Git archive containing zero `data_sources/raw/` files.
+
 # COCOAID v3 Phase 11.3.23 — Final Supabase Storage Startup Hotfix
 
 - Fixed Render startup failure when hosted Supabase wraps `NoSuchBucket` as HTTP 400 with `statusCode: 404`.

@@ -118,16 +118,47 @@ def check_remote_state_round_trip() -> None:
             setattr(settings, name, value)
 
 
+
+def check_git_checkout_reference_seeding() -> None:
+    """Production startup must not depend on gitignored raw research files."""
+    from app.core.config import settings
+    from app.data_foundation import seeding
+    from app.storage.migrations import MigrationManager
+
+    original_environment = settings.environment
+    original_sha256 = seeding._sha256
+    try:
+        settings.environment = "production"
+
+        def forbidden_raw_hash(_path: Path) -> str:
+            raise AssertionError(
+                "production startup attempted to read data_sources/raw; Render/GitHub intentionally omit it"
+            )
+
+        seeding._sha256 = forbidden_raw_hash  # type: ignore[assignment]
+        with tempfile.TemporaryDirectory() as temp:
+            database = Path(temp) / "production_seed.sqlite3"
+            MigrationManager(database).upgrade(target_version=2)
+            counts = seeding.seed_reference_data(database_path=database)
+            assert counts["source_documents"] == 16
+            assert counts["coconut_varieties"] == 30
+            assert counts["intercrop_candidates"] == 35
+    finally:
+        settings.environment = original_environment
+        seeding._sha256 = original_sha256  # type: ignore[assignment]
+
 def main() -> int:
     check_blueprint()
     check_vercel()
     check_remote_state_round_trip()
+    check_git_checkout_reference_seeding()
     print(json.dumps({
         "status": "passed",
         "render_plan": "free",
         "render_disk": False,
         "supabase_state_round_trip": True,
         "manual_phase_ids_required": False,
+        "gitignored_raw_sources_required_at_runtime": False,
     }, indent=2))
     print("ZERO-COST DEPLOYMENT VERIFICATION PASSED")
     return 0

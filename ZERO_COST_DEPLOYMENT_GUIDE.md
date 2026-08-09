@@ -451,3 +451,8 @@ https://supabase.com/docs/guides/platform/free-project-pausing
 https://supabase.com/docs/guides/getting-started/api-keys
 https://vercel.com/docs/plans/hobby
 ```
+
+
+## Render/GitHub source-file note (final startup fix)
+
+`data_sources/raw/` is intentionally ignored by Git because it contains large research inputs and a restricted farmer workbook. Do **not** force-add that directory to a public GitHub repository. In production (`ENVIRONMENT=production`), COCOAID seeds its database from the committed, versioned JSON reference catalogs and does not require the raw brochure/PDF/XLSX files at startup. Local research/setup verification remains strict and can still checksum the original raw sources.
