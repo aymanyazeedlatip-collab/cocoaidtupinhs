@@ -13,6 +13,7 @@ from pypdf import PdfReader
 
 from app.core.config import settings
 from app.storage.database import get_report, report_record
+from app.services.supabase_state import supabase_state
 
 _PRIVATE_FILE = settings.private_settings_path
 _DOC_DIR = settings.cache_dir / "assistant_documents"
@@ -129,6 +130,7 @@ def store_uploaded_document(path: Path, original_name: str) -> dict[str, Any]:
     target = _safe_document_path(document_id)
     header = json.dumps({"name": original_name[:180], "kind": kind, "pages": pages}, ensure_ascii=False)
     target.write_text(header + "\n" + text, encoding="utf-8")
+    supabase_state.upload_runtime_file(target, namespace="assistant_documents")
     return {"document_id": document_id, "name": original_name, "kind": kind, "pages": pages, "characters": len(text)}
 
 
@@ -142,6 +144,8 @@ def attach_saved_report(report_id: str) -> dict[str, Any]:
 
 def read_document(document_id: str) -> tuple[dict[str, Any], str]:
     path = _safe_document_path(document_id)
+    if not path.exists():
+        supabase_state.restore_runtime_file(path, namespace="assistant_documents")
     if not path.exists():
         raise FileNotFoundError("Attached document is no longer available.")
     raw = path.read_text(encoding="utf-8")

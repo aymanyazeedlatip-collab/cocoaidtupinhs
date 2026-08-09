@@ -9,6 +9,7 @@ from fastapi import Request, Response
 from starlette.middleware.base import BaseHTTPMiddleware
 
 from app.core.config import settings
+from app.services.supabase_state import supabase_state
 
 request_id_context: contextvars.ContextVar[str | None] = contextvars.ContextVar("request_id", default=None)
 
@@ -37,4 +38,9 @@ class RequestContextMiddleware(BaseHTTPMiddleware):
         response.headers[settings.request_id_header] = request_id
         if settings.enable_request_metrics:
             response.headers["X-Process-Time-Ms"] = f"{elapsed_ms:.3f}"
+        if request.method.upper() in {"POST", "PUT", "PATCH", "DELETE"} and response.status_code < 500:
+            # Render Free can disappear between requests. Wake the durable-state
+            # sync promptly after successful mutations without blocking the HTTP
+            # response on an external Supabase upload.
+            supabase_state.request_sync()
         return response

@@ -57,6 +57,19 @@ class Settings(BaseSettings):
     auto_phase_poll_seconds: int = Field(default=90, ge=30, le=3600)
     allow_runtime_api_key_configuration: bool = True
 
+    # Free-deployment durable state. Render Free has an ephemeral filesystem, so
+    # production can mirror the SQLite state and generated files to a private
+    # Supabase Storage bucket without exposing credentials to the browser.
+    supabase_state_sync_enabled: bool = False
+    supabase_state_required: bool = False
+    supabase_url: str | None = None
+    supabase_secret_key: str | None = None
+    supabase_storage_bucket: str = "cocoaid-state"
+    supabase_state_object: str = "state/coco_aid.sqlite3"
+    supabase_state_sync_seconds: int = Field(default=10, ge=5, le=300)
+    supabase_state_timeout_seconds: float = Field(default=20.0, gt=0, le=120)
+    supabase_state_max_object_bytes: int = Field(default=48 * 1024 * 1024, ge=1024 * 1024, le=50 * 1024 * 1024)
+
     # Persistent paths. PERSISTENT_DATA_DIR can relocate all runtime writes
     # (SQLite, reports, cache, assistant private settings) to a mounted disk.
     persistent_data_dir: Path | None = None
@@ -137,6 +150,39 @@ class Settings(BaseSettings):
             self.private_settings_path = base / "private_settings.json"
         return self
 
+    @field_validator("supabase_url", mode="before")
+    @classmethod
+    def normalize_supabase_url(cls, value: str | None) -> str | None:
+        if value is None:
+            return None
+        normalized = str(value).strip().rstrip("/")
+        return normalized or None
+
+    @field_validator("supabase_secret_key", mode="before")
+    @classmethod
+    def normalize_supabase_secret_key(cls, value: str | None) -> str | None:
+        if value is None:
+            return None
+        normalized = str(value).strip()
+        return normalized or None
+
+    @field_validator("supabase_storage_bucket", "supabase_state_object")
+    @classmethod
+    def nonempty_remote_storage_name(cls, value: str) -> str:
+        normalized = value.strip().strip("/")
+        if not normalized:
+            raise ValueError("Supabase storage names cannot be empty")
+        return normalized
+
+    @property
+    def supabase_state_configured(self) -> bool:
+        return bool(
+            self.supabase_state_sync_enabled
+            and self.supabase_url
+            and self.supabase_secret_key
+            and self.supabase_storage_bucket
+        )
+
     @field_validator("log_level")
     @classmethod
     def valid_log_level(cls, value: str) -> str:
@@ -159,7 +205,9 @@ class Settings(BaseSettings):
             "offline_mode": self.offline_mode,
             "max_live_forecast_days": self.max_live_forecast_days,
             "deployment": {
-                "persistent_storage_configured": self.persistent_data_dir is not None,
+                "persistent_storage_configured": bool(self.persistent_data_dir is not None or self.supabase_state_configured),
+                "storage_mode": "supabase_storage" if self.supabase_state_configured else ("local_directory" if self.persistent_data_dir is not None else "project_filesystem"),
+                "supabase_state_configured": self.supabase_state_configured,
                 "auto_phase_workflows": self.auto_phase_workflows,
                 "runtime_api_key_configuration": self.allow_runtime_api_key_configuration,
             },

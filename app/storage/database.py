@@ -10,6 +10,7 @@ from typing import Any
 
 from app.core.config import settings
 from app.schemas.farm import FarmCreate, FarmRecord
+from app.services.supabase_state import supabase_state
 
 
 def _connect() -> sqlite3.Connection:
@@ -25,9 +26,12 @@ def _connect() -> sqlite3.Connection:
 def _connection():
     """Yield a transactional SQLite connection and always close it."""
     conn = _connect()
+    before_changes = conn.total_changes
     try:
         yield conn
         conn.commit()
+        if conn.total_changes > before_changes:
+            supabase_state.request_sync()
     except Exception:
         conn.rollback()
         raise
@@ -146,12 +150,21 @@ def save_report(report_id: str, filepath: Path, analysis_id: str | None = None, 
             "INSERT OR REPLACE INTO reports (id, analysis_id, report_type, filepath, created_at) VALUES (?, ?, ?, ?, ?)",
             (report_id, analysis_id, report_type, str(filepath), datetime.now(UTC).isoformat()),
         )
+    # Reports are persisted separately from the SQLite snapshot so a Render Free
+    # cold start can restore the generated file lazily.
+    if filepath.exists():
+        supabase_state.upload_runtime_file(filepath, namespace="reports")
 
 
 def get_report(report_id: str) -> Path | None:
     with _connection() as conn:
         row = conn.execute("SELECT filepath FROM reports WHERE id = ?", (report_id,)).fetchone()
-    return Path(row["filepath"]) if row else None
+    if not row:
+        return None
+    path = Path(row["filepath"])
+    if not path.exists():
+        supabase_state.restore_runtime_file(path, namespace="reports")
+    return path
 
 
 def report_record(report_id: str) -> dict[str, Any] | None:

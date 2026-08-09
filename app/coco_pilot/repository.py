@@ -7,6 +7,7 @@ from uuid import UUID
 
 from app.data_foundation.repository import connection
 from app.domain.coco_pilot import CocoPilotResponse, FormalReportRecord
+from app.services.supabase_state import supabase_state
 
 
 def _json(value: Any) -> str:
@@ -88,6 +89,8 @@ def save_report(record: FormalReportRecord, filepath: Path, *, database_path: Pa
                 record.created_at.isoformat(),
             ),
         )
+    if filepath.exists():
+        supabase_state.upload_runtime_file(filepath, namespace="reports")
 
 
 def get_report(report_id: UUID | str, *, database_path: Path | None = None) -> dict[str, Any] | None:
@@ -99,6 +102,9 @@ def get_report(report_id: UUID | str, *, database_path: Path | None = None) -> d
     item["report_id"] = item.pop("id")
     item["source_manifest"] = json.loads(item.pop("source_manifest_json"))
     item["warnings"] = json.loads(item.pop("warnings_json"))
+    path = Path(item["filepath"])
+    if not path.exists():
+        supabase_state.restore_runtime_file(path, namespace="reports")
     return item
 
 

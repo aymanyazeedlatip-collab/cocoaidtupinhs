@@ -444,3 +444,12 @@ The PCA-backed `v3.pest_inference` engine is available with five profiles, statu
 
 ## Phase 11.3.4
 - Evidence-rich Home sections, grouped Farm Profile inputs, and dedicated boundary-edit save control.
+
+## Phase 11.3.23 Zero-Cost Deployment Hotfix
+
+- Replaced paid Render Standard + disk deployment with Render Free.
+- Added private Supabase Storage synchronization for SQLite state, reports, and assistant document extracts.
+- Added automatic restore on Render cold starts.
+- Preserved automatic Phase 9/10 orchestration with no manual IDs.
+- Added zero-cost deployment verifier and deployment regression tests.
+- Validated 408 automated tests plus the full Phase 3–11 verifier chain.

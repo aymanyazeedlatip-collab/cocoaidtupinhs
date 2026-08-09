@@ -20,6 +20,7 @@ from app.core.logging import configure_logging
 from app.core.middleware import RequestContextMiddleware
 from app.data_foundation.seeding import seed_reference_data
 from app.models.registry import preload_models
+from app.services.supabase_state import supabase_state
 from app.storage.database import initialize_database
 from app.workflows.auto_phase_runner import kick as kick_auto_phase_workflow
 
@@ -45,19 +46,36 @@ def _automatic_workflow_loop() -> None:
 
 @asynccontextmanager
 async def lifespan(_: FastAPI):
+    # Render Free has an ephemeral filesystem. When Supabase state sync is enabled,
+    # restore the latest private SQLite snapshot before migrations and seeding.
+    supabase_state.validate_configuration()
+    if supabase_state.configured:
+        supabase_state.ensure_bucket()
+        supabase_state.restore_database()
+
     initialize_database()
     if settings.auto_seed_reference_data:
         seed_reference_data()
     settings.reports_dir.mkdir(parents=True, exist_ok=True)
     settings.cache_dir.mkdir(parents=True, exist_ok=True)
     settings.private_settings_path.parent.mkdir(parents=True, exist_ok=True)
+
+    if supabase_state.configured:
+        # First deployment has no remote snapshot. Migrations + reference seeding
+        # create it automatically, so no SQL setup or manual IDs are required.
+        supabase_state.sync_database(force=True)
+        supabase_state.start_background_sync()
+
     if settings.auto_phase_workflows:
         threading.Thread(
             target=_automatic_workflow_loop,
             daemon=True,
             name="cocoaid-deployment-auto-phase9-10",
         ).start()
-    yield
+    try:
+        yield
+    finally:
+        supabase_state.stop_background_sync()
 
 
 app = FastAPI(

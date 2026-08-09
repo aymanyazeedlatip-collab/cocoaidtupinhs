@@ -9,6 +9,7 @@ from typing import Any, Iterator
 from uuid import UUID, uuid4
 
 from app.core.config import settings
+from app.services.supabase_state import supabase_state
 from app.domain.weather import WeatherFeatureSet
 from app.weather.assimilation.normalizer import NormalizedWeatherRun
 
@@ -20,9 +21,12 @@ def connection(database_path: Path | None = None) -> Iterator[sqlite3.Connection
     conn = sqlite3.connect(path, timeout=30)
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA foreign_keys=ON")
+    before_changes = conn.total_changes
     try:
         yield conn
         conn.commit()
+        if conn.total_changes > before_changes:
+            supabase_state.request_sync()
     except Exception:
         conn.rollback()
         raise

@@ -1,26 +1,21 @@
 services:
   - type: web
-    name: cocoaid-backend
+    name: cocoaid-backend-free
     runtime: python
-    plan: standard
+    plan: free
     region: singapore
     autoDeployTrigger: commit
     buildCommand: pip install --disable-pip-version-check --prefer-binary -r requirements.deploy.txt
     startCommand: bash scripts/start_production.sh
     healthCheckPath: /api/health
-    maxShutdownDelaySeconds: 120
     numInstances: 1
-    disk:
-      name: cocoaid-data
-      mountPath: /var/data/cocoaid
-      sizeGB: 1
     envVars:
       - key: ENVIRONMENT
         value: production
       - key: HOST
         value: 0.0.0.0
       - key: PERSISTENT_DATA_DIR
-        value: /var/data/cocoaid
+        value: /tmp/cocoaid-runtime
       - key: AUTO_PHASE_WORKFLOWS
         value: "true"
       - key: AUTO_PHASE_POLL_SECONDS
@@ -43,6 +38,22 @@ services:
         value: json
       - key: CORS_ORIGINS
         value: "*"
+      - key: SUPABASE_STATE_SYNC_ENABLED
+        value: "true"
+      - key: SUPABASE_STATE_REQUIRED
+        value: "true"
+      - key: SUPABASE_STORAGE_BUCKET
+        value: cocoaid-state
+      - key: SUPABASE_STATE_OBJECT
+        value: state/coco_aid.sqlite3
+      - key: SUPABASE_STATE_SYNC_SECONDS
+        value: "10"
+      - key: SUPABASE_STATE_TIMEOUT_SECONDS
+        value: "20"
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SECRET_KEY
+        sync: false
       - key: WEATHER_CONNECT_TIMEOUT_SECONDS
         value: "20"
       - key: WEATHER_READ_TIMEOUT_SECONDS

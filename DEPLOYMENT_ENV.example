@@ -1,10 +1,25 @@
+# ================================================================
+# COCOAID ZERO-COST DEPLOYMENT
+# Vercel Hobby + Render Free + Supabase Free
+# ================================================================
+
 # VERCEL (frontend only)
 COCOAID_BACKEND_URL=https://YOUR-RENDER-SERVICE.onrender.com
 
-# RENDER (backend)
+# RENDER: the Blueprint sets all non-secret values automatically.
+# You only need to provide these two required Supabase values:
+SUPABASE_URL=https://YOUR-PROJECT-REF.supabase.co
+SUPABASE_SECRET_KEY=sb_secret_REPLACE_WITH_YOUR_SERVER_SECRET_KEY
+
+# OPTIONAL: only add this if your Gemini account/key has a free quota you
+# intentionally want to use. Leave it unset for the strictest zero-cost setup.
+# GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+
+# The following values are already declared by render.yaml and normally do
+# not need to be entered manually.
 ENVIRONMENT=production
 HOST=0.0.0.0
-PERSISTENT_DATA_DIR=/var/data/cocoaid
+PERSISTENT_DATA_DIR=/tmp/cocoaid-runtime
 AUTO_PHASE_WORKFLOWS=true
 AUTO_PHASE_POLL_SECONDS=90
 ALLOW_RUNTIME_API_KEY_CONFIGURATION=false
@@ -16,7 +31,12 @@ STRICT_MODEL_RUNTIME_COMPATIBILITY=true
 LOG_LEVEL=INFO
 LOG_FORMAT=json
 CORS_ORIGINS=*
-GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+SUPABASE_STATE_SYNC_ENABLED=true
+SUPABASE_STATE_REQUIRED=true
+SUPABASE_STORAGE_BUCKET=cocoaid-state
+SUPABASE_STATE_OBJECT=state/coco_aid.sqlite3
+SUPABASE_STATE_SYNC_SECONDS=10
+SUPABASE_STATE_TIMEOUT_SECONDS=20
 GEMINI_MODEL=gemini-flash-latest
 WEATHER_CONNECT_TIMEOUT_SECONDS=20
 WEATHER_READ_TIMEOUT_SECONDS=60

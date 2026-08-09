@@ -26,6 +26,7 @@ from app.schemas.farm import FarmCreate, FarmPatch
 from app.schemas.weather import WeatherCubeRequest, WeatherFrameRequest, WeatherGridRequest, WeatherPointRequest
 from app.schemas.assistant import AssistantChatRequest, AssistantKeyRequest
 from app.services.analysis import full_analysis, pest_assessment, suitability_assessment
+from app.services.supabase_state import supabase_state
 from app.services.assistant import (
     assistant_status, attach_saved_report, chat_with_gemini, clear_api_key, save_api_key, store_uploaded_document,
 )
@@ -46,10 +47,14 @@ logger = logging.getLogger(__name__)
 
 @router.get("/health")
 def health() -> dict:
+    state_status = supabase_state.status()
+    persistent = bool(settings.supabase_state_configured or settings.persistent_data_dir is not None)
     return {
         "status": "healthy", "project": settings.app_name, "environment": settings.environment,
         "api_version": settings.api_version, "offline_mode": settings.offline_mode,
-        "persistent_storage_configured": settings.persistent_data_dir is not None,
+        "persistent_storage_configured": persistent,
+        "storage_mode": "supabase_storage" if settings.supabase_state_configured else ("local_directory" if settings.persistent_data_dir is not None else "project_filesystem"),
+        "supabase_state": state_status,
         "auto_phase_workflows": settings.auto_phase_workflows,
         "timestamp": datetime.now(UTC).isoformat(),
     }

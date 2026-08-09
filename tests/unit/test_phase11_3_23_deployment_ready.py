@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 def test_phase_11_3_23_deployment_files_exist() -> None:
     for relative in (
-        '.python-version', 'requirements.deploy.txt', 'render.yaml', 'render.free-demo.yaml',
+        '.python-version', 'requirements.deploy.txt', 'render.yaml',
         'vercel.mjs', 'DEPLOYMENT_ENV.example', 'scripts/start_production.sh',
         'scripts/build_vercel_frontend.mjs',
     ):
@@ -31,12 +31,17 @@ def test_explicit_runtime_path_override_wins(tmp_path: Path) -> None:
     assert settings.reports_dir == tmp_path / 'disk' / 'reports'
 
 
-def test_render_blueprint_uses_persistent_single_instance_backend() -> None:
+def test_render_blueprint_uses_free_single_instance_backend() -> None:
     text = (ROOT / 'render.yaml').read_text(encoding='utf-8')
-    assert 'plan: standard' in text
+    assert 'plan: free' in text
+    assert 'plan: standard' not in text
     assert 'region: singapore' in text
-    assert 'mountPath: /var/data/cocoaid' in text
+    assert 'disk:' not in text
     assert 'PERSISTENT_DATA_DIR' in text
+    assert '/tmp/cocoaid-runtime' in text
+    assert 'SUPABASE_STATE_SYNC_ENABLED' in text
+    assert 'SUPABASE_URL' in text
+    assert 'SUPABASE_SECRET_KEY' in text
     assert 'AUTO_PHASE_WORKFLOWS' in text
     assert 'numInstances: 1' in text
     assert 'requirements.deploy.txt' in text
